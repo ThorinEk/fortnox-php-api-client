@@ -1,5 +1,7 @@
 # OpenAPIClient-php
 
+This project is entirely generated automatically based on the OpenAPI specification for Fortnox. It was generated to be used as an HTTP client in Albia Sweden AB's customer portal.
+
 # Documentation 
 
 The Fortnox API is organized around REST. This means that we’ve designed it to have resource-oriented URLs and be as predictable as possible for you as developer.
