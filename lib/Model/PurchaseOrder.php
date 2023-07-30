@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * PurchaseOrder Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'order_date' => '\DateTime',
         'supplier_number' => 'string',
-        'rows' => '\OpenAPI\Client\Model\PurchaseOrderRow[]',
+        'rows' => '\FortnoxApi\Model\PurchaseOrderRow[]',
         'stock_point_id' => 'string',
         'delivery_name' => 'string',
         'delivery_address' => 'string',
@@ -101,7 +101,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'order_value_in_sek' => 'float',
         'supplier' => 'string',
         'translated_response_state' => 'string',
-        'outbound_document_reference' => '\OpenAPI\Client\Model\DocumentReference'
+        'outbound_document_reference' => '\FortnoxApi\Model\DocumentReference'
     ];
 
     /**
@@ -1212,7 +1212,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets rows
      *
-     * @return \OpenAPI\Client\Model\PurchaseOrderRow[]|null
+     * @return \FortnoxApi\Model\PurchaseOrderRow[]|null
      */
     public function getRows()
     {
@@ -1222,7 +1222,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets rows
      *
-     * @param \OpenAPI\Client\Model\PurchaseOrderRow[]|null $rows rows
+     * @param \FortnoxApi\Model\PurchaseOrderRow[]|null $rows rows
      *
      * @return self
      */
@@ -2434,7 +2434,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets outbound_document_reference
      *
-     * @return \OpenAPI\Client\Model\DocumentReference|null
+     * @return \FortnoxApi\Model\DocumentReference|null
      */
     public function getOutboundDocumentReference()
     {
@@ -2444,7 +2444,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets outbound_document_reference
      *
-     * @param \OpenAPI\Client\Model\DocumentReference|null $outbound_document_reference outbound_document_reference
+     * @param \FortnoxApi\Model\DocumentReference|null $outbound_document_reference outbound_document_reference
      *
      * @return self
      */

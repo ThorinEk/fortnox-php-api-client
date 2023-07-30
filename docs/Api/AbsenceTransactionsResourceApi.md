@@ -1,4 +1,4 @@
-# OpenAPI\Client\AbsenceTransactionsResourceApi
+# FortnoxApi\AbsenceTransactionsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createAbsenceTransactionsResource()`
 
 ```php
-createAbsenceTransactionsResource($absence_transactions_payload): \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap
+createAbsenceTransactionsResource($absence_transactions_payload): \FortnoxApi\Model\AbsenceTransactionSingleItemWrap
 ```
 
 Create a new absence transaction
@@ -28,12 +28,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AbsenceTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\AbsenceTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$absence_transactions_payload = new \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap(); // \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap | to create
+$absence_transactions_payload = new \FortnoxApi\Model\AbsenceTransactionPayloadWrap(); // \FortnoxApi\Model\AbsenceTransactionPayloadWrap | to create
 
 try {
     $result = $apiInstance->createAbsenceTransactionsResource($absence_transactions_payload);
@@ -47,11 +47,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **absence_transactions_payload** | [**\OpenAPI\Client\Model\AbsenceTransactionPayloadWrap**](../Model/AbsenceTransactionPayloadWrap.md)| to create | [optional] |
+| **absence_transactions_payload** | [**\FortnoxApi\Model\AbsenceTransactionPayloadWrap**](../Model/AbsenceTransactionPayloadWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap**](../Model/AbsenceTransactionSingleItemWrap.md)
+[**\FortnoxApi\Model\AbsenceTransactionSingleItemWrap**](../Model/AbsenceTransactionSingleItemWrap.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ## `getAbsenceTransactionsResource()`
 
 ```php
-getAbsenceTransactionsResource($id): \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap
+getAbsenceTransactionsResource($id): \FortnoxApi\Model\AbsenceTransactionSingleItemWrap
 ```
 
 Retrieve a specific absence transaction
@@ -84,7 +84,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AbsenceTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\AbsenceTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -107,7 +107,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap**](../Model/AbsenceTransactionSingleItemWrap.md)
+[**\FortnoxApi\Model\AbsenceTransactionSingleItemWrap**](../Model/AbsenceTransactionSingleItemWrap.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ No authorization required
 ## `getAbsenceTransactionsResource1()`
 
 ```php
-getAbsenceTransactionsResource1($employee_id, $date, $code): \OpenAPI\Client\Model\AbsenceTransactionListItemWrap
+getAbsenceTransactionsResource1($employee_id, $date, $code): \FortnoxApi\Model\AbsenceTransactionListItemWrap
 ```
 
 Retrieve absence transactions
@@ -140,7 +140,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AbsenceTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\AbsenceTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -167,7 +167,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AbsenceTransactionListItemWrap**](../Model/AbsenceTransactionListItemWrap.md)
+[**\FortnoxApi\Model\AbsenceTransactionListItemWrap**](../Model/AbsenceTransactionListItemWrap.md)
 
 ### Authorization
 
@@ -185,7 +185,7 @@ No authorization required
 ## `listAbsenceTransactionsResource()`
 
 ```php
-listAbsenceTransactionsResource($employeeid, $date): \OpenAPI\Client\Model\AbsenceTransactionListItemWrap
+listAbsenceTransactionsResource($employeeid, $date): \FortnoxApi\Model\AbsenceTransactionListItemWrap
 ```
 
 Lists all absence transactions
@@ -200,7 +200,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AbsenceTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\AbsenceTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -225,7 +225,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AbsenceTransactionListItemWrap**](../Model/AbsenceTransactionListItemWrap.md)
+[**\FortnoxApi\Model\AbsenceTransactionListItemWrap**](../Model/AbsenceTransactionListItemWrap.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ No authorization required
 ## `remove()`
 
 ```php
-remove($id): \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap
+remove($id): \FortnoxApi\Model\AbsenceTransactionSingleItemWrap
 ```
 
 Delete an absence transaction
@@ -256,7 +256,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AbsenceTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\AbsenceTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -279,7 +279,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap**](../Model/AbsenceTransactionSingleItemWrap.md)
+[**\FortnoxApi\Model\AbsenceTransactionSingleItemWrap**](../Model/AbsenceTransactionSingleItemWrap.md)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ No authorization required
 ## `updateAbsenceTransactionsResource()`
 
 ```php
-updateAbsenceTransactionsResource($id, $absence_transactions_payload): \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap
+updateAbsenceTransactionsResource($id, $absence_transactions_payload): \FortnoxApi\Model\AbsenceTransactionSingleItemWrap
 ```
 
 Update a single absence transaction
@@ -310,13 +310,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AbsenceTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\AbsenceTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | identifies the transaction
-$absence_transactions_payload = new \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap(); // \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap | to update
+$absence_transactions_payload = new \FortnoxApi\Model\AbsenceTransactionPayloadWrap(); // \FortnoxApi\Model\AbsenceTransactionPayloadWrap | to update
 
 try {
     $result = $apiInstance->updateAbsenceTransactionsResource($id, $absence_transactions_payload);
@@ -331,11 +331,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| identifies the transaction | |
-| **absence_transactions_payload** | [**\OpenAPI\Client\Model\AbsenceTransactionPayloadWrap**](../Model/AbsenceTransactionPayloadWrap.md)| to update | [optional] |
+| **absence_transactions_payload** | [**\FortnoxApi\Model\AbsenceTransactionPayloadWrap**](../Model/AbsenceTransactionPayloadWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap**](../Model/AbsenceTransactionSingleItemWrap.md)
+[**\FortnoxApi\Model\AbsenceTransactionSingleItemWrap**](../Model/AbsenceTransactionSingleItemWrap.md)
 
 ### Authorization
 

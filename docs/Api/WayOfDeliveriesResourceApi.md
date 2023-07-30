@@ -1,4 +1,4 @@
-# OpenAPI\Client\WayOfDeliveriesResourceApi
+# FortnoxApi\WayOfDeliveriesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createWayOfDeliveriesResource()`
 
 ```php
-createWayOfDeliveriesResource($way_of_delivery): \OpenAPI\Client\Model\WayOfDeliveryWrap
+createWayOfDeliveriesResource($way_of_delivery): \FortnoxApi\Model\WayOfDeliveryWrap
 ```
 
 Create a way of delivery
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\WayOfDeliveriesResourceApi(
+$apiInstance = new FortnoxApi\Api\WayOfDeliveriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$way_of_delivery = new \OpenAPI\Client\Model\WayOfDeliveryWrap(); // \OpenAPI\Client\Model\WayOfDeliveryWrap | way of delivery to create
+$way_of_delivery = new \FortnoxApi\Model\WayOfDeliveryWrap(); // \FortnoxApi\Model\WayOfDeliveryWrap | way of delivery to create
 
 try {
     $result = $apiInstance->createWayOfDeliveriesResource($way_of_delivery);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **way_of_delivery** | [**\OpenAPI\Client\Model\WayOfDeliveryWrap**](../Model/WayOfDeliveryWrap.md)| way of delivery to create | [optional] |
+| **way_of_delivery** | [**\FortnoxApi\Model\WayOfDeliveryWrap**](../Model/WayOfDeliveryWrap.md)| way of delivery to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WayOfDeliveryWrap**](../Model/WayOfDeliveryWrap.md)
+[**\FortnoxApi\Model\WayOfDeliveryWrap**](../Model/WayOfDeliveryWrap.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getWayOfDeliveriesResource()`
 
 ```php
-getWayOfDeliveriesResource($code): \OpenAPI\Client\Model\WayOfDeliveryWrap
+getWayOfDeliveriesResource($code): \FortnoxApi\Model\WayOfDeliveryWrap
 ```
 
 Retrieve a single way of delivery
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\WayOfDeliveriesResourceApi(
+$apiInstance = new FortnoxApi\Api\WayOfDeliveriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WayOfDeliveryWrap**](../Model/WayOfDeliveryWrap.md)
+[**\FortnoxApi\Model\WayOfDeliveryWrap**](../Model/WayOfDeliveryWrap.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `listWayOfDeliveriesResource()`
 
 ```php
-listWayOfDeliveriesResource(): \OpenAPI\Client\Model\WayOfDeliveryList
+listWayOfDeliveriesResource(): \FortnoxApi\Model\WayOfDeliveryList
 ```
 
 Retrieve a list of way of deliveries
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\WayOfDeliveriesResourceApi(
+$apiInstance = new FortnoxApi\Api\WayOfDeliveriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WayOfDeliveryList**](../Model/WayOfDeliveryList.md)
+[**\FortnoxApi\Model\WayOfDeliveryList**](../Model/WayOfDeliveryList.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\WayOfDeliveriesResourceApi(
+$apiInstance = new FortnoxApi\Api\WayOfDeliveriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -228,7 +228,7 @@ No authorization required
 ## `updateWayOfDeliveriesResource()`
 
 ```php
-updateWayOfDeliveriesResource($code, $way_of_delivery): \OpenAPI\Client\Model\WayOfDeliveryWrap
+updateWayOfDeliveriesResource($code, $way_of_delivery): \FortnoxApi\Model\WayOfDeliveryWrap
 ```
 
 Update a way of delivery
@@ -241,13 +241,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\WayOfDeliveriesResourceApi(
+$apiInstance = new FortnoxApi\Api\WayOfDeliveriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $code = 'code_example'; // string | identifies the way of delivery
-$way_of_delivery = new \OpenAPI\Client\Model\WayOfDeliveryWrap(); // \OpenAPI\Client\Model\WayOfDeliveryWrap | way of delivery to update
+$way_of_delivery = new \FortnoxApi\Model\WayOfDeliveryWrap(); // \FortnoxApi\Model\WayOfDeliveryWrap | way of delivery to update
 
 try {
     $result = $apiInstance->updateWayOfDeliveriesResource($code, $way_of_delivery);
@@ -262,11 +262,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **code** | **string**| identifies the way of delivery | |
-| **way_of_delivery** | [**\OpenAPI\Client\Model\WayOfDeliveryWrap**](../Model/WayOfDeliveryWrap.md)| way of delivery to update | [optional] |
+| **way_of_delivery** | [**\FortnoxApi\Model\WayOfDeliveryWrap**](../Model/WayOfDeliveryWrap.md)| way of delivery to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WayOfDeliveryWrap**](../Model/WayOfDeliveryWrap.md)
+[**\FortnoxApi\Model\WayOfDeliveryWrap**](../Model/WayOfDeliveryWrap.md)
 
 ### Authorization
 

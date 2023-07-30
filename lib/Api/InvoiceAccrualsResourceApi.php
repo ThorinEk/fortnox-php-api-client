@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * InvoiceAccrualsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class InvoiceAccrualsResourceApi
      *
      * Create an invoice accrual
      *
-     * @param  \OpenAPI\Client\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to create (optional)
+     * @param  \FortnoxApi\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInvoiceAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceAccrualWrap
+     * @return \FortnoxApi\Model\InvoiceAccrualWrap
      */
     public function createInvoiceAccrualsResource($invoice_accrual = null, string $contentType = self::contentTypes['createInvoiceAccrualsResource'][0])
     {
@@ -155,12 +155,12 @@ class InvoiceAccrualsResourceApi
      *
      * Create an invoice accrual
      *
-     * @param  \OpenAPI\Client\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to create (optional)
+     * @param  \FortnoxApi\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInvoiceAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceAccrualWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceAccrualWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createInvoiceAccrualsResourceWithHttpInfo($invoice_accrual = null, string $contentType = self::contentTypes['createInvoiceAccrualsResource'][0])
     {
@@ -203,23 +203,23 @@ class InvoiceAccrualsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceAccrualWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceAccrualWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceAccrualWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceAccrualWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceAccrualWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceAccrualWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceAccrualWrap';
+            $returnType = '\FortnoxApi\Model\InvoiceAccrualWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class InvoiceAccrualsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceAccrualWrap',
+                        '\FortnoxApi\Model\InvoiceAccrualWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class InvoiceAccrualsResourceApi
      *
      * Create an invoice accrual
      *
-     * @param  \OpenAPI\Client\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to create (optional)
+     * @param  \FortnoxApi\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInvoiceAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class InvoiceAccrualsResourceApi
      *
      * Create an invoice accrual
      *
-     * @param  \OpenAPI\Client\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to create (optional)
+     * @param  \FortnoxApi\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInvoiceAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class InvoiceAccrualsResourceApi
      */
     public function createInvoiceAccrualsResourceAsyncWithHttpInfo($invoice_accrual = null, string $contentType = self::contentTypes['createInvoiceAccrualsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceAccrualWrap';
+        $returnType = '\FortnoxApi\Model\InvoiceAccrualWrap';
         $request = $this->createInvoiceAccrualsResourceRequest($invoice_accrual, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class InvoiceAccrualsResourceApi
     /**
      * Create request for operation 'createInvoiceAccrualsResource'
      *
-     * @param  \OpenAPI\Client\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to create (optional)
+     * @param  \FortnoxApi\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInvoiceAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class InvoiceAccrualsResourceApi
      * @param  int $invoice_number identifies the invoice accrual (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getInvoiceAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceAccrualWrap
+     * @return \FortnoxApi\Model\InvoiceAccrualWrap
      */
     public function getInvoiceAccrualsResource($invoice_number, string $contentType = self::contentTypes['getInvoiceAccrualsResource'][0])
     {
@@ -434,9 +434,9 @@ class InvoiceAccrualsResourceApi
      * @param  int $invoice_number identifies the invoice accrual (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getInvoiceAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceAccrualWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceAccrualWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInvoiceAccrualsResourceWithHttpInfo($invoice_number, string $contentType = self::contentTypes['getInvoiceAccrualsResource'][0])
     {
@@ -479,23 +479,23 @@ class InvoiceAccrualsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceAccrualWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceAccrualWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceAccrualWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceAccrualWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceAccrualWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceAccrualWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceAccrualWrap';
+            $returnType = '\FortnoxApi\Model\InvoiceAccrualWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class InvoiceAccrualsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceAccrualWrap',
+                        '\FortnoxApi\Model\InvoiceAccrualWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class InvoiceAccrualsResourceApi
      */
     public function getInvoiceAccrualsResourceAsyncWithHttpInfo($invoice_number, string $contentType = self::contentTypes['getInvoiceAccrualsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceAccrualWrap';
+        $returnType = '\FortnoxApi\Model\InvoiceAccrualWrap';
         $request = $this->getInvoiceAccrualsResourceRequest($invoice_number, $contentType);
 
         return $this->client
@@ -698,9 +698,9 @@ class InvoiceAccrualsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listInvoiceAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceAccrualListItemList
+     * @return \FortnoxApi\Model\InvoiceAccrualListItemList
      */
     public function listInvoiceAccrualsResource(string $contentType = self::contentTypes['listInvoiceAccrualsResource'][0])
     {
@@ -715,9 +715,9 @@ class InvoiceAccrualsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listInvoiceAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceAccrualListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceAccrualListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listInvoiceAccrualsResourceWithHttpInfo(string $contentType = self::contentTypes['listInvoiceAccrualsResource'][0])
     {
@@ -760,23 +760,23 @@ class InvoiceAccrualsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceAccrualListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceAccrualListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceAccrualListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceAccrualListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceAccrualListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceAccrualListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceAccrualListItemList';
+            $returnType = '\FortnoxApi\Model\InvoiceAccrualListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -797,7 +797,7 @@ class InvoiceAccrualsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceAccrualListItemList',
+                        '\FortnoxApi\Model\InvoiceAccrualListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class InvoiceAccrualsResourceApi
      */
     public function listInvoiceAccrualsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listInvoiceAccrualsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceAccrualListItemList';
+        $returnType = '\FortnoxApi\Model\InvoiceAccrualListItemList';
         $request = $this->listInvoiceAccrualsResourceRequest($contentType);
 
         return $this->client
@@ -962,7 +962,7 @@ class InvoiceAccrualsResourceApi
      * @param  int $invoice_number identifies the invoice accrual (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeInvoiceAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -979,7 +979,7 @@ class InvoiceAccrualsResourceApi
      * @param  int $invoice_number identifies the invoice accrual (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeInvoiceAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1189,12 +1189,12 @@ class InvoiceAccrualsResourceApi
      * Update an invoice accrual
      *
      * @param  int $invoice_number identifies the invoice accrual (required)
-     * @param  \OpenAPI\Client\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to update (optional)
+     * @param  \FortnoxApi\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateInvoiceAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceAccrualWrap
+     * @return \FortnoxApi\Model\InvoiceAccrualWrap
      */
     public function updateInvoiceAccrualsResource($invoice_number, $invoice_accrual = null, string $contentType = self::contentTypes['updateInvoiceAccrualsResource'][0])
     {
@@ -1208,12 +1208,12 @@ class InvoiceAccrualsResourceApi
      * Update an invoice accrual
      *
      * @param  int $invoice_number identifies the invoice accrual (required)
-     * @param  \OpenAPI\Client\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to update (optional)
+     * @param  \FortnoxApi\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateInvoiceAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceAccrualWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceAccrualWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateInvoiceAccrualsResourceWithHttpInfo($invoice_number, $invoice_accrual = null, string $contentType = self::contentTypes['updateInvoiceAccrualsResource'][0])
     {
@@ -1256,23 +1256,23 @@ class InvoiceAccrualsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceAccrualWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceAccrualWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceAccrualWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceAccrualWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceAccrualWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceAccrualWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceAccrualWrap';
+            $returnType = '\FortnoxApi\Model\InvoiceAccrualWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1293,7 +1293,7 @@ class InvoiceAccrualsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceAccrualWrap',
+                        '\FortnoxApi\Model\InvoiceAccrualWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1309,7 +1309,7 @@ class InvoiceAccrualsResourceApi
      * Update an invoice accrual
      *
      * @param  int $invoice_number identifies the invoice accrual (required)
-     * @param  \OpenAPI\Client\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to update (optional)
+     * @param  \FortnoxApi\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateInvoiceAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1331,7 +1331,7 @@ class InvoiceAccrualsResourceApi
      * Update an invoice accrual
      *
      * @param  int $invoice_number identifies the invoice accrual (required)
-     * @param  \OpenAPI\Client\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to update (optional)
+     * @param  \FortnoxApi\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateInvoiceAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1339,7 +1339,7 @@ class InvoiceAccrualsResourceApi
      */
     public function updateInvoiceAccrualsResourceAsyncWithHttpInfo($invoice_number, $invoice_accrual = null, string $contentType = self::contentTypes['updateInvoiceAccrualsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceAccrualWrap';
+        $returnType = '\FortnoxApi\Model\InvoiceAccrualWrap';
         $request = $this->updateInvoiceAccrualsResourceRequest($invoice_number, $invoice_accrual, $contentType);
 
         return $this->client
@@ -1382,7 +1382,7 @@ class InvoiceAccrualsResourceApi
      * Create request for operation 'updateInvoiceAccrualsResource'
      *
      * @param  int $invoice_number identifies the invoice accrual (required)
-     * @param  \OpenAPI\Client\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to update (optional)
+     * @param  \FortnoxApi\Model\InvoiceAccrualWrap $invoice_accrual invoice accrual to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateInvoiceAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

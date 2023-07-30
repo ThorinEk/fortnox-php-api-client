@@ -1,4 +1,4 @@
-# OpenAPI\Client\InvoiceAccrualsResourceApi
+# FortnoxApi\InvoiceAccrualsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createInvoiceAccrualsResource()`
 
 ```php
-createInvoiceAccrualsResource($invoice_accrual): \OpenAPI\Client\Model\InvoiceAccrualWrap
+createInvoiceAccrualsResource($invoice_accrual): \FortnoxApi\Model\InvoiceAccrualWrap
 ```
 
 Create an invoice accrual
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoiceAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoiceAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$invoice_accrual = new \OpenAPI\Client\Model\InvoiceAccrualWrap(); // \OpenAPI\Client\Model\InvoiceAccrualWrap | invoice accrual to create
+$invoice_accrual = new \FortnoxApi\Model\InvoiceAccrualWrap(); // \FortnoxApi\Model\InvoiceAccrualWrap | invoice accrual to create
 
 try {
     $result = $apiInstance->createInvoiceAccrualsResource($invoice_accrual);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **invoice_accrual** | [**\OpenAPI\Client\Model\InvoiceAccrualWrap**](../Model/InvoiceAccrualWrap.md)| invoice accrual to create | [optional] |
+| **invoice_accrual** | [**\FortnoxApi\Model\InvoiceAccrualWrap**](../Model/InvoiceAccrualWrap.md)| invoice accrual to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceAccrualWrap**](../Model/InvoiceAccrualWrap.md)
+[**\FortnoxApi\Model\InvoiceAccrualWrap**](../Model/InvoiceAccrualWrap.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getInvoiceAccrualsResource()`
 
 ```php
-getInvoiceAccrualsResource($invoice_number): \OpenAPI\Client\Model\InvoiceAccrualWrap
+getInvoiceAccrualsResource($invoice_number): \FortnoxApi\Model\InvoiceAccrualWrap
 ```
 
 Retrieve a single invoice accrual
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoiceAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoiceAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceAccrualWrap**](../Model/InvoiceAccrualWrap.md)
+[**\FortnoxApi\Model\InvoiceAccrualWrap**](../Model/InvoiceAccrualWrap.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `listInvoiceAccrualsResource()`
 
 ```php
-listInvoiceAccrualsResource(): \OpenAPI\Client\Model\InvoiceAccrualListItemList
+listInvoiceAccrualsResource(): \FortnoxApi\Model\InvoiceAccrualListItemList
 ```
 
 Retrieve a list of invoice accruals
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoiceAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoiceAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceAccrualListItemList**](../Model/InvoiceAccrualListItemList.md)
+[**\FortnoxApi\Model\InvoiceAccrualListItemList**](../Model/InvoiceAccrualListItemList.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoiceAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoiceAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -228,7 +228,7 @@ No authorization required
 ## `updateInvoiceAccrualsResource()`
 
 ```php
-updateInvoiceAccrualsResource($invoice_number, $invoice_accrual): \OpenAPI\Client\Model\InvoiceAccrualWrap
+updateInvoiceAccrualsResource($invoice_number, $invoice_accrual): \FortnoxApi\Model\InvoiceAccrualWrap
 ```
 
 Update an invoice accrual
@@ -241,13 +241,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoiceAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoiceAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $invoice_number = 56; // int | identifies the invoice accrual
-$invoice_accrual = new \OpenAPI\Client\Model\InvoiceAccrualWrap(); // \OpenAPI\Client\Model\InvoiceAccrualWrap | invoice accrual to update
+$invoice_accrual = new \FortnoxApi\Model\InvoiceAccrualWrap(); // \FortnoxApi\Model\InvoiceAccrualWrap | invoice accrual to update
 
 try {
     $result = $apiInstance->updateInvoiceAccrualsResource($invoice_number, $invoice_accrual);
@@ -262,11 +262,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **invoice_number** | **int**| identifies the invoice accrual | |
-| **invoice_accrual** | [**\OpenAPI\Client\Model\InvoiceAccrualWrap**](../Model/InvoiceAccrualWrap.md)| invoice accrual to update | [optional] |
+| **invoice_accrual** | [**\FortnoxApi\Model\InvoiceAccrualWrap**](../Model/InvoiceAccrualWrap.md)| invoice accrual to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceAccrualWrap**](../Model/InvoiceAccrualWrap.md)
+[**\FortnoxApi\Model\InvoiceAccrualWrap**](../Model/InvoiceAccrualWrap.md)
 
 ### Authorization
 

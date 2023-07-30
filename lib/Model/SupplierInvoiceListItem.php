@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * SupplierInvoiceListItem Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -75,7 +75,7 @@ class SupplierInvoiceListItem implements ModelInterface, ArrayAccess, \JsonSeria
         'supplier_name' => 'string',
         'total' => 'string',
         'authorizer_name' => 'string',
-        'vouchers' => '\OpenAPI\Client\Model\SupplierInvoiceListItemVoucher[]',
+        'vouchers' => '\FortnoxApi\Model\SupplierInvoiceListItemVoucher[]',
         'final_pay_date' => '\DateTime'
     ];
 
@@ -980,7 +980,7 @@ class SupplierInvoiceListItem implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets vouchers
      *
-     * @return \OpenAPI\Client\Model\SupplierInvoiceListItemVoucher[]|null
+     * @return \FortnoxApi\Model\SupplierInvoiceListItemVoucher[]|null
      */
     public function getVouchers()
     {
@@ -990,7 +990,7 @@ class SupplierInvoiceListItem implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets vouchers
      *
-     * @param \OpenAPI\Client\Model\SupplierInvoiceListItemVoucher[]|null $vouchers vouchers
+     * @param \FortnoxApi\Model\SupplierInvoiceListItemVoucher[]|null $vouchers vouchers
      *
      * @return self
      */

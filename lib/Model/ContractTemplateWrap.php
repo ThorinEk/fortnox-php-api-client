@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ContractTemplateWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class ContractTemplateWrap implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'contract_template' => '\OpenAPI\Client\Model\ContractTemplate'
+        'contract_template' => '\FortnoxApi\Model\ContractTemplate'
     ];
 
     /**
@@ -290,7 +290,7 @@ class ContractTemplateWrap implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets contract_template
      *
-     * @return \OpenAPI\Client\Model\ContractTemplate|null
+     * @return \FortnoxApi\Model\ContractTemplate|null
      */
     public function getContractTemplate()
     {
@@ -300,7 +300,7 @@ class ContractTemplateWrap implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets contract_template
      *
-     * @param \OpenAPI\Client\Model\ContractTemplate|null $contract_template contract_template
+     * @param \FortnoxApi\Model\ContractTemplate|null $contract_template contract_template
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * ExpensesResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,12 +131,12 @@ class ExpensesResourceApi
      *
      * Create an expense
      *
-     * @param  \OpenAPI\Client\Model\ExpenseWrap $expense expense to create (optional)
+     * @param  \FortnoxApi\Model\ExpenseWrap $expense expense to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createExpensesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ExpenseWrap
+     * @return \FortnoxApi\Model\ExpenseWrap
      */
     public function createExpensesResource($expense = null, string $contentType = self::contentTypes['createExpensesResource'][0])
     {
@@ -149,12 +149,12 @@ class ExpensesResourceApi
      *
      * Create an expense
      *
-     * @param  \OpenAPI\Client\Model\ExpenseWrap $expense expense to create (optional)
+     * @param  \FortnoxApi\Model\ExpenseWrap $expense expense to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createExpensesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ExpenseWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ExpenseWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createExpensesResourceWithHttpInfo($expense = null, string $contentType = self::contentTypes['createExpensesResource'][0])
     {
@@ -197,23 +197,23 @@ class ExpensesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ExpenseWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ExpenseWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ExpenseWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ExpenseWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ExpenseWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ExpenseWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ExpenseWrap';
+            $returnType = '\FortnoxApi\Model\ExpenseWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -234,7 +234,7 @@ class ExpensesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ExpenseWrap',
+                        '\FortnoxApi\Model\ExpenseWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -249,7 +249,7 @@ class ExpensesResourceApi
      *
      * Create an expense
      *
-     * @param  \OpenAPI\Client\Model\ExpenseWrap $expense expense to create (optional)
+     * @param  \FortnoxApi\Model\ExpenseWrap $expense expense to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createExpensesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -270,7 +270,7 @@ class ExpensesResourceApi
      *
      * Create an expense
      *
-     * @param  \OpenAPI\Client\Model\ExpenseWrap $expense expense to create (optional)
+     * @param  \FortnoxApi\Model\ExpenseWrap $expense expense to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createExpensesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -278,7 +278,7 @@ class ExpensesResourceApi
      */
     public function createExpensesResourceAsyncWithHttpInfo($expense = null, string $contentType = self::contentTypes['createExpensesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ExpenseWrap';
+        $returnType = '\FortnoxApi\Model\ExpenseWrap';
         $request = $this->createExpensesResourceRequest($expense, $contentType);
 
         return $this->client
@@ -320,7 +320,7 @@ class ExpensesResourceApi
     /**
      * Create request for operation 'createExpensesResource'
      *
-     * @param  \OpenAPI\Client\Model\ExpenseWrap $expense expense to create (optional)
+     * @param  \FortnoxApi\Model\ExpenseWrap $expense expense to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createExpensesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -410,9 +410,9 @@ class ExpensesResourceApi
      * @param  string $expense_code expenseCode (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExpensesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ExpenseWrap
+     * @return \FortnoxApi\Model\ExpenseWrap
      */
     public function getExpensesResource($expense_code, string $contentType = self::contentTypes['getExpensesResource'][0])
     {
@@ -428,9 +428,9 @@ class ExpensesResourceApi
      * @param  string $expense_code expenseCode (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExpensesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ExpenseWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ExpenseWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getExpensesResourceWithHttpInfo($expense_code, string $contentType = self::contentTypes['getExpensesResource'][0])
     {
@@ -473,23 +473,23 @@ class ExpensesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ExpenseWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ExpenseWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ExpenseWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ExpenseWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ExpenseWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ExpenseWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ExpenseWrap';
+            $returnType = '\FortnoxApi\Model\ExpenseWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -510,7 +510,7 @@ class ExpensesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ExpenseWrap',
+                        '\FortnoxApi\Model\ExpenseWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -554,7 +554,7 @@ class ExpensesResourceApi
      */
     public function getExpensesResourceAsyncWithHttpInfo($expense_code, string $contentType = self::contentTypes['getExpensesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ExpenseWrap';
+        $returnType = '\FortnoxApi\Model\ExpenseWrap';
         $request = $this->getExpensesResourceRequest($expense_code, $contentType);
 
         return $this->client
@@ -692,9 +692,9 @@ class ExpensesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listExpensesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ExpenseListItemWrap
+     * @return \FortnoxApi\Model\ExpenseListItemWrap
      */
     public function listExpensesResource(string $contentType = self::contentTypes['listExpensesResource'][0])
     {
@@ -709,9 +709,9 @@ class ExpensesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listExpensesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ExpenseListItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ExpenseListItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function listExpensesResourceWithHttpInfo(string $contentType = self::contentTypes['listExpensesResource'][0])
     {
@@ -754,23 +754,23 @@ class ExpensesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ExpenseListItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ExpenseListItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ExpenseListItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ExpenseListItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ExpenseListItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ExpenseListItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ExpenseListItemWrap';
+            $returnType = '\FortnoxApi\Model\ExpenseListItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -791,7 +791,7 @@ class ExpensesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ExpenseListItemWrap',
+                        '\FortnoxApi\Model\ExpenseListItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -833,7 +833,7 @@ class ExpensesResourceApi
      */
     public function listExpensesResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listExpensesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ExpenseListItemWrap';
+        $returnType = '\FortnoxApi\Model\ExpenseListItemWrap';
         $request = $this->listExpensesResourceRequest($contentType);
 
         return $this->client

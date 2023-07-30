@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * Order Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -84,7 +84,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'delivery_name' => 'string',
         'delivery_zip_code' => 'string',
         'document_number' => 'string',
-        'email_information' => '\OpenAPI\Client\Model\OrderEmailInformation',
+        'email_information' => '\FortnoxApi\Model\OrderEmailInformation',
         'external_invoice_reference1' => 'string',
         'external_invoice_reference2' => 'string',
         'freight' => 'float',
@@ -92,13 +92,13 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'gross' => 'float',
         'house_work' => 'bool',
         'invoice_reference' => 'string',
-        'labels' => '\OpenAPI\Client\Model\OrderLabel[]',
+        'labels' => '\FortnoxApi\Model\OrderLabel[]',
         'language' => 'string',
         'net' => 'float',
         'not_completed' => 'bool',
         'offer_reference' => 'string',
         'order_date' => '\DateTime',
-        'order_rows' => '\OpenAPI\Client\Model\OrderOrderRow[]',
+        'order_rows' => '\FortnoxApi\Model\OrderOrderRow[]',
         'order_type' => 'string',
         'organisation_number' => 'string',
         'our_reference' => 'string',
@@ -1684,7 +1684,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets email_information
      *
-     * @return \OpenAPI\Client\Model\OrderEmailInformation|null
+     * @return \FortnoxApi\Model\OrderEmailInformation|null
      */
     public function getEmailInformation()
     {
@@ -1694,7 +1694,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets email_information
      *
-     * @param \OpenAPI\Client\Model\OrderEmailInformation|null $email_information email_information
+     * @param \FortnoxApi\Model\OrderEmailInformation|null $email_information email_information
      *
      * @return self
      */
@@ -1900,7 +1900,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets labels
      *
-     * @return \OpenAPI\Client\Model\OrderLabel[]|null
+     * @return \FortnoxApi\Model\OrderLabel[]|null
      */
     public function getLabels()
     {
@@ -1910,7 +1910,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets labels
      *
-     * @param \OpenAPI\Client\Model\OrderLabel[]|null $labels labels
+     * @param \FortnoxApi\Model\OrderLabel[]|null $labels labels
      *
      * @return self
      */
@@ -2062,7 +2062,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets order_rows
      *
-     * @return \OpenAPI\Client\Model\OrderOrderRow[]|null
+     * @return \FortnoxApi\Model\OrderOrderRow[]|null
      */
     public function getOrderRows()
     {
@@ -2072,7 +2072,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets order_rows
      *
-     * @param \OpenAPI\Client\Model\OrderOrderRow[]|null $order_rows order_rows
+     * @param \FortnoxApi\Model\OrderOrderRow[]|null $order_rows order_rows
      *
      * @return self
      */

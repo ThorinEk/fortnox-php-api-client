@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * BaseArticleRegistration Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -56,11 +56,11 @@ class BaseArticleRegistration implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'cost_center' => '\OpenAPI\Client\Model\TRCostCenter',
-        'customer' => '\OpenAPI\Client\Model\TRCustomer',
-        'project' => '\OpenAPI\Client\Model\TRProject',
-        'article_registrations' => '\OpenAPI\Client\Model\ArticleRegistration[]',
-        'registered_article' => '\OpenAPI\Client\Model\ArticleRegistration',
+        'cost_center' => '\FortnoxApi\Model\TRCostCenter',
+        'customer' => '\FortnoxApi\Model\TRCustomer',
+        'project' => '\FortnoxApi\Model\TRProject',
+        'article_registrations' => '\FortnoxApi\Model\ArticleRegistration[]',
+        'registered_article' => '\FortnoxApi\Model\ArticleRegistration',
         'purchase_date' => '\DateTime',
         'owner_id' => 'string',
         'version' => 'int',
@@ -419,7 +419,7 @@ class BaseArticleRegistration implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets cost_center
      *
-     * @return \OpenAPI\Client\Model\TRCostCenter|null
+     * @return \FortnoxApi\Model\TRCostCenter|null
      */
     public function getCostCenter()
     {
@@ -429,7 +429,7 @@ class BaseArticleRegistration implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets cost_center
      *
-     * @param \OpenAPI\Client\Model\TRCostCenter|null $cost_center cost_center
+     * @param \FortnoxApi\Model\TRCostCenter|null $cost_center cost_center
      *
      * @return self
      */
@@ -446,7 +446,7 @@ class BaseArticleRegistration implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets customer
      *
-     * @return \OpenAPI\Client\Model\TRCustomer
+     * @return \FortnoxApi\Model\TRCustomer
      */
     public function getCustomer()
     {
@@ -456,7 +456,7 @@ class BaseArticleRegistration implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets customer
      *
-     * @param \OpenAPI\Client\Model\TRCustomer $customer customer
+     * @param \FortnoxApi\Model\TRCustomer $customer customer
      *
      * @return self
      */
@@ -473,7 +473,7 @@ class BaseArticleRegistration implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets project
      *
-     * @return \OpenAPI\Client\Model\TRProject|null
+     * @return \FortnoxApi\Model\TRProject|null
      */
     public function getProject()
     {
@@ -483,7 +483,7 @@ class BaseArticleRegistration implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets project
      *
-     * @param \OpenAPI\Client\Model\TRProject|null $project project
+     * @param \FortnoxApi\Model\TRProject|null $project project
      *
      * @return self
      */
@@ -500,7 +500,7 @@ class BaseArticleRegistration implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets article_registrations
      *
-     * @return \OpenAPI\Client\Model\ArticleRegistration[]|null
+     * @return \FortnoxApi\Model\ArticleRegistration[]|null
      */
     public function getArticleRegistrations()
     {
@@ -510,7 +510,7 @@ class BaseArticleRegistration implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets article_registrations
      *
-     * @param \OpenAPI\Client\Model\ArticleRegistration[]|null $article_registrations article_registrations
+     * @param \FortnoxApi\Model\ArticleRegistration[]|null $article_registrations article_registrations
      *
      * @return self
      */
@@ -527,7 +527,7 @@ class BaseArticleRegistration implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets registered_article
      *
-     * @return \OpenAPI\Client\Model\ArticleRegistration|null
+     * @return \FortnoxApi\Model\ArticleRegistration|null
      */
     public function getRegisteredArticle()
     {
@@ -537,7 +537,7 @@ class BaseArticleRegistration implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets registered_article
      *
-     * @param \OpenAPI\Client\Model\ArticleRegistration|null $registered_article registered_article
+     * @param \FortnoxApi\Model\ArticleRegistration|null $registered_article registered_article
      *
      * @return self
      */

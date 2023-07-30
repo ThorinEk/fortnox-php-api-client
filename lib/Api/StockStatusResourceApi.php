@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * StockStatusResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -129,9 +129,9 @@ class StockStatusResourceApi
      * @param  string[] $stock_point_codes Optional filter on stock point codes (comma-separated). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStockBalance'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\StockBalance[]
+     * @return \FortnoxApi\Model\StockBalance[]
      */
     public function getStockBalance($item_ids = null, $stock_point_codes = null, string $contentType = self::contentTypes['getStockBalance'][0])
     {
@@ -148,9 +148,9 @@ class StockStatusResourceApi
      * @param  string[] $stock_point_codes Optional filter on stock point codes (comma-separated). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStockBalance'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\StockBalance[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\StockBalance[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getStockBalanceWithHttpInfo($item_ids = null, $stock_point_codes = null, string $contentType = self::contentTypes['getStockBalance'][0])
     {
@@ -193,23 +193,23 @@ class StockStatusResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\StockBalance[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\StockBalance[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\StockBalance[]' !== 'string') {
+                        if ('\FortnoxApi\Model\StockBalance[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\StockBalance[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\StockBalance[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\StockBalance[]';
+            $returnType = '\FortnoxApi\Model\StockBalance[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -230,7 +230,7 @@ class StockStatusResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\StockBalance[]',
+                        '\FortnoxApi\Model\StockBalance[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -276,7 +276,7 @@ class StockStatusResourceApi
      */
     public function getStockBalanceAsyncWithHttpInfo($item_ids = null, $stock_point_codes = null, string $contentType = self::contentTypes['getStockBalance'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\StockBalance[]';
+        $returnType = '\FortnoxApi\Model\StockBalance[]';
         $request = $this->getStockBalanceRequest($item_ids, $stock_point_codes, $contentType);
 
         return $this->client

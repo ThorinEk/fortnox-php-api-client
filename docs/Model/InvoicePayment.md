@@ -27,6 +27,6 @@ Name | Type | Description | Notes
 **voucher_series** | **string** |  | [optional]
 **voucher_year** | **int** |  | [optional]
 **source** | **string** |  | [optional]
-**write_offs** | [**\OpenAPI\Client\Model\InvoicePaymentWriteOff[]**](InvoicePaymentWriteOff.md) |  | [optional]
+**write_offs** | [**\FortnoxApi\Model\InvoicePaymentWriteOff[]**](InvoicePaymentWriteOff.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

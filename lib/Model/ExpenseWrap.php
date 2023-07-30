@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ExpenseWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class ExpenseWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'expense' => '\OpenAPI\Client\Model\Expense'
+        'expense' => '\FortnoxApi\Model\Expense'
     ];
 
     /**
@@ -290,7 +290,7 @@ class ExpenseWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets expense
      *
-     * @return \OpenAPI\Client\Model\Expense|null
+     * @return \FortnoxApi\Model\Expense|null
      */
     public function getExpense()
     {
@@ -300,7 +300,7 @@ class ExpenseWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets expense
      *
-     * @param \OpenAPI\Client\Model\Expense|null $expense expense
+     * @param \FortnoxApi\Model\Expense|null $expense expense
      *
      * @return self
      */

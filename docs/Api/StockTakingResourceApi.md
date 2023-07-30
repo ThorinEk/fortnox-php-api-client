@@ -1,4 +1,4 @@
-# OpenAPI\Client\StockTakingResourceApi
+# FortnoxApi\StockTakingResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -37,13 +37,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | Stock Taking document id.
-$rows = array(new \OpenAPI\Client\Model\StockTakingRow()); // \OpenAPI\Client\Model\StockTakingRow[] | A list of <code>StockTakingRows</code>.
+$rows = array(new \FortnoxApi\Model\StockTakingRow()); // \FortnoxApi\Model\StockTakingRow[] | A list of <code>StockTakingRows</code>.
 
 try {
     $apiInstance->addStockTakingRows($id, $rows);
@@ -57,7 +57,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Stock Taking document id. | |
-| **rows** | [**\OpenAPI\Client\Model\StockTakingRow[]**](../Model/StockTakingRow.md)| A list of &lt;code&gt;StockTakingRows&lt;/code&gt;. | [optional] |
+| **rows** | [**\FortnoxApi\Model\StockTakingRow[]**](../Model/StockTakingRow.md)| A list of &lt;code&gt;StockTakingRows&lt;/code&gt;. | [optional] |
 
 ### Return type
 
@@ -94,7 +94,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -153,7 +153,7 @@ No authorization required
 ## `createStockTakingResource()`
 
 ```php
-createStockTakingResource($stock_taking): \OpenAPI\Client\Model\StockTaking
+createStockTakingResource($stock_taking): \FortnoxApi\Model\StockTaking
 ```
 
 Create stock taking
@@ -168,12 +168,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$stock_taking = new \OpenAPI\Client\Model\StockTaking(); // \OpenAPI\Client\Model\StockTaking | stock taking
+$stock_taking = new \FortnoxApi\Model\StockTaking(); // \FortnoxApi\Model\StockTaking | stock taking
 
 try {
     $result = $apiInstance->createStockTakingResource($stock_taking);
@@ -187,11 +187,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stock_taking** | [**\OpenAPI\Client\Model\StockTaking**](../Model/StockTaking.md)| stock taking | [optional] |
+| **stock_taking** | [**\FortnoxApi\Model\StockTaking**](../Model/StockTaking.md)| stock taking | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockTaking**](../Model/StockTaking.md)
+[**\FortnoxApi\Model\StockTaking**](../Model/StockTaking.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -279,7 +279,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -337,7 +337,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -394,7 +394,7 @@ No authorization required
 ## `getAllStockTakingResource()`
 
 ```php
-getAllStockTakingResource($state, $item_id): \OpenAPI\Client\Model\StockTaking[]
+getAllStockTakingResource($state, $item_id): \FortnoxApi\Model\StockTaking[]
 ```
 
 List stock takings
@@ -409,7 +409,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -434,7 +434,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockTaking[]**](../Model/StockTaking.md)
+[**\FortnoxApi\Model\StockTaking[]**](../Model/StockTaking.md)
 
 ### Authorization
 
@@ -452,7 +452,7 @@ No authorization required
 ## `getCandidateRows()`
 
 ```php
-getCandidateRows($id, $item_ids, $supplier_numbers, $stock_point_ids, $stock_location_ids, $transaction_date, $item_id_search, $item_description_search, $exclude_zero_balance_items, $include_non_inbound_items): \OpenAPI\Client\Model\StockTakingRow[]
+getCandidateRows($id, $item_ids, $supplier_numbers, $stock_point_ids, $stock_location_ids, $transaction_date, $item_id_search, $item_description_search, $exclude_zero_balance_items, $include_non_inbound_items): \FortnoxApi\Model\StockTakingRow[]
 ```
 
 Get candidate rows
@@ -467,7 +467,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -508,7 +508,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockTakingRow[]**](../Model/StockTakingRow.md)
+[**\FortnoxApi\Model\StockTakingRow[]**](../Model/StockTakingRow.md)
 
 ### Authorization
 
@@ -526,7 +526,7 @@ No authorization required
 ## `getRows()`
 
 ```php
-getRows($id, $item_ids, $supplier_numbers, $stock_point_ids, $stock_location_ids, $transaction_date, $item_id_search, $item_description_search, $exclude_zero_balance_items, $secondarysortby, $secondaryorder, $state_filter, $starting_row_no, $starting_item_id): \OpenAPI\Client\Model\StockTakingRow[]
+getRows($id, $item_ids, $supplier_numbers, $stock_point_ids, $stock_location_ids, $transaction_date, $item_id_search, $item_description_search, $exclude_zero_balance_items, $secondarysortby, $secondaryorder, $state_filter, $starting_row_no, $starting_item_id): \FortnoxApi\Model\StockTakingRow[]
 ```
 
 Get Stock Taking Rows
@@ -539,7 +539,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -588,7 +588,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockTakingRow[]**](../Model/StockTakingRow.md)
+[**\FortnoxApi\Model\StockTakingRow[]**](../Model/StockTakingRow.md)
 
 ### Authorization
 
@@ -606,7 +606,7 @@ No authorization required
 ## `getStockTakingResource()`
 
 ```php
-getStockTakingResource($id): \OpenAPI\Client\Model\StockTaking
+getStockTakingResource($id): \FortnoxApi\Model\StockTaking
 ```
 
 Get Stock Taking document
@@ -619,7 +619,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -642,7 +642,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockTaking**](../Model/StockTaking.md)
+[**\FortnoxApi\Model\StockTaking**](../Model/StockTaking.md)
 
 ### Authorization
 
@@ -675,7 +675,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -715,7 +715,7 @@ No authorization required
 ## `updateStockTakingResource()`
 
 ```php
-updateStockTakingResource($id, $stock_taking): \OpenAPI\Client\Model\StockTaking
+updateStockTakingResource($id, $stock_taking): \FortnoxApi\Model\StockTaking
 ```
 
 Update a stock taking
@@ -730,13 +730,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | Stock Taking document id.
-$stock_taking = new \OpenAPI\Client\Model\StockTaking(); // \OpenAPI\Client\Model\StockTaking | stock taking
+$stock_taking = new \FortnoxApi\Model\StockTaking(); // \FortnoxApi\Model\StockTaking | stock taking
 
 try {
     $result = $apiInstance->updateStockTakingResource($id, $stock_taking);
@@ -751,11 +751,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Stock Taking document id. | |
-| **stock_taking** | [**\OpenAPI\Client\Model\StockTaking**](../Model/StockTaking.md)| stock taking | [optional] |
+| **stock_taking** | [**\FortnoxApi\Model\StockTaking**](../Model/StockTaking.md)| stock taking | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockTaking**](../Model/StockTaking.md)
+[**\FortnoxApi\Model\StockTaking**](../Model/StockTaking.md)
 
 ### Authorization
 
@@ -788,7 +788,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockTakingResourceApi(
+$apiInstance = new FortnoxApi\Api\StockTakingResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

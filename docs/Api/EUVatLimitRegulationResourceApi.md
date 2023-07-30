@@ -1,4 +1,4 @@
-# OpenAPI\Client\EUVatLimitRegulationResourceApi
+# FortnoxApi\EUVatLimitRegulationResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getEUVatLimitRegulationResource()`
 
 ```php
-getEUVatLimitRegulationResource($year): \OpenAPI\Client\Model\EUVatLimitRegulationWrap
+getEUVatLimitRegulationResource($year): \FortnoxApi\Model\EUVatLimitRegulationWrap
 ```
 
 Retrieve details about eu vat limit
@@ -23,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EUVatLimitRegulationResourceApi(
+$apiInstance = new FortnoxApi\Api\EUVatLimitRegulationResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -46,7 +46,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EUVatLimitRegulationWrap**](../Model/EUVatLimitRegulationWrap.md)
+[**\FortnoxApi\Model\EUVatLimitRegulationWrap**](../Model/EUVatLimitRegulationWrap.md)
 
 ### Authorization
 

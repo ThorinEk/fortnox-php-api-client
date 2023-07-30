@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * ScheduleTimesResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -135,9 +135,9 @@ class ScheduleTimesResourceApi
      * @param  \DateTime $date identifies the date (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getScheduleTimesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ScheduleTimeWrap
+     * @return \FortnoxApi\Model\ScheduleTimeWrap
      */
     public function getScheduleTimesResource($employee_id, $date, string $contentType = self::contentTypes['getScheduleTimesResource'][0])
     {
@@ -154,9 +154,9 @@ class ScheduleTimesResourceApi
      * @param  \DateTime $date identifies the date (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getScheduleTimesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ScheduleTimeWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ScheduleTimeWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getScheduleTimesResourceWithHttpInfo($employee_id, $date, string $contentType = self::contentTypes['getScheduleTimesResource'][0])
     {
@@ -199,23 +199,23 @@ class ScheduleTimesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ScheduleTimeWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ScheduleTimeWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ScheduleTimeWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ScheduleTimeWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ScheduleTimeWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ScheduleTimeWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ScheduleTimeWrap';
+            $returnType = '\FortnoxApi\Model\ScheduleTimeWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -236,7 +236,7 @@ class ScheduleTimesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ScheduleTimeWrap',
+                        '\FortnoxApi\Model\ScheduleTimeWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -282,7 +282,7 @@ class ScheduleTimesResourceApi
      */
     public function getScheduleTimesResourceAsyncWithHttpInfo($employee_id, $date, string $contentType = self::contentTypes['getScheduleTimesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ScheduleTimeWrap';
+        $returnType = '\FortnoxApi\Model\ScheduleTimeWrap';
         $request = $this->getScheduleTimesResourceRequest($employee_id, $date, $contentType);
 
         return $this->client
@@ -438,9 +438,9 @@ class ScheduleTimesResourceApi
      * @param  \DateTime $date identifies the date (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reset'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ScheduleTimeWrap
+     * @return \FortnoxApi\Model\ScheduleTimeWrap
      */
     public function reset($employee_id, $date, string $contentType = self::contentTypes['reset'][0])
     {
@@ -457,9 +457,9 @@ class ScheduleTimesResourceApi
      * @param  \DateTime $date identifies the date (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reset'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ScheduleTimeWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ScheduleTimeWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function resetWithHttpInfo($employee_id, $date, string $contentType = self::contentTypes['reset'][0])
     {
@@ -502,23 +502,23 @@ class ScheduleTimesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ScheduleTimeWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ScheduleTimeWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ScheduleTimeWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ScheduleTimeWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ScheduleTimeWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ScheduleTimeWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ScheduleTimeWrap';
+            $returnType = '\FortnoxApi\Model\ScheduleTimeWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -539,7 +539,7 @@ class ScheduleTimesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ScheduleTimeWrap',
+                        '\FortnoxApi\Model\ScheduleTimeWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -585,7 +585,7 @@ class ScheduleTimesResourceApi
      */
     public function resetAsyncWithHttpInfo($employee_id, $date, string $contentType = self::contentTypes['reset'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ScheduleTimeWrap';
+        $returnType = '\FortnoxApi\Model\ScheduleTimeWrap';
         $request = $this->resetRequest($employee_id, $date, $contentType);
 
         return $this->client
@@ -739,12 +739,12 @@ class ScheduleTimesResourceApi
      *
      * @param  string $employee_id identifies the employee (required)
      * @param  \DateTime $date identifies the date (required)
-     * @param  \OpenAPI\Client\Model\ScheduleTimeWrap $schedule_time to update (optional)
+     * @param  \FortnoxApi\Model\ScheduleTimeWrap $schedule_time to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateScheduleTimesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ScheduleTimeWrap
+     * @return \FortnoxApi\Model\ScheduleTimeWrap
      */
     public function updateScheduleTimesResource($employee_id, $date, $schedule_time = null, string $contentType = self::contentTypes['updateScheduleTimesResource'][0])
     {
@@ -759,12 +759,12 @@ class ScheduleTimesResourceApi
      *
      * @param  string $employee_id identifies the employee (required)
      * @param  \DateTime $date identifies the date (required)
-     * @param  \OpenAPI\Client\Model\ScheduleTimeWrap $schedule_time to update (optional)
+     * @param  \FortnoxApi\Model\ScheduleTimeWrap $schedule_time to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateScheduleTimesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ScheduleTimeWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ScheduleTimeWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateScheduleTimesResourceWithHttpInfo($employee_id, $date, $schedule_time = null, string $contentType = self::contentTypes['updateScheduleTimesResource'][0])
     {
@@ -807,23 +807,23 @@ class ScheduleTimesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ScheduleTimeWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ScheduleTimeWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ScheduleTimeWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ScheduleTimeWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ScheduleTimeWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ScheduleTimeWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ScheduleTimeWrap';
+            $returnType = '\FortnoxApi\Model\ScheduleTimeWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -844,7 +844,7 @@ class ScheduleTimesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ScheduleTimeWrap',
+                        '\FortnoxApi\Model\ScheduleTimeWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -861,7 +861,7 @@ class ScheduleTimesResourceApi
      *
      * @param  string $employee_id identifies the employee (required)
      * @param  \DateTime $date identifies the date (required)
-     * @param  \OpenAPI\Client\Model\ScheduleTimeWrap $schedule_time to update (optional)
+     * @param  \FortnoxApi\Model\ScheduleTimeWrap $schedule_time to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateScheduleTimesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -884,7 +884,7 @@ class ScheduleTimesResourceApi
      *
      * @param  string $employee_id identifies the employee (required)
      * @param  \DateTime $date identifies the date (required)
-     * @param  \OpenAPI\Client\Model\ScheduleTimeWrap $schedule_time to update (optional)
+     * @param  \FortnoxApi\Model\ScheduleTimeWrap $schedule_time to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateScheduleTimesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -892,7 +892,7 @@ class ScheduleTimesResourceApi
      */
     public function updateScheduleTimesResourceAsyncWithHttpInfo($employee_id, $date, $schedule_time = null, string $contentType = self::contentTypes['updateScheduleTimesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ScheduleTimeWrap';
+        $returnType = '\FortnoxApi\Model\ScheduleTimeWrap';
         $request = $this->updateScheduleTimesResourceRequest($employee_id, $date, $schedule_time, $contentType);
 
         return $this->client
@@ -936,7 +936,7 @@ class ScheduleTimesResourceApi
      *
      * @param  string $employee_id identifies the employee (required)
      * @param  \DateTime $date identifies the date (required)
-     * @param  \OpenAPI\Client\Model\ScheduleTimeWrap $schedule_time to update (optional)
+     * @param  \FortnoxApi\Model\ScheduleTimeWrap $schedule_time to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateScheduleTimesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

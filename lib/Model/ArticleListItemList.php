@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ArticleListItemList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class ArticleListItemList implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'articles' => '\OpenAPI\Client\Model\ArticleListItem[]'
+        'articles' => '\FortnoxApi\Model\ArticleListItem[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class ArticleListItemList implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets articles
      *
-     * @return \OpenAPI\Client\Model\ArticleListItem[]|null
+     * @return \FortnoxApi\Model\ArticleListItem[]|null
      */
     public function getArticles()
     {
@@ -300,7 +300,7 @@ class ArticleListItemList implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets articles
      *
-     * @param \OpenAPI\Client\Model\ArticleListItem[]|null $articles articles
+     * @param \FortnoxApi\Model\ArticleListItem[]|null $articles articles
      *
      * @return self
      */

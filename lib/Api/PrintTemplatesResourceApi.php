@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * PrintTemplatesResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -127,9 +127,9 @@ class PrintTemplatesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPrintTemplatesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PrintTemplateList
+     * @return \FortnoxApi\Model\PrintTemplateList
      */
     public function listPrintTemplatesResource(string $contentType = self::contentTypes['listPrintTemplatesResource'][0])
     {
@@ -144,9 +144,9 @@ class PrintTemplatesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPrintTemplatesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PrintTemplateList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PrintTemplateList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPrintTemplatesResourceWithHttpInfo(string $contentType = self::contentTypes['listPrintTemplatesResource'][0])
     {
@@ -189,23 +189,23 @@ class PrintTemplatesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PrintTemplateList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PrintTemplateList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PrintTemplateList' !== 'string') {
+                        if ('\FortnoxApi\Model\PrintTemplateList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PrintTemplateList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PrintTemplateList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PrintTemplateList';
+            $returnType = '\FortnoxApi\Model\PrintTemplateList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -226,7 +226,7 @@ class PrintTemplatesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PrintTemplateList',
+                        '\FortnoxApi\Model\PrintTemplateList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -268,7 +268,7 @@ class PrintTemplatesResourceApi
      */
     public function listPrintTemplatesResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listPrintTemplatesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PrintTemplateList';
+        $returnType = '\FortnoxApi\Model\PrintTemplateList';
         $request = $this->listPrintTemplatesResourceRequest($contentType);
 
         return $this->client

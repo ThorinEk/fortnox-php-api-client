@@ -1,4 +1,4 @@
-# OpenAPI\Client\LabelsResourceApi
+# FortnoxApi\LabelsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createLabelsResource()`
 
 ```php
-createLabelsResource($label): \OpenAPI\Client\Model\LabelWrap
+createLabelsResource($label): \FortnoxApi\Model\LabelWrap
 ```
 
 Create a label
@@ -28,12 +28,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\LabelsResourceApi(
+$apiInstance = new FortnoxApi\Api\LabelsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$label = new \OpenAPI\Client\Model\LabelWrap(); // \OpenAPI\Client\Model\LabelWrap | to create
+$label = new \FortnoxApi\Model\LabelWrap(); // \FortnoxApi\Model\LabelWrap | to create
 
 try {
     $result = $apiInstance->createLabelsResource($label);
@@ -47,11 +47,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **label** | [**\OpenAPI\Client\Model\LabelWrap**](../Model/LabelWrap.md)| to create | [optional] |
+| **label** | [**\FortnoxApi\Model\LabelWrap**](../Model/LabelWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LabelWrap**](../Model/LabelWrap.md)
+[**\FortnoxApi\Model\LabelWrap**](../Model/LabelWrap.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ## `listLabelsResource()`
 
 ```php
-listLabelsResource(): \OpenAPI\Client\Model\LabelList
+listLabelsResource(): \FortnoxApi\Model\LabelList
 ```
 
 Retrieve a list of labels
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\LabelsResourceApi(
+$apiInstance = new FortnoxApi\Api\LabelsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -102,7 +102,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LabelList**](../Model/LabelList.md)
+[**\FortnoxApi\Model\LabelList**](../Model/LabelList.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\LabelsResourceApi(
+$apiInstance = new FortnoxApi\Api\LabelsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -175,7 +175,7 @@ No authorization required
 ## `updateLabelsResource()`
 
 ```php
-updateLabelsResource($id, $label): \OpenAPI\Client\Model\LabelWrap
+updateLabelsResource($id, $label): \FortnoxApi\Model\LabelWrap
 ```
 
 Update a label
@@ -190,13 +190,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\LabelsResourceApi(
+$apiInstance = new FortnoxApi\Api\LabelsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | identifies the label
-$label = new \OpenAPI\Client\Model\LabelWrap(); // \OpenAPI\Client\Model\LabelWrap | to update
+$label = new \FortnoxApi\Model\LabelWrap(); // \FortnoxApi\Model\LabelWrap | to update
 
 try {
     $result = $apiInstance->updateLabelsResource($id, $label);
@@ -211,11 +211,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| identifies the label | |
-| **label** | [**\OpenAPI\Client\Model\LabelWrap**](../Model/LabelWrap.md)| to update | [optional] |
+| **label** | [**\FortnoxApi\Model\LabelWrap**](../Model/LabelWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LabelWrap**](../Model/LabelWrap.md)
+[**\FortnoxApi\Model\LabelWrap**](../Model/LabelWrap.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\CompanySettingsResourceApi
+# FortnoxApi\CompanySettingsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getCompanySettingsResource()`
 
 ```php
-getCompanySettingsResource(): \OpenAPI\Client\Model\CompanySettingsWrap
+getCompanySettingsResource(): \FortnoxApi\Model\CompanySettingsWrap
 ```
 
 Retrieve the company settings
@@ -23,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CompanySettingsResourceApi(
+$apiInstance = new FortnoxApi\Api\CompanySettingsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompanySettingsWrap**](../Model/CompanySettingsWrap.md)
+[**\FortnoxApi\Model\CompanySettingsWrap**](../Model/CompanySettingsWrap.md)
 
 ### Authorization
 

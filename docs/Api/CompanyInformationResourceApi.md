@@ -1,4 +1,4 @@
-# OpenAPI\Client\CompanyInformationResourceApi
+# FortnoxApi\CompanyInformationResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getCompanyInformationResource()`
 
 ```php
-getCompanyInformationResource(): \OpenAPI\Client\Model\CompanyInfoWrap
+getCompanyInformationResource(): \FortnoxApi\Model\CompanyInfoWrap
 ```
 
 Retrieve the Company Information
@@ -23,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CompanyInformationResourceApi(
+$apiInstance = new FortnoxApi\Api\CompanyInformationResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompanyInfoWrap**](../Model/CompanyInfoWrap.md)
+[**\FortnoxApi\Model\CompanyInfoWrap**](../Model/CompanyInfoWrap.md)
 
 ### Authorization
 

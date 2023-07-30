@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * FinanceInvoicesResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,12 +143,12 @@ class FinanceInvoicesResourceApi
      *
      * Send an invoice with Fortnox Finans
      *
-     * @param  \OpenAPI\Client\Model\CreatePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\CreatePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFinanceInvoicesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceResponseWrap
+     * @return \FortnoxApi\Model\InvoiceResponseWrap
      */
     public function createFinanceInvoicesResource($payload = null, string $contentType = self::contentTypes['createFinanceInvoicesResource'][0])
     {
@@ -161,12 +161,12 @@ class FinanceInvoicesResourceApi
      *
      * Send an invoice with Fortnox Finans
      *
-     * @param  \OpenAPI\Client\Model\CreatePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\CreatePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFinanceInvoicesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFinanceInvoicesResourceWithHttpInfo($payload = null, string $contentType = self::contentTypes['createFinanceInvoicesResource'][0])
     {
@@ -209,23 +209,23 @@ class FinanceInvoicesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceResponseWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceResponseWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceResponseWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceResponseWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceResponseWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceResponseWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+            $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -246,7 +246,7 @@ class FinanceInvoicesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceResponseWrap',
+                        '\FortnoxApi\Model\InvoiceResponseWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -261,7 +261,7 @@ class FinanceInvoicesResourceApi
      *
      * Send an invoice with Fortnox Finans
      *
-     * @param  \OpenAPI\Client\Model\CreatePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\CreatePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFinanceInvoicesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -282,7 +282,7 @@ class FinanceInvoicesResourceApi
      *
      * Send an invoice with Fortnox Finans
      *
-     * @param  \OpenAPI\Client\Model\CreatePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\CreatePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFinanceInvoicesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -290,7 +290,7 @@ class FinanceInvoicesResourceApi
      */
     public function createFinanceInvoicesResourceAsyncWithHttpInfo($payload = null, string $contentType = self::contentTypes['createFinanceInvoicesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+        $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
         $request = $this->createFinanceInvoicesResourceRequest($payload, $contentType);
 
         return $this->client
@@ -332,7 +332,7 @@ class FinanceInvoicesResourceApi
     /**
      * Create request for operation 'createFinanceInvoicesResource'
      *
-     * @param  \OpenAPI\Client\Model\CreatePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\CreatePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFinanceInvoicesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -422,9 +422,9 @@ class FinanceInvoicesResourceApi
      * @param  string $number The Fortnox invoice number (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFinanceInvoicesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceResponseWrap
+     * @return \FortnoxApi\Model\InvoiceResponseWrap
      */
     public function getFinanceInvoicesResource($number, string $contentType = self::contentTypes['getFinanceInvoicesResource'][0])
     {
@@ -440,9 +440,9 @@ class FinanceInvoicesResourceApi
      * @param  string $number The Fortnox invoice number (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFinanceInvoicesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFinanceInvoicesResourceWithHttpInfo($number, string $contentType = self::contentTypes['getFinanceInvoicesResource'][0])
     {
@@ -485,23 +485,23 @@ class FinanceInvoicesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceResponseWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceResponseWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceResponseWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceResponseWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceResponseWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceResponseWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+            $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -522,7 +522,7 @@ class FinanceInvoicesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceResponseWrap',
+                        '\FortnoxApi\Model\InvoiceResponseWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -566,7 +566,7 @@ class FinanceInvoicesResourceApi
      */
     public function getFinanceInvoicesResourceAsyncWithHttpInfo($number, string $contentType = self::contentTypes['getFinanceInvoicesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+        $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
         $request = $this->getFinanceInvoicesResourceRequest($number, $contentType);
 
         return $this->client
@@ -703,12 +703,12 @@ class FinanceInvoicesResourceApi
      * Action Pause
      *
      * @param  string $number The Fortnox invoice number (required)
-     * @param  \OpenAPI\Client\Model\PausePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\PausePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pause'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceResponseWrap
+     * @return \FortnoxApi\Model\InvoiceResponseWrap
      */
     public function pause($number, $payload = null, string $contentType = self::contentTypes['pause'][0])
     {
@@ -722,12 +722,12 @@ class FinanceInvoicesResourceApi
      * Action Pause
      *
      * @param  string $number The Fortnox invoice number (required)
-     * @param  \OpenAPI\Client\Model\PausePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\PausePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pause'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function pauseWithHttpInfo($number, $payload = null, string $contentType = self::contentTypes['pause'][0])
     {
@@ -770,23 +770,23 @@ class FinanceInvoicesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceResponseWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceResponseWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceResponseWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceResponseWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceResponseWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceResponseWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+            $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -807,7 +807,7 @@ class FinanceInvoicesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceResponseWrap',
+                        '\FortnoxApi\Model\InvoiceResponseWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -823,7 +823,7 @@ class FinanceInvoicesResourceApi
      * Action Pause
      *
      * @param  string $number The Fortnox invoice number (required)
-     * @param  \OpenAPI\Client\Model\PausePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\PausePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pause'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -845,7 +845,7 @@ class FinanceInvoicesResourceApi
      * Action Pause
      *
      * @param  string $number The Fortnox invoice number (required)
-     * @param  \OpenAPI\Client\Model\PausePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\PausePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pause'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -853,7 +853,7 @@ class FinanceInvoicesResourceApi
      */
     public function pauseAsyncWithHttpInfo($number, $payload = null, string $contentType = self::contentTypes['pause'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+        $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
         $request = $this->pauseRequest($number, $payload, $contentType);
 
         return $this->client
@@ -896,7 +896,7 @@ class FinanceInvoicesResourceApi
      * Create request for operation 'pause'
      *
      * @param  string $number The Fortnox invoice number (required)
-     * @param  \OpenAPI\Client\Model\PausePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\PausePayloadWrap $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['pause'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -999,12 +999,12 @@ class FinanceInvoicesResourceApi
      * Action Report Payment
      *
      * @param  string $number The Fortnox invoice number (required)
-     * @param  \OpenAPI\Client\Model\ReportPaymentPayload $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\ReportPaymentPayload $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportPayment'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceResponseWrap
+     * @return \FortnoxApi\Model\InvoiceResponseWrap
      */
     public function reportPayment($number, $payload = null, string $contentType = self::contentTypes['reportPayment'][0])
     {
@@ -1018,12 +1018,12 @@ class FinanceInvoicesResourceApi
      * Action Report Payment
      *
      * @param  string $number The Fortnox invoice number (required)
-     * @param  \OpenAPI\Client\Model\ReportPaymentPayload $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\ReportPaymentPayload $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportPayment'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportPaymentWithHttpInfo($number, $payload = null, string $contentType = self::contentTypes['reportPayment'][0])
     {
@@ -1066,23 +1066,23 @@ class FinanceInvoicesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceResponseWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceResponseWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceResponseWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceResponseWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceResponseWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceResponseWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+            $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1103,7 +1103,7 @@ class FinanceInvoicesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceResponseWrap',
+                        '\FortnoxApi\Model\InvoiceResponseWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1119,7 +1119,7 @@ class FinanceInvoicesResourceApi
      * Action Report Payment
      *
      * @param  string $number The Fortnox invoice number (required)
-     * @param  \OpenAPI\Client\Model\ReportPaymentPayload $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\ReportPaymentPayload $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportPayment'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1141,7 +1141,7 @@ class FinanceInvoicesResourceApi
      * Action Report Payment
      *
      * @param  string $number The Fortnox invoice number (required)
-     * @param  \OpenAPI\Client\Model\ReportPaymentPayload $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\ReportPaymentPayload $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportPayment'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1149,7 +1149,7 @@ class FinanceInvoicesResourceApi
      */
     public function reportPaymentAsyncWithHttpInfo($number, $payload = null, string $contentType = self::contentTypes['reportPayment'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+        $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
         $request = $this->reportPaymentRequest($number, $payload, $contentType);
 
         return $this->client
@@ -1192,7 +1192,7 @@ class FinanceInvoicesResourceApi
      * Create request for operation 'reportPayment'
      *
      * @param  string $number The Fortnox invoice number (required)
-     * @param  \OpenAPI\Client\Model\ReportPaymentPayload $payload The payload for sending an invoice with  Fortnox Finans (optional)
+     * @param  \FortnoxApi\Model\ReportPaymentPayload $payload The payload for sending an invoice with  Fortnox Finans (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportPayment'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1297,9 +1297,9 @@ class FinanceInvoicesResourceApi
      * @param  string $number The Fortnox invoice number (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stop'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceResponseWrap
+     * @return \FortnoxApi\Model\InvoiceResponseWrap
      */
     public function stop($number, string $contentType = self::contentTypes['stop'][0])
     {
@@ -1315,9 +1315,9 @@ class FinanceInvoicesResourceApi
      * @param  string $number The Fortnox invoice number (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stop'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function stopWithHttpInfo($number, string $contentType = self::contentTypes['stop'][0])
     {
@@ -1360,23 +1360,23 @@ class FinanceInvoicesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceResponseWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceResponseWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceResponseWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceResponseWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceResponseWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceResponseWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+            $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1397,7 +1397,7 @@ class FinanceInvoicesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceResponseWrap',
+                        '\FortnoxApi\Model\InvoiceResponseWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1441,7 +1441,7 @@ class FinanceInvoicesResourceApi
      */
     public function stopAsyncWithHttpInfo($number, string $contentType = self::contentTypes['stop'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+        $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
         $request = $this->stopRequest($number, $contentType);
 
         return $this->client
@@ -1580,9 +1580,9 @@ class FinanceInvoicesResourceApi
      * @param  string $number The Fortnox invoice number (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['takeFees'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceResponseWrap
+     * @return \FortnoxApi\Model\InvoiceResponseWrap
      */
     public function takeFees($number, string $contentType = self::contentTypes['takeFees'][0])
     {
@@ -1598,9 +1598,9 @@ class FinanceInvoicesResourceApi
      * @param  string $number The Fortnox invoice number (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['takeFees'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function takeFeesWithHttpInfo($number, string $contentType = self::contentTypes['takeFees'][0])
     {
@@ -1643,23 +1643,23 @@ class FinanceInvoicesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceResponseWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceResponseWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceResponseWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceResponseWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceResponseWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceResponseWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+            $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1680,7 +1680,7 @@ class FinanceInvoicesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceResponseWrap',
+                        '\FortnoxApi\Model\InvoiceResponseWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1724,7 +1724,7 @@ class FinanceInvoicesResourceApi
      */
     public function takeFeesAsyncWithHttpInfo($number, string $contentType = self::contentTypes['takeFees'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+        $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
         $request = $this->takeFeesRequest($number, $contentType);
 
         return $this->client
@@ -1863,9 +1863,9 @@ class FinanceInvoicesResourceApi
      * @param  string $number The Fortnox invoice number (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unpause'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceResponseWrap
+     * @return \FortnoxApi\Model\InvoiceResponseWrap
      */
     public function unpause($number, string $contentType = self::contentTypes['unpause'][0])
     {
@@ -1881,9 +1881,9 @@ class FinanceInvoicesResourceApi
      * @param  string $number The Fortnox invoice number (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unpause'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceResponseWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function unpauseWithHttpInfo($number, string $contentType = self::contentTypes['unpause'][0])
     {
@@ -1926,23 +1926,23 @@ class FinanceInvoicesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceResponseWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceResponseWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceResponseWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceResponseWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceResponseWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceResponseWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+            $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1963,7 +1963,7 @@ class FinanceInvoicesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceResponseWrap',
+                        '\FortnoxApi\Model\InvoiceResponseWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2007,7 +2007,7 @@ class FinanceInvoicesResourceApi
      */
     public function unpauseAsyncWithHttpInfo($number, string $contentType = self::contentTypes['unpause'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceResponseWrap';
+        $returnType = '\FortnoxApi\Model\InvoiceResponseWrap';
         $request = $this->unpauseRequest($number, $contentType);
 
         return $this->client

@@ -19,6 +19,6 @@ Name | Type | Description | Notes
 **voucher_number** | **int** |  | [optional]
 **voucher_series** | **string** |  | [optional]
 **voucher_year** | **int** |  | [optional]
-**tax_reduction_amounts** | [**\OpenAPI\Client\Model\TaxReductionTaxReductionAmount[]**](TaxReductionTaxReductionAmount.md) |  | [optional]
+**tax_reduction_amounts** | [**\FortnoxApi\Model\TaxReductionTaxReductionAmount[]**](TaxReductionTaxReductionAmount.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

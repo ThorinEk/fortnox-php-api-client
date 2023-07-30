@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * ArchiveResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,7 +141,7 @@ class ArchiveResourceApi
      * @param  string $fileid fileId from fileattachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFileById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -160,7 +160,7 @@ class ArchiveResourceApi
      * @param  string $fileid fileId from fileattachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFileById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -439,9 +439,9 @@ class ArchiveResourceApi
      * @param  string $fileid fileId from fileattachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFolder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FolderWrap
+     * @return \FortnoxApi\Model\FolderWrap
      */
     public function getFolder($path = null, $fileid = null, string $contentType = self::contentTypes['getFolder'][0])
     {
@@ -458,9 +458,9 @@ class ArchiveResourceApi
      * @param  string $fileid fileId from fileattachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFolder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FolderWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\FolderWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFolderWithHttpInfo($path = null, $fileid = null, string $contentType = self::contentTypes['getFolder'][0])
     {
@@ -503,23 +503,23 @@ class ArchiveResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FolderWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\FolderWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FolderWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\FolderWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FolderWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\FolderWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\FolderWrap';
+            $returnType = '\FortnoxApi\Model\FolderWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -540,7 +540,7 @@ class ArchiveResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FolderWrap',
+                        '\FortnoxApi\Model\FolderWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -586,7 +586,7 @@ class ArchiveResourceApi
      */
     public function getFolderAsyncWithHttpInfo($path = null, $fileid = null, string $contentType = self::contentTypes['getFolder'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FolderWrap';
+        $returnType = '\FortnoxApi\Model\FolderWrap';
         $request = $this->getFolderRequest($path, $fileid, $contentType);
 
         return $this->client
@@ -731,7 +731,7 @@ class ArchiveResourceApi
      * @param  string $id identifies file/folder to remove (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -748,7 +748,7 @@ class ArchiveResourceApi
      * @param  string $id identifies file/folder to remove (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -960,7 +960,7 @@ class ArchiveResourceApi
      * @param  string $path identifies file/folder to remove (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeByPath'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -977,7 +977,7 @@ class ArchiveResourceApi
      * @param  string $path identifies file/folder to remove (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeByPath'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1186,9 +1186,9 @@ class ArchiveResourceApi
      * @param  object $file file to uplad (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadFile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FolderFileRowWrap
+     * @return \FortnoxApi\Model\FolderFileRowWrap
      */
     public function uploadFile($path = null, $folderid = null, $file = null, string $contentType = self::contentTypes['uploadFile'][0])
     {
@@ -1206,9 +1206,9 @@ class ArchiveResourceApi
      * @param  object $file file to uplad (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadFile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FolderFileRowWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\FolderFileRowWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadFileWithHttpInfo($path = null, $folderid = null, $file = null, string $contentType = self::contentTypes['uploadFile'][0])
     {
@@ -1251,23 +1251,23 @@ class ArchiveResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FolderFileRowWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\FolderFileRowWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FolderFileRowWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\FolderFileRowWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FolderFileRowWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\FolderFileRowWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\FolderFileRowWrap';
+            $returnType = '\FortnoxApi\Model\FolderFileRowWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1288,7 +1288,7 @@ class ArchiveResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FolderFileRowWrap',
+                        '\FortnoxApi\Model\FolderFileRowWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1336,7 +1336,7 @@ class ArchiveResourceApi
      */
     public function uploadFileAsyncWithHttpInfo($path = null, $folderid = null, $file = null, string $contentType = self::contentTypes['uploadFile'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FolderFileRowWrap';
+        $returnType = '\FortnoxApi\Model\FolderFileRowWrap';
         $request = $this->uploadFileRequest($path, $folderid, $file, $contentType);
 
         return $this->client

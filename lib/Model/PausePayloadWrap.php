@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * PausePayloadWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class PausePayloadWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'nox_finans_invoice' => '\OpenAPI\Client\Model\PausePayload'
+        'nox_finans_invoice' => '\FortnoxApi\Model\PausePayload'
     ];
 
     /**
@@ -290,7 +290,7 @@ class PausePayloadWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets nox_finans_invoice
      *
-     * @return \OpenAPI\Client\Model\PausePayload|null
+     * @return \FortnoxApi\Model\PausePayload|null
      */
     public function getNoxFinansInvoice()
     {
@@ -300,7 +300,7 @@ class PausePayloadWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets nox_finans_invoice
      *
-     * @param \OpenAPI\Client\Model\PausePayload|null $nox_finans_invoice nox_finans_invoice
+     * @param \FortnoxApi\Model\PausePayload|null $nox_finans_invoice nox_finans_invoice
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * UnitsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class UnitsResourceApi
      *
      * Create a unit
      *
-     * @param  \OpenAPI\Client\Model\UnitWrap $unit to create (optional)
+     * @param  \FortnoxApi\Model\UnitWrap $unit to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUnitsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UnitWrap
+     * @return \FortnoxApi\Model\UnitWrap
      */
     public function createUnitsResource($unit = null, string $contentType = self::contentTypes['createUnitsResource'][0])
     {
@@ -155,12 +155,12 @@ class UnitsResourceApi
      *
      * Create a unit
      *
-     * @param  \OpenAPI\Client\Model\UnitWrap $unit to create (optional)
+     * @param  \FortnoxApi\Model\UnitWrap $unit to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUnitsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UnitWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\UnitWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createUnitsResourceWithHttpInfo($unit = null, string $contentType = self::contentTypes['createUnitsResource'][0])
     {
@@ -203,23 +203,23 @@ class UnitsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UnitWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\UnitWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UnitWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\UnitWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UnitWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\UnitWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UnitWrap';
+            $returnType = '\FortnoxApi\Model\UnitWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class UnitsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UnitWrap',
+                        '\FortnoxApi\Model\UnitWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class UnitsResourceApi
      *
      * Create a unit
      *
-     * @param  \OpenAPI\Client\Model\UnitWrap $unit to create (optional)
+     * @param  \FortnoxApi\Model\UnitWrap $unit to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUnitsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class UnitsResourceApi
      *
      * Create a unit
      *
-     * @param  \OpenAPI\Client\Model\UnitWrap $unit to create (optional)
+     * @param  \FortnoxApi\Model\UnitWrap $unit to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUnitsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class UnitsResourceApi
      */
     public function createUnitsResourceAsyncWithHttpInfo($unit = null, string $contentType = self::contentTypes['createUnitsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UnitWrap';
+        $returnType = '\FortnoxApi\Model\UnitWrap';
         $request = $this->createUnitsResourceRequest($unit, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class UnitsResourceApi
     /**
      * Create request for operation 'createUnitsResource'
      *
-     * @param  \OpenAPI\Client\Model\UnitWrap $unit to create (optional)
+     * @param  \FortnoxApi\Model\UnitWrap $unit to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUnitsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class UnitsResourceApi
      * @param  string $code identifies the unit (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUnitsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UnitWrap
+     * @return \FortnoxApi\Model\UnitWrap
      */
     public function getUnitsResource($code, string $contentType = self::contentTypes['getUnitsResource'][0])
     {
@@ -434,9 +434,9 @@ class UnitsResourceApi
      * @param  string $code identifies the unit (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUnitsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UnitWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\UnitWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUnitsResourceWithHttpInfo($code, string $contentType = self::contentTypes['getUnitsResource'][0])
     {
@@ -479,23 +479,23 @@ class UnitsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UnitWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\UnitWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UnitWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\UnitWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UnitWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\UnitWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UnitWrap';
+            $returnType = '\FortnoxApi\Model\UnitWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class UnitsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UnitWrap',
+                        '\FortnoxApi\Model\UnitWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class UnitsResourceApi
      */
     public function getUnitsResourceAsyncWithHttpInfo($code, string $contentType = self::contentTypes['getUnitsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UnitWrap';
+        $returnType = '\FortnoxApi\Model\UnitWrap';
         $request = $this->getUnitsResourceRequest($code, $contentType);
 
         return $this->client
@@ -698,9 +698,9 @@ class UnitsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listUnitsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UnitList
+     * @return \FortnoxApi\Model\UnitList
      */
     public function listUnitsResource(string $contentType = self::contentTypes['listUnitsResource'][0])
     {
@@ -715,9 +715,9 @@ class UnitsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listUnitsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UnitList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\UnitList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listUnitsResourceWithHttpInfo(string $contentType = self::contentTypes['listUnitsResource'][0])
     {
@@ -760,23 +760,23 @@ class UnitsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UnitList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\UnitList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UnitList' !== 'string') {
+                        if ('\FortnoxApi\Model\UnitList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UnitList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\UnitList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UnitList';
+            $returnType = '\FortnoxApi\Model\UnitList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -797,7 +797,7 @@ class UnitsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UnitList',
+                        '\FortnoxApi\Model\UnitList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class UnitsResourceApi
      */
     public function listUnitsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listUnitsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UnitList';
+        $returnType = '\FortnoxApi\Model\UnitList';
         $request = $this->listUnitsResourceRequest($contentType);
 
         return $this->client
@@ -962,7 +962,7 @@ class UnitsResourceApi
      * @param  string $code identifies the unit (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeUnitsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -979,7 +979,7 @@ class UnitsResourceApi
      * @param  string $code identifies the unit (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeUnitsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1189,12 +1189,12 @@ class UnitsResourceApi
      * Update a unit
      *
      * @param  string $code identifies the unit (required)
-     * @param  \OpenAPI\Client\Model\UnitWrap $unit unit to update (optional)
+     * @param  \FortnoxApi\Model\UnitWrap $unit unit to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUnitsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UnitWrap
+     * @return \FortnoxApi\Model\UnitWrap
      */
     public function updateUnitsResource($code, $unit = null, string $contentType = self::contentTypes['updateUnitsResource'][0])
     {
@@ -1208,12 +1208,12 @@ class UnitsResourceApi
      * Update a unit
      *
      * @param  string $code identifies the unit (required)
-     * @param  \OpenAPI\Client\Model\UnitWrap $unit unit to update (optional)
+     * @param  \FortnoxApi\Model\UnitWrap $unit unit to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUnitsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UnitWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\UnitWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateUnitsResourceWithHttpInfo($code, $unit = null, string $contentType = self::contentTypes['updateUnitsResource'][0])
     {
@@ -1256,23 +1256,23 @@ class UnitsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UnitWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\UnitWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UnitWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\UnitWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UnitWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\UnitWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UnitWrap';
+            $returnType = '\FortnoxApi\Model\UnitWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1293,7 +1293,7 @@ class UnitsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UnitWrap',
+                        '\FortnoxApi\Model\UnitWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1309,7 +1309,7 @@ class UnitsResourceApi
      * Update a unit
      *
      * @param  string $code identifies the unit (required)
-     * @param  \OpenAPI\Client\Model\UnitWrap $unit unit to update (optional)
+     * @param  \FortnoxApi\Model\UnitWrap $unit unit to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUnitsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1331,7 +1331,7 @@ class UnitsResourceApi
      * Update a unit
      *
      * @param  string $code identifies the unit (required)
-     * @param  \OpenAPI\Client\Model\UnitWrap $unit unit to update (optional)
+     * @param  \FortnoxApi\Model\UnitWrap $unit unit to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUnitsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1339,7 +1339,7 @@ class UnitsResourceApi
      */
     public function updateUnitsResourceAsyncWithHttpInfo($code, $unit = null, string $contentType = self::contentTypes['updateUnitsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UnitWrap';
+        $returnType = '\FortnoxApi\Model\UnitWrap';
         $request = $this->updateUnitsResourceRequest($code, $unit, $contentType);
 
         return $this->client
@@ -1382,7 +1382,7 @@ class UnitsResourceApi
      * Create request for operation 'updateUnitsResource'
      *
      * @param  string $code identifies the unit (required)
-     * @param  \OpenAPI\Client\Model\UnitWrap $unit unit to update (optional)
+     * @param  \FortnoxApi\Model\UnitWrap $unit unit to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUnitsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

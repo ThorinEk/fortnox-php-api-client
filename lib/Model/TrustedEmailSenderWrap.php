@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * TrustedEmailSenderWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class TrustedEmailSenderWrap implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'email_senders' => '\OpenAPI\Client\Model\TrustedEmailSender'
+        'email_senders' => '\FortnoxApi\Model\TrustedEmailSender'
     ];
 
     /**
@@ -290,7 +290,7 @@ class TrustedEmailSenderWrap implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets email_senders
      *
-     * @return \OpenAPI\Client\Model\TrustedEmailSender|null
+     * @return \FortnoxApi\Model\TrustedEmailSender|null
      */
     public function getEmailSenders()
     {
@@ -300,7 +300,7 @@ class TrustedEmailSenderWrap implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets email_senders
      *
-     * @param \OpenAPI\Client\Model\TrustedEmailSender|null $email_senders email_senders
+     * @param \FortnoxApi\Model\TrustedEmailSender|null $email_senders email_senders
      *
      * @return self
      */

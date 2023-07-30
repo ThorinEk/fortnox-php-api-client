@@ -1,4 +1,4 @@
-# OpenAPI\Client\PrintTemplatesResourceApi
+# FortnoxApi\PrintTemplatesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `listPrintTemplatesResource()`
 
 ```php
-listPrintTemplatesResource(): \OpenAPI\Client\Model\PrintTemplateList
+listPrintTemplatesResource(): \FortnoxApi\Model\PrintTemplateList
 ```
 
 Retrieve a list of print templates
@@ -23,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PrintTemplatesResourceApi(
+$apiInstance = new FortnoxApi\Api\PrintTemplatesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PrintTemplateList**](../Model/PrintTemplateList.md)
+[**\FortnoxApi\Model\PrintTemplateList**](../Model/PrintTemplateList.md)
 
 ### Authorization
 

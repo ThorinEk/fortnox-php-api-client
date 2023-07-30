@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * SupplierInvoiceAccrual Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -66,7 +66,7 @@ class SupplierInvoiceAccrual implements ModelInterface, ArrayAccess, \JsonSerial
         'times' => 'int',
         'total' => 'float',
         'vat_included' => 'bool',
-        'supplier_invoice_accrual_rows' => '\OpenAPI\Client\Model\SupplierInvoiceAccrualSupplierInvoiceAccrualRows[]'
+        'supplier_invoice_accrual_rows' => '\FortnoxApi\Model\SupplierInvoiceAccrualSupplierInvoiceAccrualRows[]'
     ];
 
     /**
@@ -781,7 +781,7 @@ class SupplierInvoiceAccrual implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets supplier_invoice_accrual_rows
      *
-     * @return \OpenAPI\Client\Model\SupplierInvoiceAccrualSupplierInvoiceAccrualRows[]
+     * @return \FortnoxApi\Model\SupplierInvoiceAccrualSupplierInvoiceAccrualRows[]
      */
     public function getSupplierInvoiceAccrualRows()
     {
@@ -791,7 +791,7 @@ class SupplierInvoiceAccrual implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets supplier_invoice_accrual_rows
      *
-     * @param \OpenAPI\Client\Model\SupplierInvoiceAccrualSupplierInvoiceAccrualRows[] $supplier_invoice_accrual_rows supplier_invoice_accrual_rows
+     * @param \FortnoxApi\Model\SupplierInvoiceAccrualSupplierInvoiceAccrualRows[] $supplier_invoice_accrual_rows supplier_invoice_accrual_rows
      *
      * @return self
      */

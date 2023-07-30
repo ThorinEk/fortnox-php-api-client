@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * LabelList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class LabelList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'labels' => '\OpenAPI\Client\Model\Label[]'
+        'labels' => '\FortnoxApi\Model\Label[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class LabelList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets labels
      *
-     * @return \OpenAPI\Client\Model\Label[]|null
+     * @return \FortnoxApi\Model\Label[]|null
      */
     public function getLabels()
     {
@@ -300,7 +300,7 @@ class LabelList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets labels
      *
-     * @param \OpenAPI\Client\Model\Label[]|null $labels labels
+     * @param \FortnoxApi\Model\Label[]|null $labels labels
      *
      * @return self
      */

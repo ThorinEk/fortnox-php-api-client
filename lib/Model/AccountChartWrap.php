@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * AccountChartWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class AccountChartWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'account_charts' => '\OpenAPI\Client\Model\AccountChart[]'
+        'account_charts' => '\FortnoxApi\Model\AccountChart[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class AccountChartWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets account_charts
      *
-     * @return \OpenAPI\Client\Model\AccountChart[]|null
+     * @return \FortnoxApi\Model\AccountChart[]|null
      */
     public function getAccountCharts()
     {
@@ -300,7 +300,7 @@ class AccountChartWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets account_charts
      *
-     * @param \OpenAPI\Client\Model\AccountChart[]|null $account_charts account_charts
+     * @param \FortnoxApi\Model\AccountChart[]|null $account_charts account_charts
      *
      * @return self
      */

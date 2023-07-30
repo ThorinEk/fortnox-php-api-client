@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * ProjectsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class ProjectsResourceApi
      *
      * Create a project
      *
-     * @param  \OpenAPI\Client\Model\ProjectWrap $project to create (optional)
+     * @param  \FortnoxApi\Model\ProjectWrap $project to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProjectsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProjectWrap
+     * @return \FortnoxApi\Model\ProjectWrap
      */
     public function createProjectsResource($project = null, string $contentType = self::contentTypes['createProjectsResource'][0])
     {
@@ -155,12 +155,12 @@ class ProjectsResourceApi
      *
      * Create a project
      *
-     * @param  \OpenAPI\Client\Model\ProjectWrap $project to create (optional)
+     * @param  \FortnoxApi\Model\ProjectWrap $project to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProjectsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProjectWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ProjectWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createProjectsResourceWithHttpInfo($project = null, string $contentType = self::contentTypes['createProjectsResource'][0])
     {
@@ -203,23 +203,23 @@ class ProjectsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProjectWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ProjectWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProjectWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ProjectWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProjectWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ProjectWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProjectWrap';
+            $returnType = '\FortnoxApi\Model\ProjectWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class ProjectsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProjectWrap',
+                        '\FortnoxApi\Model\ProjectWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class ProjectsResourceApi
      *
      * Create a project
      *
-     * @param  \OpenAPI\Client\Model\ProjectWrap $project to create (optional)
+     * @param  \FortnoxApi\Model\ProjectWrap $project to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProjectsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class ProjectsResourceApi
      *
      * Create a project
      *
-     * @param  \OpenAPI\Client\Model\ProjectWrap $project to create (optional)
+     * @param  \FortnoxApi\Model\ProjectWrap $project to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProjectsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class ProjectsResourceApi
      */
     public function createProjectsResourceAsyncWithHttpInfo($project = null, string $contentType = self::contentTypes['createProjectsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProjectWrap';
+        $returnType = '\FortnoxApi\Model\ProjectWrap';
         $request = $this->createProjectsResourceRequest($project, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class ProjectsResourceApi
     /**
      * Create request for operation 'createProjectsResource'
      *
-     * @param  \OpenAPI\Client\Model\ProjectWrap $project to create (optional)
+     * @param  \FortnoxApi\Model\ProjectWrap $project to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProjectsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class ProjectsResourceApi
      * @param  int $project_number identifies the project (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProjectsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProjectWrap
+     * @return \FortnoxApi\Model\ProjectWrap
      */
     public function getProjectsResource($project_number, string $contentType = self::contentTypes['getProjectsResource'][0])
     {
@@ -434,9 +434,9 @@ class ProjectsResourceApi
      * @param  int $project_number identifies the project (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProjectsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProjectWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ProjectWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProjectsResourceWithHttpInfo($project_number, string $contentType = self::contentTypes['getProjectsResource'][0])
     {
@@ -479,23 +479,23 @@ class ProjectsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProjectWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ProjectWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProjectWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ProjectWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProjectWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ProjectWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProjectWrap';
+            $returnType = '\FortnoxApi\Model\ProjectWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class ProjectsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProjectWrap',
+                        '\FortnoxApi\Model\ProjectWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class ProjectsResourceApi
      */
     public function getProjectsResourceAsyncWithHttpInfo($project_number, string $contentType = self::contentTypes['getProjectsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProjectWrap';
+        $returnType = '\FortnoxApi\Model\ProjectWrap';
         $request = $this->getProjectsResourceRequest($project_number, $contentType);
 
         return $this->client
@@ -698,9 +698,9 @@ class ProjectsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProjectsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProjectListItemList
+     * @return \FortnoxApi\Model\ProjectListItemList
      */
     public function listProjectsResource(string $contentType = self::contentTypes['listProjectsResource'][0])
     {
@@ -715,9 +715,9 @@ class ProjectsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProjectsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProjectListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ProjectListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listProjectsResourceWithHttpInfo(string $contentType = self::contentTypes['listProjectsResource'][0])
     {
@@ -760,23 +760,23 @@ class ProjectsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProjectListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ProjectListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProjectListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\ProjectListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProjectListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ProjectListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProjectListItemList';
+            $returnType = '\FortnoxApi\Model\ProjectListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -797,7 +797,7 @@ class ProjectsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProjectListItemList',
+                        '\FortnoxApi\Model\ProjectListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class ProjectsResourceApi
      */
     public function listProjectsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listProjectsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProjectListItemList';
+        $returnType = '\FortnoxApi\Model\ProjectListItemList';
         $request = $this->listProjectsResourceRequest($contentType);
 
         return $this->client
@@ -962,7 +962,7 @@ class ProjectsResourceApi
      * @param  int $project_number identifies the project (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeProjectsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -979,7 +979,7 @@ class ProjectsResourceApi
      * @param  int $project_number identifies the project (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeProjectsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1189,12 +1189,12 @@ class ProjectsResourceApi
      * Update a project
      *
      * @param  int $project_number identifies the project (required)
-     * @param  \OpenAPI\Client\Model\ProjectWrap $project to update (optional)
+     * @param  \FortnoxApi\Model\ProjectWrap $project to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProjectsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProjectWrap
+     * @return \FortnoxApi\Model\ProjectWrap
      */
     public function updateProjectsResource($project_number, $project = null, string $contentType = self::contentTypes['updateProjectsResource'][0])
     {
@@ -1208,12 +1208,12 @@ class ProjectsResourceApi
      * Update a project
      *
      * @param  int $project_number identifies the project (required)
-     * @param  \OpenAPI\Client\Model\ProjectWrap $project to update (optional)
+     * @param  \FortnoxApi\Model\ProjectWrap $project to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProjectsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProjectWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ProjectWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProjectsResourceWithHttpInfo($project_number, $project = null, string $contentType = self::contentTypes['updateProjectsResource'][0])
     {
@@ -1256,23 +1256,23 @@ class ProjectsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProjectWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ProjectWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProjectWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ProjectWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProjectWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ProjectWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProjectWrap';
+            $returnType = '\FortnoxApi\Model\ProjectWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1293,7 +1293,7 @@ class ProjectsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProjectWrap',
+                        '\FortnoxApi\Model\ProjectWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1309,7 +1309,7 @@ class ProjectsResourceApi
      * Update a project
      *
      * @param  int $project_number identifies the project (required)
-     * @param  \OpenAPI\Client\Model\ProjectWrap $project to update (optional)
+     * @param  \FortnoxApi\Model\ProjectWrap $project to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProjectsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1331,7 +1331,7 @@ class ProjectsResourceApi
      * Update a project
      *
      * @param  int $project_number identifies the project (required)
-     * @param  \OpenAPI\Client\Model\ProjectWrap $project to update (optional)
+     * @param  \FortnoxApi\Model\ProjectWrap $project to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProjectsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1339,7 +1339,7 @@ class ProjectsResourceApi
      */
     public function updateProjectsResourceAsyncWithHttpInfo($project_number, $project = null, string $contentType = self::contentTypes['updateProjectsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProjectWrap';
+        $returnType = '\FortnoxApi\Model\ProjectWrap';
         $request = $this->updateProjectsResourceRequest($project_number, $project, $contentType);
 
         return $this->client
@@ -1382,7 +1382,7 @@ class ProjectsResourceApi
      * Create request for operation 'updateProjectsResource'
      *
      * @param  int $project_number identifies the project (required)
-     * @param  \OpenAPI\Client\Model\ProjectWrap $project to update (optional)
+     * @param  \FortnoxApi\Model\ProjectWrap $project to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProjectsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * FinancialYearsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,12 +131,12 @@ class FinancialYearsResourceApi
      *
      * Create a financial year
      *
-     * @param  \OpenAPI\Client\Model\FinancialYearWrap $financial_year to create (optional)
+     * @param  \FortnoxApi\Model\FinancialYearWrap $financial_year to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFinancialYearsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FinancialYearWrap
+     * @return \FortnoxApi\Model\FinancialYearWrap
      */
     public function createFinancialYearsResource($financial_year = null, string $contentType = self::contentTypes['createFinancialYearsResource'][0])
     {
@@ -149,12 +149,12 @@ class FinancialYearsResourceApi
      *
      * Create a financial year
      *
-     * @param  \OpenAPI\Client\Model\FinancialYearWrap $financial_year to create (optional)
+     * @param  \FortnoxApi\Model\FinancialYearWrap $financial_year to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFinancialYearsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FinancialYearWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\FinancialYearWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFinancialYearsResourceWithHttpInfo($financial_year = null, string $contentType = self::contentTypes['createFinancialYearsResource'][0])
     {
@@ -197,23 +197,23 @@ class FinancialYearsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FinancialYearWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\FinancialYearWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FinancialYearWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\FinancialYearWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FinancialYearWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\FinancialYearWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\FinancialYearWrap';
+            $returnType = '\FortnoxApi\Model\FinancialYearWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -234,7 +234,7 @@ class FinancialYearsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FinancialYearWrap',
+                        '\FortnoxApi\Model\FinancialYearWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -249,7 +249,7 @@ class FinancialYearsResourceApi
      *
      * Create a financial year
      *
-     * @param  \OpenAPI\Client\Model\FinancialYearWrap $financial_year to create (optional)
+     * @param  \FortnoxApi\Model\FinancialYearWrap $financial_year to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFinancialYearsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -270,7 +270,7 @@ class FinancialYearsResourceApi
      *
      * Create a financial year
      *
-     * @param  \OpenAPI\Client\Model\FinancialYearWrap $financial_year to create (optional)
+     * @param  \FortnoxApi\Model\FinancialYearWrap $financial_year to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFinancialYearsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -278,7 +278,7 @@ class FinancialYearsResourceApi
      */
     public function createFinancialYearsResourceAsyncWithHttpInfo($financial_year = null, string $contentType = self::contentTypes['createFinancialYearsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FinancialYearWrap';
+        $returnType = '\FortnoxApi\Model\FinancialYearWrap';
         $request = $this->createFinancialYearsResourceRequest($financial_year, $contentType);
 
         return $this->client
@@ -320,7 +320,7 @@ class FinancialYearsResourceApi
     /**
      * Create request for operation 'createFinancialYearsResource'
      *
-     * @param  \OpenAPI\Client\Model\FinancialYearWrap $financial_year to create (optional)
+     * @param  \FortnoxApi\Model\FinancialYearWrap $financial_year to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFinancialYearsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -410,9 +410,9 @@ class FinancialYearsResourceApi
      * @param  \DateTime $date date to filter on, for example 2020-06-30 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByDate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FinancialYearWrapList
+     * @return \FortnoxApi\Model\FinancialYearWrapList
      */
     public function getByDate($date = null, string $contentType = self::contentTypes['getByDate'][0])
     {
@@ -428,9 +428,9 @@ class FinancialYearsResourceApi
      * @param  \DateTime $date date to filter on, for example 2020-06-30 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByDate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FinancialYearWrapList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\FinancialYearWrapList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getByDateWithHttpInfo($date = null, string $contentType = self::contentTypes['getByDate'][0])
     {
@@ -473,23 +473,23 @@ class FinancialYearsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FinancialYearWrapList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\FinancialYearWrapList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FinancialYearWrapList' !== 'string') {
+                        if ('\FortnoxApi\Model\FinancialYearWrapList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FinancialYearWrapList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\FinancialYearWrapList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\FinancialYearWrapList';
+            $returnType = '\FortnoxApi\Model\FinancialYearWrapList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -510,7 +510,7 @@ class FinancialYearsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FinancialYearWrapList',
+                        '\FortnoxApi\Model\FinancialYearWrapList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -554,7 +554,7 @@ class FinancialYearsResourceApi
      */
     public function getByDateAsyncWithHttpInfo($date = null, string $contentType = self::contentTypes['getByDate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FinancialYearWrapList';
+        $returnType = '\FortnoxApi\Model\FinancialYearWrapList';
         $request = $this->getByDateRequest($date, $contentType);
 
         return $this->client
@@ -688,9 +688,9 @@ class FinancialYearsResourceApi
      * @param  int $id identifies the year (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FinancialYearWrap
+     * @return \FortnoxApi\Model\FinancialYearWrap
      */
     public function getById($id, string $contentType = self::contentTypes['getById'][0])
     {
@@ -706,9 +706,9 @@ class FinancialYearsResourceApi
      * @param  int $id identifies the year (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FinancialYearWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\FinancialYearWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getByIdWithHttpInfo($id, string $contentType = self::contentTypes['getById'][0])
     {
@@ -751,23 +751,23 @@ class FinancialYearsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FinancialYearWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\FinancialYearWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FinancialYearWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\FinancialYearWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FinancialYearWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\FinancialYearWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\FinancialYearWrap';
+            $returnType = '\FortnoxApi\Model\FinancialYearWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -788,7 +788,7 @@ class FinancialYearsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FinancialYearWrap',
+                        '\FortnoxApi\Model\FinancialYearWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -832,7 +832,7 @@ class FinancialYearsResourceApi
      */
     public function getByIdAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FinancialYearWrap';
+        $returnType = '\FortnoxApi\Model\FinancialYearWrap';
         $request = $this->getByIdRequest($id, $contentType);
 
         return $this->client

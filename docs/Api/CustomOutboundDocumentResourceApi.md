@@ -1,4 +1,4 @@
-# OpenAPI\Client\CustomOutboundDocumentResourceApi
+# FortnoxApi\CustomOutboundDocumentResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `get()`
 
 ```php
-get($type, $id): \OpenAPI\Client\Model\CustomOutboundDocument
+get($type, $id): \FortnoxApi\Model\CustomOutboundDocument
 ```
 
 Get custom outbound document
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomOutboundDocumentResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomOutboundDocumentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -51,7 +51,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomOutboundDocument**](../Model/CustomOutboundDocument.md)
+[**\FortnoxApi\Model\CustomOutboundDocument**](../Model/CustomOutboundDocument.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomOutboundDocumentResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomOutboundDocumentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -124,7 +124,7 @@ No authorization required
 ## `save()`
 
 ```php
-save($type, $id, $document): \OpenAPI\Client\Model\CustomOutboundDocument
+save($type, $id, $document): \FortnoxApi\Model\CustomOutboundDocument
 ```
 
 Save a custom outbound document
@@ -139,14 +139,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomOutboundDocumentResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomOutboundDocumentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $type = 'type_example'; // string | the type of the custom outbound document, min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-). Always stored as upper case.
 $id = 'id_example'; // string | the id of the custom outbound document, min 1 character, max 25 characters, may only contain digits 0-9
-$document = new \OpenAPI\Client\Model\CustomOutboundDocument(); // \OpenAPI\Client\Model\CustomOutboundDocument | the <code>CustomOutboundDocument</code> to create
+$document = new \FortnoxApi\Model\CustomOutboundDocument(); // \FortnoxApi\Model\CustomOutboundDocument | the <code>CustomOutboundDocument</code> to create
 
 try {
     $result = $apiInstance->save($type, $id, $document);
@@ -162,11 +162,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **type** | **string**| the type of the custom outbound document, min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-). Always stored as upper case. | |
 | **id** | **string**| the id of the custom outbound document, min 1 character, max 25 characters, may only contain digits 0-9 | |
-| **document** | [**\OpenAPI\Client\Model\CustomOutboundDocument**](../Model/CustomOutboundDocument.md)| the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create | [optional] |
+| **document** | [**\FortnoxApi\Model\CustomOutboundDocument**](../Model/CustomOutboundDocument.md)| the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomOutboundDocument**](../Model/CustomOutboundDocument.md)
+[**\FortnoxApi\Model\CustomOutboundDocument**](../Model/CustomOutboundDocument.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomOutboundDocumentResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomOutboundDocumentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

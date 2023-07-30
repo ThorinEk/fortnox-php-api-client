@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * EmployeesResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,12 +134,12 @@ class EmployeesResourceApi
      *
      * Create a new employee
      *
-     * @param  \OpenAPI\Client\Model\EmployeeWrap $employee employee to create (optional)
+     * @param  \FortnoxApi\Model\EmployeeWrap $employee employee to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmployeesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmployeeWrap
+     * @return \FortnoxApi\Model\EmployeeWrap
      */
     public function createEmployeesResource($employee = null, string $contentType = self::contentTypes['createEmployeesResource'][0])
     {
@@ -152,12 +152,12 @@ class EmployeesResourceApi
      *
      * Create a new employee
      *
-     * @param  \OpenAPI\Client\Model\EmployeeWrap $employee employee to create (optional)
+     * @param  \FortnoxApi\Model\EmployeeWrap $employee employee to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmployeesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmployeeWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\EmployeeWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createEmployeesResourceWithHttpInfo($employee = null, string $contentType = self::contentTypes['createEmployeesResource'][0])
     {
@@ -200,23 +200,23 @@ class EmployeesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmployeeWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\EmployeeWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmployeeWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\EmployeeWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmployeeWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\EmployeeWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmployeeWrap';
+            $returnType = '\FortnoxApi\Model\EmployeeWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -237,7 +237,7 @@ class EmployeesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmployeeWrap',
+                        '\FortnoxApi\Model\EmployeeWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class EmployeesResourceApi
      *
      * Create a new employee
      *
-     * @param  \OpenAPI\Client\Model\EmployeeWrap $employee employee to create (optional)
+     * @param  \FortnoxApi\Model\EmployeeWrap $employee employee to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmployeesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class EmployeesResourceApi
      *
      * Create a new employee
      *
-     * @param  \OpenAPI\Client\Model\EmployeeWrap $employee employee to create (optional)
+     * @param  \FortnoxApi\Model\EmployeeWrap $employee employee to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmployeesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class EmployeesResourceApi
      */
     public function createEmployeesResourceAsyncWithHttpInfo($employee = null, string $contentType = self::contentTypes['createEmployeesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmployeeWrap';
+        $returnType = '\FortnoxApi\Model\EmployeeWrap';
         $request = $this->createEmployeesResourceRequest($employee, $contentType);
 
         return $this->client
@@ -323,7 +323,7 @@ class EmployeesResourceApi
     /**
      * Create request for operation 'createEmployeesResource'
      *
-     * @param  \OpenAPI\Client\Model\EmployeeWrap $employee employee to create (optional)
+     * @param  \FortnoxApi\Model\EmployeeWrap $employee employee to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmployeesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -413,9 +413,9 @@ class EmployeesResourceApi
      * @param  string $employee_id identifies the employee (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEmployeesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmployeeWrap
+     * @return \FortnoxApi\Model\EmployeeWrap
      */
     public function getEmployeesResource($employee_id, string $contentType = self::contentTypes['getEmployeesResource'][0])
     {
@@ -431,9 +431,9 @@ class EmployeesResourceApi
      * @param  string $employee_id identifies the employee (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEmployeesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmployeeWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\EmployeeWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEmployeesResourceWithHttpInfo($employee_id, string $contentType = self::contentTypes['getEmployeesResource'][0])
     {
@@ -476,23 +476,23 @@ class EmployeesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmployeeWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\EmployeeWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmployeeWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\EmployeeWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmployeeWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\EmployeeWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmployeeWrap';
+            $returnType = '\FortnoxApi\Model\EmployeeWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -513,7 +513,7 @@ class EmployeesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmployeeWrap',
+                        '\FortnoxApi\Model\EmployeeWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -557,7 +557,7 @@ class EmployeesResourceApi
      */
     public function getEmployeesResourceAsyncWithHttpInfo($employee_id, string $contentType = self::contentTypes['getEmployeesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmployeeWrap';
+        $returnType = '\FortnoxApi\Model\EmployeeWrap';
         $request = $this->getEmployeesResourceRequest($employee_id, $contentType);
 
         return $this->client
@@ -695,9 +695,9 @@ class EmployeesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEmployeesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmployeeListItemWrap
+     * @return \FortnoxApi\Model\EmployeeListItemWrap
      */
     public function listEmployeesResource(string $contentType = self::contentTypes['listEmployeesResource'][0])
     {
@@ -712,9 +712,9 @@ class EmployeesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEmployeesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmployeeListItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\EmployeeListItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function listEmployeesResourceWithHttpInfo(string $contentType = self::contentTypes['listEmployeesResource'][0])
     {
@@ -757,23 +757,23 @@ class EmployeesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmployeeListItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\EmployeeListItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmployeeListItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\EmployeeListItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmployeeListItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\EmployeeListItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmployeeListItemWrap';
+            $returnType = '\FortnoxApi\Model\EmployeeListItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -794,7 +794,7 @@ class EmployeesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmployeeListItemWrap',
+                        '\FortnoxApi\Model\EmployeeListItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -836,7 +836,7 @@ class EmployeesResourceApi
      */
     public function listEmployeesResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listEmployeesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmployeeListItemWrap';
+        $returnType = '\FortnoxApi\Model\EmployeeListItemWrap';
         $request = $this->listEmployeesResourceRequest($contentType);
 
         return $this->client
@@ -957,12 +957,12 @@ class EmployeesResourceApi
      * Update employee
      *
      * @param  string $employee_id identifies the employee (required)
-     * @param  \OpenAPI\Client\Model\EmployeeWrap $employee employee to update (optional)
+     * @param  \FortnoxApi\Model\EmployeeWrap $employee employee to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmployeesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmployeeWrap
+     * @return \FortnoxApi\Model\EmployeeWrap
      */
     public function updateEmployeesResource($employee_id, $employee = null, string $contentType = self::contentTypes['updateEmployeesResource'][0])
     {
@@ -976,12 +976,12 @@ class EmployeesResourceApi
      * Update employee
      *
      * @param  string $employee_id identifies the employee (required)
-     * @param  \OpenAPI\Client\Model\EmployeeWrap $employee employee to update (optional)
+     * @param  \FortnoxApi\Model\EmployeeWrap $employee employee to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmployeesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmployeeWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\EmployeeWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateEmployeesResourceWithHttpInfo($employee_id, $employee = null, string $contentType = self::contentTypes['updateEmployeesResource'][0])
     {
@@ -1024,23 +1024,23 @@ class EmployeesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmployeeWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\EmployeeWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmployeeWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\EmployeeWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmployeeWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\EmployeeWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmployeeWrap';
+            $returnType = '\FortnoxApi\Model\EmployeeWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1061,7 +1061,7 @@ class EmployeesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmployeeWrap',
+                        '\FortnoxApi\Model\EmployeeWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1077,7 +1077,7 @@ class EmployeesResourceApi
      * Update employee
      *
      * @param  string $employee_id identifies the employee (required)
-     * @param  \OpenAPI\Client\Model\EmployeeWrap $employee employee to update (optional)
+     * @param  \FortnoxApi\Model\EmployeeWrap $employee employee to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmployeesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1099,7 +1099,7 @@ class EmployeesResourceApi
      * Update employee
      *
      * @param  string $employee_id identifies the employee (required)
-     * @param  \OpenAPI\Client\Model\EmployeeWrap $employee employee to update (optional)
+     * @param  \FortnoxApi\Model\EmployeeWrap $employee employee to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmployeesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1107,7 +1107,7 @@ class EmployeesResourceApi
      */
     public function updateEmployeesResourceAsyncWithHttpInfo($employee_id, $employee = null, string $contentType = self::contentTypes['updateEmployeesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmployeeWrap';
+        $returnType = '\FortnoxApi\Model\EmployeeWrap';
         $request = $this->updateEmployeesResourceRequest($employee_id, $employee, $contentType);
 
         return $this->client
@@ -1150,7 +1150,7 @@ class EmployeesResourceApi
      * Create request for operation 'updateEmployeesResource'
      *
      * @param  string $employee_id identifies the employee (required)
-     * @param  \OpenAPI\Client\Model\EmployeeWrap $employee employee to update (optional)
+     * @param  \FortnoxApi\Model\EmployeeWrap $employee employee to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmployeesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

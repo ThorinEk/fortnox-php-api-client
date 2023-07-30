@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * PrintTemplateList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class PrintTemplateList implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'print_templates' => '\OpenAPI\Client\Model\PrintTemplate[]'
+        'print_templates' => '\FortnoxApi\Model\PrintTemplate[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class PrintTemplateList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets print_templates
      *
-     * @return \OpenAPI\Client\Model\PrintTemplate[]|null
+     * @return \FortnoxApi\Model\PrintTemplate[]|null
      */
     public function getPrintTemplates()
     {
@@ -300,7 +300,7 @@ class PrintTemplateList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets print_templates
      *
-     * @param \OpenAPI\Client\Model\PrintTemplate[]|null $print_templates print_templates
+     * @param \FortnoxApi\Model\PrintTemplate[]|null $print_templates print_templates
      *
      * @return self
      */

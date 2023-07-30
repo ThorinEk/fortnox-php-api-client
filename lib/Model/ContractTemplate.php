@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ContractTemplate Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ContractTemplate implements ModelInterface, ArrayAccess, \JsonSerializable
         'contract_length' => 'int',
         'freight' => 'float',
         'invoice_interval' => 'int',
-        'invoice_rows' => '\OpenAPI\Client\Model\ContractTemplateInvoiceRow[]',
+        'invoice_rows' => '\FortnoxApi\Model\ContractTemplateInvoiceRow[]',
         'continuous' => 'bool',
         'our_reference' => 'string',
         'print_template' => 'string',
@@ -582,7 +582,7 @@ class ContractTemplate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets invoice_rows
      *
-     * @return \OpenAPI\Client\Model\ContractTemplateInvoiceRow[]|null
+     * @return \FortnoxApi\Model\ContractTemplateInvoiceRow[]|null
      */
     public function getInvoiceRows()
     {
@@ -592,7 +592,7 @@ class ContractTemplate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets invoice_rows
      *
-     * @param \OpenAPI\Client\Model\ContractTemplateInvoiceRow[]|null $invoice_rows invoice_rows
+     * @param \FortnoxApi\Model\ContractTemplateInvoiceRow[]|null $invoice_rows invoice_rows
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# OpenAPI\Client\AssetsResourceApi
+# FortnoxApi\AssetsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -20,7 +20,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `changeManualObValue()`
 
 ```php
-changeManualObValue($given_number, $asset): \OpenAPI\Client\Model\AssetSingle
+changeManualObValue($given_number, $asset): \FortnoxApi\Model\AssetSingle
 ```
 
 Change manual OB value of an Asset
@@ -35,13 +35,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetsResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $given_number = 'given_number_example'; // string | Asset number
-$asset = new \OpenAPI\Client\Model\ManualObAsset(); // \OpenAPI\Client\Model\ManualObAsset | asset
+$asset = new \FortnoxApi\Model\ManualObAsset(); // \FortnoxApi\Model\ManualObAsset | asset
 
 try {
     $result = $apiInstance->changeManualObValue($given_number, $asset);
@@ -56,11 +56,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **given_number** | **string**| Asset number | |
-| **asset** | [**\OpenAPI\Client\Model\ManualObAsset**](../Model/ManualObAsset.md)| asset | [optional] |
+| **asset** | [**\FortnoxApi\Model\ManualObAsset**](../Model/ManualObAsset.md)| asset | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetSingle**](../Model/AssetSingle.md)
+[**\FortnoxApi\Model\AssetSingle**](../Model/AssetSingle.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ No authorization required
 ## `createAssetsResource()`
 
 ```php
-createAssetsResource($asset): \OpenAPI\Client\Model\AssetSingle
+createAssetsResource($asset): \FortnoxApi\Model\AssetSingle
 ```
 
 Create an Asset
@@ -93,12 +93,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetsResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$asset = new \OpenAPI\Client\Model\CreateAssetWrap(); // \OpenAPI\Client\Model\CreateAssetWrap | asset
+$asset = new \FortnoxApi\Model\CreateAssetWrap(); // \FortnoxApi\Model\CreateAssetWrap | asset
 
 try {
     $result = $apiInstance->createAssetsResource($asset);
@@ -112,11 +112,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **asset** | [**\OpenAPI\Client\Model\CreateAssetWrap**](../Model/CreateAssetWrap.md)| asset | [optional] |
+| **asset** | [**\FortnoxApi\Model\CreateAssetWrap**](../Model/CreateAssetWrap.md)| asset | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetSingle**](../Model/AssetSingle.md)
+[**\FortnoxApi\Model\AssetSingle**](../Model/AssetSingle.md)
 
 ### Authorization
 
@@ -149,13 +149,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetsResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $given_number = 'given_number_example'; // string | Asset number
-$request = new \OpenAPI\Client\Model\DeleteWrap(); // \OpenAPI\Client\Model\DeleteWrap | request
+$request = new \FortnoxApi\Model\DeleteWrap(); // \FortnoxApi\Model\DeleteWrap | request
 
 try {
     $apiInstance->deleteAssetsResource($given_number, $request);
@@ -169,7 +169,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **given_number** | **string**| Asset number | |
-| **request** | [**\OpenAPI\Client\Model\DeleteWrap**](../Model/DeleteWrap.md)| request | [optional] |
+| **request** | [**\FortnoxApi\Model\DeleteWrap**](../Model/DeleteWrap.md)| request | [optional] |
 
 ### Return type
 
@@ -191,7 +191,7 @@ No authorization required
 ## `depreciate()`
 
 ```php
-depreciate($body): \OpenAPI\Client\Model\DepreciationResponseWrap
+depreciate($body): \FortnoxApi\Model\DepreciationResponseWrap
 ```
 
 Perform a Depreciation of an Asset
@@ -206,12 +206,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetsResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \OpenAPI\Client\Model\DepreciationWrap(); // \OpenAPI\Client\Model\DepreciationWrap | body
+$body = new \FortnoxApi\Model\DepreciationWrap(); // \FortnoxApi\Model\DepreciationWrap | body
 
 try {
     $result = $apiInstance->depreciate($body);
@@ -225,11 +225,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\DepreciationWrap**](../Model/DepreciationWrap.md)| body | [optional] |
+| **body** | [**\FortnoxApi\Model\DepreciationWrap**](../Model/DepreciationWrap.md)| body | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DepreciationResponseWrap**](../Model/DepreciationResponseWrap.md)
+[**\FortnoxApi\Model\DepreciationResponseWrap**](../Model/DepreciationResponseWrap.md)
 
 ### Authorization
 
@@ -247,7 +247,7 @@ No authorization required
 ## `getAssetsResource()`
 
 ```php
-getAssetsResource($given_number): \OpenAPI\Client\Model\AssetSingle
+getAssetsResource($given_number): \FortnoxApi\Model\AssetSingle
 ```
 
 Retrieve a single asset
@@ -260,7 +260,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetsResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -283,7 +283,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetSingle**](../Model/AssetSingle.md)
+[**\FortnoxApi\Model\AssetSingle**](../Model/AssetSingle.md)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ No authorization required
 ## `getDeprecationList()`
 
 ```php
-getDeprecationList($to_date): \OpenAPI\Client\Model\ListAssetWrap
+getDeprecationList($to_date): \FortnoxApi\Model\ListAssetWrap
 ```
 
 Assets depreciation list
@@ -316,7 +316,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetsResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -339,7 +339,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListAssetWrap**](../Model/ListAssetWrap.md)
+[**\FortnoxApi\Model\ListAssetWrap**](../Model/ListAssetWrap.md)
 
 ### Authorization
 
@@ -357,7 +357,7 @@ No authorization required
 ## `listAssetsResource()`
 
 ```php
-listAssetsResource(): \OpenAPI\Client\Model\ListAssetWrap
+listAssetsResource(): \FortnoxApi\Model\ListAssetWrap
 ```
 
 Retrieve a list of assets
@@ -370,7 +370,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetsResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -390,7 +390,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListAssetWrap**](../Model/ListAssetWrap.md)
+[**\FortnoxApi\Model\ListAssetWrap**](../Model/ListAssetWrap.md)
 
 ### Authorization
 
@@ -408,7 +408,7 @@ No authorization required
 ## `scrap()`
 
 ```php
-scrap($given_number, $asset): \OpenAPI\Client\Model\AssetSingle
+scrap($given_number, $asset): \FortnoxApi\Model\AssetSingle
 ```
 
 Scrap an Asset
@@ -423,13 +423,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetsResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $given_number = 'given_number_example'; // string | Asset number
-$asset = new \OpenAPI\Client\Model\ScrapWrap(); // \OpenAPI\Client\Model\ScrapWrap | asset
+$asset = new \FortnoxApi\Model\ScrapWrap(); // \FortnoxApi\Model\ScrapWrap | asset
 
 try {
     $result = $apiInstance->scrap($given_number, $asset);
@@ -444,11 +444,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **given_number** | **string**| Asset number | |
-| **asset** | [**\OpenAPI\Client\Model\ScrapWrap**](../Model/ScrapWrap.md)| asset | [optional] |
+| **asset** | [**\FortnoxApi\Model\ScrapWrap**](../Model/ScrapWrap.md)| asset | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetSingle**](../Model/AssetSingle.md)
+[**\FortnoxApi\Model\AssetSingle**](../Model/AssetSingle.md)
 
 ### Authorization
 
@@ -466,7 +466,7 @@ No authorization required
 ## `sell()`
 
 ```php
-sell($given_number, $asset): \OpenAPI\Client\Model\AssetSingle
+sell($given_number, $asset): \FortnoxApi\Model\AssetSingle
 ```
 
 Sell an Asset
@@ -481,13 +481,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetsResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $given_number = 'given_number_example'; // string | Asset number
-$asset = new \OpenAPI\Client\Model\SellWrap(); // \OpenAPI\Client\Model\SellWrap | asset
+$asset = new \FortnoxApi\Model\SellWrap(); // \FortnoxApi\Model\SellWrap | asset
 
 try {
     $result = $apiInstance->sell($given_number, $asset);
@@ -502,11 +502,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **given_number** | **string**| Asset number | |
-| **asset** | [**\OpenAPI\Client\Model\SellWrap**](../Model/SellWrap.md)| asset | [optional] |
+| **asset** | [**\FortnoxApi\Model\SellWrap**](../Model/SellWrap.md)| asset | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetSingle**](../Model/AssetSingle.md)
+[**\FortnoxApi\Model\AssetSingle**](../Model/AssetSingle.md)
 
 ### Authorization
 
@@ -524,7 +524,7 @@ No authorization required
 ## `writeDown()`
 
 ```php
-writeDown($given_number, $asset): \OpenAPI\Client\Model\AssetSingle
+writeDown($given_number, $asset): \FortnoxApi\Model\AssetSingle
 ```
 
 Write down an Asset
@@ -539,13 +539,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetsResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $given_number = 'given_number_example'; // string | Asset number
-$asset = new \OpenAPI\Client\Model\WriteDownWrap(); // \OpenAPI\Client\Model\WriteDownWrap | asset
+$asset = new \FortnoxApi\Model\WriteDownWrap(); // \FortnoxApi\Model\WriteDownWrap | asset
 
 try {
     $result = $apiInstance->writeDown($given_number, $asset);
@@ -560,11 +560,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **given_number** | **string**| Asset number | |
-| **asset** | [**\OpenAPI\Client\Model\WriteDownWrap**](../Model/WriteDownWrap.md)| asset | [optional] |
+| **asset** | [**\FortnoxApi\Model\WriteDownWrap**](../Model/WriteDownWrap.md)| asset | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetSingle**](../Model/AssetSingle.md)
+[**\FortnoxApi\Model\AssetSingle**](../Model/AssetSingle.md)
 
 ### Authorization
 
@@ -582,7 +582,7 @@ No authorization required
 ## `writeUp()`
 
 ```php
-writeUp($given_number, $asset): \OpenAPI\Client\Model\AssetSingle
+writeUp($given_number, $asset): \FortnoxApi\Model\AssetSingle
 ```
 
 Write up an Asset
@@ -597,13 +597,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetsResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $given_number = 'given_number_example'; // string | Asset number
-$asset = new \OpenAPI\Client\Model\WriteUpWrap(); // \OpenAPI\Client\Model\WriteUpWrap | asset
+$asset = new \FortnoxApi\Model\WriteUpWrap(); // \FortnoxApi\Model\WriteUpWrap | asset
 
 try {
     $result = $apiInstance->writeUp($given_number, $asset);
@@ -618,11 +618,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **given_number** | **string**| Asset number | |
-| **asset** | [**\OpenAPI\Client\Model\WriteUpWrap**](../Model/WriteUpWrap.md)| asset | [optional] |
+| **asset** | [**\FortnoxApi\Model\WriteUpWrap**](../Model/WriteUpWrap.md)| asset | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetSingle**](../Model/AssetSingle.md)
+[**\FortnoxApi\Model\AssetSingle**](../Model/AssetSingle.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\VoucherSeriesResourceApi
+# FortnoxApi\VoucherSeriesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createVoucherSeriesResource()`
 
 ```php
-createVoucherSeriesResource($voucher_series): \OpenAPI\Client\Model\VoucherSeriesWrap
+createVoucherSeriesResource($voucher_series): \FortnoxApi\Model\VoucherSeriesWrap
 ```
 
 Create a voucher series
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VoucherSeriesResourceApi(
+$apiInstance = new FortnoxApi\Api\VoucherSeriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$voucher_series = new \OpenAPI\Client\Model\VoucherSeriesWrap(); // \OpenAPI\Client\Model\VoucherSeriesWrap | to create
+$voucher_series = new \FortnoxApi\Model\VoucherSeriesWrap(); // \FortnoxApi\Model\VoucherSeriesWrap | to create
 
 try {
     $result = $apiInstance->createVoucherSeriesResource($voucher_series);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **voucher_series** | [**\OpenAPI\Client\Model\VoucherSeriesWrap**](../Model/VoucherSeriesWrap.md)| to create | [optional] |
+| **voucher_series** | [**\FortnoxApi\Model\VoucherSeriesWrap**](../Model/VoucherSeriesWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VoucherSeriesWrap**](../Model/VoucherSeriesWrap.md)
+[**\FortnoxApi\Model\VoucherSeriesWrap**](../Model/VoucherSeriesWrap.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `getVoucherSeriesResource()`
 
 ```php
-getVoucherSeriesResource($code): \OpenAPI\Client\Model\VoucherSeriesWrap
+getVoucherSeriesResource($code): \FortnoxApi\Model\VoucherSeriesWrap
 ```
 
 Retrieve a single voucher series
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VoucherSeriesResourceApi(
+$apiInstance = new FortnoxApi\Api\VoucherSeriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VoucherSeriesWrap**](../Model/VoucherSeriesWrap.md)
+[**\FortnoxApi\Model\VoucherSeriesWrap**](../Model/VoucherSeriesWrap.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 ## `listVoucherSeriesResource()`
 
 ```php
-listVoucherSeriesResource(): \OpenAPI\Client\Model\VoucherSeriesListItemList
+listVoucherSeriesResource(): \FortnoxApi\Model\VoucherSeriesListItemList
 ```
 
 Retrieve a list of voucher series
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VoucherSeriesResourceApi(
+$apiInstance = new FortnoxApi\Api\VoucherSeriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -156,7 +156,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VoucherSeriesListItemList**](../Model/VoucherSeriesListItemList.md)
+[**\FortnoxApi\Model\VoucherSeriesListItemList**](../Model/VoucherSeriesListItemList.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
 ## `updateVoucherSeriesResource()`
 
 ```php
-updateVoucherSeriesResource($code, $voucher_series): \OpenAPI\Client\Model\VoucherSeriesWrap
+updateVoucherSeriesResource($code, $voucher_series): \FortnoxApi\Model\VoucherSeriesWrap
 ```
 
 Update a voucher series
@@ -187,13 +187,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VoucherSeriesResourceApi(
+$apiInstance = new FortnoxApi\Api\VoucherSeriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $code = 'code_example'; // string | identifies the voucher series
-$voucher_series = new \OpenAPI\Client\Model\VoucherSeriesWrap(); // \OpenAPI\Client\Model\VoucherSeriesWrap | to update
+$voucher_series = new \FortnoxApi\Model\VoucherSeriesWrap(); // \FortnoxApi\Model\VoucherSeriesWrap | to update
 
 try {
     $result = $apiInstance->updateVoucherSeriesResource($code, $voucher_series);
@@ -208,11 +208,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **code** | **string**| identifies the voucher series | |
-| **voucher_series** | [**\OpenAPI\Client\Model\VoucherSeriesWrap**](../Model/VoucherSeriesWrap.md)| to update | [optional] |
+| **voucher_series** | [**\FortnoxApi\Model\VoucherSeriesWrap**](../Model/VoucherSeriesWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VoucherSeriesWrap**](../Model/VoucherSeriesWrap.md)
+[**\FortnoxApi\Model\VoucherSeriesWrap**](../Model/VoucherSeriesWrap.md)
 
 ### Authorization
 

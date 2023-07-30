@@ -21,6 +21,6 @@ Name | Type | Description | Notes
 **transaction_information_settings** | **string** |  | [optional]
 **quantity_settings** | **string** |  | [optional]
 **quantity_unit** | **string** |  | [optional]
-**opening_quantities** | [**\OpenAPI\Client\Model\AccountSingleItemOpeningQuantities[]**](AccountSingleItemOpeningQuantities.md) |  | [optional]
+**opening_quantities** | [**\FortnoxApi\Model\AccountSingleItemOpeningQuantities[]**](AccountSingleItemOpeningQuantities.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * InvoiceAccrualWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class InvoiceAccrualWrap implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'invoice_accrual' => '\OpenAPI\Client\Model\InvoiceAccrual'
+        'invoice_accrual' => '\FortnoxApi\Model\InvoiceAccrual'
     ];
 
     /**
@@ -290,7 +290,7 @@ class InvoiceAccrualWrap implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets invoice_accrual
      *
-     * @return \OpenAPI\Client\Model\InvoiceAccrual|null
+     * @return \FortnoxApi\Model\InvoiceAccrual|null
      */
     public function getInvoiceAccrual()
     {
@@ -300,7 +300,7 @@ class InvoiceAccrualWrap implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets invoice_accrual
      *
-     * @param \OpenAPI\Client\Model\InvoiceAccrual|null $invoice_accrual invoice_accrual
+     * @param \FortnoxApi\Model\InvoiceAccrual|null $invoice_accrual invoice_accrual
      *
      * @return self
      */

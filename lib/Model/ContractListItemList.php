@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ContractListItemList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class ContractListItemList implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'contracts' => '\OpenAPI\Client\Model\ContractListItem[]'
+        'contracts' => '\FortnoxApi\Model\ContractListItem[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class ContractListItemList implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets contracts
      *
-     * @return \OpenAPI\Client\Model\ContractListItem[]|null
+     * @return \FortnoxApi\Model\ContractListItem[]|null
      */
     public function getContracts()
     {
@@ -300,7 +300,7 @@ class ContractListItemList implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets contracts
      *
-     * @param \OpenAPI\Client\Model\ContractListItem[]|null $contracts contracts
+     * @param \FortnoxApi\Model\ContractListItem[]|null $contracts contracts
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * StockPointResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -147,12 +147,12 @@ class StockPointResourceApi
      * Append stock locations
      *
      * @param  string $id stock point id (required)
-     * @param  \OpenAPI\Client\Model\StockLocation[] $stock_locations A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. (optional)
+     * @param  \FortnoxApi\Model\StockLocation[] $stock_locations A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['appendStockLocations'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\StockLocation[]
+     * @return \FortnoxApi\Model\StockLocation[]
      */
     public function appendStockLocations($id, $stock_locations = null, string $contentType = self::contentTypes['appendStockLocations'][0])
     {
@@ -166,12 +166,12 @@ class StockPointResourceApi
      * Append stock locations
      *
      * @param  string $id stock point id (required)
-     * @param  \OpenAPI\Client\Model\StockLocation[] $stock_locations A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. (optional)
+     * @param  \FortnoxApi\Model\StockLocation[] $stock_locations A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['appendStockLocations'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\StockLocation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\StockLocation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function appendStockLocationsWithHttpInfo($id, $stock_locations = null, string $contentType = self::contentTypes['appendStockLocations'][0])
     {
@@ -214,23 +214,23 @@ class StockPointResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\StockLocation[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\StockLocation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\StockLocation[]' !== 'string') {
+                        if ('\FortnoxApi\Model\StockLocation[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\StockLocation[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\StockLocation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\StockLocation[]';
+            $returnType = '\FortnoxApi\Model\StockLocation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -251,7 +251,7 @@ class StockPointResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\StockLocation[]',
+                        '\FortnoxApi\Model\StockLocation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -267,7 +267,7 @@ class StockPointResourceApi
      * Append stock locations
      *
      * @param  string $id stock point id (required)
-     * @param  \OpenAPI\Client\Model\StockLocation[] $stock_locations A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. (optional)
+     * @param  \FortnoxApi\Model\StockLocation[] $stock_locations A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['appendStockLocations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -289,7 +289,7 @@ class StockPointResourceApi
      * Append stock locations
      *
      * @param  string $id stock point id (required)
-     * @param  \OpenAPI\Client\Model\StockLocation[] $stock_locations A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. (optional)
+     * @param  \FortnoxApi\Model\StockLocation[] $stock_locations A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['appendStockLocations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -297,7 +297,7 @@ class StockPointResourceApi
      */
     public function appendStockLocationsAsyncWithHttpInfo($id, $stock_locations = null, string $contentType = self::contentTypes['appendStockLocations'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\StockLocation[]';
+        $returnType = '\FortnoxApi\Model\StockLocation[]';
         $request = $this->appendStockLocationsRequest($id, $stock_locations, $contentType);
 
         return $this->client
@@ -340,7 +340,7 @@ class StockPointResourceApi
      * Create request for operation 'appendStockLocations'
      *
      * @param  string $id stock point id (required)
-     * @param  \OpenAPI\Client\Model\StockLocation[] $stock_locations A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. (optional)
+     * @param  \FortnoxApi\Model\StockLocation[] $stock_locations A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['appendStockLocations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -442,12 +442,12 @@ class StockPointResourceApi
      *
      * Create stock point
      *
-     * @param  \OpenAPI\Client\Model\StockPoint $stock_point stock point (optional)
+     * @param  \FortnoxApi\Model\StockPoint $stock_point stock point (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\StockPoint
+     * @return \FortnoxApi\Model\StockPoint
      */
     public function create($stock_point = null, string $contentType = self::contentTypes['create'][0])
     {
@@ -460,12 +460,12 @@ class StockPointResourceApi
      *
      * Create stock point
      *
-     * @param  \OpenAPI\Client\Model\StockPoint $stock_point stock point (optional)
+     * @param  \FortnoxApi\Model\StockPoint $stock_point stock point (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\StockPoint, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\StockPoint, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWithHttpInfo($stock_point = null, string $contentType = self::contentTypes['create'][0])
     {
@@ -508,23 +508,23 @@ class StockPointResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\StockPoint' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\StockPoint' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\StockPoint' !== 'string') {
+                        if ('\FortnoxApi\Model\StockPoint' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\StockPoint', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\StockPoint', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\StockPoint';
+            $returnType = '\FortnoxApi\Model\StockPoint';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -545,7 +545,7 @@ class StockPointResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\StockPoint',
+                        '\FortnoxApi\Model\StockPoint',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class StockPointResourceApi
      *
      * Create stock point
      *
-     * @param  \OpenAPI\Client\Model\StockPoint $stock_point stock point (optional)
+     * @param  \FortnoxApi\Model\StockPoint $stock_point stock point (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -581,7 +581,7 @@ class StockPointResourceApi
      *
      * Create stock point
      *
-     * @param  \OpenAPI\Client\Model\StockPoint $stock_point stock point (optional)
+     * @param  \FortnoxApi\Model\StockPoint $stock_point stock point (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -589,7 +589,7 @@ class StockPointResourceApi
      */
     public function createAsyncWithHttpInfo($stock_point = null, string $contentType = self::contentTypes['create'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\StockPoint';
+        $returnType = '\FortnoxApi\Model\StockPoint';
         $request = $this->createRequest($stock_point, $contentType);
 
         return $this->client
@@ -631,7 +631,7 @@ class StockPointResourceApi
     /**
      * Create request for operation 'create'
      *
-     * @param  \OpenAPI\Client\Model\StockPoint $stock_point stock point (optional)
+     * @param  \FortnoxApi\Model\StockPoint $stock_point stock point (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -721,9 +721,9 @@ class StockPointResourceApi
      * @param  string $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['delete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\StockPoint
+     * @return \FortnoxApi\Model\StockPoint
      */
     public function delete($id, string $contentType = self::contentTypes['delete'][0])
     {
@@ -739,9 +739,9 @@ class StockPointResourceApi
      * @param  string $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['delete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\StockPoint, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\StockPoint, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteWithHttpInfo($id, string $contentType = self::contentTypes['delete'][0])
     {
@@ -784,23 +784,23 @@ class StockPointResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\StockPoint' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\StockPoint' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\StockPoint' !== 'string') {
+                        if ('\FortnoxApi\Model\StockPoint' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\StockPoint', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\StockPoint', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\StockPoint';
+            $returnType = '\FortnoxApi\Model\StockPoint';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -821,7 +821,7 @@ class StockPointResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\StockPoint',
+                        '\FortnoxApi\Model\StockPoint',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -865,7 +865,7 @@ class StockPointResourceApi
      */
     public function deleteAsyncWithHttpInfo($id, string $contentType = self::contentTypes['delete'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\StockPoint';
+        $returnType = '\FortnoxApi\Model\StockPoint';
         $request = $this->deleteRequest($id, $contentType);
 
         return $this->client
@@ -1005,9 +1005,9 @@ class StockPointResourceApi
      * @param  string $state filter on stock point state (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAll'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\StockPoint[]
+     * @return \FortnoxApi\Model\StockPoint[]
      */
     public function getAll($q = null, $state = null, string $contentType = self::contentTypes['getAll'][0])
     {
@@ -1024,9 +1024,9 @@ class StockPointResourceApi
      * @param  string $state filter on stock point state (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAll'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\StockPoint[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\StockPoint[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllWithHttpInfo($q = null, $state = null, string $contentType = self::contentTypes['getAll'][0])
     {
@@ -1069,23 +1069,23 @@ class StockPointResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\StockPoint[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\StockPoint[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\StockPoint[]' !== 'string') {
+                        if ('\FortnoxApi\Model\StockPoint[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\StockPoint[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\StockPoint[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\StockPoint[]';
+            $returnType = '\FortnoxApi\Model\StockPoint[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1106,7 +1106,7 @@ class StockPointResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\StockPoint[]',
+                        '\FortnoxApi\Model\StockPoint[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1152,7 +1152,7 @@ class StockPointResourceApi
      */
     public function getAllAsyncWithHttpInfo($q = null, $state = null, string $contentType = self::contentTypes['getAll'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\StockPoint[]';
+        $returnType = '\FortnoxApi\Model\StockPoint[]';
         $request = $this->getAllRequest($q, $state, $contentType);
 
         return $this->client
@@ -1297,9 +1297,9 @@ class StockPointResourceApi
      * @param  string $id stock point code, or stock point id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByAmbiguousId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\StockPoint
+     * @return \FortnoxApi\Model\StockPoint
      */
     public function getByAmbiguousId($id, string $contentType = self::contentTypes['getByAmbiguousId'][0])
     {
@@ -1315,9 +1315,9 @@ class StockPointResourceApi
      * @param  string $id stock point code, or stock point id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByAmbiguousId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\StockPoint, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\StockPoint, HTTP status code, HTTP response headers (array of strings)
      */
     public function getByAmbiguousIdWithHttpInfo($id, string $contentType = self::contentTypes['getByAmbiguousId'][0])
     {
@@ -1360,23 +1360,23 @@ class StockPointResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\StockPoint' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\StockPoint' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\StockPoint' !== 'string') {
+                        if ('\FortnoxApi\Model\StockPoint' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\StockPoint', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\StockPoint', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\StockPoint';
+            $returnType = '\FortnoxApi\Model\StockPoint';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1397,7 +1397,7 @@ class StockPointResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\StockPoint',
+                        '\FortnoxApi\Model\StockPoint',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1441,7 +1441,7 @@ class StockPointResourceApi
      */
     public function getByAmbiguousIdAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getByAmbiguousId'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\StockPoint';
+        $returnType = '\FortnoxApi\Model\StockPoint';
         $request = $this->getByAmbiguousIdRequest($id, $contentType);
 
         return $this->client
@@ -1581,9 +1581,9 @@ class StockPointResourceApi
      * @param  string $state filter on &lt;code&gt;StockPointState&lt;/code&gt;, default is to include ALL stock points. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMany'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\StockPoint[]
+     * @return \FortnoxApi\Model\StockPoint[]
      */
     public function getMany($ids = null, $state = null, string $contentType = self::contentTypes['getMany'][0])
     {
@@ -1600,9 +1600,9 @@ class StockPointResourceApi
      * @param  string $state filter on &lt;code&gt;StockPointState&lt;/code&gt;, default is to include ALL stock points. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMany'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\StockPoint[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\StockPoint[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getManyWithHttpInfo($ids = null, $state = null, string $contentType = self::contentTypes['getMany'][0])
     {
@@ -1645,23 +1645,23 @@ class StockPointResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\StockPoint[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\StockPoint[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\StockPoint[]' !== 'string') {
+                        if ('\FortnoxApi\Model\StockPoint[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\StockPoint[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\StockPoint[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\StockPoint[]';
+            $returnType = '\FortnoxApi\Model\StockPoint[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1682,7 +1682,7 @@ class StockPointResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\StockPoint[]',
+                        '\FortnoxApi\Model\StockPoint[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1728,7 +1728,7 @@ class StockPointResourceApi
      */
     public function getManyAsyncWithHttpInfo($ids = null, $state = null, string $contentType = self::contentTypes['getMany'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\StockPoint[]';
+        $returnType = '\FortnoxApi\Model\StockPoint[]';
         $request = $this->getManyRequest($ids, $state, $contentType);
 
         return $this->client
@@ -1874,9 +1874,9 @@ class StockPointResourceApi
      * @param  string $q filters on stock location code or name. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStockLocationsByAmbiguousId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\StockLocation[]
+     * @return \FortnoxApi\Model\StockLocation[]
      */
     public function getStockLocationsByAmbiguousId($id, $q = null, string $contentType = self::contentTypes['getStockLocationsByAmbiguousId'][0])
     {
@@ -1893,9 +1893,9 @@ class StockPointResourceApi
      * @param  string $q filters on stock location code or name. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStockLocationsByAmbiguousId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\StockLocation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\StockLocation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getStockLocationsByAmbiguousIdWithHttpInfo($id, $q = null, string $contentType = self::contentTypes['getStockLocationsByAmbiguousId'][0])
     {
@@ -1938,23 +1938,23 @@ class StockPointResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\StockLocation[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\StockLocation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\StockLocation[]' !== 'string') {
+                        if ('\FortnoxApi\Model\StockLocation[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\StockLocation[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\StockLocation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\StockLocation[]';
+            $returnType = '\FortnoxApi\Model\StockLocation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1975,7 +1975,7 @@ class StockPointResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\StockLocation[]',
+                        '\FortnoxApi\Model\StockLocation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2021,7 +2021,7 @@ class StockPointResourceApi
      */
     public function getStockLocationsByAmbiguousIdAsyncWithHttpInfo($id, $q = null, string $contentType = self::contentTypes['getStockLocationsByAmbiguousId'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\StockLocation[]';
+        $returnType = '\FortnoxApi\Model\StockLocation[]';
         $request = $this->getStockLocationsByAmbiguousIdRequest($id, $q, $contentType);
 
         return $this->client
@@ -2169,12 +2169,12 @@ class StockPointResourceApi
      * Update stock point
      *
      * @param  string $id id (required)
-     * @param  \OpenAPI\Client\Model\StockPoint $stock_point complete representation of stock point including stock locations. (optional)
+     * @param  \FortnoxApi\Model\StockPoint $stock_point complete representation of stock point including stock locations. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\StockPoint
+     * @return \FortnoxApi\Model\StockPoint
      */
     public function update($id, $stock_point = null, string $contentType = self::contentTypes['update'][0])
     {
@@ -2188,12 +2188,12 @@ class StockPointResourceApi
      * Update stock point
      *
      * @param  string $id id (required)
-     * @param  \OpenAPI\Client\Model\StockPoint $stock_point complete representation of stock point including stock locations. (optional)
+     * @param  \FortnoxApi\Model\StockPoint $stock_point complete representation of stock point including stock locations. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\StockPoint, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\StockPoint, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWithHttpInfo($id, $stock_point = null, string $contentType = self::contentTypes['update'][0])
     {
@@ -2236,23 +2236,23 @@ class StockPointResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\StockPoint' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\StockPoint' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\StockPoint' !== 'string') {
+                        if ('\FortnoxApi\Model\StockPoint' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\StockPoint', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\StockPoint', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\StockPoint';
+            $returnType = '\FortnoxApi\Model\StockPoint';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2273,7 +2273,7 @@ class StockPointResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\StockPoint',
+                        '\FortnoxApi\Model\StockPoint',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2289,7 +2289,7 @@ class StockPointResourceApi
      * Update stock point
      *
      * @param  string $id id (required)
-     * @param  \OpenAPI\Client\Model\StockPoint $stock_point complete representation of stock point including stock locations. (optional)
+     * @param  \FortnoxApi\Model\StockPoint $stock_point complete representation of stock point including stock locations. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2311,7 +2311,7 @@ class StockPointResourceApi
      * Update stock point
      *
      * @param  string $id id (required)
-     * @param  \OpenAPI\Client\Model\StockPoint $stock_point complete representation of stock point including stock locations. (optional)
+     * @param  \FortnoxApi\Model\StockPoint $stock_point complete representation of stock point including stock locations. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2319,7 +2319,7 @@ class StockPointResourceApi
      */
     public function updateAsyncWithHttpInfo($id, $stock_point = null, string $contentType = self::contentTypes['update'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\StockPoint';
+        $returnType = '\FortnoxApi\Model\StockPoint';
         $request = $this->updateRequest($id, $stock_point, $contentType);
 
         return $this->client
@@ -2362,7 +2362,7 @@ class StockPointResourceApi
      * Create request for operation 'update'
      *
      * @param  string $id id (required)
-     * @param  \OpenAPI\Client\Model\StockPoint $stock_point complete representation of stock point including stock locations. (optional)
+     * @param  \FortnoxApi\Model\StockPoint $stock_point complete representation of stock point including stock locations. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

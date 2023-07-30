@@ -1,4 +1,4 @@
-# OpenAPI\Client\AssetTypesResourceApi
+# FortnoxApi\AssetTypesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createAssetTypesResource()`
 
 ```php
-createAssetTypesResource($id, $create_asset_request): \OpenAPI\Client\Model\AssetTypeWrapSingle
+createAssetTypesResource($id, $create_asset_request): \FortnoxApi\Model\AssetTypeWrapSingle
 ```
 
 Create an asset type
@@ -27,13 +27,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetTypesResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetTypesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | id
-$create_asset_request = new \OpenAPI\Client\Model\CreateAssetWrap(); // \OpenAPI\Client\Model\CreateAssetWrap | request
+$create_asset_request = new \FortnoxApi\Model\CreateAssetWrap(); // \FortnoxApi\Model\CreateAssetWrap | request
 
 try {
     $result = $apiInstance->createAssetTypesResource($id, $create_asset_request);
@@ -48,11 +48,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| id | |
-| **create_asset_request** | [**\OpenAPI\Client\Model\CreateAssetWrap**](../Model/CreateAssetWrap.md)| request | [optional] |
+| **create_asset_request** | [**\FortnoxApi\Model\CreateAssetWrap**](../Model/CreateAssetWrap.md)| request | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetTypeWrapSingle**](../Model/AssetTypeWrapSingle.md)
+[**\FortnoxApi\Model\AssetTypeWrapSingle**](../Model/AssetTypeWrapSingle.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetTypesResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetTypesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -123,7 +123,7 @@ No authorization required
 ## `getAllAssetTypesResource()`
 
 ```php
-getAllAssetTypesResource(): \OpenAPI\Client\Model\AssetTypeWrapList
+getAllAssetTypesResource(): \FortnoxApi\Model\AssetTypeWrapList
 ```
 
 Retrieve a list of asset types
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetTypesResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetTypesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -156,7 +156,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetTypeWrapList**](../Model/AssetTypeWrapList.md)
+[**\FortnoxApi\Model\AssetTypeWrapList**](../Model/AssetTypeWrapList.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
 ## `getAssetTypesResource()`
 
 ```php
-getAssetTypesResource($id): \OpenAPI\Client\Model\AssetTypeWrapSingle
+getAssetTypesResource($id): \FortnoxApi\Model\AssetTypeWrapSingle
 ```
 
 Retrieve an asset type
@@ -187,7 +187,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetTypesResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetTypesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -210,7 +210,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetTypeWrapSingle**](../Model/AssetTypeWrapSingle.md)
+[**\FortnoxApi\Model\AssetTypeWrapSingle**](../Model/AssetTypeWrapSingle.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ No authorization required
 ## `updateAssetTypesResource()`
 
 ```php
-updateAssetTypesResource($id, $update_asset_request): \OpenAPI\Client\Model\AssetTypeWrapSingle
+updateAssetTypesResource($id, $update_asset_request): \FortnoxApi\Model\AssetTypeWrapSingle
 ```
 
 Update an asset type
@@ -241,13 +241,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetTypesResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetTypesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | id
-$update_asset_request = new \OpenAPI\Client\Model\UpdateAssetWrap(); // \OpenAPI\Client\Model\UpdateAssetWrap | request
+$update_asset_request = new \FortnoxApi\Model\UpdateAssetWrap(); // \FortnoxApi\Model\UpdateAssetWrap | request
 
 try {
     $result = $apiInstance->updateAssetTypesResource($id, $update_asset_request);
@@ -262,11 +262,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| id | |
-| **update_asset_request** | [**\OpenAPI\Client\Model\UpdateAssetWrap**](../Model/UpdateAssetWrap.md)| request | [optional] |
+| **update_asset_request** | [**\FortnoxApi\Model\UpdateAssetWrap**](../Model/UpdateAssetWrap.md)| request | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetTypeWrapSingle**](../Model/AssetTypeWrapSingle.md)
+[**\FortnoxApi\Model\AssetTypeWrapSingle**](../Model/AssetTypeWrapSingle.md)
 
 ### Authorization
 

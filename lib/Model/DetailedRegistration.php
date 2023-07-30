@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * DetailedRegistration Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -56,11 +56,11 @@ class DetailedRegistration implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'cost_center' => '\OpenAPI\Client\Model\TRCostCenter',
-        'customer' => '\OpenAPI\Client\Model\TRCustomer',
-        'project' => '\OpenAPI\Client\Model\TRProject',
-        'service' => '\OpenAPI\Client\Model\TRItem',
-        'registration_code' => '\OpenAPI\Client\Model\RegistrationCode',
+        'cost_center' => '\FortnoxApi\Model\TRCostCenter',
+        'customer' => '\FortnoxApi\Model\TRCustomer',
+        'project' => '\FortnoxApi\Model\TRProject',
+        'service' => '\FortnoxApi\Model\TRItem',
+        'registration_code' => '\FortnoxApi\Model\RegistrationCode',
         'worked_date' => '\DateTime',
         'worked_hours' => 'float',
         'charge_hours' => 'float',
@@ -524,7 +524,7 @@ class DetailedRegistration implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets cost_center
      *
-     * @return \OpenAPI\Client\Model\TRCostCenter|null
+     * @return \FortnoxApi\Model\TRCostCenter|null
      */
     public function getCostCenter()
     {
@@ -534,7 +534,7 @@ class DetailedRegistration implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets cost_center
      *
-     * @param \OpenAPI\Client\Model\TRCostCenter|null $cost_center cost_center
+     * @param \FortnoxApi\Model\TRCostCenter|null $cost_center cost_center
      *
      * @return self
      */
@@ -551,7 +551,7 @@ class DetailedRegistration implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets customer
      *
-     * @return \OpenAPI\Client\Model\TRCustomer|null
+     * @return \FortnoxApi\Model\TRCustomer|null
      */
     public function getCustomer()
     {
@@ -561,7 +561,7 @@ class DetailedRegistration implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets customer
      *
-     * @param \OpenAPI\Client\Model\TRCustomer|null $customer customer
+     * @param \FortnoxApi\Model\TRCustomer|null $customer customer
      *
      * @return self
      */
@@ -578,7 +578,7 @@ class DetailedRegistration implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets project
      *
-     * @return \OpenAPI\Client\Model\TRProject|null
+     * @return \FortnoxApi\Model\TRProject|null
      */
     public function getProject()
     {
@@ -588,7 +588,7 @@ class DetailedRegistration implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets project
      *
-     * @param \OpenAPI\Client\Model\TRProject|null $project project
+     * @param \FortnoxApi\Model\TRProject|null $project project
      *
      * @return self
      */
@@ -605,7 +605,7 @@ class DetailedRegistration implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets service
      *
-     * @return \OpenAPI\Client\Model\TRItem|null
+     * @return \FortnoxApi\Model\TRItem|null
      */
     public function getService()
     {
@@ -615,7 +615,7 @@ class DetailedRegistration implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets service
      *
-     * @param \OpenAPI\Client\Model\TRItem|null $service service
+     * @param \FortnoxApi\Model\TRItem|null $service service
      *
      * @return self
      */
@@ -632,7 +632,7 @@ class DetailedRegistration implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets registration_code
      *
-     * @return \OpenAPI\Client\Model\RegistrationCode
+     * @return \FortnoxApi\Model\RegistrationCode
      */
     public function getRegistrationCode()
     {
@@ -642,7 +642,7 @@ class DetailedRegistration implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets registration_code
      *
-     * @param \OpenAPI\Client\Model\RegistrationCode $registration_code registration_code
+     * @param \FortnoxApi\Model\RegistrationCode $registration_code registration_code
      *
      * @return self
      */

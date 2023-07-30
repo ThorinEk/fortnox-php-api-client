@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ContractAccrual Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ContractAccrual implements ModelInterface, ArrayAccess, \JsonSerializable
         'accrual_account' => 'int',
         'cost_account' => 'int',
         'description' => 'string',
-        'accrual_rows' => '\OpenAPI\Client\Model\ContractAccrualAccrualRow[]',
+        'accrual_rows' => '\FortnoxApi\Model\ContractAccrualAccrualRow[]',
         'document_number' => 'int',
         'period' => 'string',
         'times' => 'int',
@@ -549,7 +549,7 @@ class ContractAccrual implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets accrual_rows
      *
-     * @return \OpenAPI\Client\Model\ContractAccrualAccrualRow[]
+     * @return \FortnoxApi\Model\ContractAccrualAccrualRow[]
      */
     public function getAccrualRows()
     {
@@ -559,7 +559,7 @@ class ContractAccrual implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets accrual_rows
      *
-     * @param \OpenAPI\Client\Model\ContractAccrualAccrualRow[] $accrual_rows accrual_rows
+     * @param \FortnoxApi\Model\ContractAccrualAccrualRow[] $accrual_rows accrual_rows
      *
      * @return self
      */

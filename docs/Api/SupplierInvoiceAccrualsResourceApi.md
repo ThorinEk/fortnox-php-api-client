@@ -1,4 +1,4 @@
-# OpenAPI\Client\SupplierInvoiceAccrualsResourceApi
+# FortnoxApi\SupplierInvoiceAccrualsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createSupplierInvoiceAccrualsResource()`
 
 ```php
-createSupplierInvoiceAccrualsResource($supplier_invoice_accrual): \OpenAPI\Client\Model\SupplierInvoiceAccrualWrap
+createSupplierInvoiceAccrualsResource($supplier_invoice_accrual): \FortnoxApi\Model\SupplierInvoiceAccrualWrap
 ```
 
 Create a supplier invoice accrual
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$supplier_invoice_accrual = new \OpenAPI\Client\Model\SupplierInvoiceAccrualWrap(); // \OpenAPI\Client\Model\SupplierInvoiceAccrualWrap | to create
+$supplier_invoice_accrual = new \FortnoxApi\Model\SupplierInvoiceAccrualWrap(); // \FortnoxApi\Model\SupplierInvoiceAccrualWrap | to create
 
 try {
     $result = $apiInstance->createSupplierInvoiceAccrualsResource($supplier_invoice_accrual);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **supplier_invoice_accrual** | [**\OpenAPI\Client\Model\SupplierInvoiceAccrualWrap**](../Model/SupplierInvoiceAccrualWrap.md)| to create | [optional] |
+| **supplier_invoice_accrual** | [**\FortnoxApi\Model\SupplierInvoiceAccrualWrap**](../Model/SupplierInvoiceAccrualWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierInvoiceAccrualWrap**](../Model/SupplierInvoiceAccrualWrap.md)
+[**\FortnoxApi\Model\SupplierInvoiceAccrualWrap**](../Model/SupplierInvoiceAccrualWrap.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getSupplierInvoiceAccrualsResource()`
 
 ```php
-getSupplierInvoiceAccrualsResource($supplier_invoice_number): \OpenAPI\Client\Model\SupplierInvoiceAccrualWrap
+getSupplierInvoiceAccrualsResource($supplier_invoice_number): \FortnoxApi\Model\SupplierInvoiceAccrualWrap
 ```
 
 Retrieve a single supplier invoice accrual
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierInvoiceAccrualWrap**](../Model/SupplierInvoiceAccrualWrap.md)
+[**\FortnoxApi\Model\SupplierInvoiceAccrualWrap**](../Model/SupplierInvoiceAccrualWrap.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `listSupplierInvoiceAccrualsResource()`
 
 ```php
-listSupplierInvoiceAccrualsResource(): \OpenAPI\Client\Model\SupplierInvoiceAccrualListItemList
+listSupplierInvoiceAccrualsResource(): \FortnoxApi\Model\SupplierInvoiceAccrualListItemList
 ```
 
 Retrieve a list of supplier invoice accruals
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierInvoiceAccrualListItemList**](../Model/SupplierInvoiceAccrualListItemList.md)
+[**\FortnoxApi\Model\SupplierInvoiceAccrualListItemList**](../Model/SupplierInvoiceAccrualListItemList.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -228,7 +228,7 @@ No authorization required
 ## `updateSupplierInvoiceAccrualsResource()`
 
 ```php
-updateSupplierInvoiceAccrualsResource($supplier_invoice_number, $supplier_invoice_accrual): \OpenAPI\Client\Model\SupplierInvoiceAccrualWrap
+updateSupplierInvoiceAccrualsResource($supplier_invoice_number, $supplier_invoice_accrual): \FortnoxApi\Model\SupplierInvoiceAccrualWrap
 ```
 
 Update a supplier invoice accrual
@@ -241,13 +241,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $supplier_invoice_number = 56; // int | identifies the supplier invoice accrual
-$supplier_invoice_accrual = new \OpenAPI\Client\Model\SupplierInvoiceAccrualWrap(); // \OpenAPI\Client\Model\SupplierInvoiceAccrualWrap | to update
+$supplier_invoice_accrual = new \FortnoxApi\Model\SupplierInvoiceAccrualWrap(); // \FortnoxApi\Model\SupplierInvoiceAccrualWrap | to update
 
 try {
     $result = $apiInstance->updateSupplierInvoiceAccrualsResource($supplier_invoice_number, $supplier_invoice_accrual);
@@ -262,11 +262,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **supplier_invoice_number** | **int**| identifies the supplier invoice accrual | |
-| **supplier_invoice_accrual** | [**\OpenAPI\Client\Model\SupplierInvoiceAccrualWrap**](../Model/SupplierInvoiceAccrualWrap.md)| to update | [optional] |
+| **supplier_invoice_accrual** | [**\FortnoxApi\Model\SupplierInvoiceAccrualWrap**](../Model/SupplierInvoiceAccrualWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierInvoiceAccrualWrap**](../Model/SupplierInvoiceAccrualWrap.md)
+[**\FortnoxApi\Model\SupplierInvoiceAccrualWrap**](../Model/SupplierInvoiceAccrualWrap.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\CostCentersResourceApi
+# FortnoxApi\CostCentersResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createCostCentersResource()`
 
 ```php
-createCostCentersResource($cost_center): \OpenAPI\Client\Model\CostCenterWrap
+createCostCentersResource($cost_center): \FortnoxApi\Model\CostCenterWrap
 ```
 
 Create a cost center
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CostCentersResourceApi(
+$apiInstance = new FortnoxApi\Api\CostCentersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$cost_center = new \OpenAPI\Client\Model\CostCenterWrap(); // \OpenAPI\Client\Model\CostCenterWrap | cost center to create
+$cost_center = new \FortnoxApi\Model\CostCenterWrap(); // \FortnoxApi\Model\CostCenterWrap | cost center to create
 
 try {
     $result = $apiInstance->createCostCentersResource($cost_center);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **cost_center** | [**\OpenAPI\Client\Model\CostCenterWrap**](../Model/CostCenterWrap.md)| cost center to create | [optional] |
+| **cost_center** | [**\FortnoxApi\Model\CostCenterWrap**](../Model/CostCenterWrap.md)| cost center to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CostCenterWrap**](../Model/CostCenterWrap.md)
+[**\FortnoxApi\Model\CostCenterWrap**](../Model/CostCenterWrap.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getCostCentersResource()`
 
 ```php
-getCostCentersResource($code): \OpenAPI\Client\Model\CostCenterWrap
+getCostCentersResource($code): \FortnoxApi\Model\CostCenterWrap
 ```
 
 Retrieve a single cost center
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CostCentersResourceApi(
+$apiInstance = new FortnoxApi\Api\CostCentersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CostCenterWrap**](../Model/CostCenterWrap.md)
+[**\FortnoxApi\Model\CostCenterWrap**](../Model/CostCenterWrap.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `listCostCentersResource()`
 
 ```php
-listCostCentersResource(): \OpenAPI\Client\Model\CostCenterList
+listCostCentersResource(): \FortnoxApi\Model\CostCenterList
 ```
 
 Retrieve a list of cost centers
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CostCentersResourceApi(
+$apiInstance = new FortnoxApi\Api\CostCentersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CostCenterList**](../Model/CostCenterList.md)
+[**\FortnoxApi\Model\CostCenterList**](../Model/CostCenterList.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CostCentersResourceApi(
+$apiInstance = new FortnoxApi\Api\CostCentersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -228,7 +228,7 @@ No authorization required
 ## `updateCostCentersResource()`
 
 ```php
-updateCostCentersResource($code, $cost_center): \OpenAPI\Client\Model\CostCenterWrap
+updateCostCentersResource($code, $cost_center): \FortnoxApi\Model\CostCenterWrap
 ```
 
 Update a cost center
@@ -241,13 +241,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CostCentersResourceApi(
+$apiInstance = new FortnoxApi\Api\CostCentersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $code = 'code_example'; // string | identifies the cost center
-$cost_center = new \OpenAPI\Client\Model\CostCenterWrap(); // \OpenAPI\Client\Model\CostCenterWrap | cost center to update
+$cost_center = new \FortnoxApi\Model\CostCenterWrap(); // \FortnoxApi\Model\CostCenterWrap | cost center to update
 
 try {
     $result = $apiInstance->updateCostCentersResource($code, $cost_center);
@@ -262,11 +262,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **code** | **string**| identifies the cost center | |
-| **cost_center** | [**\OpenAPI\Client\Model\CostCenterWrap**](../Model/CostCenterWrap.md)| cost center to update | [optional] |
+| **cost_center** | [**\FortnoxApi\Model\CostCenterWrap**](../Model/CostCenterWrap.md)| cost center to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CostCenterWrap**](../Model/CostCenterWrap.md)
+[**\FortnoxApi\Model\CostCenterWrap**](../Model/CostCenterWrap.md)
 
 ### Authorization
 

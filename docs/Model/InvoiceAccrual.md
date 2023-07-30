@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **accrual_account** | **int** |  |
 **description** | **string** |  |
 **end_date** | **\DateTime** |  |
-**invoice_accrual_rows** | [**\OpenAPI\Client\Model\InvoiceAccrualInvoiceAccrualRow[]**](InvoiceAccrualInvoiceAccrualRow.md) |  |
+**invoice_accrual_rows** | [**\FortnoxApi\Model\InvoiceAccrualInvoiceAccrualRow[]**](InvoiceAccrualInvoiceAccrualRow.md) |  |
 **invoice_number** | **int** |  |
 **period** | **string** |  | [optional]
 **revenue_account** | **int** |  |

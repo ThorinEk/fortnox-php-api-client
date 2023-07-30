@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * Contract Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -71,7 +71,7 @@ class Contract implements ModelInterface, ArrayAccess, \JsonSerializable
         'customer_name' => 'string',
         'customer_number' => 'string',
         'document_number' => 'string',
-        'email_information' => '\OpenAPI\Client\Model\ContractEmailInformation',
+        'email_information' => '\FortnoxApi\Model\ContractEmailInformation',
         'external_invoice_reference1' => 'string',
         'external_invoice_reference2' => 'string',
         'freight' => 'float',
@@ -80,7 +80,7 @@ class Contract implements ModelInterface, ArrayAccess, \JsonSerializable
         'invoice_discount' => 'float',
         'invoice_interval' => 'int',
         'invoices_remaining' => 'string',
-        'invoice_rows' => '\OpenAPI\Client\Model\ContractInvoiceRow[]',
+        'invoice_rows' => '\FortnoxApi\Model\ContractInvoiceRow[]',
         'language' => 'string',
         'last_invoice_date' => 'string',
         'net' => 'float',
@@ -1165,7 +1165,7 @@ class Contract implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets email_information
      *
-     * @return \OpenAPI\Client\Model\ContractEmailInformation|null
+     * @return \FortnoxApi\Model\ContractEmailInformation|null
      */
     public function getEmailInformation()
     {
@@ -1175,7 +1175,7 @@ class Contract implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets email_information
      *
-     * @param \OpenAPI\Client\Model\ContractEmailInformation|null $email_information email_information
+     * @param \FortnoxApi\Model\ContractEmailInformation|null $email_information email_information
      *
      * @return self
      */
@@ -1408,7 +1408,7 @@ class Contract implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets invoice_rows
      *
-     * @return \OpenAPI\Client\Model\ContractInvoiceRow[]
+     * @return \FortnoxApi\Model\ContractInvoiceRow[]
      */
     public function getInvoiceRows()
     {
@@ -1418,7 +1418,7 @@ class Contract implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets invoice_rows
      *
-     * @param \OpenAPI\Client\Model\ContractInvoiceRow[] $invoice_rows invoice_rows
+     * @param \FortnoxApi\Model\ContractInvoiceRow[] $invoice_rows invoice_rows
      *
      * @return self
      */

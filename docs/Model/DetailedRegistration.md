@@ -5,11 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional]
-**cost_center** | [**\OpenAPI\Client\Model\TRCostCenter**](TRCostCenter.md) |  | [optional]
-**customer** | [**\OpenAPI\Client\Model\TRCustomer**](TRCustomer.md) |  | [optional]
-**project** | [**\OpenAPI\Client\Model\TRProject**](TRProject.md) |  | [optional]
-**service** | [**\OpenAPI\Client\Model\TRItem**](TRItem.md) |  | [optional]
-**registration_code** | [**\OpenAPI\Client\Model\RegistrationCode**](RegistrationCode.md) |  |
+**cost_center** | [**\FortnoxApi\Model\TRCostCenter**](TRCostCenter.md) |  | [optional]
+**customer** | [**\FortnoxApi\Model\TRCustomer**](TRCustomer.md) |  | [optional]
+**project** | [**\FortnoxApi\Model\TRProject**](TRProject.md) |  | [optional]
+**service** | [**\FortnoxApi\Model\TRItem**](TRItem.md) |  | [optional]
+**registration_code** | [**\FortnoxApi\Model\RegistrationCode**](RegistrationCode.md) |  |
 **worked_date** | **\DateTime** |  |
 **worked_hours** | **float** |  | [optional]
 **charge_hours** | **float** |  | [optional]

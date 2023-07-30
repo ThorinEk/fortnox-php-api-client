@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * ArticlesResourceArticlesApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class ArticlesResourceArticlesApi
      *
      * Create an article
      *
-     * @param  \OpenAPI\Client\Model\ArticleWrap $article to create (optional)
+     * @param  \FortnoxApi\Model\ArticleWrap $article to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArticlesResourceArticles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ArticleWrap
+     * @return \FortnoxApi\Model\ArticleWrap
      */
     public function createArticlesResourceArticles($article = null, string $contentType = self::contentTypes['createArticlesResourceArticles'][0])
     {
@@ -155,12 +155,12 @@ class ArticlesResourceArticlesApi
      *
      * Create an article
      *
-     * @param  \OpenAPI\Client\Model\ArticleWrap $article to create (optional)
+     * @param  \FortnoxApi\Model\ArticleWrap $article to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArticlesResourceArticles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ArticleWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ArticleWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createArticlesResourceArticlesWithHttpInfo($article = null, string $contentType = self::contentTypes['createArticlesResourceArticles'][0])
     {
@@ -203,23 +203,23 @@ class ArticlesResourceArticlesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ArticleWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ArticleWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ArticleWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ArticleWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ArticleWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ArticleWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ArticleWrap';
+            $returnType = '\FortnoxApi\Model\ArticleWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class ArticlesResourceArticlesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ArticleWrap',
+                        '\FortnoxApi\Model\ArticleWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class ArticlesResourceArticlesApi
      *
      * Create an article
      *
-     * @param  \OpenAPI\Client\Model\ArticleWrap $article to create (optional)
+     * @param  \FortnoxApi\Model\ArticleWrap $article to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArticlesResourceArticles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class ArticlesResourceArticlesApi
      *
      * Create an article
      *
-     * @param  \OpenAPI\Client\Model\ArticleWrap $article to create (optional)
+     * @param  \FortnoxApi\Model\ArticleWrap $article to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArticlesResourceArticles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class ArticlesResourceArticlesApi
      */
     public function createArticlesResourceArticlesAsyncWithHttpInfo($article = null, string $contentType = self::contentTypes['createArticlesResourceArticles'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ArticleWrap';
+        $returnType = '\FortnoxApi\Model\ArticleWrap';
         $request = $this->createArticlesResourceArticlesRequest($article, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class ArticlesResourceArticlesApi
     /**
      * Create request for operation 'createArticlesResourceArticles'
      *
-     * @param  \OpenAPI\Client\Model\ArticleWrap $article to create (optional)
+     * @param  \FortnoxApi\Model\ArticleWrap $article to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArticlesResourceArticles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class ArticlesResourceArticlesApi
      * @param  int $article_number identifies the article (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getArticlesResourceArticles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ArticleWrap
+     * @return \FortnoxApi\Model\ArticleWrap
      */
     public function getArticlesResourceArticles($article_number, string $contentType = self::contentTypes['getArticlesResourceArticles'][0])
     {
@@ -434,9 +434,9 @@ class ArticlesResourceArticlesApi
      * @param  int $article_number identifies the article (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getArticlesResourceArticles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ArticleWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ArticleWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getArticlesResourceArticlesWithHttpInfo($article_number, string $contentType = self::contentTypes['getArticlesResourceArticles'][0])
     {
@@ -479,23 +479,23 @@ class ArticlesResourceArticlesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ArticleWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ArticleWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ArticleWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ArticleWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ArticleWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ArticleWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ArticleWrap';
+            $returnType = '\FortnoxApi\Model\ArticleWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class ArticlesResourceArticlesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ArticleWrap',
+                        '\FortnoxApi\Model\ArticleWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class ArticlesResourceArticlesApi
      */
     public function getArticlesResourceArticlesAsyncWithHttpInfo($article_number, string $contentType = self::contentTypes['getArticlesResourceArticles'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ArticleWrap';
+        $returnType = '\FortnoxApi\Model\ArticleWrap';
         $request = $this->getArticlesResourceArticlesRequest($article_number, $contentType);
 
         return $this->client
@@ -708,9 +708,9 @@ class ArticlesResourceArticlesApi
      * @param  string $sortby field to sort returned list (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listArticlesResourceArticles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ArticleListItemList
+     * @return \FortnoxApi\Model\ArticleListItemList
      */
     public function listArticlesResourceArticles($filter = null, $articlenumber = null, $description = null, $ean = null, $suppliernumber = null, $manufacturer = null, $manufacturerarticlenumber = null, $webshop = null, $lastmodified = null, $sortby = null, string $contentType = self::contentTypes['listArticlesResourceArticles'][0])
     {
@@ -735,9 +735,9 @@ class ArticlesResourceArticlesApi
      * @param  string $sortby field to sort returned list (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listArticlesResourceArticles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ArticleListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ArticleListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listArticlesResourceArticlesWithHttpInfo($filter = null, $articlenumber = null, $description = null, $ean = null, $suppliernumber = null, $manufacturer = null, $manufacturerarticlenumber = null, $webshop = null, $lastmodified = null, $sortby = null, string $contentType = self::contentTypes['listArticlesResourceArticles'][0])
     {
@@ -780,23 +780,23 @@ class ArticlesResourceArticlesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ArticleListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ArticleListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ArticleListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\ArticleListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ArticleListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ArticleListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ArticleListItemList';
+            $returnType = '\FortnoxApi\Model\ArticleListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -817,7 +817,7 @@ class ArticlesResourceArticlesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ArticleListItemList',
+                        '\FortnoxApi\Model\ArticleListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -879,7 +879,7 @@ class ArticlesResourceArticlesApi
      */
     public function listArticlesResourceArticlesAsyncWithHttpInfo($filter = null, $articlenumber = null, $description = null, $ean = null, $suppliernumber = null, $manufacturer = null, $manufacturerarticlenumber = null, $webshop = null, $lastmodified = null, $sortby = null, string $contentType = self::contentTypes['listArticlesResourceArticles'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ArticleListItemList';
+        $returnType = '\FortnoxApi\Model\ArticleListItemList';
         $request = $this->listArticlesResourceArticlesRequest($filter, $articlenumber, $description, $ean, $suppliernumber, $manufacturer, $manufacturerarticlenumber, $webshop, $lastmodified, $sortby, $contentType);
 
         return $this->client
@@ -1112,7 +1112,7 @@ class ArticlesResourceArticlesApi
      * @param  int $article_number identifies the article (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeArticlesResourceArticles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1129,7 +1129,7 @@ class ArticlesResourceArticlesApi
      * @param  int $article_number identifies the article (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeArticlesResourceArticles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1339,12 +1339,12 @@ class ArticlesResourceArticlesApi
      * Update an article
      *
      * @param  int $article_number identifies the article (required)
-     * @param  \OpenAPI\Client\Model\ArticleWrap $article to update (optional)
+     * @param  \FortnoxApi\Model\ArticleWrap $article to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateArticlesResourceArticles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ArticleWrap
+     * @return \FortnoxApi\Model\ArticleWrap
      */
     public function updateArticlesResourceArticles($article_number, $article = null, string $contentType = self::contentTypes['updateArticlesResourceArticles'][0])
     {
@@ -1358,12 +1358,12 @@ class ArticlesResourceArticlesApi
      * Update an article
      *
      * @param  int $article_number identifies the article (required)
-     * @param  \OpenAPI\Client\Model\ArticleWrap $article to update (optional)
+     * @param  \FortnoxApi\Model\ArticleWrap $article to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateArticlesResourceArticles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ArticleWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ArticleWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateArticlesResourceArticlesWithHttpInfo($article_number, $article = null, string $contentType = self::contentTypes['updateArticlesResourceArticles'][0])
     {
@@ -1406,23 +1406,23 @@ class ArticlesResourceArticlesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ArticleWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ArticleWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ArticleWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ArticleWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ArticleWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ArticleWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ArticleWrap';
+            $returnType = '\FortnoxApi\Model\ArticleWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1443,7 +1443,7 @@ class ArticlesResourceArticlesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ArticleWrap',
+                        '\FortnoxApi\Model\ArticleWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1459,7 +1459,7 @@ class ArticlesResourceArticlesApi
      * Update an article
      *
      * @param  int $article_number identifies the article (required)
-     * @param  \OpenAPI\Client\Model\ArticleWrap $article to update (optional)
+     * @param  \FortnoxApi\Model\ArticleWrap $article to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateArticlesResourceArticles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1481,7 +1481,7 @@ class ArticlesResourceArticlesApi
      * Update an article
      *
      * @param  int $article_number identifies the article (required)
-     * @param  \OpenAPI\Client\Model\ArticleWrap $article to update (optional)
+     * @param  \FortnoxApi\Model\ArticleWrap $article to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateArticlesResourceArticles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1489,7 +1489,7 @@ class ArticlesResourceArticlesApi
      */
     public function updateArticlesResourceArticlesAsyncWithHttpInfo($article_number, $article = null, string $contentType = self::contentTypes['updateArticlesResourceArticles'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ArticleWrap';
+        $returnType = '\FortnoxApi\Model\ArticleWrap';
         $request = $this->updateArticlesResourceArticlesRequest($article_number, $article, $contentType);
 
         return $this->client
@@ -1532,7 +1532,7 @@ class ArticlesResourceArticlesApi
      * Create request for operation 'updateArticlesResourceArticles'
      *
      * @param  int $article_number identifies the article (required)
-     * @param  \OpenAPI\Client\Model\ArticleWrap $article to update (optional)
+     * @param  \FortnoxApi\Model\ArticleWrap $article to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateArticlesResourceArticles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

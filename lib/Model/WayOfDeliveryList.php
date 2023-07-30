@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * WayOfDeliveryList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class WayOfDeliveryList implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'way_of_deliveries' => '\OpenAPI\Client\Model\WayOfDelivery[]'
+        'way_of_deliveries' => '\FortnoxApi\Model\WayOfDelivery[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class WayOfDeliveryList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets way_of_deliveries
      *
-     * @return \OpenAPI\Client\Model\WayOfDelivery[]|null
+     * @return \FortnoxApi\Model\WayOfDelivery[]|null
      */
     public function getWayOfDeliveries()
     {
@@ -300,7 +300,7 @@ class WayOfDeliveryList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets way_of_deliveries
      *
-     * @param \OpenAPI\Client\Model\WayOfDelivery[]|null $way_of_deliveries way_of_deliveries
+     * @param \FortnoxApi\Model\WayOfDelivery[]|null $way_of_deliveries way_of_deliveries
      *
      * @return self
      */

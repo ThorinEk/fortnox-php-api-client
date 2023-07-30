@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * ArticleFileConnectionsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,12 +134,12 @@ class ArticleFileConnectionsResourceApi
      *
      * Create an article file connection
      *
-     * @param  \OpenAPI\Client\Model\ArticleFileConnectionWrap $article_file_connection to create (optional)
+     * @param  \FortnoxApi\Model\ArticleFileConnectionWrap $article_file_connection to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArticleFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ArticleFileConnectionWrap
+     * @return \FortnoxApi\Model\ArticleFileConnectionWrap
      */
     public function createArticleFileConnectionsResource($article_file_connection = null, string $contentType = self::contentTypes['createArticleFileConnectionsResource'][0])
     {
@@ -152,12 +152,12 @@ class ArticleFileConnectionsResourceApi
      *
      * Create an article file connection
      *
-     * @param  \OpenAPI\Client\Model\ArticleFileConnectionWrap $article_file_connection to create (optional)
+     * @param  \FortnoxApi\Model\ArticleFileConnectionWrap $article_file_connection to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArticleFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ArticleFileConnectionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ArticleFileConnectionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createArticleFileConnectionsResourceWithHttpInfo($article_file_connection = null, string $contentType = self::contentTypes['createArticleFileConnectionsResource'][0])
     {
@@ -200,23 +200,23 @@ class ArticleFileConnectionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ArticleFileConnectionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ArticleFileConnectionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ArticleFileConnectionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ArticleFileConnectionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ArticleFileConnectionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ArticleFileConnectionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ArticleFileConnectionWrap';
+            $returnType = '\FortnoxApi\Model\ArticleFileConnectionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -237,7 +237,7 @@ class ArticleFileConnectionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ArticleFileConnectionWrap',
+                        '\FortnoxApi\Model\ArticleFileConnectionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class ArticleFileConnectionsResourceApi
      *
      * Create an article file connection
      *
-     * @param  \OpenAPI\Client\Model\ArticleFileConnectionWrap $article_file_connection to create (optional)
+     * @param  \FortnoxApi\Model\ArticleFileConnectionWrap $article_file_connection to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArticleFileConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class ArticleFileConnectionsResourceApi
      *
      * Create an article file connection
      *
-     * @param  \OpenAPI\Client\Model\ArticleFileConnectionWrap $article_file_connection to create (optional)
+     * @param  \FortnoxApi\Model\ArticleFileConnectionWrap $article_file_connection to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArticleFileConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class ArticleFileConnectionsResourceApi
      */
     public function createArticleFileConnectionsResourceAsyncWithHttpInfo($article_file_connection = null, string $contentType = self::contentTypes['createArticleFileConnectionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ArticleFileConnectionWrap';
+        $returnType = '\FortnoxApi\Model\ArticleFileConnectionWrap';
         $request = $this->createArticleFileConnectionsResourceRequest($article_file_connection, $contentType);
 
         return $this->client
@@ -323,7 +323,7 @@ class ArticleFileConnectionsResourceApi
     /**
      * Create request for operation 'createArticleFileConnectionsResource'
      *
-     * @param  \OpenAPI\Client\Model\ArticleFileConnectionWrap $article_file_connection to create (optional)
+     * @param  \FortnoxApi\Model\ArticleFileConnectionWrap $article_file_connection to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArticleFileConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -413,9 +413,9 @@ class ArticleFileConnectionsResourceApi
      * @param  string $file_id identifies the article file connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getArticleFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ArticleFileConnectionWrap
+     * @return \FortnoxApi\Model\ArticleFileConnectionWrap
      */
     public function getArticleFileConnectionsResource($file_id, string $contentType = self::contentTypes['getArticleFileConnectionsResource'][0])
     {
@@ -431,9 +431,9 @@ class ArticleFileConnectionsResourceApi
      * @param  string $file_id identifies the article file connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getArticleFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ArticleFileConnectionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ArticleFileConnectionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getArticleFileConnectionsResourceWithHttpInfo($file_id, string $contentType = self::contentTypes['getArticleFileConnectionsResource'][0])
     {
@@ -476,23 +476,23 @@ class ArticleFileConnectionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ArticleFileConnectionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ArticleFileConnectionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ArticleFileConnectionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ArticleFileConnectionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ArticleFileConnectionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ArticleFileConnectionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ArticleFileConnectionWrap';
+            $returnType = '\FortnoxApi\Model\ArticleFileConnectionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -513,7 +513,7 @@ class ArticleFileConnectionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ArticleFileConnectionWrap',
+                        '\FortnoxApi\Model\ArticleFileConnectionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -557,7 +557,7 @@ class ArticleFileConnectionsResourceApi
      */
     public function getArticleFileConnectionsResourceAsyncWithHttpInfo($file_id, string $contentType = self::contentTypes['getArticleFileConnectionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ArticleFileConnectionWrap';
+        $returnType = '\FortnoxApi\Model\ArticleFileConnectionWrap';
         $request = $this->getArticleFileConnectionsResourceRequest($file_id, $contentType);
 
         return $this->client
@@ -695,9 +695,9 @@ class ArticleFileConnectionsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listArticleFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ArticleFileConnectionListItemWrap
+     * @return \FortnoxApi\Model\ArticleFileConnectionListItemWrap
      */
     public function listArticleFileConnectionsResource(string $contentType = self::contentTypes['listArticleFileConnectionsResource'][0])
     {
@@ -712,9 +712,9 @@ class ArticleFileConnectionsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listArticleFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ArticleFileConnectionListItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ArticleFileConnectionListItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function listArticleFileConnectionsResourceWithHttpInfo(string $contentType = self::contentTypes['listArticleFileConnectionsResource'][0])
     {
@@ -757,23 +757,23 @@ class ArticleFileConnectionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ArticleFileConnectionListItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ArticleFileConnectionListItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ArticleFileConnectionListItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ArticleFileConnectionListItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ArticleFileConnectionListItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ArticleFileConnectionListItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ArticleFileConnectionListItemWrap';
+            $returnType = '\FortnoxApi\Model\ArticleFileConnectionListItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -794,7 +794,7 @@ class ArticleFileConnectionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ArticleFileConnectionListItemWrap',
+                        '\FortnoxApi\Model\ArticleFileConnectionListItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -836,7 +836,7 @@ class ArticleFileConnectionsResourceApi
      */
     public function listArticleFileConnectionsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listArticleFileConnectionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ArticleFileConnectionListItemWrap';
+        $returnType = '\FortnoxApi\Model\ArticleFileConnectionListItemWrap';
         $request = $this->listArticleFileConnectionsResourceRequest($contentType);
 
         return $this->client
@@ -959,7 +959,7 @@ class ArticleFileConnectionsResourceApi
      * @param  string $file_id identifies the article file connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeArticleFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -976,7 +976,7 @@ class ArticleFileConnectionsResourceApi
      * @param  string $file_id identifies the article file connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeArticleFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

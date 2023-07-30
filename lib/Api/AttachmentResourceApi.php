@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * AttachmentResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,12 +140,12 @@ class AttachmentResourceApi
      *
      * Attach files to one or more entities
      *
-     * @param  \OpenAPI\Client\Model\Attachment[] $attachments A list of attachments (optional)
+     * @param  \FortnoxApi\Model\Attachment[] $attachments A list of attachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attach'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Attachment[]
+     * @return \FortnoxApi\Model\Attachment[]
      */
     public function attach($attachments = null, string $contentType = self::contentTypes['attach'][0])
     {
@@ -158,12 +158,12 @@ class AttachmentResourceApi
      *
      * Attach files to one or more entities
      *
-     * @param  \OpenAPI\Client\Model\Attachment[] $attachments A list of attachments (optional)
+     * @param  \FortnoxApi\Model\Attachment[] $attachments A list of attachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attach'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Attachment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\Attachment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function attachWithHttpInfo($attachments = null, string $contentType = self::contentTypes['attach'][0])
     {
@@ -206,23 +206,23 @@ class AttachmentResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Attachment[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\Attachment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Attachment[]' !== 'string') {
+                        if ('\FortnoxApi\Model\Attachment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Attachment[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\Attachment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Attachment[]';
+            $returnType = '\FortnoxApi\Model\Attachment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -243,7 +243,7 @@ class AttachmentResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Attachment[]',
+                        '\FortnoxApi\Model\Attachment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -258,7 +258,7 @@ class AttachmentResourceApi
      *
      * Attach files to one or more entities
      *
-     * @param  \OpenAPI\Client\Model\Attachment[] $attachments A list of attachments (optional)
+     * @param  \FortnoxApi\Model\Attachment[] $attachments A list of attachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attach'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -279,7 +279,7 @@ class AttachmentResourceApi
      *
      * Attach files to one or more entities
      *
-     * @param  \OpenAPI\Client\Model\Attachment[] $attachments A list of attachments (optional)
+     * @param  \FortnoxApi\Model\Attachment[] $attachments A list of attachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attach'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -287,7 +287,7 @@ class AttachmentResourceApi
      */
     public function attachAsyncWithHttpInfo($attachments = null, string $contentType = self::contentTypes['attach'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Attachment[]';
+        $returnType = '\FortnoxApi\Model\Attachment[]';
         $request = $this->attachRequest($attachments, $contentType);
 
         return $this->client
@@ -329,7 +329,7 @@ class AttachmentResourceApi
     /**
      * Create request for operation 'attach'
      *
-     * @param  \OpenAPI\Client\Model\Attachment[] $attachments A list of attachments (optional)
+     * @param  \FortnoxApi\Model\Attachment[] $attachments A list of attachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attach'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -419,7 +419,7 @@ class AttachmentResourceApi
      * @param  string $attachment_id id of the attachment to be detached (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['detach'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -436,7 +436,7 @@ class AttachmentResourceApi
      * @param  string $attachment_id id of the attachment to be detached (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['detach'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -649,9 +649,9 @@ class AttachmentResourceApi
      * @param  string $entitytype type of the entities whose attachments should be fetched (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttachments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Attachment[]
+     * @return \FortnoxApi\Model\Attachment[]
      */
     public function getAttachments($entityid, $entitytype, string $contentType = self::contentTypes['getAttachments'][0])
     {
@@ -668,9 +668,9 @@ class AttachmentResourceApi
      * @param  string $entitytype type of the entities whose attachments should be fetched (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttachments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Attachment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\Attachment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAttachmentsWithHttpInfo($entityid, $entitytype, string $contentType = self::contentTypes['getAttachments'][0])
     {
@@ -713,23 +713,23 @@ class AttachmentResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Attachment[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\Attachment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Attachment[]' !== 'string') {
+                        if ('\FortnoxApi\Model\Attachment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Attachment[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\Attachment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Attachment[]';
+            $returnType = '\FortnoxApi\Model\Attachment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -750,7 +750,7 @@ class AttachmentResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Attachment[]',
+                        '\FortnoxApi\Model\Attachment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -796,7 +796,7 @@ class AttachmentResourceApi
      */
     public function getAttachmentsAsyncWithHttpInfo($entityid, $entitytype, string $contentType = self::contentTypes['getAttachments'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Attachment[]';
+        $returnType = '\FortnoxApi\Model\Attachment[]';
         $request = $this->getAttachmentsRequest($entityid, $entitytype, $contentType);
 
         return $this->client
@@ -954,9 +954,9 @@ class AttachmentResourceApi
      * @param  string $entitytype type of the entities  to look for number of attachments on (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNumberOfAttachmentsForEntity'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NumberOfAttachments[]
+     * @return \FortnoxApi\Model\NumberOfAttachments[]
      */
     public function getNumberOfAttachmentsForEntity($entityids, $entitytype, string $contentType = self::contentTypes['getNumberOfAttachmentsForEntity'][0])
     {
@@ -973,9 +973,9 @@ class AttachmentResourceApi
      * @param  string $entitytype type of the entities  to look for number of attachments on (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNumberOfAttachmentsForEntity'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NumberOfAttachments[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\NumberOfAttachments[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getNumberOfAttachmentsForEntityWithHttpInfo($entityids, $entitytype, string $contentType = self::contentTypes['getNumberOfAttachmentsForEntity'][0])
     {
@@ -1018,23 +1018,23 @@ class AttachmentResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NumberOfAttachments[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\NumberOfAttachments[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NumberOfAttachments[]' !== 'string') {
+                        if ('\FortnoxApi\Model\NumberOfAttachments[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NumberOfAttachments[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\NumberOfAttachments[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\NumberOfAttachments[]';
+            $returnType = '\FortnoxApi\Model\NumberOfAttachments[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1055,7 +1055,7 @@ class AttachmentResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NumberOfAttachments[]',
+                        '\FortnoxApi\Model\NumberOfAttachments[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1101,7 +1101,7 @@ class AttachmentResourceApi
      */
     public function getNumberOfAttachmentsForEntityAsyncWithHttpInfo($entityids, $entitytype, string $contentType = self::contentTypes['getNumberOfAttachmentsForEntity'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NumberOfAttachments[]';
+        $returnType = '\FortnoxApi\Model\NumberOfAttachments[]';
         $request = $this->getNumberOfAttachmentsForEntityRequest($entityids, $entitytype, $contentType);
 
         return $this->client
@@ -1256,12 +1256,12 @@ class AttachmentResourceApi
      * Update attachment
      *
      * @param  string $attachment_id id of the attachment to be updated (required)
-     * @param  \OpenAPI\Client\Model\Attachment $attachment an attachment (optional)
+     * @param  \FortnoxApi\Model\Attachment $attachment an attachment (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttachment'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Attachment
+     * @return \FortnoxApi\Model\Attachment
      */
     public function updateAttachment($attachment_id, $attachment = null, string $contentType = self::contentTypes['updateAttachment'][0])
     {
@@ -1275,12 +1275,12 @@ class AttachmentResourceApi
      * Update attachment
      *
      * @param  string $attachment_id id of the attachment to be updated (required)
-     * @param  \OpenAPI\Client\Model\Attachment $attachment an attachment (optional)
+     * @param  \FortnoxApi\Model\Attachment $attachment an attachment (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttachment'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Attachment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\Attachment, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAttachmentWithHttpInfo($attachment_id, $attachment = null, string $contentType = self::contentTypes['updateAttachment'][0])
     {
@@ -1323,23 +1323,23 @@ class AttachmentResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Attachment' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\Attachment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Attachment' !== 'string') {
+                        if ('\FortnoxApi\Model\Attachment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Attachment', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\Attachment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Attachment';
+            $returnType = '\FortnoxApi\Model\Attachment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1360,7 +1360,7 @@ class AttachmentResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Attachment',
+                        '\FortnoxApi\Model\Attachment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1376,7 +1376,7 @@ class AttachmentResourceApi
      * Update attachment
      *
      * @param  string $attachment_id id of the attachment to be updated (required)
-     * @param  \OpenAPI\Client\Model\Attachment $attachment an attachment (optional)
+     * @param  \FortnoxApi\Model\Attachment $attachment an attachment (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttachment'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1398,7 +1398,7 @@ class AttachmentResourceApi
      * Update attachment
      *
      * @param  string $attachment_id id of the attachment to be updated (required)
-     * @param  \OpenAPI\Client\Model\Attachment $attachment an attachment (optional)
+     * @param  \FortnoxApi\Model\Attachment $attachment an attachment (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttachment'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1406,7 +1406,7 @@ class AttachmentResourceApi
      */
     public function updateAttachmentAsyncWithHttpInfo($attachment_id, $attachment = null, string $contentType = self::contentTypes['updateAttachment'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Attachment';
+        $returnType = '\FortnoxApi\Model\Attachment';
         $request = $this->updateAttachmentRequest($attachment_id, $attachment, $contentType);
 
         return $this->client
@@ -1449,7 +1449,7 @@ class AttachmentResourceApi
      * Create request for operation 'updateAttachment'
      *
      * @param  string $attachment_id id of the attachment to be updated (required)
-     * @param  \OpenAPI\Client\Model\Attachment $attachment an attachment (optional)
+     * @param  \FortnoxApi\Model\Attachment $attachment an attachment (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttachment'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1551,10 +1551,10 @@ class AttachmentResourceApi
      *
      * Validates a list of attachments that will be included on send
      *
-     * @param  \OpenAPI\Client\Model\Attachment[] $attachments a list of Attachments (optional)
+     * @param  \FortnoxApi\Model\Attachment[] $attachments a list of Attachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validateIncludedOnSend'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1568,10 +1568,10 @@ class AttachmentResourceApi
      *
      * Validates a list of attachments that will be included on send
      *
-     * @param  \OpenAPI\Client\Model\Attachment[] $attachments a list of Attachments (optional)
+     * @param  \FortnoxApi\Model\Attachment[] $attachments a list of Attachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validateIncludedOnSend'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1628,7 +1628,7 @@ class AttachmentResourceApi
      *
      * Validates a list of attachments that will be included on send
      *
-     * @param  \OpenAPI\Client\Model\Attachment[] $attachments a list of Attachments (optional)
+     * @param  \FortnoxApi\Model\Attachment[] $attachments a list of Attachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validateIncludedOnSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1649,7 +1649,7 @@ class AttachmentResourceApi
      *
      * Validates a list of attachments that will be included on send
      *
-     * @param  \OpenAPI\Client\Model\Attachment[] $attachments a list of Attachments (optional)
+     * @param  \FortnoxApi\Model\Attachment[] $attachments a list of Attachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validateIncludedOnSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1686,7 +1686,7 @@ class AttachmentResourceApi
     /**
      * Create request for operation 'validateIncludedOnSend'
      *
-     * @param  \OpenAPI\Client\Model\Attachment[] $attachments a list of Attachments (optional)
+     * @param  \FortnoxApi\Model\Attachment[] $attachments a list of Attachments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validateIncludedOnSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

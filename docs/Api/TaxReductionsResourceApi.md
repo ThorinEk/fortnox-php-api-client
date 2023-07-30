@@ -1,4 +1,4 @@
-# OpenAPI\Client\TaxReductionsResourceApi
+# FortnoxApi\TaxReductionsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createTaxReductionsResource()`
 
 ```php
-createTaxReductionsResource($tax_reduction): \OpenAPI\Client\Model\TaxReductionWrap
+createTaxReductionsResource($tax_reduction): \FortnoxApi\Model\TaxReductionWrap
 ```
 
 Create a Tax Reduction
@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TaxReductionsResourceApi(
+$apiInstance = new FortnoxApi\Api\TaxReductionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$tax_reduction = new \OpenAPI\Client\Model\TaxReductionWrap(); // \OpenAPI\Client\Model\TaxReductionWrap | to create
+$tax_reduction = new \FortnoxApi\Model\TaxReductionWrap(); // \FortnoxApi\Model\TaxReductionWrap | to create
 
 try {
     $result = $apiInstance->createTaxReductionsResource($tax_reduction);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **tax_reduction** | [**\OpenAPI\Client\Model\TaxReductionWrap**](../Model/TaxReductionWrap.md)| to create | [optional] |
+| **tax_reduction** | [**\FortnoxApi\Model\TaxReductionWrap**](../Model/TaxReductionWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TaxReductionWrap**](../Model/TaxReductionWrap.md)
+[**\FortnoxApi\Model\TaxReductionWrap**](../Model/TaxReductionWrap.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `getTaxReductionsResource()`
 
 ```php
-getTaxReductionsResource($id): \OpenAPI\Client\Model\TaxReductionWrap
+getTaxReductionsResource($id): \FortnoxApi\Model\TaxReductionWrap
 ```
 
 Retrieve a single tax reduction
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TaxReductionsResourceApi(
+$apiInstance = new FortnoxApi\Api\TaxReductionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -106,7 +106,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TaxReductionWrap**](../Model/TaxReductionWrap.md)
+[**\FortnoxApi\Model\TaxReductionWrap**](../Model/TaxReductionWrap.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ No authorization required
 ## `listTaxReductionsResource()`
 
 ```php
-listTaxReductionsResource($filter): \OpenAPI\Client\Model\TaxReductionListItemList
+listTaxReductionsResource($filter): \FortnoxApi\Model\TaxReductionListItemList
 ```
 
 Retrieve a list of tax reductions
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TaxReductionsResourceApi(
+$apiInstance = new FortnoxApi\Api\TaxReductionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -160,7 +160,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TaxReductionListItemList**](../Model/TaxReductionListItemList.md)
+[**\FortnoxApi\Model\TaxReductionListItemList**](../Model/TaxReductionListItemList.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TaxReductionsResourceApi(
+$apiInstance = new FortnoxApi\Api\TaxReductionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -231,7 +231,7 @@ No authorization required
 ## `updateTaxReductionsResource()`
 
 ```php
-updateTaxReductionsResource($id, $tax_reduction): \OpenAPI\Client\Model\TaxReductionWrap
+updateTaxReductionsResource($id, $tax_reduction): \FortnoxApi\Model\TaxReductionWrap
 ```
 
 Update a tax reduction
@@ -244,13 +244,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TaxReductionsResourceApi(
+$apiInstance = new FortnoxApi\Api\TaxReductionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | identifies the tax reduction
-$tax_reduction = new \OpenAPI\Client\Model\TaxReductionWrap(); // \OpenAPI\Client\Model\TaxReductionWrap | to update
+$tax_reduction = new \FortnoxApi\Model\TaxReductionWrap(); // \FortnoxApi\Model\TaxReductionWrap | to update
 
 try {
     $result = $apiInstance->updateTaxReductionsResource($id, $tax_reduction);
@@ -265,11 +265,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| identifies the tax reduction | |
-| **tax_reduction** | [**\OpenAPI\Client\Model\TaxReductionWrap**](../Model/TaxReductionWrap.md)| to update | [optional] |
+| **tax_reduction** | [**\FortnoxApi\Model\TaxReductionWrap**](../Model/TaxReductionWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TaxReductionWrap**](../Model/TaxReductionWrap.md)
+[**\FortnoxApi\Model\TaxReductionWrap**](../Model/TaxReductionWrap.md)
 
 ### Authorization
 

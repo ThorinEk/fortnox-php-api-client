@@ -1,4 +1,4 @@
-# OpenAPI\Client\ArticlesResourceApi
+# FortnoxApi\ArticlesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `callList()`
 
 ```php
-callList($from_date, $to_date, $customer_ids, $project_ids, $include_registrations_without_project, $item_ids, $cost_center_ids, $owner_ids, $invoiced, $in_invoice_basis, $internal_articles, $non_invoiceable, $include_non_invoiceable_price): \OpenAPI\Client\Model\BaseArticleRegistration[]
+callList($from_date, $to_date, $customer_ids, $project_ids, $include_registrations_without_project, $item_ids, $cost_center_ids, $owner_ids, $invoiced, $in_invoice_basis, $internal_articles, $non_invoiceable, $include_non_invoiceable_price): \FortnoxApi\Model\BaseArticleRegistration[]
 ```
 
 Get full article registrations that match filter
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArticlesResourceApi(
+$apiInstance = new FortnoxApi\Api\ArticlesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -72,7 +72,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BaseArticleRegistration[]**](../Model/BaseArticleRegistration.md)
+[**\FortnoxApi\Model\BaseArticleRegistration[]**](../Model/BaseArticleRegistration.md)
 
 ### Authorization
 

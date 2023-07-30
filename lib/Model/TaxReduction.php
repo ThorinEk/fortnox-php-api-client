@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * TaxReduction Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -70,7 +70,7 @@ class TaxReduction implements ModelInterface, ArrayAccess, \JsonSerializable
         'voucher_number' => 'int',
         'voucher_series' => 'string',
         'voucher_year' => 'int',
-        'tax_reduction_amounts' => '\OpenAPI\Client\Model\TaxReductionTaxReductionAmount[]'
+        'tax_reduction_amounts' => '\FortnoxApi\Model\TaxReductionTaxReductionAmount[]'
     ];
 
     /**
@@ -890,7 +890,7 @@ class TaxReduction implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tax_reduction_amounts
      *
-     * @return \OpenAPI\Client\Model\TaxReductionTaxReductionAmount[]|null
+     * @return \FortnoxApi\Model\TaxReductionTaxReductionAmount[]|null
      */
     public function getTaxReductionAmounts()
     {
@@ -900,7 +900,7 @@ class TaxReduction implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tax_reduction_amounts
      *
-     * @param \OpenAPI\Client\Model\TaxReductionTaxReductionAmount[]|null $tax_reduction_amounts tax_reduction_amounts
+     * @param \FortnoxApi\Model\TaxReductionTaxReductionAmount[]|null $tax_reduction_amounts tax_reduction_amounts
      *
      * @return self
      */

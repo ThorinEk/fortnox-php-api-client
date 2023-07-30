@@ -1,4 +1,4 @@
-# OpenAPI\Client\ScheduleTimesResourceApi
+# FortnoxApi\ScheduleTimesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getScheduleTimesResource()`
 
 ```php
-getScheduleTimesResource($employee_id, $date): \OpenAPI\Client\Model\ScheduleTimeWrap
+getScheduleTimesResource($employee_id, $date): \FortnoxApi\Model\ScheduleTimeWrap
 ```
 
 Retrieve a specific schedule time
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduleTimesResourceApi(
+$apiInstance = new FortnoxApi\Api\ScheduleTimesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -50,7 +50,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ScheduleTimeWrap**](../Model/ScheduleTimeWrap.md)
+[**\FortnoxApi\Model\ScheduleTimeWrap**](../Model/ScheduleTimeWrap.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `reset()`
 
 ```php
-reset($employee_id, $date): \OpenAPI\Client\Model\ScheduleTimeWrap
+reset($employee_id, $date): \FortnoxApi\Model\ScheduleTimeWrap
 ```
 
 Reset schedule time
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduleTimesResourceApi(
+$apiInstance = new FortnoxApi\Api\ScheduleTimesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -106,7 +106,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ScheduleTimeWrap**](../Model/ScheduleTimeWrap.md)
+[**\FortnoxApi\Model\ScheduleTimeWrap**](../Model/ScheduleTimeWrap.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ No authorization required
 ## `updateScheduleTimesResource()`
 
 ```php
-updateScheduleTimesResource($employee_id, $date, $schedule_time): \OpenAPI\Client\Model\ScheduleTimeWrap
+updateScheduleTimesResource($employee_id, $date, $schedule_time): \FortnoxApi\Model\ScheduleTimeWrap
 ```
 
 Update a schedule time
@@ -137,14 +137,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduleTimesResourceApi(
+$apiInstance = new FortnoxApi\Api\ScheduleTimesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $employee_id = 'employee_id_example'; // string | identifies the employee
 $date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | identifies the date
-$schedule_time = new \OpenAPI\Client\Model\ScheduleTimeWrap(); // \OpenAPI\Client\Model\ScheduleTimeWrap | to update
+$schedule_time = new \FortnoxApi\Model\ScheduleTimeWrap(); // \FortnoxApi\Model\ScheduleTimeWrap | to update
 
 try {
     $result = $apiInstance->updateScheduleTimesResource($employee_id, $date, $schedule_time);
@@ -160,11 +160,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **employee_id** | **string**| identifies the employee | |
 | **date** | **\DateTime**| identifies the date | |
-| **schedule_time** | [**\OpenAPI\Client\Model\ScheduleTimeWrap**](../Model/ScheduleTimeWrap.md)| to update | [optional] |
+| **schedule_time** | [**\FortnoxApi\Model\ScheduleTimeWrap**](../Model/ScheduleTimeWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ScheduleTimeWrap**](../Model/ScheduleTimeWrap.md)
+[**\FortnoxApi\Model\ScheduleTimeWrap**](../Model/ScheduleTimeWrap.md)
 
 ### Authorization
 

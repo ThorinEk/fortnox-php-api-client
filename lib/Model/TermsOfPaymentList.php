@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * TermsOfPaymentList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class TermsOfPaymentList implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'terms_of_payments' => '\OpenAPI\Client\Model\TermsOfPayment[]'
+        'terms_of_payments' => '\FortnoxApi\Model\TermsOfPayment[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class TermsOfPaymentList implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets terms_of_payments
      *
-     * @return \OpenAPI\Client\Model\TermsOfPayment[]|null
+     * @return \FortnoxApi\Model\TermsOfPayment[]|null
      */
     public function getTermsOfPayments()
     {
@@ -300,7 +300,7 @@ class TermsOfPaymentList implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets terms_of_payments
      *
-     * @param \OpenAPI\Client\Model\TermsOfPayment[]|null $terms_of_payments terms_of_payments
+     * @param \FortnoxApi\Model\TermsOfPayment[]|null $terms_of_payments terms_of_payments
      *
      * @return self
      */

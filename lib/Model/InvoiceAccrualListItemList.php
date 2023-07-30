@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * InvoiceAccrualListItemList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class InvoiceAccrualListItemList implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'invoice_accruals' => '\OpenAPI\Client\Model\InvoiceAccrualListItem[]'
+        'invoice_accruals' => '\FortnoxApi\Model\InvoiceAccrualListItem[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class InvoiceAccrualListItemList implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets invoice_accruals
      *
-     * @return \OpenAPI\Client\Model\InvoiceAccrualListItem[]|null
+     * @return \FortnoxApi\Model\InvoiceAccrualListItem[]|null
      */
     public function getInvoiceAccruals()
     {
@@ -300,7 +300,7 @@ class InvoiceAccrualListItemList implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets invoice_accruals
      *
-     * @param \OpenAPI\Client\Model\InvoiceAccrualListItem[]|null $invoice_accruals invoice_accruals
+     * @param \FortnoxApi\Model\InvoiceAccrualListItem[]|null $invoice_accruals invoice_accruals
      *
      * @return self
      */

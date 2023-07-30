@@ -1,4 +1,4 @@
-# OpenAPI\Client\PurchaseOrderResourceApi
+# FortnoxApi\PurchaseOrderResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -23,7 +23,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `batchUpdateResponseState()`
 
 ```php
-batchUpdateResponseState($ids, $response_state_change): \OpenAPI\Client\Model\PurchaseOrder[]
+batchUpdateResponseState($ids, $response_state_change): \FortnoxApi\Model\PurchaseOrder[]
 ```
 
 Update response states
@@ -36,13 +36,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $ids = array(56); // int[] | List of purchase order ids.
-$response_state_change = new \OpenAPI\Client\Model\ResponseStateChange(); // \OpenAPI\Client\Model\ResponseStateChange | The new response state.
+$response_state_change = new \FortnoxApi\Model\ResponseStateChange(); // \FortnoxApi\Model\ResponseStateChange | The new response state.
 
 try {
     $result = $apiInstance->batchUpdateResponseState($ids, $response_state_change);
@@ -57,11 +57,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ids** | [**int[]**](../Model/int.md)| List of purchase order ids. | [optional] |
-| **response_state_change** | [**\OpenAPI\Client\Model\ResponseStateChange**](../Model/ResponseStateChange.md)| The new response state. | [optional] |
+| **response_state_change** | [**\FortnoxApi\Model\ResponseStateChange**](../Model/ResponseStateChange.md)| The new response state. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PurchaseOrder[]**](../Model/PurchaseOrder.md)
+[**\FortnoxApi\Model\PurchaseOrder[]**](../Model/PurchaseOrder.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ No authorization required
 ## `createPurchaseOrderResource()`
 
 ```php
-createPurchaseOrderResource($purchase_order): \OpenAPI\Client\Model\PurchaseOrder
+createPurchaseOrderResource($purchase_order): \FortnoxApi\Model\PurchaseOrder
 ```
 
 Create Purchase Order
@@ -92,12 +92,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$purchase_order = new \OpenAPI\Client\Model\PurchaseOrder(); // \OpenAPI\Client\Model\PurchaseOrder | <code>PurchaseOrder</code> document.
+$purchase_order = new \FortnoxApi\Model\PurchaseOrder(); // \FortnoxApi\Model\PurchaseOrder | <code>PurchaseOrder</code> document.
 
 try {
     $result = $apiInstance->createPurchaseOrderResource($purchase_order);
@@ -111,11 +111,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **purchase_order** | [**\OpenAPI\Client\Model\PurchaseOrder**](../Model/PurchaseOrder.md)| &lt;code&gt;PurchaseOrder&lt;/code&gt; document. | [optional] |
+| **purchase_order** | [**\FortnoxApi\Model\PurchaseOrder**](../Model/PurchaseOrder.md)| &lt;code&gt;PurchaseOrder&lt;/code&gt; document. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PurchaseOrder**](../Model/PurchaseOrder.md)
+[**\FortnoxApi\Model\PurchaseOrder**](../Model/PurchaseOrder.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ No authorization required
 ## `getAllPurchaseOrderResource()`
 
 ```php
-getAllPurchaseOrderResource($q, $supplier_number, $state, $item_id, $purchase_type, $internal_reference, $note): \OpenAPI\Client\Model\PurchaseOrder[]
+getAllPurchaseOrderResource($q, $supplier_number, $state, $item_id, $purchase_type, $internal_reference, $note): \FortnoxApi\Model\PurchaseOrder[]
 ```
 
 List Purchase Orders
@@ -148,7 +148,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -183,7 +183,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PurchaseOrder[]**](../Model/PurchaseOrder.md)
+[**\FortnoxApi\Model\PurchaseOrder[]**](../Model/PurchaseOrder.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ No authorization required
 ## `getAttachedNotes()`
 
 ```php
-getAttachedNotes($id): \OpenAPI\Client\Model\PurchaseOrderRowNote[]
+getAttachedNotes($id): \FortnoxApi\Model\PurchaseOrderRowNote[]
 ```
 
 Get notes
@@ -216,7 +216,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -239,7 +239,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PurchaseOrderRowNote[]**](../Model/PurchaseOrderRowNote.md)
+[**\FortnoxApi\Model\PurchaseOrderRowNote[]**](../Model/PurchaseOrderRowNote.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -325,7 +325,7 @@ No authorization required
 ## `getMatchedDocuments()`
 
 ```php
-getMatchedDocuments($id): \OpenAPI\Client\Model\DocumentReference[]
+getMatchedDocuments($id): \FortnoxApi\Model\DocumentReference[]
 ```
 
 List matched documents
@@ -340,7 +340,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -363,7 +363,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DocumentReference[]**](../Model/DocumentReference.md)
+[**\FortnoxApi\Model\DocumentReference[]**](../Model/DocumentReference.md)
 
 ### Authorization
 
@@ -381,7 +381,7 @@ No authorization required
 ## `getPurchaseOrderResource()`
 
 ```php
-getPurchaseOrderResource($id, $ignore_incoming_goods_id): \OpenAPI\Client\Model\PurchaseOrder
+getPurchaseOrderResource($id, $ignore_incoming_goods_id): \FortnoxApi\Model\PurchaseOrder
 ```
 
 Get Purchase Order
@@ -394,7 +394,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -419,7 +419,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PurchaseOrder**](../Model/PurchaseOrder.md)
+[**\FortnoxApi\Model\PurchaseOrder**](../Model/PurchaseOrder.md)
 
 ### Authorization
 
@@ -452,13 +452,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | Purchase order id.
-$settings = new \OpenAPI\Client\Model\PurchaseOrderMailSettings(); // \OpenAPI\Client\Model\PurchaseOrderMailSettings | see <code>PurchaseOrderMailSettings</code>
+$settings = new \FortnoxApi\Model\PurchaseOrderMailSettings(); // \FortnoxApi\Model\PurchaseOrderMailSettings | see <code>PurchaseOrderMailSettings</code>
 
 try {
     $apiInstance->sendPurchaseOrder($id, $settings);
@@ -472,7 +472,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Purchase order id. | |
-| **settings** | [**\OpenAPI\Client\Model\PurchaseOrderMailSettings**](../Model/PurchaseOrderMailSettings.md)| see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; | [optional] |
+| **settings** | [**\FortnoxApi\Model\PurchaseOrderMailSettings**](../Model/PurchaseOrderMailSettings.md)| see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; | [optional] |
 
 ### Return type
 
@@ -507,7 +507,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -547,7 +547,7 @@ No authorization required
 ## `setDropshipManuallyCompleted()`
 
 ```php
-setDropshipManuallyCompleted($id): \OpenAPI\Client\Model\ReleaseParentOrder
+setDropshipManuallyCompleted($id): \FortnoxApi\Model\ReleaseParentOrder
 ```
 
 Manually complete dropship order
@@ -562,7 +562,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -585,7 +585,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReleaseParentOrder**](../Model/ReleaseParentOrder.md)
+[**\FortnoxApi\Model\ReleaseParentOrder**](../Model/ReleaseParentOrder.md)
 
 ### Authorization
 
@@ -618,7 +618,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -658,7 +658,7 @@ No authorization required
 ## `updatePurchaseOrderResource()`
 
 ```php
-updatePurchaseOrderResource($id, $purchase_order): \OpenAPI\Client\Model\PurchaseOrder
+updatePurchaseOrderResource($id, $purchase_order): \FortnoxApi\Model\PurchaseOrder
 ```
 
 Update Purchase Order
@@ -671,13 +671,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | Purchase order id.
-$purchase_order = new \OpenAPI\Client\Model\PurchaseOrder(); // \OpenAPI\Client\Model\PurchaseOrder | The <code>PurchaseOrder</code> document.
+$purchase_order = new \FortnoxApi\Model\PurchaseOrder(); // \FortnoxApi\Model\PurchaseOrder | The <code>PurchaseOrder</code> document.
 
 try {
     $result = $apiInstance->updatePurchaseOrderResource($id, $purchase_order);
@@ -692,11 +692,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Purchase order id. | |
-| **purchase_order** | [**\OpenAPI\Client\Model\PurchaseOrder**](../Model/PurchaseOrder.md)| The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. | [optional] |
+| **purchase_order** | [**\FortnoxApi\Model\PurchaseOrder**](../Model/PurchaseOrder.md)| The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PurchaseOrder**](../Model/PurchaseOrder.md)
+[**\FortnoxApi\Model\PurchaseOrder**](../Model/PurchaseOrder.md)
 
 ### Authorization
 
@@ -714,7 +714,7 @@ No authorization required
 ## `updateResponseState()`
 
 ```php
-updateResponseState($id, $response_state_change): \OpenAPI\Client\Model\PurchaseOrder
+updateResponseState($id, $response_state_change): \FortnoxApi\Model\PurchaseOrder
 ```
 
 Update response state
@@ -727,13 +727,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | Purchase order id.
-$response_state_change = new \OpenAPI\Client\Model\ResponseStateChange(); // \OpenAPI\Client\Model\ResponseStateChange | The new response state.
+$response_state_change = new \FortnoxApi\Model\ResponseStateChange(); // \FortnoxApi\Model\ResponseStateChange | The new response state.
 
 try {
     $result = $apiInstance->updateResponseState($id, $response_state_change);
@@ -748,11 +748,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Purchase order id. | |
-| **response_state_change** | [**\OpenAPI\Client\Model\ResponseStateChange**](../Model/ResponseStateChange.md)| The new response state. | [optional] |
+| **response_state_change** | [**\FortnoxApi\Model\ResponseStateChange**](../Model/ResponseStateChange.md)| The new response state. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PurchaseOrder**](../Model/PurchaseOrder.md)
+[**\FortnoxApi\Model\PurchaseOrder**](../Model/PurchaseOrder.md)
 
 ### Authorization
 
@@ -783,7 +783,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PurchaseOrderResourceApi(
+$apiInstance = new FortnoxApi\Api\PurchaseOrderResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

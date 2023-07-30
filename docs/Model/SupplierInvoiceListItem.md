@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **supplier_name** | **string** |  | [optional]
 **total** | **string** |  | [optional]
 **authorizer_name** | **string** |  | [optional]
-**vouchers** | [**\OpenAPI\Client\Model\SupplierInvoiceListItemVoucher[]**](SupplierInvoiceListItemVoucher.md) |  | [optional]
+**vouchers** | [**\FortnoxApi\Model\SupplierInvoiceListItemVoucher[]**](SupplierInvoiceListItemVoucher.md) |  | [optional]
 **final_pay_date** | **\DateTime** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

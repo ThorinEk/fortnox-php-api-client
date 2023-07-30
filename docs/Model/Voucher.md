@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **reference_type** | **string** |  | [optional]
 **transaction_date** | **\DateTime** |  |
 **voucher_number** | **int** |  | [optional]
-**voucher_rows** | [**\OpenAPI\Client\Model\VoucherVoucherRow[]**](VoucherVoucherRow.md) |  | [optional]
+**voucher_rows** | [**\FortnoxApi\Model\VoucherVoucherRow[]**](VoucherVoucherRow.md) |  | [optional]
 **voucher_series** | **string** |  |
 **year** | **int** |  |
 **approval_state** | **int** |  | [optional]

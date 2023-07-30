@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **description** | **string** |  | [optional]
 **manual** | **bool** |  | [optional]
 **year** | **int** |  | [optional]
-**approver** | [**\OpenAPI\Client\Model\VoucherSeriesListItemApprover**](VoucherSeriesListItemApprover.md) |  | [optional]
+**approver** | [**\FortnoxApi\Model\VoucherSeriesListItemApprover**](VoucherSeriesListItemApprover.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

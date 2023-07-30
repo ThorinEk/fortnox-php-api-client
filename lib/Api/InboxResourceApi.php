@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * InboxResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,7 +137,7 @@ class InboxResourceApi
      * @param  string $id identifies the folder (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFileByIdInboxResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -155,7 +155,7 @@ class InboxResourceApi
      * @param  string $id identifies the folder (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFileByIdInboxResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -419,9 +419,9 @@ class InboxResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getInboxResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FolderWrap
+     * @return \FortnoxApi\Model\FolderWrap
      */
     public function getInboxResource(string $contentType = self::contentTypes['getInboxResource'][0])
     {
@@ -436,9 +436,9 @@ class InboxResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getInboxResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FolderWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\FolderWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInboxResourceWithHttpInfo(string $contentType = self::contentTypes['getInboxResource'][0])
     {
@@ -481,23 +481,23 @@ class InboxResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FolderWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\FolderWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FolderWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\FolderWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FolderWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\FolderWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\FolderWrap';
+            $returnType = '\FortnoxApi\Model\FolderWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -518,7 +518,7 @@ class InboxResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FolderWrap',
+                        '\FortnoxApi\Model\FolderWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class InboxResourceApi
      */
     public function getInboxResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['getInboxResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FolderWrap';
+        $returnType = '\FortnoxApi\Model\FolderWrap';
         $request = $this->getInboxResourceRequest($contentType);
 
         return $this->client
@@ -683,7 +683,7 @@ class InboxResourceApi
      * @param  string $id identifies the file to remove (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeInboxResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -700,7 +700,7 @@ class InboxResourceApi
      * @param  string $id identifies the file to remove (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeInboxResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -914,9 +914,9 @@ class InboxResourceApi
      * @param  object $file file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upload'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FolderFileRowWrap
+     * @return \FortnoxApi\Model\FolderFileRowWrap
      */
     public function upload($folder_id = null, $path = null, $file = null, string $contentType = self::contentTypes['upload'][0])
     {
@@ -934,9 +934,9 @@ class InboxResourceApi
      * @param  object $file file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upload'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FolderFileRowWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\FolderFileRowWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadWithHttpInfo($folder_id = null, $path = null, $file = null, string $contentType = self::contentTypes['upload'][0])
     {
@@ -979,23 +979,23 @@ class InboxResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FolderFileRowWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\FolderFileRowWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FolderFileRowWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\FolderFileRowWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FolderFileRowWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\FolderFileRowWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\FolderFileRowWrap';
+            $returnType = '\FortnoxApi\Model\FolderFileRowWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1016,7 +1016,7 @@ class InboxResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FolderFileRowWrap',
+                        '\FortnoxApi\Model\FolderFileRowWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1064,7 +1064,7 @@ class InboxResourceApi
      */
     public function uploadAsyncWithHttpInfo($folder_id = null, $path = null, $file = null, string $contentType = self::contentTypes['upload'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FolderFileRowWrap';
+        $returnType = '\FortnoxApi\Model\FolderFileRowWrap';
         $request = $this->uploadRequest($folder_id, $path, $file, $contentType);
 
         return $this->client

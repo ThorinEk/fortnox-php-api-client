@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * VoucherFileConnectionWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class VoucherFileConnectionWrap implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'voucher_file_connection' => '\OpenAPI\Client\Model\VoucherFileConnection'
+        'voucher_file_connection' => '\FortnoxApi\Model\VoucherFileConnection'
     ];
 
     /**
@@ -293,7 +293,7 @@ class VoucherFileConnectionWrap implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets voucher_file_connection
      *
-     * @return \OpenAPI\Client\Model\VoucherFileConnection
+     * @return \FortnoxApi\Model\VoucherFileConnection
      */
     public function getVoucherFileConnection()
     {
@@ -303,7 +303,7 @@ class VoucherFileConnectionWrap implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets voucher_file_connection
      *
-     * @param \OpenAPI\Client\Model\VoucherFileConnection $voucher_file_connection voucher_file_connection
+     * @param \FortnoxApi\Model\VoucherFileConnection $voucher_file_connection voucher_file_connection
      *
      * @return self
      */

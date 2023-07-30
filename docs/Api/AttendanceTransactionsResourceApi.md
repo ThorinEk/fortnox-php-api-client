@@ -1,4 +1,4 @@
-# OpenAPI\Client\AttendanceTransactionsResourceApi
+# FortnoxApi\AttendanceTransactionsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createAttendanceTransactionsResource()`
 
 ```php
-createAttendanceTransactionsResource($attendance_transaction): \OpenAPI\Client\Model\AttendanceTransactionWrap
+createAttendanceTransactionsResource($attendance_transaction): \FortnoxApi\Model\AttendanceTransactionWrap
 ```
 
 Create a new attendance transaction
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AttendanceTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\AttendanceTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$attendance_transaction = new \OpenAPI\Client\Model\AttendanceTransactionWrap(); // \OpenAPI\Client\Model\AttendanceTransactionWrap | attendance transaction to create
+$attendance_transaction = new \FortnoxApi\Model\AttendanceTransactionWrap(); // \FortnoxApi\Model\AttendanceTransactionWrap | attendance transaction to create
 
 try {
     $result = $apiInstance->createAttendanceTransactionsResource($attendance_transaction);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **attendance_transaction** | [**\OpenAPI\Client\Model\AttendanceTransactionWrap**](../Model/AttendanceTransactionWrap.md)| attendance transaction to create | [optional] |
+| **attendance_transaction** | [**\FortnoxApi\Model\AttendanceTransactionWrap**](../Model/AttendanceTransactionWrap.md)| attendance transaction to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AttendanceTransactionWrap**](../Model/AttendanceTransactionWrap.md)
+[**\FortnoxApi\Model\AttendanceTransactionWrap**](../Model/AttendanceTransactionWrap.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `getAttendanceTransactionsResource()`
 
 ```php
-getAttendanceTransactionsResource($id): \OpenAPI\Client\Model\AttendanceTransactionWrap
+getAttendanceTransactionsResource($id): \FortnoxApi\Model\AttendanceTransactionWrap
 ```
 
 Retrieve a specific attendance transaction
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AttendanceTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\AttendanceTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -105,7 +105,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AttendanceTransactionWrap**](../Model/AttendanceTransactionWrap.md)
+[**\FortnoxApi\Model\AttendanceTransactionWrap**](../Model/AttendanceTransactionWrap.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ No authorization required
 ## `listAttendanceTransactionsResource()`
 
 ```php
-listAttendanceTransactionsResource($employeeid, $date): \OpenAPI\Client\Model\AttendanceTransactionListItemList
+listAttendanceTransactionsResource($employeeid, $date): \FortnoxApi\Model\AttendanceTransactionListItemList
 ```
 
 Lists all attendance transactions
@@ -138,7 +138,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AttendanceTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\AttendanceTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -163,7 +163,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AttendanceTransactionListItemList**](../Model/AttendanceTransactionListItemList.md)
+[**\FortnoxApi\Model\AttendanceTransactionListItemList**](../Model/AttendanceTransactionListItemList.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ No authorization required
 ## `updateAttendanceTransactionsResource()`
 
 ```php
-updateAttendanceTransactionsResource($id, $attendance_transaction): \OpenAPI\Client\Model\AttendanceTransactionWrap
+updateAttendanceTransactionsResource($id, $attendance_transaction): \FortnoxApi\Model\AttendanceTransactionWrap
 ```
 
 Update a single attendance transaction
@@ -194,13 +194,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AttendanceTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\AttendanceTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | identifies the transaction
-$attendance_transaction = new \OpenAPI\Client\Model\AttendanceTransactionWrap(); // \OpenAPI\Client\Model\AttendanceTransactionWrap | to update
+$attendance_transaction = new \FortnoxApi\Model\AttendanceTransactionWrap(); // \FortnoxApi\Model\AttendanceTransactionWrap | to update
 
 try {
     $result = $apiInstance->updateAttendanceTransactionsResource($id, $attendance_transaction);
@@ -215,11 +215,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| identifies the transaction | |
-| **attendance_transaction** | [**\OpenAPI\Client\Model\AttendanceTransactionWrap**](../Model/AttendanceTransactionWrap.md)| to update | [optional] |
+| **attendance_transaction** | [**\FortnoxApi\Model\AttendanceTransactionWrap**](../Model/AttendanceTransactionWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AttendanceTransactionWrap**](../Model/AttendanceTransactionWrap.md)
+[**\FortnoxApi\Model\AttendanceTransactionWrap**](../Model/AttendanceTransactionWrap.md)
 
 ### Authorization
 

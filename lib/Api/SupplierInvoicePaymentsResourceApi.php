@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * SupplierInvoicePaymentsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,9 +143,9 @@ class SupplierInvoicePaymentsResourceApi
      * @param  int $number identifies the supplier invoice payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bookkeepSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierInvoicePaymentWrap
+     * @return \FortnoxApi\Model\SupplierInvoicePaymentWrap
      */
     public function bookkeepSupplierInvoicePaymentsResource($number, string $contentType = self::contentTypes['bookkeepSupplierInvoicePaymentsResource'][0])
     {
@@ -161,9 +161,9 @@ class SupplierInvoicePaymentsResourceApi
      * @param  int $number identifies the supplier invoice payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bookkeepSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierInvoicePaymentWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierInvoicePaymentWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function bookkeepSupplierInvoicePaymentsResourceWithHttpInfo($number, string $contentType = self::contentTypes['bookkeepSupplierInvoicePaymentsResource'][0])
     {
@@ -206,23 +206,23 @@ class SupplierInvoicePaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierInvoicePaymentWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierInvoicePaymentWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierInvoicePaymentWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierInvoicePaymentWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierInvoicePaymentWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap';
+            $returnType = '\FortnoxApi\Model\SupplierInvoicePaymentWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -243,7 +243,7 @@ class SupplierInvoicePaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap',
+                        '\FortnoxApi\Model\SupplierInvoicePaymentWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -287,7 +287,7 @@ class SupplierInvoicePaymentsResourceApi
      */
     public function bookkeepSupplierInvoicePaymentsResourceAsyncWithHttpInfo($number, string $contentType = self::contentTypes['bookkeepSupplierInvoicePaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap';
+        $returnType = '\FortnoxApi\Model\SupplierInvoicePaymentWrap';
         $request = $this->bookkeepSupplierInvoicePaymentsResourceRequest($number, $contentType);
 
         return $this->client
@@ -423,12 +423,12 @@ class SupplierInvoicePaymentsResourceApi
      *
      * Create a supplier invoice payment
      *
-     * @param  \OpenAPI\Client\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to create (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierInvoicePaymentWrap
+     * @return \FortnoxApi\Model\SupplierInvoicePaymentWrap
      */
     public function createSupplierInvoicePaymentsResource($supplier_invoice_payment = null, string $contentType = self::contentTypes['createSupplierInvoicePaymentsResource'][0])
     {
@@ -441,12 +441,12 @@ class SupplierInvoicePaymentsResourceApi
      *
      * Create a supplier invoice payment
      *
-     * @param  \OpenAPI\Client\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to create (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierInvoicePaymentWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierInvoicePaymentWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSupplierInvoicePaymentsResourceWithHttpInfo($supplier_invoice_payment = null, string $contentType = self::contentTypes['createSupplierInvoicePaymentsResource'][0])
     {
@@ -489,23 +489,23 @@ class SupplierInvoicePaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierInvoicePaymentWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierInvoicePaymentWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierInvoicePaymentWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierInvoicePaymentWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierInvoicePaymentWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap';
+            $returnType = '\FortnoxApi\Model\SupplierInvoicePaymentWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -526,7 +526,7 @@ class SupplierInvoicePaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap',
+                        '\FortnoxApi\Model\SupplierInvoicePaymentWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -541,7 +541,7 @@ class SupplierInvoicePaymentsResourceApi
      *
      * Create a supplier invoice payment
      *
-     * @param  \OpenAPI\Client\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to create (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -562,7 +562,7 @@ class SupplierInvoicePaymentsResourceApi
      *
      * Create a supplier invoice payment
      *
-     * @param  \OpenAPI\Client\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to create (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -570,7 +570,7 @@ class SupplierInvoicePaymentsResourceApi
      */
     public function createSupplierInvoicePaymentsResourceAsyncWithHttpInfo($supplier_invoice_payment = null, string $contentType = self::contentTypes['createSupplierInvoicePaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap';
+        $returnType = '\FortnoxApi\Model\SupplierInvoicePaymentWrap';
         $request = $this->createSupplierInvoicePaymentsResourceRequest($supplier_invoice_payment, $contentType);
 
         return $this->client
@@ -612,7 +612,7 @@ class SupplierInvoicePaymentsResourceApi
     /**
      * Create request for operation 'createSupplierInvoicePaymentsResource'
      *
-     * @param  \OpenAPI\Client\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to create (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -702,9 +702,9 @@ class SupplierInvoicePaymentsResourceApi
      * @param  int $number identifies the supplier invoice payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierInvoicePaymentWrap
+     * @return \FortnoxApi\Model\SupplierInvoicePaymentWrap
      */
     public function getSupplierInvoicePaymentsResource($number, string $contentType = self::contentTypes['getSupplierInvoicePaymentsResource'][0])
     {
@@ -720,9 +720,9 @@ class SupplierInvoicePaymentsResourceApi
      * @param  int $number identifies the supplier invoice payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierInvoicePaymentWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierInvoicePaymentWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSupplierInvoicePaymentsResourceWithHttpInfo($number, string $contentType = self::contentTypes['getSupplierInvoicePaymentsResource'][0])
     {
@@ -765,23 +765,23 @@ class SupplierInvoicePaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierInvoicePaymentWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierInvoicePaymentWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierInvoicePaymentWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierInvoicePaymentWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierInvoicePaymentWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap';
+            $returnType = '\FortnoxApi\Model\SupplierInvoicePaymentWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -802,7 +802,7 @@ class SupplierInvoicePaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap',
+                        '\FortnoxApi\Model\SupplierInvoicePaymentWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -846,7 +846,7 @@ class SupplierInvoicePaymentsResourceApi
      */
     public function getSupplierInvoicePaymentsResourceAsyncWithHttpInfo($number, string $contentType = self::contentTypes['getSupplierInvoicePaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap';
+        $returnType = '\FortnoxApi\Model\SupplierInvoicePaymentWrap';
         $request = $this->getSupplierInvoicePaymentsResourceRequest($number, $contentType);
 
         return $this->client
@@ -984,9 +984,9 @@ class SupplierInvoicePaymentsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierInvoicePaymentListItemList
+     * @return \FortnoxApi\Model\SupplierInvoicePaymentListItemList
      */
     public function listSupplierInvoicePaymentsResource(string $contentType = self::contentTypes['listSupplierInvoicePaymentsResource'][0])
     {
@@ -1001,9 +1001,9 @@ class SupplierInvoicePaymentsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierInvoicePaymentListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierInvoicePaymentListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSupplierInvoicePaymentsResourceWithHttpInfo(string $contentType = self::contentTypes['listSupplierInvoicePaymentsResource'][0])
     {
@@ -1046,23 +1046,23 @@ class SupplierInvoicePaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierInvoicePaymentListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierInvoicePaymentListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierInvoicePaymentListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierInvoicePaymentListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierInvoicePaymentListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierInvoicePaymentListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierInvoicePaymentListItemList';
+            $returnType = '\FortnoxApi\Model\SupplierInvoicePaymentListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1083,7 +1083,7 @@ class SupplierInvoicePaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierInvoicePaymentListItemList',
+                        '\FortnoxApi\Model\SupplierInvoicePaymentListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1125,7 +1125,7 @@ class SupplierInvoicePaymentsResourceApi
      */
     public function listSupplierInvoicePaymentsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listSupplierInvoicePaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierInvoicePaymentListItemList';
+        $returnType = '\FortnoxApi\Model\SupplierInvoicePaymentListItemList';
         $request = $this->listSupplierInvoicePaymentsResourceRequest($contentType);
 
         return $this->client
@@ -1248,7 +1248,7 @@ class SupplierInvoicePaymentsResourceApi
      * @param  int $number identifies the supplier invoice payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1265,7 +1265,7 @@ class SupplierInvoicePaymentsResourceApi
      * @param  int $number identifies the supplier invoice payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1475,12 +1475,12 @@ class SupplierInvoicePaymentsResourceApi
      * Update a supplier invoice payment
      *
      * @param  int $number identifies the supplier invoice payment (required)
-     * @param  \OpenAPI\Client\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to update (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierInvoicePaymentWrap
+     * @return \FortnoxApi\Model\SupplierInvoicePaymentWrap
      */
     public function updateSupplierInvoicePaymentsResource($number, $supplier_invoice_payment = null, string $contentType = self::contentTypes['updateSupplierInvoicePaymentsResource'][0])
     {
@@ -1494,12 +1494,12 @@ class SupplierInvoicePaymentsResourceApi
      * Update a supplier invoice payment
      *
      * @param  int $number identifies the supplier invoice payment (required)
-     * @param  \OpenAPI\Client\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to update (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierInvoicePaymentWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierInvoicePaymentWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSupplierInvoicePaymentsResourceWithHttpInfo($number, $supplier_invoice_payment = null, string $contentType = self::contentTypes['updateSupplierInvoicePaymentsResource'][0])
     {
@@ -1542,23 +1542,23 @@ class SupplierInvoicePaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierInvoicePaymentWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierInvoicePaymentWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierInvoicePaymentWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierInvoicePaymentWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierInvoicePaymentWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap';
+            $returnType = '\FortnoxApi\Model\SupplierInvoicePaymentWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1579,7 +1579,7 @@ class SupplierInvoicePaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap',
+                        '\FortnoxApi\Model\SupplierInvoicePaymentWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1595,7 +1595,7 @@ class SupplierInvoicePaymentsResourceApi
      * Update a supplier invoice payment
      *
      * @param  int $number identifies the supplier invoice payment (required)
-     * @param  \OpenAPI\Client\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to update (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1617,7 +1617,7 @@ class SupplierInvoicePaymentsResourceApi
      * Update a supplier invoice payment
      *
      * @param  int $number identifies the supplier invoice payment (required)
-     * @param  \OpenAPI\Client\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to update (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1625,7 +1625,7 @@ class SupplierInvoicePaymentsResourceApi
      */
     public function updateSupplierInvoicePaymentsResourceAsyncWithHttpInfo($number, $supplier_invoice_payment = null, string $contentType = self::contentTypes['updateSupplierInvoicePaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierInvoicePaymentWrap';
+        $returnType = '\FortnoxApi\Model\SupplierInvoicePaymentWrap';
         $request = $this->updateSupplierInvoicePaymentsResourceRequest($number, $supplier_invoice_payment, $contentType);
 
         return $this->client
@@ -1668,7 +1668,7 @@ class SupplierInvoicePaymentsResourceApi
      * Create request for operation 'updateSupplierInvoicePaymentsResource'
      *
      * @param  int $number identifies the supplier invoice payment (required)
-     * @param  \OpenAPI\Client\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to update (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoicePaymentWrap $supplier_invoice_payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSupplierInvoicePaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

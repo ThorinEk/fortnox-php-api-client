@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * Customer Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -66,8 +66,8 @@ class Customer implements ModelInterface, ArrayAccess, \JsonSerializable
         'country_code' => 'string',
         'active' => 'bool',
         'customer_number' => 'string',
-        'default_delivery_types' => '\OpenAPI\Client\Model\CustomerDefaultDeliveryTypes',
-        'default_templates' => '\OpenAPI\Client\Model\CustomerDefaultTemplates',
+        'default_delivery_types' => '\FortnoxApi\Model\CustomerDefaultDeliveryTypes',
+        'default_templates' => '\FortnoxApi\Model\CustomerDefaultTemplates',
         'delivery_address1' => 'string',
         'delivery_address2' => 'string',
         'delivery_city' => 'string',
@@ -1494,7 +1494,7 @@ class Customer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets default_delivery_types
      *
-     * @return \OpenAPI\Client\Model\CustomerDefaultDeliveryTypes|null
+     * @return \FortnoxApi\Model\CustomerDefaultDeliveryTypes|null
      */
     public function getDefaultDeliveryTypes()
     {
@@ -1504,7 +1504,7 @@ class Customer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets default_delivery_types
      *
-     * @param \OpenAPI\Client\Model\CustomerDefaultDeliveryTypes|null $default_delivery_types default_delivery_types
+     * @param \FortnoxApi\Model\CustomerDefaultDeliveryTypes|null $default_delivery_types default_delivery_types
      *
      * @return self
      */
@@ -1521,7 +1521,7 @@ class Customer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets default_templates
      *
-     * @return \OpenAPI\Client\Model\CustomerDefaultTemplates|null
+     * @return \FortnoxApi\Model\CustomerDefaultTemplates|null
      */
     public function getDefaultTemplates()
     {
@@ -1531,7 +1531,7 @@ class Customer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets default_templates
      *
-     * @param \OpenAPI\Client\Model\CustomerDefaultTemplates|null $default_templates default_templates
+     * @param \FortnoxApi\Model\CustomerDefaultTemplates|null $default_templates default_templates
      *
      * @return self
      */

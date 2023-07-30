@@ -1,4 +1,4 @@
-# OpenAPI\Client\EmployeesResourceApi
+# FortnoxApi\EmployeesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createEmployeesResource()`
 
 ```php
-createEmployeesResource($employee): \OpenAPI\Client\Model\EmployeeWrap
+createEmployeesResource($employee): \FortnoxApi\Model\EmployeeWrap
 ```
 
 Create a new employee
@@ -28,12 +28,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmployeesResourceApi(
+$apiInstance = new FortnoxApi\Api\EmployeesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$employee = new \OpenAPI\Client\Model\EmployeeWrap(); // \OpenAPI\Client\Model\EmployeeWrap | employee to create
+$employee = new \FortnoxApi\Model\EmployeeWrap(); // \FortnoxApi\Model\EmployeeWrap | employee to create
 
 try {
     $result = $apiInstance->createEmployeesResource($employee);
@@ -47,11 +47,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **employee** | [**\OpenAPI\Client\Model\EmployeeWrap**](../Model/EmployeeWrap.md)| employee to create | [optional] |
+| **employee** | [**\FortnoxApi\Model\EmployeeWrap**](../Model/EmployeeWrap.md)| employee to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmployeeWrap**](../Model/EmployeeWrap.md)
+[**\FortnoxApi\Model\EmployeeWrap**](../Model/EmployeeWrap.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ## `getEmployeesResource()`
 
 ```php
-getEmployeesResource($employee_id): \OpenAPI\Client\Model\EmployeeWrap
+getEmployeesResource($employee_id): \FortnoxApi\Model\EmployeeWrap
 ```
 
 Retrieve a specific employee
@@ -84,7 +84,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmployeesResourceApi(
+$apiInstance = new FortnoxApi\Api\EmployeesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -107,7 +107,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmployeeWrap**](../Model/EmployeeWrap.md)
+[**\FortnoxApi\Model\EmployeeWrap**](../Model/EmployeeWrap.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ No authorization required
 ## `listEmployeesResource()`
 
 ```php
-listEmployeesResource(): \OpenAPI\Client\Model\EmployeeListItemWrap
+listEmployeesResource(): \FortnoxApi\Model\EmployeeListItemWrap
 ```
 
 Retrieve a list of employees
@@ -140,7 +140,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmployeesResourceApi(
+$apiInstance = new FortnoxApi\Api\EmployeesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -160,7 +160,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmployeeListItemWrap**](../Model/EmployeeListItemWrap.md)
+[**\FortnoxApi\Model\EmployeeListItemWrap**](../Model/EmployeeListItemWrap.md)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ No authorization required
 ## `updateEmployeesResource()`
 
 ```php
-updateEmployeesResource($employee_id, $employee): \OpenAPI\Client\Model\EmployeeWrap
+updateEmployeesResource($employee_id, $employee): \FortnoxApi\Model\EmployeeWrap
 ```
 
 Update employee
@@ -193,13 +193,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmployeesResourceApi(
+$apiInstance = new FortnoxApi\Api\EmployeesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $employee_id = 'employee_id_example'; // string | identifies the employee
-$employee = new \OpenAPI\Client\Model\EmployeeWrap(); // \OpenAPI\Client\Model\EmployeeWrap | employee to update
+$employee = new \FortnoxApi\Model\EmployeeWrap(); // \FortnoxApi\Model\EmployeeWrap | employee to update
 
 try {
     $result = $apiInstance->updateEmployeesResource($employee_id, $employee);
@@ -214,11 +214,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **employee_id** | **string**| identifies the employee | |
-| **employee** | [**\OpenAPI\Client\Model\EmployeeWrap**](../Model/EmployeeWrap.md)| employee to update | [optional] |
+| **employee** | [**\FortnoxApi\Model\EmployeeWrap**](../Model/EmployeeWrap.md)| employee to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmployeeWrap**](../Model/EmployeeWrap.md)
+[**\FortnoxApi\Model\EmployeeWrap**](../Model/EmployeeWrap.md)
 
 ### Authorization
 

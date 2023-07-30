@@ -1,4 +1,4 @@
-# OpenAPI\Client\FinancialYearsResourceApi
+# FortnoxApi\FinancialYearsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createFinancialYearsResource()`
 
 ```php
-createFinancialYearsResource($financial_year): \OpenAPI\Client\Model\FinancialYearWrap
+createFinancialYearsResource($financial_year): \FortnoxApi\Model\FinancialYearWrap
 ```
 
 Create a financial year
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\FinancialYearsResourceApi(
+$apiInstance = new FortnoxApi\Api\FinancialYearsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$financial_year = new \OpenAPI\Client\Model\FinancialYearWrap(); // \OpenAPI\Client\Model\FinancialYearWrap | to create
+$financial_year = new \FortnoxApi\Model\FinancialYearWrap(); // \FortnoxApi\Model\FinancialYearWrap | to create
 
 try {
     $result = $apiInstance->createFinancialYearsResource($financial_year);
@@ -44,11 +44,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **financial_year** | [**\OpenAPI\Client\Model\FinancialYearWrap**](../Model/FinancialYearWrap.md)| to create | [optional] |
+| **financial_year** | [**\FortnoxApi\Model\FinancialYearWrap**](../Model/FinancialYearWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FinancialYearWrap**](../Model/FinancialYearWrap.md)
+[**\FortnoxApi\Model\FinancialYearWrap**](../Model/FinancialYearWrap.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ No authorization required
 ## `getByDate()`
 
 ```php
-getByDate($date): \OpenAPI\Client\Model\FinancialYearWrapList
+getByDate($date): \FortnoxApi\Model\FinancialYearWrapList
 ```
 
 Retrieve a list of financial years
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\FinancialYearsResourceApi(
+$apiInstance = new FortnoxApi\Api\FinancialYearsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FinancialYearWrapList**](../Model/FinancialYearWrapList.md)
+[**\FortnoxApi\Model\FinancialYearWrapList**](../Model/FinancialYearWrapList.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `getById()`
 
 ```php
-getById($id): \OpenAPI\Client\Model\FinancialYearWrap
+getById($id): \FortnoxApi\Model\FinancialYearWrap
 ```
 
 Retrieve financial year by id
@@ -135,7 +135,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\FinancialYearsResourceApi(
+$apiInstance = new FortnoxApi\Api\FinancialYearsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -158,7 +158,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FinancialYearWrap**](../Model/FinancialYearWrap.md)
+[**\FortnoxApi\Model\FinancialYearWrap**](../Model/FinancialYearWrap.md)
 
 ### Authorization
 

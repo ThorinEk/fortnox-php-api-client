@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * LabelsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,12 +134,12 @@ class LabelsResourceApi
      *
      * Create a label
      *
-     * @param  \OpenAPI\Client\Model\LabelWrap $label to create (optional)
+     * @param  \FortnoxApi\Model\LabelWrap $label to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLabelsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LabelWrap
+     * @return \FortnoxApi\Model\LabelWrap
      */
     public function createLabelsResource($label = null, string $contentType = self::contentTypes['createLabelsResource'][0])
     {
@@ -152,12 +152,12 @@ class LabelsResourceApi
      *
      * Create a label
      *
-     * @param  \OpenAPI\Client\Model\LabelWrap $label to create (optional)
+     * @param  \FortnoxApi\Model\LabelWrap $label to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLabelsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LabelWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\LabelWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createLabelsResourceWithHttpInfo($label = null, string $contentType = self::contentTypes['createLabelsResource'][0])
     {
@@ -200,23 +200,23 @@ class LabelsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LabelWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\LabelWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LabelWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\LabelWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LabelWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\LabelWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LabelWrap';
+            $returnType = '\FortnoxApi\Model\LabelWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -237,7 +237,7 @@ class LabelsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LabelWrap',
+                        '\FortnoxApi\Model\LabelWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class LabelsResourceApi
      *
      * Create a label
      *
-     * @param  \OpenAPI\Client\Model\LabelWrap $label to create (optional)
+     * @param  \FortnoxApi\Model\LabelWrap $label to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLabelsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class LabelsResourceApi
      *
      * Create a label
      *
-     * @param  \OpenAPI\Client\Model\LabelWrap $label to create (optional)
+     * @param  \FortnoxApi\Model\LabelWrap $label to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLabelsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class LabelsResourceApi
      */
     public function createLabelsResourceAsyncWithHttpInfo($label = null, string $contentType = self::contentTypes['createLabelsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LabelWrap';
+        $returnType = '\FortnoxApi\Model\LabelWrap';
         $request = $this->createLabelsResourceRequest($label, $contentType);
 
         return $this->client
@@ -323,7 +323,7 @@ class LabelsResourceApi
     /**
      * Create request for operation 'createLabelsResource'
      *
-     * @param  \OpenAPI\Client\Model\LabelWrap $label to create (optional)
+     * @param  \FortnoxApi\Model\LabelWrap $label to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLabelsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -412,9 +412,9 @@ class LabelsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listLabelsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LabelList
+     * @return \FortnoxApi\Model\LabelList
      */
     public function listLabelsResource(string $contentType = self::contentTypes['listLabelsResource'][0])
     {
@@ -429,9 +429,9 @@ class LabelsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listLabelsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LabelList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\LabelList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listLabelsResourceWithHttpInfo(string $contentType = self::contentTypes['listLabelsResource'][0])
     {
@@ -474,23 +474,23 @@ class LabelsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LabelList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\LabelList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LabelList' !== 'string') {
+                        if ('\FortnoxApi\Model\LabelList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LabelList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\LabelList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LabelList';
+            $returnType = '\FortnoxApi\Model\LabelList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -511,7 +511,7 @@ class LabelsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LabelList',
+                        '\FortnoxApi\Model\LabelList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class LabelsResourceApi
      */
     public function listLabelsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listLabelsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LabelList';
+        $returnType = '\FortnoxApi\Model\LabelList';
         $request = $this->listLabelsResourceRequest($contentType);
 
         return $this->client
@@ -676,7 +676,7 @@ class LabelsResourceApi
      * @param  int $id identifies the label (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeLabelsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -693,7 +693,7 @@ class LabelsResourceApi
      * @param  int $id identifies the label (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeLabelsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -903,12 +903,12 @@ class LabelsResourceApi
      * Update a label
      *
      * @param  int $id identifies the label (required)
-     * @param  \OpenAPI\Client\Model\LabelWrap $label to update (optional)
+     * @param  \FortnoxApi\Model\LabelWrap $label to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateLabelsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LabelWrap
+     * @return \FortnoxApi\Model\LabelWrap
      */
     public function updateLabelsResource($id, $label = null, string $contentType = self::contentTypes['updateLabelsResource'][0])
     {
@@ -922,12 +922,12 @@ class LabelsResourceApi
      * Update a label
      *
      * @param  int $id identifies the label (required)
-     * @param  \OpenAPI\Client\Model\LabelWrap $label to update (optional)
+     * @param  \FortnoxApi\Model\LabelWrap $label to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateLabelsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LabelWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\LabelWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateLabelsResourceWithHttpInfo($id, $label = null, string $contentType = self::contentTypes['updateLabelsResource'][0])
     {
@@ -970,23 +970,23 @@ class LabelsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LabelWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\LabelWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LabelWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\LabelWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LabelWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\LabelWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LabelWrap';
+            $returnType = '\FortnoxApi\Model\LabelWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1007,7 +1007,7 @@ class LabelsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LabelWrap',
+                        '\FortnoxApi\Model\LabelWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1023,7 +1023,7 @@ class LabelsResourceApi
      * Update a label
      *
      * @param  int $id identifies the label (required)
-     * @param  \OpenAPI\Client\Model\LabelWrap $label to update (optional)
+     * @param  \FortnoxApi\Model\LabelWrap $label to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateLabelsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1045,7 +1045,7 @@ class LabelsResourceApi
      * Update a label
      *
      * @param  int $id identifies the label (required)
-     * @param  \OpenAPI\Client\Model\LabelWrap $label to update (optional)
+     * @param  \FortnoxApi\Model\LabelWrap $label to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateLabelsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1053,7 +1053,7 @@ class LabelsResourceApi
      */
     public function updateLabelsResourceAsyncWithHttpInfo($id, $label = null, string $contentType = self::contentTypes['updateLabelsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LabelWrap';
+        $returnType = '\FortnoxApi\Model\LabelWrap';
         $request = $this->updateLabelsResourceRequest($id, $label, $contentType);
 
         return $this->client
@@ -1096,7 +1096,7 @@ class LabelsResourceApi
      * Create request for operation 'updateLabelsResource'
      *
      * @param  int $id identifies the label (required)
-     * @param  \OpenAPI\Client\Model\LabelWrap $label to update (optional)
+     * @param  \FortnoxApi\Model\LabelWrap $label to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateLabelsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

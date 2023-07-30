@@ -1,4 +1,4 @@
-# OpenAPI\Client\LockedPeriodResourceApi
+# FortnoxApi\LockedPeriodResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getLockedPeriodResource()`
 
 ```php
-getLockedPeriodResource(): \OpenAPI\Client\Model\LockedPeriodWrap
+getLockedPeriodResource(): \FortnoxApi\Model\LockedPeriodWrap
 ```
 
 Retrieve the locked period
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\LockedPeriodResourceApi(
+$apiInstance = new FortnoxApi\Api\LockedPeriodResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LockedPeriodWrap**](../Model/LockedPeriodWrap.md)
+[**\FortnoxApi\Model\LockedPeriodWrap**](../Model/LockedPeriodWrap.md)
 
 ### Authorization
 

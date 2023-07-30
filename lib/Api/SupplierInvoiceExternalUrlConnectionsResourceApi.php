@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * SupplierInvoiceExternalUrlConnectionsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,12 +134,12 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      *
      * Create a supplier invoice external URL connection
      *
-     * @param  \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle
+     * @return \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle
      */
     public function createSupplierInvoiceExternalUrlConnectionsResource($request = null, string $contentType = self::contentTypes['createSupplierInvoiceExternalUrlConnectionsResource'][0])
     {
@@ -152,12 +152,12 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      *
      * Create a supplier invoice external URL connection
      *
-     * @param  \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSupplierInvoiceExternalUrlConnectionsResourceWithHttpInfo($request = null, string $contentType = self::contentTypes['createSupplierInvoiceExternalUrlConnectionsResource'][0])
     {
@@ -200,23 +200,23 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle';
+            $returnType = '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -237,7 +237,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle',
+                        '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      *
      * Create a supplier invoice external URL connection
      *
-     * @param  \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      *
      * Create a supplier invoice external URL connection
      *
-     * @param  \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      */
     public function createSupplierInvoiceExternalUrlConnectionsResourceAsyncWithHttpInfo($request = null, string $contentType = self::contentTypes['createSupplierInvoiceExternalUrlConnectionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle';
+        $returnType = '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle';
         $request = $this->createSupplierInvoiceExternalUrlConnectionsResourceRequest($request, $contentType);
 
         return $this->client
@@ -323,7 +323,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
     /**
      * Create request for operation 'createSupplierInvoiceExternalUrlConnectionsResource'
      *
-     * @param  \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -413,7 +413,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -430,7 +430,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -642,9 +642,9 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle
+     * @return \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle
      */
     public function getSupplierInvoiceExternalUrlConnectionsResource($id, string $contentType = self::contentTypes['getSupplierInvoiceExternalUrlConnectionsResource'][0])
     {
@@ -660,9 +660,9 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSupplierInvoiceExternalUrlConnectionsResourceWithHttpInfo($id, string $contentType = self::contentTypes['getSupplierInvoiceExternalUrlConnectionsResource'][0])
     {
@@ -705,23 +705,23 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle';
+            $returnType = '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -742,7 +742,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle',
+                        '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -786,7 +786,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      */
     public function getSupplierInvoiceExternalUrlConnectionsResourceAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getSupplierInvoiceExternalUrlConnectionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle';
+        $returnType = '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle';
         $request = $this->getSupplierInvoiceExternalUrlConnectionsResourceRequest($id, $contentType);
 
         return $this->client
@@ -923,12 +923,12 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      * Update a supplier invoice external URL connection
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle
+     * @return \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle
      */
     public function updateSupplierInvoiceExternalUrlConnectionsResource($id, $request = null, string $contentType = self::contentTypes['updateSupplierInvoiceExternalUrlConnectionsResource'][0])
     {
@@ -942,12 +942,12 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      * Update a supplier invoice external URL connection
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSupplierInvoiceExternalUrlConnectionsResourceWithHttpInfo($id, $request = null, string $contentType = self::contentTypes['updateSupplierInvoiceExternalUrlConnectionsResource'][0])
     {
@@ -990,23 +990,23 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle';
+            $returnType = '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1027,7 +1027,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle',
+                        '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1043,7 +1043,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      * Update a supplier invoice external URL connection
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1065,7 +1065,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      * Update a supplier invoice external URL connection
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1073,7 +1073,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      */
     public function updateSupplierInvoiceExternalUrlConnectionsResourceAsyncWithHttpInfo($id, $request = null, string $contentType = self::contentTypes['updateSupplierInvoiceExternalUrlConnectionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle';
+        $returnType = '\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle';
         $request = $this->updateSupplierInvoiceExternalUrlConnectionsResourceRequest($id, $request, $contentType);
 
         return $this->client
@@ -1116,7 +1116,7 @@ class SupplierInvoiceExternalUrlConnectionsResourceApi
      * Create request for operation 'updateSupplierInvoiceExternalUrlConnectionsResource'
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
+     * @param  \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate $request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSupplierInvoiceExternalUrlConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * TermsOfPaymentsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class TermsOfPaymentsResourceApi
      *
      * Create a term of payment
      *
-     * @param  \OpenAPI\Client\Model\TermsOfPaymentWrap $terms_of_payment to create (optional)
+     * @param  \FortnoxApi\Model\TermsOfPaymentWrap $terms_of_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTermsOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TermsOfPaymentWrap
+     * @return \FortnoxApi\Model\TermsOfPaymentWrap
      */
     public function createTermsOfPaymentsResource($terms_of_payment = null, string $contentType = self::contentTypes['createTermsOfPaymentsResource'][0])
     {
@@ -155,12 +155,12 @@ class TermsOfPaymentsResourceApi
      *
      * Create a term of payment
      *
-     * @param  \OpenAPI\Client\Model\TermsOfPaymentWrap $terms_of_payment to create (optional)
+     * @param  \FortnoxApi\Model\TermsOfPaymentWrap $terms_of_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTermsOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TermsOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TermsOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTermsOfPaymentsResourceWithHttpInfo($terms_of_payment = null, string $contentType = self::contentTypes['createTermsOfPaymentsResource'][0])
     {
@@ -203,23 +203,23 @@ class TermsOfPaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TermsOfPaymentWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TermsOfPaymentWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TermsOfPaymentWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\TermsOfPaymentWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TermsOfPaymentWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TermsOfPaymentWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TermsOfPaymentWrap';
+            $returnType = '\FortnoxApi\Model\TermsOfPaymentWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class TermsOfPaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TermsOfPaymentWrap',
+                        '\FortnoxApi\Model\TermsOfPaymentWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class TermsOfPaymentsResourceApi
      *
      * Create a term of payment
      *
-     * @param  \OpenAPI\Client\Model\TermsOfPaymentWrap $terms_of_payment to create (optional)
+     * @param  \FortnoxApi\Model\TermsOfPaymentWrap $terms_of_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTermsOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class TermsOfPaymentsResourceApi
      *
      * Create a term of payment
      *
-     * @param  \OpenAPI\Client\Model\TermsOfPaymentWrap $terms_of_payment to create (optional)
+     * @param  \FortnoxApi\Model\TermsOfPaymentWrap $terms_of_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTermsOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class TermsOfPaymentsResourceApi
      */
     public function createTermsOfPaymentsResourceAsyncWithHttpInfo($terms_of_payment = null, string $contentType = self::contentTypes['createTermsOfPaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TermsOfPaymentWrap';
+        $returnType = '\FortnoxApi\Model\TermsOfPaymentWrap';
         $request = $this->createTermsOfPaymentsResourceRequest($terms_of_payment, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class TermsOfPaymentsResourceApi
     /**
      * Create request for operation 'createTermsOfPaymentsResource'
      *
-     * @param  \OpenAPI\Client\Model\TermsOfPaymentWrap $terms_of_payment to create (optional)
+     * @param  \FortnoxApi\Model\TermsOfPaymentWrap $terms_of_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTermsOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class TermsOfPaymentsResourceApi
      * @param  string $code identifies the terms of payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTermsOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TermsOfPaymentWrap
+     * @return \FortnoxApi\Model\TermsOfPaymentWrap
      */
     public function getTermsOfPaymentsResource($code, string $contentType = self::contentTypes['getTermsOfPaymentsResource'][0])
     {
@@ -434,9 +434,9 @@ class TermsOfPaymentsResourceApi
      * @param  string $code identifies the terms of payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTermsOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TermsOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TermsOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTermsOfPaymentsResourceWithHttpInfo($code, string $contentType = self::contentTypes['getTermsOfPaymentsResource'][0])
     {
@@ -479,23 +479,23 @@ class TermsOfPaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TermsOfPaymentWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TermsOfPaymentWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TermsOfPaymentWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\TermsOfPaymentWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TermsOfPaymentWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TermsOfPaymentWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TermsOfPaymentWrap';
+            $returnType = '\FortnoxApi\Model\TermsOfPaymentWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class TermsOfPaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TermsOfPaymentWrap',
+                        '\FortnoxApi\Model\TermsOfPaymentWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class TermsOfPaymentsResourceApi
      */
     public function getTermsOfPaymentsResourceAsyncWithHttpInfo($code, string $contentType = self::contentTypes['getTermsOfPaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TermsOfPaymentWrap';
+        $returnType = '\FortnoxApi\Model\TermsOfPaymentWrap';
         $request = $this->getTermsOfPaymentsResourceRequest($code, $contentType);
 
         return $this->client
@@ -698,9 +698,9 @@ class TermsOfPaymentsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTermsOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TermsOfPaymentList
+     * @return \FortnoxApi\Model\TermsOfPaymentList
      */
     public function listTermsOfPaymentsResource(string $contentType = self::contentTypes['listTermsOfPaymentsResource'][0])
     {
@@ -715,9 +715,9 @@ class TermsOfPaymentsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTermsOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TermsOfPaymentList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TermsOfPaymentList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTermsOfPaymentsResourceWithHttpInfo(string $contentType = self::contentTypes['listTermsOfPaymentsResource'][0])
     {
@@ -760,23 +760,23 @@ class TermsOfPaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TermsOfPaymentList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TermsOfPaymentList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TermsOfPaymentList' !== 'string') {
+                        if ('\FortnoxApi\Model\TermsOfPaymentList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TermsOfPaymentList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TermsOfPaymentList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TermsOfPaymentList';
+            $returnType = '\FortnoxApi\Model\TermsOfPaymentList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -797,7 +797,7 @@ class TermsOfPaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TermsOfPaymentList',
+                        '\FortnoxApi\Model\TermsOfPaymentList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class TermsOfPaymentsResourceApi
      */
     public function listTermsOfPaymentsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listTermsOfPaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TermsOfPaymentList';
+        $returnType = '\FortnoxApi\Model\TermsOfPaymentList';
         $request = $this->listTermsOfPaymentsResourceRequest($contentType);
 
         return $this->client
@@ -962,7 +962,7 @@ class TermsOfPaymentsResourceApi
      * @param  string $code identifies the terms of payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeTermsOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -979,7 +979,7 @@ class TermsOfPaymentsResourceApi
      * @param  string $code identifies the terms of payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeTermsOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1189,12 +1189,12 @@ class TermsOfPaymentsResourceApi
      * Update a term of payment
      *
      * @param  string $code identifies the term of payment (required)
-     * @param  \OpenAPI\Client\Model\TermsOfPaymentWrap $term_of_payment term of payment to update (optional)
+     * @param  \FortnoxApi\Model\TermsOfPaymentWrap $term_of_payment term of payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTermsOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TermsOfPaymentWrap
+     * @return \FortnoxApi\Model\TermsOfPaymentWrap
      */
     public function updateTermsOfPaymentsResource($code, $term_of_payment = null, string $contentType = self::contentTypes['updateTermsOfPaymentsResource'][0])
     {
@@ -1208,12 +1208,12 @@ class TermsOfPaymentsResourceApi
      * Update a term of payment
      *
      * @param  string $code identifies the term of payment (required)
-     * @param  \OpenAPI\Client\Model\TermsOfPaymentWrap $term_of_payment term of payment to update (optional)
+     * @param  \FortnoxApi\Model\TermsOfPaymentWrap $term_of_payment term of payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTermsOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TermsOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TermsOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateTermsOfPaymentsResourceWithHttpInfo($code, $term_of_payment = null, string $contentType = self::contentTypes['updateTermsOfPaymentsResource'][0])
     {
@@ -1256,23 +1256,23 @@ class TermsOfPaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TermsOfPaymentWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TermsOfPaymentWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TermsOfPaymentWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\TermsOfPaymentWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TermsOfPaymentWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TermsOfPaymentWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TermsOfPaymentWrap';
+            $returnType = '\FortnoxApi\Model\TermsOfPaymentWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1293,7 +1293,7 @@ class TermsOfPaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TermsOfPaymentWrap',
+                        '\FortnoxApi\Model\TermsOfPaymentWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1309,7 +1309,7 @@ class TermsOfPaymentsResourceApi
      * Update a term of payment
      *
      * @param  string $code identifies the term of payment (required)
-     * @param  \OpenAPI\Client\Model\TermsOfPaymentWrap $term_of_payment term of payment to update (optional)
+     * @param  \FortnoxApi\Model\TermsOfPaymentWrap $term_of_payment term of payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTermsOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1331,7 +1331,7 @@ class TermsOfPaymentsResourceApi
      * Update a term of payment
      *
      * @param  string $code identifies the term of payment (required)
-     * @param  \OpenAPI\Client\Model\TermsOfPaymentWrap $term_of_payment term of payment to update (optional)
+     * @param  \FortnoxApi\Model\TermsOfPaymentWrap $term_of_payment term of payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTermsOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1339,7 +1339,7 @@ class TermsOfPaymentsResourceApi
      */
     public function updateTermsOfPaymentsResourceAsyncWithHttpInfo($code, $term_of_payment = null, string $contentType = self::contentTypes['updateTermsOfPaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TermsOfPaymentWrap';
+        $returnType = '\FortnoxApi\Model\TermsOfPaymentWrap';
         $request = $this->updateTermsOfPaymentsResourceRequest($code, $term_of_payment, $contentType);
 
         return $this->client
@@ -1382,7 +1382,7 @@ class TermsOfPaymentsResourceApi
      * Create request for operation 'updateTermsOfPaymentsResource'
      *
      * @param  string $code identifies the term of payment (required)
-     * @param  \OpenAPI\Client\Model\TermsOfPaymentWrap $term_of_payment term of payment to update (optional)
+     * @param  \FortnoxApi\Model\TermsOfPaymentWrap $term_of_payment term of payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTermsOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * CustomerReferencesResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class CustomerReferencesResourceApi
      *
      * Create a customer reference row
      *
-     * @param  \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to create (optional)
+     * @param  \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerReferencesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerReferenceWrap
+     * @return \FortnoxApi\Model\CustomerReferenceWrap
      */
     public function createCustomerReferencesResource($customer_reference_row = null, string $contentType = self::contentTypes['createCustomerReferencesResource'][0])
     {
@@ -155,12 +155,12 @@ class CustomerReferencesResourceApi
      *
      * Create a customer reference row
      *
-     * @param  \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to create (optional)
+     * @param  \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerReferencesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerReferenceWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomerReferenceWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCustomerReferencesResourceWithHttpInfo($customer_reference_row = null, string $contentType = self::contentTypes['createCustomerReferencesResource'][0])
     {
@@ -203,23 +203,23 @@ class CustomerReferencesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerReferenceWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomerReferenceWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerReferenceWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomerReferenceWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerReferenceWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomerReferenceWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerReferenceWrap';
+            $returnType = '\FortnoxApi\Model\CustomerReferenceWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class CustomerReferencesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerReferenceWrap',
+                        '\FortnoxApi\Model\CustomerReferenceWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class CustomerReferencesResourceApi
      *
      * Create a customer reference row
      *
-     * @param  \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to create (optional)
+     * @param  \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerReferencesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class CustomerReferencesResourceApi
      *
      * Create a customer reference row
      *
-     * @param  \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to create (optional)
+     * @param  \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerReferencesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class CustomerReferencesResourceApi
      */
     public function createCustomerReferencesResourceAsyncWithHttpInfo($customer_reference_row = null, string $contentType = self::contentTypes['createCustomerReferencesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerReferenceWrap';
+        $returnType = '\FortnoxApi\Model\CustomerReferenceWrap';
         $request = $this->createCustomerReferencesResourceRequest($customer_reference_row, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class CustomerReferencesResourceApi
     /**
      * Create request for operation 'createCustomerReferencesResource'
      *
-     * @param  \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to create (optional)
+     * @param  \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerReferencesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class CustomerReferencesResourceApi
      * @param  string $customer_reference_row_id identifies the customer reference row (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomerReferencesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerReferenceWrap
+     * @return \FortnoxApi\Model\CustomerReferenceWrap
      */
     public function getCustomerReferencesResource($customer_reference_row_id, string $contentType = self::contentTypes['getCustomerReferencesResource'][0])
     {
@@ -434,9 +434,9 @@ class CustomerReferencesResourceApi
      * @param  string $customer_reference_row_id identifies the customer reference row (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomerReferencesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerReferenceWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomerReferenceWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerReferencesResourceWithHttpInfo($customer_reference_row_id, string $contentType = self::contentTypes['getCustomerReferencesResource'][0])
     {
@@ -479,23 +479,23 @@ class CustomerReferencesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerReferenceWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomerReferenceWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerReferenceWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomerReferenceWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerReferenceWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomerReferenceWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerReferenceWrap';
+            $returnType = '\FortnoxApi\Model\CustomerReferenceWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class CustomerReferencesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerReferenceWrap',
+                        '\FortnoxApi\Model\CustomerReferenceWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class CustomerReferencesResourceApi
      */
     public function getCustomerReferencesResourceAsyncWithHttpInfo($customer_reference_row_id, string $contentType = self::contentTypes['getCustomerReferencesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerReferenceWrap';
+        $returnType = '\FortnoxApi\Model\CustomerReferenceWrap';
         $request = $this->getCustomerReferencesResourceRequest($customer_reference_row_id, $contentType);
 
         return $this->client
@@ -699,9 +699,9 @@ class CustomerReferencesResourceApi
      * @param  string $customer possibility to filter by customer number (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCustomerReferencesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerReferenceWrap
+     * @return \FortnoxApi\Model\CustomerReferenceWrap
      */
     public function listCustomerReferencesResource($customer = null, string $contentType = self::contentTypes['listCustomerReferencesResource'][0])
     {
@@ -717,9 +717,9 @@ class CustomerReferencesResourceApi
      * @param  string $customer possibility to filter by customer number (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCustomerReferencesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerReferenceWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomerReferenceWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCustomerReferencesResourceWithHttpInfo($customer = null, string $contentType = self::contentTypes['listCustomerReferencesResource'][0])
     {
@@ -762,23 +762,23 @@ class CustomerReferencesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerReferenceWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomerReferenceWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerReferenceWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomerReferenceWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerReferenceWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomerReferenceWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerReferenceWrap';
+            $returnType = '\FortnoxApi\Model\CustomerReferenceWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -799,7 +799,7 @@ class CustomerReferencesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerReferenceWrap',
+                        '\FortnoxApi\Model\CustomerReferenceWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -843,7 +843,7 @@ class CustomerReferencesResourceApi
      */
     public function listCustomerReferencesResourceAsyncWithHttpInfo($customer = null, string $contentType = self::contentTypes['listCustomerReferencesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerReferenceWrap';
+        $returnType = '\FortnoxApi\Model\CustomerReferenceWrap';
         $request = $this->listCustomerReferencesResourceRequest($customer, $contentType);
 
         return $this->client
@@ -977,7 +977,7 @@ class CustomerReferencesResourceApi
      * @param  string $customer_reference_row_id identifies the customer reference row (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeCustomerReferencesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -994,7 +994,7 @@ class CustomerReferencesResourceApi
      * @param  string $customer_reference_row_id identifies the customer reference row (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeCustomerReferencesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1204,12 +1204,12 @@ class CustomerReferencesResourceApi
      * Update a customer reference row
      *
      * @param  string $customer_reference_row_id identifies the customer reference row (required)
-     * @param  \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to update (optional)
+     * @param  \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerReferencesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerWrap
+     * @return \FortnoxApi\Model\CustomerWrap
      */
     public function updateCustomerReferencesResource($customer_reference_row_id, $customer_reference_row = null, string $contentType = self::contentTypes['updateCustomerReferencesResource'][0])
     {
@@ -1223,12 +1223,12 @@ class CustomerReferencesResourceApi
      * Update a customer reference row
      *
      * @param  string $customer_reference_row_id identifies the customer reference row (required)
-     * @param  \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to update (optional)
+     * @param  \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerReferencesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomerWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCustomerReferencesResourceWithHttpInfo($customer_reference_row_id, $customer_reference_row = null, string $contentType = self::contentTypes['updateCustomerReferencesResource'][0])
     {
@@ -1271,23 +1271,23 @@ class CustomerReferencesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomerWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomerWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomerWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerWrap';
+            $returnType = '\FortnoxApi\Model\CustomerWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1308,7 +1308,7 @@ class CustomerReferencesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerWrap',
+                        '\FortnoxApi\Model\CustomerWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1324,7 +1324,7 @@ class CustomerReferencesResourceApi
      * Update a customer reference row
      *
      * @param  string $customer_reference_row_id identifies the customer reference row (required)
-     * @param  \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to update (optional)
+     * @param  \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerReferencesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1346,7 +1346,7 @@ class CustomerReferencesResourceApi
      * Update a customer reference row
      *
      * @param  string $customer_reference_row_id identifies the customer reference row (required)
-     * @param  \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to update (optional)
+     * @param  \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerReferencesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1354,7 +1354,7 @@ class CustomerReferencesResourceApi
      */
     public function updateCustomerReferencesResourceAsyncWithHttpInfo($customer_reference_row_id, $customer_reference_row = null, string $contentType = self::contentTypes['updateCustomerReferencesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerWrap';
+        $returnType = '\FortnoxApi\Model\CustomerWrap';
         $request = $this->updateCustomerReferencesResourceRequest($customer_reference_row_id, $customer_reference_row, $contentType);
 
         return $this->client
@@ -1397,7 +1397,7 @@ class CustomerReferencesResourceApi
      * Create request for operation 'updateCustomerReferencesResource'
      *
      * @param  string $customer_reference_row_id identifies the customer reference row (required)
-     * @param  \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to update (optional)
+     * @param  \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap $customer_reference_row customer reference row to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerReferencesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

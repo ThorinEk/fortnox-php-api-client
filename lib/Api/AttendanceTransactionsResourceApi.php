@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * AttendanceTransactionsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,12 +134,12 @@ class AttendanceTransactionsResourceApi
      *
      * Create a new attendance transaction
      *
-     * @param  \OpenAPI\Client\Model\AttendanceTransactionWrap $attendance_transaction attendance transaction to create (optional)
+     * @param  \FortnoxApi\Model\AttendanceTransactionWrap $attendance_transaction attendance transaction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAttendanceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AttendanceTransactionWrap
+     * @return \FortnoxApi\Model\AttendanceTransactionWrap
      */
     public function createAttendanceTransactionsResource($attendance_transaction = null, string $contentType = self::contentTypes['createAttendanceTransactionsResource'][0])
     {
@@ -152,12 +152,12 @@ class AttendanceTransactionsResourceApi
      *
      * Create a new attendance transaction
      *
-     * @param  \OpenAPI\Client\Model\AttendanceTransactionWrap $attendance_transaction attendance transaction to create (optional)
+     * @param  \FortnoxApi\Model\AttendanceTransactionWrap $attendance_transaction attendance transaction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAttendanceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AttendanceTransactionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AttendanceTransactionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAttendanceTransactionsResourceWithHttpInfo($attendance_transaction = null, string $contentType = self::contentTypes['createAttendanceTransactionsResource'][0])
     {
@@ -200,23 +200,23 @@ class AttendanceTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AttendanceTransactionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AttendanceTransactionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AttendanceTransactionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AttendanceTransactionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AttendanceTransactionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AttendanceTransactionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AttendanceTransactionWrap';
+            $returnType = '\FortnoxApi\Model\AttendanceTransactionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -237,7 +237,7 @@ class AttendanceTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AttendanceTransactionWrap',
+                        '\FortnoxApi\Model\AttendanceTransactionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class AttendanceTransactionsResourceApi
      *
      * Create a new attendance transaction
      *
-     * @param  \OpenAPI\Client\Model\AttendanceTransactionWrap $attendance_transaction attendance transaction to create (optional)
+     * @param  \FortnoxApi\Model\AttendanceTransactionWrap $attendance_transaction attendance transaction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAttendanceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class AttendanceTransactionsResourceApi
      *
      * Create a new attendance transaction
      *
-     * @param  \OpenAPI\Client\Model\AttendanceTransactionWrap $attendance_transaction attendance transaction to create (optional)
+     * @param  \FortnoxApi\Model\AttendanceTransactionWrap $attendance_transaction attendance transaction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAttendanceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class AttendanceTransactionsResourceApi
      */
     public function createAttendanceTransactionsResourceAsyncWithHttpInfo($attendance_transaction = null, string $contentType = self::contentTypes['createAttendanceTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AttendanceTransactionWrap';
+        $returnType = '\FortnoxApi\Model\AttendanceTransactionWrap';
         $request = $this->createAttendanceTransactionsResourceRequest($attendance_transaction, $contentType);
 
         return $this->client
@@ -323,7 +323,7 @@ class AttendanceTransactionsResourceApi
     /**
      * Create request for operation 'createAttendanceTransactionsResource'
      *
-     * @param  \OpenAPI\Client\Model\AttendanceTransactionWrap $attendance_transaction attendance transaction to create (optional)
+     * @param  \FortnoxApi\Model\AttendanceTransactionWrap $attendance_transaction attendance transaction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAttendanceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -413,9 +413,9 @@ class AttendanceTransactionsResourceApi
      * @param  string $id identifies the transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttendanceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AttendanceTransactionWrap
+     * @return \FortnoxApi\Model\AttendanceTransactionWrap
      */
     public function getAttendanceTransactionsResource($id, string $contentType = self::contentTypes['getAttendanceTransactionsResource'][0])
     {
@@ -431,9 +431,9 @@ class AttendanceTransactionsResourceApi
      * @param  string $id identifies the transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttendanceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AttendanceTransactionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AttendanceTransactionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAttendanceTransactionsResourceWithHttpInfo($id, string $contentType = self::contentTypes['getAttendanceTransactionsResource'][0])
     {
@@ -476,23 +476,23 @@ class AttendanceTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AttendanceTransactionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AttendanceTransactionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AttendanceTransactionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AttendanceTransactionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AttendanceTransactionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AttendanceTransactionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AttendanceTransactionWrap';
+            $returnType = '\FortnoxApi\Model\AttendanceTransactionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -513,7 +513,7 @@ class AttendanceTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AttendanceTransactionWrap',
+                        '\FortnoxApi\Model\AttendanceTransactionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -557,7 +557,7 @@ class AttendanceTransactionsResourceApi
      */
     public function getAttendanceTransactionsResourceAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getAttendanceTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AttendanceTransactionWrap';
+        $returnType = '\FortnoxApi\Model\AttendanceTransactionWrap';
         $request = $this->getAttendanceTransactionsResourceRequest($id, $contentType);
 
         return $this->client
@@ -697,9 +697,9 @@ class AttendanceTransactionsResourceApi
      * @param  string $date filter by date (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAttendanceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AttendanceTransactionListItemList
+     * @return \FortnoxApi\Model\AttendanceTransactionListItemList
      */
     public function listAttendanceTransactionsResource($employeeid = null, $date = null, string $contentType = self::contentTypes['listAttendanceTransactionsResource'][0])
     {
@@ -716,9 +716,9 @@ class AttendanceTransactionsResourceApi
      * @param  string $date filter by date (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAttendanceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AttendanceTransactionListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AttendanceTransactionListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAttendanceTransactionsResourceWithHttpInfo($employeeid = null, $date = null, string $contentType = self::contentTypes['listAttendanceTransactionsResource'][0])
     {
@@ -761,23 +761,23 @@ class AttendanceTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AttendanceTransactionListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AttendanceTransactionListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AttendanceTransactionListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\AttendanceTransactionListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AttendanceTransactionListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AttendanceTransactionListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AttendanceTransactionListItemList';
+            $returnType = '\FortnoxApi\Model\AttendanceTransactionListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -798,7 +798,7 @@ class AttendanceTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AttendanceTransactionListItemList',
+                        '\FortnoxApi\Model\AttendanceTransactionListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -844,7 +844,7 @@ class AttendanceTransactionsResourceApi
      */
     public function listAttendanceTransactionsResourceAsyncWithHttpInfo($employeeid = null, $date = null, string $contentType = self::contentTypes['listAttendanceTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AttendanceTransactionListItemList';
+        $returnType = '\FortnoxApi\Model\AttendanceTransactionListItemList';
         $request = $this->listAttendanceTransactionsResourceRequest($employeeid, $date, $contentType);
 
         return $this->client
@@ -987,12 +987,12 @@ class AttendanceTransactionsResourceApi
      * Update a single attendance transaction
      *
      * @param  string $id identifies the transaction (required)
-     * @param  \OpenAPI\Client\Model\AttendanceTransactionWrap $attendance_transaction to update (optional)
+     * @param  \FortnoxApi\Model\AttendanceTransactionWrap $attendance_transaction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttendanceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AttendanceTransactionWrap
+     * @return \FortnoxApi\Model\AttendanceTransactionWrap
      */
     public function updateAttendanceTransactionsResource($id, $attendance_transaction = null, string $contentType = self::contentTypes['updateAttendanceTransactionsResource'][0])
     {
@@ -1006,12 +1006,12 @@ class AttendanceTransactionsResourceApi
      * Update a single attendance transaction
      *
      * @param  string $id identifies the transaction (required)
-     * @param  \OpenAPI\Client\Model\AttendanceTransactionWrap $attendance_transaction to update (optional)
+     * @param  \FortnoxApi\Model\AttendanceTransactionWrap $attendance_transaction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttendanceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AttendanceTransactionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AttendanceTransactionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAttendanceTransactionsResourceWithHttpInfo($id, $attendance_transaction = null, string $contentType = self::contentTypes['updateAttendanceTransactionsResource'][0])
     {
@@ -1054,23 +1054,23 @@ class AttendanceTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AttendanceTransactionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AttendanceTransactionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AttendanceTransactionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AttendanceTransactionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AttendanceTransactionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AttendanceTransactionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AttendanceTransactionWrap';
+            $returnType = '\FortnoxApi\Model\AttendanceTransactionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1091,7 +1091,7 @@ class AttendanceTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AttendanceTransactionWrap',
+                        '\FortnoxApi\Model\AttendanceTransactionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1107,7 +1107,7 @@ class AttendanceTransactionsResourceApi
      * Update a single attendance transaction
      *
      * @param  string $id identifies the transaction (required)
-     * @param  \OpenAPI\Client\Model\AttendanceTransactionWrap $attendance_transaction to update (optional)
+     * @param  \FortnoxApi\Model\AttendanceTransactionWrap $attendance_transaction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttendanceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1129,7 +1129,7 @@ class AttendanceTransactionsResourceApi
      * Update a single attendance transaction
      *
      * @param  string $id identifies the transaction (required)
-     * @param  \OpenAPI\Client\Model\AttendanceTransactionWrap $attendance_transaction to update (optional)
+     * @param  \FortnoxApi\Model\AttendanceTransactionWrap $attendance_transaction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttendanceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1137,7 +1137,7 @@ class AttendanceTransactionsResourceApi
      */
     public function updateAttendanceTransactionsResourceAsyncWithHttpInfo($id, $attendance_transaction = null, string $contentType = self::contentTypes['updateAttendanceTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AttendanceTransactionWrap';
+        $returnType = '\FortnoxApi\Model\AttendanceTransactionWrap';
         $request = $this->updateAttendanceTransactionsResourceRequest($id, $attendance_transaction, $contentType);
 
         return $this->client
@@ -1180,7 +1180,7 @@ class AttendanceTransactionsResourceApi
      * Create request for operation 'updateAttendanceTransactionsResource'
      *
      * @param  string $id identifies the transaction (required)
-     * @param  \OpenAPI\Client\Model\AttendanceTransactionWrap $attendance_transaction to update (optional)
+     * @param  \FortnoxApi\Model\AttendanceTransactionWrap $attendance_transaction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttendanceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -1,4 +1,4 @@
-# OpenAPI\Client\ContractAccrualsResourceApi
+# FortnoxApi\ContractAccrualsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createContractAccrualsResource()`
 
 ```php
-createContractAccrualsResource($contract_accrual): \OpenAPI\Client\Model\ContractAccrualWrap
+createContractAccrualsResource($contract_accrual): \FortnoxApi\Model\ContractAccrualWrap
 ```
 
 Create a contract accrual
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$contract_accrual = new \OpenAPI\Client\Model\ContractAccrualWrap(); // \OpenAPI\Client\Model\ContractAccrualWrap | contract accrual to create
+$contract_accrual = new \FortnoxApi\Model\ContractAccrualWrap(); // \FortnoxApi\Model\ContractAccrualWrap | contract accrual to create
 
 try {
     $result = $apiInstance->createContractAccrualsResource($contract_accrual);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **contract_accrual** | [**\OpenAPI\Client\Model\ContractAccrualWrap**](../Model/ContractAccrualWrap.md)| contract accrual to create | [optional] |
+| **contract_accrual** | [**\FortnoxApi\Model\ContractAccrualWrap**](../Model/ContractAccrualWrap.md)| contract accrual to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContractAccrualWrap**](../Model/ContractAccrualWrap.md)
+[**\FortnoxApi\Model\ContractAccrualWrap**](../Model/ContractAccrualWrap.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getContractAccrualsResource()`
 
 ```php
-getContractAccrualsResource($document_number): \OpenAPI\Client\Model\ContractAccrualWrap
+getContractAccrualsResource($document_number): \FortnoxApi\Model\ContractAccrualWrap
 ```
 
 Retrieve a single contract accrual
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContractAccrualWrap**](../Model/ContractAccrualWrap.md)
+[**\FortnoxApi\Model\ContractAccrualWrap**](../Model/ContractAccrualWrap.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `listContractAccrualsResource()`
 
 ```php
-listContractAccrualsResource(): \OpenAPI\Client\Model\ContractAccrualListItemList
+listContractAccrualsResource(): \FortnoxApi\Model\ContractAccrualListItemList
 ```
 
 Retrieve a list of contract accruals
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContractAccrualListItemList**](../Model/ContractAccrualListItemList.md)
+[**\FortnoxApi\Model\ContractAccrualListItemList**](../Model/ContractAccrualListItemList.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -228,7 +228,7 @@ No authorization required
 ## `updateContractAccrualsResource()`
 
 ```php
-updateContractAccrualsResource($document_number, $contract_accrual): \OpenAPI\Client\Model\ContractAccrualWrap
+updateContractAccrualsResource($document_number, $contract_accrual): \FortnoxApi\Model\ContractAccrualWrap
 ```
 
 Update a contract accrual
@@ -241,13 +241,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractAccrualsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractAccrualsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $document_number = 56; // int | identifies the contract accrual
-$contract_accrual = new \OpenAPI\Client\Model\ContractAccrualWrap(); // \OpenAPI\Client\Model\ContractAccrualWrap | contract accrual to update
+$contract_accrual = new \FortnoxApi\Model\ContractAccrualWrap(); // \FortnoxApi\Model\ContractAccrualWrap | contract accrual to update
 
 try {
     $result = $apiInstance->updateContractAccrualsResource($document_number, $contract_accrual);
@@ -262,11 +262,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **document_number** | **int**| identifies the contract accrual | |
-| **contract_accrual** | [**\OpenAPI\Client\Model\ContractAccrualWrap**](../Model/ContractAccrualWrap.md)| contract accrual to update | [optional] |
+| **contract_accrual** | [**\FortnoxApi\Model\ContractAccrualWrap**](../Model/ContractAccrualWrap.md)| contract accrual to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContractAccrualWrap**](../Model/ContractAccrualWrap.md)
+[**\FortnoxApi\Model\ContractAccrualWrap**](../Model/ContractAccrualWrap.md)
 
 ### Authorization
 

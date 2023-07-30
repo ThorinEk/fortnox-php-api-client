@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * SupplierInvoiceAccrualListItemList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class SupplierInvoiceAccrualListItemList implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'supplier_invoice_accruals' => '\OpenAPI\Client\Model\SupplierInvoiceAccrualListItem[]'
+        'supplier_invoice_accruals' => '\FortnoxApi\Model\SupplierInvoiceAccrualListItem[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class SupplierInvoiceAccrualListItemList implements ModelInterface, ArrayAccess,
     /**
      * Gets supplier_invoice_accruals
      *
-     * @return \OpenAPI\Client\Model\SupplierInvoiceAccrualListItem[]|null
+     * @return \FortnoxApi\Model\SupplierInvoiceAccrualListItem[]|null
      */
     public function getSupplierInvoiceAccruals()
     {
@@ -300,7 +300,7 @@ class SupplierInvoiceAccrualListItemList implements ModelInterface, ArrayAccess,
     /**
      * Sets supplier_invoice_accruals
      *
-     * @param \OpenAPI\Client\Model\SupplierInvoiceAccrualListItem[]|null $supplier_invoice_accruals supplier_invoice_accruals
+     * @param \FortnoxApi\Model\SupplierInvoiceAccrualListItem[]|null $supplier_invoice_accruals supplier_invoice_accruals
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# OpenAPI\Client\SalaryTransactionsResourceApi
+# FortnoxApi\SalaryTransactionsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createSalaryTransactionsResource()`
 
 ```php
-createSalaryTransactionsResource($salary_transaction): \OpenAPI\Client\Model\SalaryTransactionWrap
+createSalaryTransactionsResource($salary_transaction): \FortnoxApi\Model\SalaryTransactionWrap
 ```
 
 Create a new salary transaction for an employee
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SalaryTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SalaryTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$salary_transaction = new \OpenAPI\Client\Model\SalaryTransactionWrap(); // \OpenAPI\Client\Model\SalaryTransactionWrap | to create
+$salary_transaction = new \FortnoxApi\Model\SalaryTransactionWrap(); // \FortnoxApi\Model\SalaryTransactionWrap | to create
 
 try {
     $result = $apiInstance->createSalaryTransactionsResource($salary_transaction);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **salary_transaction** | [**\OpenAPI\Client\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)| to create | [optional] |
+| **salary_transaction** | [**\FortnoxApi\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)
+[**\FortnoxApi\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `deleteSalaryTransactionsResource()`
 
 ```php
-deleteSalaryTransactionsResource($salary_row): \OpenAPI\Client\Model\SalaryTransactionWrap
+deleteSalaryTransactionsResource($salary_row): \FortnoxApi\Model\SalaryTransactionWrap
 ```
 
 Delete a single salary transaction
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SalaryTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SalaryTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)
+[**\FortnoxApi\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `getSalaryTransactionsResource()`
 
 ```php
-getSalaryTransactionsResource($salary_row): \OpenAPI\Client\Model\SalaryTransactionWrap
+getSalaryTransactionsResource($salary_row): \FortnoxApi\Model\SalaryTransactionWrap
 ```
 
 Retrieve a single salary transaction
@@ -135,7 +135,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SalaryTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SalaryTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -158,7 +158,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)
+[**\FortnoxApi\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ No authorization required
 ## `listSalaryTransactionsResource()`
 
 ```php
-listSalaryTransactionsResource($employee_id, $date): \OpenAPI\Client\Model\SalaryTransactionListItemList
+listSalaryTransactionsResource($employee_id, $date): \FortnoxApi\Model\SalaryTransactionListItemList
 ```
 
 List all salary transactions for all employees
@@ -191,7 +191,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SalaryTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SalaryTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -216,7 +216,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SalaryTransactionListItemList**](../Model/SalaryTransactionListItemList.md)
+[**\FortnoxApi\Model\SalaryTransactionListItemList**](../Model/SalaryTransactionListItemList.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ No authorization required
 ## `updateSalaryTransactionsResource()`
 
 ```php
-updateSalaryTransactionsResource($salary_row, $salary_transaction): \OpenAPI\Client\Model\SalaryTransactionWrap
+updateSalaryTransactionsResource($salary_row, $salary_transaction): \FortnoxApi\Model\SalaryTransactionWrap
 ```
 
 Update a salary transaction
@@ -247,13 +247,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SalaryTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SalaryTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $salary_row = 56; // int | identifies the salary transaction
-$salary_transaction = new \OpenAPI\Client\Model\SalaryTransactionWrap(); // \OpenAPI\Client\Model\SalaryTransactionWrap | to update
+$salary_transaction = new \FortnoxApi\Model\SalaryTransactionWrap(); // \FortnoxApi\Model\SalaryTransactionWrap | to update
 
 try {
     $result = $apiInstance->updateSalaryTransactionsResource($salary_row, $salary_transaction);
@@ -268,11 +268,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **salary_row** | **int**| identifies the salary transaction | |
-| **salary_transaction** | [**\OpenAPI\Client\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)| to update | [optional] |
+| **salary_transaction** | [**\FortnoxApi\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)
+[**\FortnoxApi\Model\SalaryTransactionWrap**](../Model/SalaryTransactionWrap.md)
 
 ### Authorization
 

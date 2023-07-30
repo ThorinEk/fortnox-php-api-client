@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * AccountPayloadWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class AccountPayloadWrap implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'account' => '\OpenAPI\Client\Model\AccountPayload'
+        'account' => '\FortnoxApi\Model\AccountPayload'
     ];
 
     /**
@@ -290,7 +290,7 @@ class AccountPayloadWrap implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets account
      *
-     * @return \OpenAPI\Client\Model\AccountPayload|null
+     * @return \FortnoxApi\Model\AccountPayload|null
      */
     public function getAccount()
     {
@@ -300,7 +300,7 @@ class AccountPayloadWrap implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets account
      *
-     * @param \OpenAPI\Client\Model\AccountPayload|null $account account
+     * @param \FortnoxApi\Model\AccountPayload|null $account account
      *
      * @return self
      */

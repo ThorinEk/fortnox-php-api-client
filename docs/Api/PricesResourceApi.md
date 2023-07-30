@@ -1,4 +1,4 @@
-# OpenAPI\Client\PricesResourceApi
+# FortnoxApi\PricesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createPricesResource()`
 
 ```php
-createPricesResource($price): \OpenAPI\Client\Model\PriceWrap
+createPricesResource($price): \FortnoxApi\Model\PriceWrap
 ```
 
 Create a price
@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PricesResourceApi(
+$apiInstance = new FortnoxApi\Api\PricesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$price = new \OpenAPI\Client\Model\PriceWrap(); // \OpenAPI\Client\Model\PriceWrap | price to create
+$price = new \FortnoxApi\Model\PriceWrap(); // \FortnoxApi\Model\PriceWrap | price to create
 
 try {
     $result = $apiInstance->createPricesResource($price);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **price** | [**\OpenAPI\Client\Model\PriceWrap**](../Model/PriceWrap.md)| price to create | [optional] |
+| **price** | [**\FortnoxApi\Model\PriceWrap**](../Model/PriceWrap.md)| price to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PriceWrap**](../Model/PriceWrap.md)
+[**\FortnoxApi\Model\PriceWrap**](../Model/PriceWrap.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `getFirstPrice()`
 
 ```php
-getFirstPrice($price_list, $article_number): \OpenAPI\Client\Model\PriceWrap
+getFirstPrice($price_list, $article_number): \FortnoxApi\Model\PriceWrap
 ```
 
 Retrieve the first price for the specified article
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PricesResourceApi(
+$apiInstance = new FortnoxApi\Api\PricesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -108,7 +108,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PriceWrap**](../Model/PriceWrap.md)
+[**\FortnoxApi\Model\PriceWrap**](../Model/PriceWrap.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 ## `getPricesResource()`
 
 ```php
-getPricesResource($price_list, $article_number, $from_quantity): \OpenAPI\Client\Model\PriceWrap
+getPricesResource($price_list, $article_number, $from_quantity): \FortnoxApi\Model\PriceWrap
 ```
 
 Retrieve a price for a specified article
@@ -139,7 +139,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PricesResourceApi(
+$apiInstance = new FortnoxApi\Api\PricesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -166,7 +166,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PriceWrap**](../Model/PriceWrap.md)
+[**\FortnoxApi\Model\PriceWrap**](../Model/PriceWrap.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ No authorization required
 ## `listPricesResource()`
 
 ```php
-listPricesResource($price_list, $article_number): \OpenAPI\Client\Model\PriceListItemList
+listPricesResource($price_list, $article_number): \FortnoxApi\Model\PriceListItemList
 ```
 
 Retrieve a list of articles with all their prices in the specified price list
@@ -199,7 +199,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PricesResourceApi(
+$apiInstance = new FortnoxApi\Api\PricesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -224,7 +224,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PriceListItemList**](../Model/PriceListItemList.md)
+[**\FortnoxApi\Model\PriceListItemList**](../Model/PriceListItemList.md)
 
 ### Authorization
 
@@ -255,7 +255,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PricesResourceApi(
+$apiInstance = new FortnoxApi\Api\PricesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -299,7 +299,7 @@ No authorization required
 ## `updatePricesResource()`
 
 ```php
-updatePricesResource($price_list, $article_number, $from_quantity, $price): \OpenAPI\Client\Model\PriceWrap
+updatePricesResource($price_list, $article_number, $from_quantity, $price): \FortnoxApi\Model\PriceWrap
 ```
 
 Update a price
@@ -312,7 +312,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PricesResourceApi(
+$apiInstance = new FortnoxApi\Api\PricesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -320,7 +320,7 @@ $apiInstance = new OpenAPI\Client\Api\PricesResourceApi(
 $price_list = 'price_list_example'; // string | identifies the price list
 $article_number = 'article_number_example'; // string | identifies the article number
 $from_quantity = 3.4; // float | identifies the from quantity
-$price = new \OpenAPI\Client\Model\PriceWrap(); // \OpenAPI\Client\Model\PriceWrap | price to update
+$price = new \FortnoxApi\Model\PriceWrap(); // \FortnoxApi\Model\PriceWrap | price to update
 
 try {
     $result = $apiInstance->updatePricesResource($price_list, $article_number, $from_quantity, $price);
@@ -337,11 +337,11 @@ try {
 | **price_list** | **string**| identifies the price list | |
 | **article_number** | **string**| identifies the article number | |
 | **from_quantity** | **float**| identifies the from quantity | |
-| **price** | [**\OpenAPI\Client\Model\PriceWrap**](../Model/PriceWrap.md)| price to update | [optional] |
+| **price** | [**\FortnoxApi\Model\PriceWrap**](../Model/PriceWrap.md)| price to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PriceWrap**](../Model/PriceWrap.md)
+[**\FortnoxApi\Model\PriceWrap**](../Model/PriceWrap.md)
 
 ### Authorization
 
@@ -359,7 +359,7 @@ No authorization required
 ## `updatePricesResource1()`
 
 ```php
-updatePricesResource1($price_list, $article_number, $price): \OpenAPI\Client\Model\PriceWrap
+updatePricesResource1($price_list, $article_number, $price): \FortnoxApi\Model\PriceWrap
 ```
 
 Update the first price in the specified article
@@ -372,14 +372,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PricesResourceApi(
+$apiInstance = new FortnoxApi\Api\PricesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $price_list = 'price_list_example'; // string | identifies the price list
 $article_number = 'article_number_example'; // string | identifies the article number
-$price = new \OpenAPI\Client\Model\PriceWrap(); // \OpenAPI\Client\Model\PriceWrap | price to update
+$price = new \FortnoxApi\Model\PriceWrap(); // \FortnoxApi\Model\PriceWrap | price to update
 
 try {
     $result = $apiInstance->updatePricesResource1($price_list, $article_number, $price);
@@ -395,11 +395,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **price_list** | **string**| identifies the price list | |
 | **article_number** | **string**| identifies the article number | |
-| **price** | [**\OpenAPI\Client\Model\PriceWrap**](../Model/PriceWrap.md)| price to update | [optional] |
+| **price** | [**\FortnoxApi\Model\PriceWrap**](../Model/PriceWrap.md)| price to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PriceWrap**](../Model/PriceWrap.md)
+[**\FortnoxApi\Model\PriceWrap**](../Model/PriceWrap.md)
 
 ### Authorization
 

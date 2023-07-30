@@ -1,4 +1,4 @@
-# OpenAPI\Client\AccountsResourceApi
+# FortnoxApi\AccountsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createAccountsResource()`
 
 ```php
-createAccountsResource($financialyear, $account_payload): \OpenAPI\Client\Model\AccountSingleItemWrap
+createAccountsResource($financialyear, $account_payload): \FortnoxApi\Model\AccountSingleItemWrap
 ```
 
 Create an account
@@ -28,13 +28,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsResourceApi(
+$apiInstance = new FortnoxApi\Api\AccountsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $financialyear = 56; // int | financial year to create account against
-$account_payload = new \OpenAPI\Client\Model\AccountPayloadWrap(); // \OpenAPI\Client\Model\AccountPayloadWrap | account to create
+$account_payload = new \FortnoxApi\Model\AccountPayloadWrap(); // \FortnoxApi\Model\AccountPayloadWrap | account to create
 
 try {
     $result = $apiInstance->createAccountsResource($financialyear, $account_payload);
@@ -49,11 +49,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **financialyear** | **int**| financial year to create account against | [optional] |
-| **account_payload** | [**\OpenAPI\Client\Model\AccountPayloadWrap**](../Model/AccountPayloadWrap.md)| account to create | [optional] |
+| **account_payload** | [**\FortnoxApi\Model\AccountPayloadWrap**](../Model/AccountPayloadWrap.md)| account to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountSingleItemWrap**](../Model/AccountSingleItemWrap.md)
+[**\FortnoxApi\Model\AccountSingleItemWrap**](../Model/AccountSingleItemWrap.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 ## `getAccountsResource()`
 
 ```php
-getAccountsResource($number): \OpenAPI\Client\Model\AccountSingleItemWrap
+getAccountsResource($number): \FortnoxApi\Model\AccountSingleItemWrap
 ```
 
 Retrieve an account
@@ -86,7 +86,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsResourceApi(
+$apiInstance = new FortnoxApi\Api\AccountsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -109,7 +109,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountSingleItemWrap**](../Model/AccountSingleItemWrap.md)
+[**\FortnoxApi\Model\AccountSingleItemWrap**](../Model/AccountSingleItemWrap.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ No authorization required
 ## `listAccountsResource()`
 
 ```php
-listAccountsResource($lastmodified, $sru, $sortby): \OpenAPI\Client\Model\AccountListItemWrap
+listAccountsResource($lastmodified, $sru, $sortby): \FortnoxApi\Model\AccountListItemWrap
 ```
 
 List all accounts
@@ -142,7 +142,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsResourceApi(
+$apiInstance = new FortnoxApi\Api\AccountsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -169,7 +169,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountListItemWrap**](../Model/AccountListItemWrap.md)
+[**\FortnoxApi\Model\AccountListItemWrap**](../Model/AccountListItemWrap.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ No authorization required
 ## `updateAccountsResource()`
 
 ```php
-updateAccountsResource($number, $financialyear, $account_payload): \OpenAPI\Client\Model\AccountSingleItemWrap
+updateAccountsResource($number, $financialyear, $account_payload): \FortnoxApi\Model\AccountSingleItemWrap
 ```
 
 Update an account
@@ -202,14 +202,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsResourceApi(
+$apiInstance = new FortnoxApi\Api\AccountsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $number = 56; // int | identifies the account
 $financialyear = 56; // int | financial year to update account against
-$account_payload = new \OpenAPI\Client\Model\AccountPayloadWrap(); // \OpenAPI\Client\Model\AccountPayloadWrap | account to update
+$account_payload = new \FortnoxApi\Model\AccountPayloadWrap(); // \FortnoxApi\Model\AccountPayloadWrap | account to update
 
 try {
     $result = $apiInstance->updateAccountsResource($number, $financialyear, $account_payload);
@@ -225,11 +225,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **number** | **int**| identifies the account | |
 | **financialyear** | **int**| financial year to update account against | [optional] |
-| **account_payload** | [**\OpenAPI\Client\Model\AccountPayloadWrap**](../Model/AccountPayloadWrap.md)| account to update | [optional] |
+| **account_payload** | [**\FortnoxApi\Model\AccountPayloadWrap**](../Model/AccountPayloadWrap.md)| account to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountSingleItemWrap**](../Model/AccountSingleItemWrap.md)
+[**\FortnoxApi\Model\AccountSingleItemWrap**](../Model/AccountSingleItemWrap.md)
 
 ### Authorization
 

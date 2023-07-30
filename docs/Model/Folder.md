@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **at_url** | **string** |  | [optional]
 **email** | **string** |  | [optional]
-**files** | [**\OpenAPI\Client\Model\FolderFileRow[]**](FolderFileRow.md) |  | [optional]
-**folders** | [**\OpenAPI\Client\Model\FolderFolderRow[]**](FolderFolderRow.md) |  | [optional]
+**files** | [**\FortnoxApi\Model\FolderFileRow[]**](FolderFileRow.md) |  | [optional]
+**folders** | [**\FortnoxApi\Model\FolderFolderRow[]**](FolderFolderRow.md) |  | [optional]
 **id** | **string** |  | [optional]
 **name** | **string** |  | [optional]
 

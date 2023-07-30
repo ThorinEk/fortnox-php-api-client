@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * IncomingGoods Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class IncomingGoods implements ModelInterface, ArrayAccess, \JsonSerializable
         'has_delivery_note' => 'bool',
         'delivery_note_id' => 'string',
         'supplier_number' => 'string',
-        'rows' => '\OpenAPI\Client\Model\IncomingGoodsRow[]',
+        'rows' => '\FortnoxApi\Model\IncomingGoodsRow[]',
         'date' => '\DateTime',
         'released' => 'bool',
         'note' => 'string',
@@ -552,7 +552,7 @@ class IncomingGoods implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets rows
      *
-     * @return \OpenAPI\Client\Model\IncomingGoodsRow[]|null
+     * @return \FortnoxApi\Model\IncomingGoodsRow[]|null
      */
     public function getRows()
     {
@@ -562,7 +562,7 @@ class IncomingGoods implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets rows
      *
-     * @param \OpenAPI\Client\Model\IncomingGoodsRow[]|null $rows rows
+     * @param \FortnoxApi\Model\IncomingGoodsRow[]|null $rows rows
      *
      * @return self
      */

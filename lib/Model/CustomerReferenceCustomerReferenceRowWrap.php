@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * CustomerReferenceCustomerReferenceRowWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class CustomerReferenceCustomerReferenceRowWrap implements ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'customer_reference_row' => '\OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRow'
+        'customer_reference_row' => '\FortnoxApi\Model\CustomerReferenceCustomerReferenceRow'
     ];
 
     /**
@@ -290,7 +290,7 @@ class CustomerReferenceCustomerReferenceRowWrap implements ModelInterface, Array
     /**
      * Gets customer_reference_row
      *
-     * @return \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRow|null
+     * @return \FortnoxApi\Model\CustomerReferenceCustomerReferenceRow|null
      */
     public function getCustomerReferenceRow()
     {
@@ -300,7 +300,7 @@ class CustomerReferenceCustomerReferenceRowWrap implements ModelInterface, Array
     /**
      * Sets customer_reference_row
      *
-     * @param \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRow|null $customer_reference_row customer_reference_row
+     * @param \FortnoxApi\Model\CustomerReferenceCustomerReferenceRow|null $customer_reference_row customer_reference_row
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * IncomingGoodsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -147,7 +147,7 @@ class IncomingGoodsResourceApi
      * @param  string $booking_date Date for bookkeeping in format &#x60;\&quot;YYYY-MM-DD\&quot;&#x60;. Must be between document&#39;s release date (inclusive) and today&#39;s date (inclusive). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['completed'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -165,7 +165,7 @@ class IncomingGoodsResourceApi
      * @param  string $booking_date Date for bookkeeping in format &#x60;\&quot;YYYY-MM-DD\&quot;&#x60;. Must be between document&#39;s release date (inclusive) and today&#39;s date (inclusive). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['completed'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -385,12 +385,12 @@ class IncomingGoodsResourceApi
      *
      * Create Incoming Goods document
      *
-     * @param  \OpenAPI\Client\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\IncomingGoods
+     * @return \FortnoxApi\Model\IncomingGoods
      */
     public function createIncomingGoodsResource($incoming_goods = null, string $contentType = self::contentTypes['createIncomingGoodsResource'][0])
     {
@@ -403,12 +403,12 @@ class IncomingGoodsResourceApi
      *
      * Create Incoming Goods document
      *
-     * @param  \OpenAPI\Client\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\IncomingGoods, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\IncomingGoods, HTTP status code, HTTP response headers (array of strings)
      */
     public function createIncomingGoodsResourceWithHttpInfo($incoming_goods = null, string $contentType = self::contentTypes['createIncomingGoodsResource'][0])
     {
@@ -451,23 +451,23 @@ class IncomingGoodsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\IncomingGoods' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\IncomingGoods' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\IncomingGoods' !== 'string') {
+                        if ('\FortnoxApi\Model\IncomingGoods' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\IncomingGoods', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\IncomingGoods', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\IncomingGoods';
+            $returnType = '\FortnoxApi\Model\IncomingGoods';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -488,7 +488,7 @@ class IncomingGoodsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\IncomingGoods',
+                        '\FortnoxApi\Model\IncomingGoods',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -503,7 +503,7 @@ class IncomingGoodsResourceApi
      *
      * Create Incoming Goods document
      *
-     * @param  \OpenAPI\Client\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createIncomingGoodsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -524,7 +524,7 @@ class IncomingGoodsResourceApi
      *
      * Create Incoming Goods document
      *
-     * @param  \OpenAPI\Client\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createIncomingGoodsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -532,7 +532,7 @@ class IncomingGoodsResourceApi
      */
     public function createIncomingGoodsResourceAsyncWithHttpInfo($incoming_goods = null, string $contentType = self::contentTypes['createIncomingGoodsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\IncomingGoods';
+        $returnType = '\FortnoxApi\Model\IncomingGoods';
         $request = $this->createIncomingGoodsResourceRequest($incoming_goods, $contentType);
 
         return $this->client
@@ -574,7 +574,7 @@ class IncomingGoodsResourceApi
     /**
      * Create request for operation 'createIncomingGoodsResource'
      *
-     * @param  \OpenAPI\Client\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createIncomingGoodsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -671,9 +671,9 @@ class IncomingGoodsResourceApi
      * @param  string $q Include only documents where &#x60;id&#x60; or &#x60;deliveryNote&#x60;-field contains the given text (case-insensitive). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\IncomingGoodsListRow[]
+     * @return \FortnoxApi\Model\IncomingGoodsListRow[]
      */
     public function getAllIncomingGoodsResource($released = null, $completed = null, $voided = null, $supplier_number = null, $item_id = null, $note = null, $delivery_note = null, $q = null, string $contentType = self::contentTypes['getAllIncomingGoodsResource'][0])
     {
@@ -696,9 +696,9 @@ class IncomingGoodsResourceApi
      * @param  string $q Include only documents where &#x60;id&#x60; or &#x60;deliveryNote&#x60;-field contains the given text (case-insensitive). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\IncomingGoodsListRow[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\IncomingGoodsListRow[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllIncomingGoodsResourceWithHttpInfo($released = null, $completed = null, $voided = null, $supplier_number = null, $item_id = null, $note = null, $delivery_note = null, $q = null, string $contentType = self::contentTypes['getAllIncomingGoodsResource'][0])
     {
@@ -741,23 +741,23 @@ class IncomingGoodsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\IncomingGoodsListRow[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\IncomingGoodsListRow[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\IncomingGoodsListRow[]' !== 'string') {
+                        if ('\FortnoxApi\Model\IncomingGoodsListRow[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\IncomingGoodsListRow[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\IncomingGoodsListRow[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\IncomingGoodsListRow[]';
+            $returnType = '\FortnoxApi\Model\IncomingGoodsListRow[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -778,7 +778,7 @@ class IncomingGoodsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\IncomingGoodsListRow[]',
+                        '\FortnoxApi\Model\IncomingGoodsListRow[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -836,7 +836,7 @@ class IncomingGoodsResourceApi
      */
     public function getAllIncomingGoodsResourceAsyncWithHttpInfo($released = null, $completed = null, $voided = null, $supplier_number = null, $item_id = null, $note = null, $delivery_note = null, $q = null, string $contentType = self::contentTypes['getAllIncomingGoodsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\IncomingGoodsListRow[]';
+        $returnType = '\FortnoxApi\Model\IncomingGoodsListRow[]';
         $request = $this->getAllIncomingGoodsResourceRequest($released, $completed, $voided, $supplier_number, $item_id, $note, $delivery_note, $q, $contentType);
 
         return $this->client
@@ -1048,9 +1048,9 @@ class IncomingGoodsResourceApi
      * @param  int $ignore_supplier_invoice_id This Supplier Invoice id will be excluded when calculating the takenQuantity. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\IncomingGoods
+     * @return \FortnoxApi\Model\IncomingGoods
      */
     public function getIncomingGoodsResource($id, $ignore_supplier_invoice_id = null, string $contentType = self::contentTypes['getIncomingGoodsResource'][0])
     {
@@ -1067,9 +1067,9 @@ class IncomingGoodsResourceApi
      * @param  int $ignore_supplier_invoice_id This Supplier Invoice id will be excluded when calculating the takenQuantity. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\IncomingGoods, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\IncomingGoods, HTTP status code, HTTP response headers (array of strings)
      */
     public function getIncomingGoodsResourceWithHttpInfo($id, $ignore_supplier_invoice_id = null, string $contentType = self::contentTypes['getIncomingGoodsResource'][0])
     {
@@ -1112,23 +1112,23 @@ class IncomingGoodsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\IncomingGoods' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\IncomingGoods' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\IncomingGoods' !== 'string') {
+                        if ('\FortnoxApi\Model\IncomingGoods' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\IncomingGoods', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\IncomingGoods', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\IncomingGoods';
+            $returnType = '\FortnoxApi\Model\IncomingGoods';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1149,7 +1149,7 @@ class IncomingGoodsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\IncomingGoods',
+                        '\FortnoxApi\Model\IncomingGoods',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1195,7 +1195,7 @@ class IncomingGoodsResourceApi
      */
     public function getIncomingGoodsResourceAsyncWithHttpInfo($id, $ignore_supplier_invoice_id = null, string $contentType = self::contentTypes['getIncomingGoodsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\IncomingGoods';
+        $returnType = '\FortnoxApi\Model\IncomingGoods';
         $request = $this->getIncomingGoodsResourceRequest($id, $ignore_supplier_invoice_id, $contentType);
 
         return $this->client
@@ -1345,7 +1345,7 @@ class IncomingGoodsResourceApi
      * @param  int $id Incoming goods document id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['releaseIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1362,7 +1362,7 @@ class IncomingGoodsResourceApi
      * @param  int $id Incoming goods document id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['releaseIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1572,12 +1572,12 @@ class IncomingGoodsResourceApi
      * Update Incoming Goods document
      *
      * @param  int $id Incoming goods document id. (required)
-     * @param  \OpenAPI\Client\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\IncomingGoods
+     * @return \FortnoxApi\Model\IncomingGoods
      */
     public function saveIncomingGoodsResource($id, $incoming_goods = null, string $contentType = self::contentTypes['saveIncomingGoodsResource'][0])
     {
@@ -1591,12 +1591,12 @@ class IncomingGoodsResourceApi
      * Update Incoming Goods document
      *
      * @param  int $id Incoming goods document id. (required)
-     * @param  \OpenAPI\Client\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\IncomingGoods, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\IncomingGoods, HTTP status code, HTTP response headers (array of strings)
      */
     public function saveIncomingGoodsResourceWithHttpInfo($id, $incoming_goods = null, string $contentType = self::contentTypes['saveIncomingGoodsResource'][0])
     {
@@ -1639,23 +1639,23 @@ class IncomingGoodsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\IncomingGoods' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\IncomingGoods' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\IncomingGoods' !== 'string') {
+                        if ('\FortnoxApi\Model\IncomingGoods' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\IncomingGoods', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\IncomingGoods', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\IncomingGoods';
+            $returnType = '\FortnoxApi\Model\IncomingGoods';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1676,7 +1676,7 @@ class IncomingGoodsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\IncomingGoods',
+                        '\FortnoxApi\Model\IncomingGoods',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1692,7 +1692,7 @@ class IncomingGoodsResourceApi
      * Update Incoming Goods document
      *
      * @param  int $id Incoming goods document id. (required)
-     * @param  \OpenAPI\Client\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveIncomingGoodsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1714,7 +1714,7 @@ class IncomingGoodsResourceApi
      * Update Incoming Goods document
      *
      * @param  int $id Incoming goods document id. (required)
-     * @param  \OpenAPI\Client\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveIncomingGoodsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1722,7 +1722,7 @@ class IncomingGoodsResourceApi
      */
     public function saveIncomingGoodsResourceAsyncWithHttpInfo($id, $incoming_goods = null, string $contentType = self::contentTypes['saveIncomingGoodsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\IncomingGoods';
+        $returnType = '\FortnoxApi\Model\IncomingGoods';
         $request = $this->saveIncomingGoodsResourceRequest($id, $incoming_goods, $contentType);
 
         return $this->client
@@ -1765,7 +1765,7 @@ class IncomingGoodsResourceApi
      * Create request for operation 'saveIncomingGoodsResource'
      *
      * @param  int $id Incoming goods document id. (required)
-     * @param  \OpenAPI\Client\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\IncomingGoods $incoming_goods The &lt;code&gt;IncomingGoods&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveIncomingGoodsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1870,7 +1870,7 @@ class IncomingGoodsResourceApi
      * @param  int $id Incoming goods document id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['voidDocumentIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1887,7 +1887,7 @@ class IncomingGoodsResourceApi
      * @param  int $id Incoming goods document id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['voidDocumentIncomingGoodsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

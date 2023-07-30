@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * AssetFileConnectionResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,12 +131,12 @@ class AssetFileConnectionResourceApi
      *
      * Create an asset file connection
      *
-     * @param  \OpenAPI\Client\Model\CreateAssetFileConnection $asset_file_connection asset file connection (optional)
+     * @param  \FortnoxApi\Model\CreateAssetFileConnection $asset_file_connection asset file connection (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssetFileConnectionResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AssetFileConnection
+     * @return \FortnoxApi\Model\AssetFileConnection
      */
     public function createAssetFileConnectionResource($asset_file_connection = null, string $contentType = self::contentTypes['createAssetFileConnectionResource'][0])
     {
@@ -149,12 +149,12 @@ class AssetFileConnectionResourceApi
      *
      * Create an asset file connection
      *
-     * @param  \OpenAPI\Client\Model\CreateAssetFileConnection $asset_file_connection asset file connection (optional)
+     * @param  \FortnoxApi\Model\CreateAssetFileConnection $asset_file_connection asset file connection (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssetFileConnectionResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AssetFileConnection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AssetFileConnection, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAssetFileConnectionResourceWithHttpInfo($asset_file_connection = null, string $contentType = self::contentTypes['createAssetFileConnectionResource'][0])
     {
@@ -197,23 +197,23 @@ class AssetFileConnectionResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AssetFileConnection' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AssetFileConnection' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AssetFileConnection' !== 'string') {
+                        if ('\FortnoxApi\Model\AssetFileConnection' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AssetFileConnection', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AssetFileConnection', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AssetFileConnection';
+            $returnType = '\FortnoxApi\Model\AssetFileConnection';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -234,7 +234,7 @@ class AssetFileConnectionResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AssetFileConnection',
+                        '\FortnoxApi\Model\AssetFileConnection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -249,7 +249,7 @@ class AssetFileConnectionResourceApi
      *
      * Create an asset file connection
      *
-     * @param  \OpenAPI\Client\Model\CreateAssetFileConnection $asset_file_connection asset file connection (optional)
+     * @param  \FortnoxApi\Model\CreateAssetFileConnection $asset_file_connection asset file connection (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssetFileConnectionResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -270,7 +270,7 @@ class AssetFileConnectionResourceApi
      *
      * Create an asset file connection
      *
-     * @param  \OpenAPI\Client\Model\CreateAssetFileConnection $asset_file_connection asset file connection (optional)
+     * @param  \FortnoxApi\Model\CreateAssetFileConnection $asset_file_connection asset file connection (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssetFileConnectionResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -278,7 +278,7 @@ class AssetFileConnectionResourceApi
      */
     public function createAssetFileConnectionResourceAsyncWithHttpInfo($asset_file_connection = null, string $contentType = self::contentTypes['createAssetFileConnectionResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AssetFileConnection';
+        $returnType = '\FortnoxApi\Model\AssetFileConnection';
         $request = $this->createAssetFileConnectionResourceRequest($asset_file_connection, $contentType);
 
         return $this->client
@@ -320,7 +320,7 @@ class AssetFileConnectionResourceApi
     /**
      * Create request for operation 'createAssetFileConnectionResource'
      *
-     * @param  \OpenAPI\Client\Model\CreateAssetFileConnection $asset_file_connection asset file connection (optional)
+     * @param  \FortnoxApi\Model\CreateAssetFileConnection $asset_file_connection asset file connection (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssetFileConnectionResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -410,7 +410,7 @@ class AssetFileConnectionResourceApi
      * @param  string $file_id fileId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssetFileConnectionResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -427,7 +427,7 @@ class AssetFileConnectionResourceApi
      * @param  string $file_id fileId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssetFileConnectionResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -638,9 +638,9 @@ class AssetFileConnectionResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllAssetFileConnectionResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AssetFileConnectionResponse
+     * @return \FortnoxApi\Model\AssetFileConnectionResponse
      */
     public function getAllAssetFileConnectionResource(string $contentType = self::contentTypes['getAllAssetFileConnectionResource'][0])
     {
@@ -655,9 +655,9 @@ class AssetFileConnectionResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllAssetFileConnectionResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AssetFileConnectionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AssetFileConnectionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllAssetFileConnectionResourceWithHttpInfo(string $contentType = self::contentTypes['getAllAssetFileConnectionResource'][0])
     {
@@ -700,23 +700,23 @@ class AssetFileConnectionResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AssetFileConnectionResponse' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AssetFileConnectionResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AssetFileConnectionResponse' !== 'string') {
+                        if ('\FortnoxApi\Model\AssetFileConnectionResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AssetFileConnectionResponse', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AssetFileConnectionResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AssetFileConnectionResponse';
+            $returnType = '\FortnoxApi\Model\AssetFileConnectionResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -737,7 +737,7 @@ class AssetFileConnectionResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AssetFileConnectionResponse',
+                        '\FortnoxApi\Model\AssetFileConnectionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -779,7 +779,7 @@ class AssetFileConnectionResourceApi
      */
     public function getAllAssetFileConnectionResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['getAllAssetFileConnectionResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AssetFileConnectionResponse';
+        $returnType = '\FortnoxApi\Model\AssetFileConnectionResponse';
         $request = $this->getAllAssetFileConnectionResourceRequest($contentType);
 
         return $this->client

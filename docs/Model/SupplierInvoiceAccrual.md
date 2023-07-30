@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **times** | **int** |  |
 **total** | **float** |  |
 **vat_included** | **bool** |  | [optional]
-**supplier_invoice_accrual_rows** | [**\OpenAPI\Client\Model\SupplierInvoiceAccrualSupplierInvoiceAccrualRows[]**](SupplierInvoiceAccrualSupplierInvoiceAccrualRows.md) |  |
+**supplier_invoice_accrual_rows** | [**\FortnoxApi\Model\SupplierInvoiceAccrualSupplierInvoiceAccrualRows[]**](SupplierInvoiceAccrualSupplierInvoiceAccrualRows.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

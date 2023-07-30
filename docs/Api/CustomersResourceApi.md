@@ -1,4 +1,4 @@
-# OpenAPI\Client\CustomersResourceApi
+# FortnoxApi\CustomersResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createCustomersResource()`
 
 ```php
-createCustomersResource($customer): \OpenAPI\Client\Model\CustomerWrap
+createCustomersResource($customer): \FortnoxApi\Model\CustomerWrap
 ```
 
 Create a customer
@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$customer = new \OpenAPI\Client\Model\CustomerWrap(); // \OpenAPI\Client\Model\CustomerWrap | customer to create
+$customer = new \FortnoxApi\Model\CustomerWrap(); // \FortnoxApi\Model\CustomerWrap | customer to create
 
 try {
     $result = $apiInstance->createCustomersResource($customer);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **customer** | [**\OpenAPI\Client\Model\CustomerWrap**](../Model/CustomerWrap.md)| customer to create | [optional] |
+| **customer** | [**\FortnoxApi\Model\CustomerWrap**](../Model/CustomerWrap.md)| customer to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerWrap**](../Model/CustomerWrap.md)
+[**\FortnoxApi\Model\CustomerWrap**](../Model/CustomerWrap.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `getCustomersResource()`
 
 ```php
-getCustomersResource($customer_number): \OpenAPI\Client\Model\CustomerWrap
+getCustomersResource($customer_number): \FortnoxApi\Model\CustomerWrap
 ```
 
 Retrieve a customer
@@ -85,7 +85,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -108,7 +108,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerWrap**](../Model/CustomerWrap.md)
+[**\FortnoxApi\Model\CustomerWrap**](../Model/CustomerWrap.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 ## `listCustomersResource()`
 
 ```php
-listCustomersResource($filter, $customernumber, $name, $zipcode, $city, $email, $phone, $organisationnumber, $gln, $glndelivery, $lastmodified, $sortby): \OpenAPI\Client\Model\CustomerListItemList
+listCustomersResource($filter, $customernumber, $name, $zipcode, $city, $email, $phone, $organisationnumber, $gln, $glndelivery, $lastmodified, $sortby): \FortnoxApi\Model\CustomerListItemList
 ```
 
 Retrieve a list of customers
@@ -141,7 +141,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -186,7 +186,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerListItemList**](../Model/CustomerListItemList.md)
+[**\FortnoxApi\Model\CustomerListItemList**](../Model/CustomerListItemList.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -259,7 +259,7 @@ No authorization required
 ## `updateCustomersResource()`
 
 ```php
-updateCustomersResource($customer_number, $customer): \OpenAPI\Client\Model\CustomerWrap
+updateCustomersResource($customer_number, $customer): \FortnoxApi\Model\CustomerWrap
 ```
 
 Update a customer
@@ -274,13 +274,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $customer_number = 'customer_number_example'; // string | identifies the customer
-$customer = new \OpenAPI\Client\Model\CustomerWrap(); // \OpenAPI\Client\Model\CustomerWrap | customer to update
+$customer = new \FortnoxApi\Model\CustomerWrap(); // \FortnoxApi\Model\CustomerWrap | customer to update
 
 try {
     $result = $apiInstance->updateCustomersResource($customer_number, $customer);
@@ -295,11 +295,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customer_number** | **string**| identifies the customer | |
-| **customer** | [**\OpenAPI\Client\Model\CustomerWrap**](../Model/CustomerWrap.md)| customer to update | [optional] |
+| **customer** | [**\FortnoxApi\Model\CustomerWrap**](../Model/CustomerWrap.md)| customer to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerWrap**](../Model/CustomerWrap.md)
+[**\FortnoxApi\Model\CustomerWrap**](../Model/CustomerWrap.md)
 
 ### Authorization
 

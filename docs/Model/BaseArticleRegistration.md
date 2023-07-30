@@ -5,11 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional]
-**cost_center** | [**\OpenAPI\Client\Model\TRCostCenter**](TRCostCenter.md) |  | [optional]
-**customer** | [**\OpenAPI\Client\Model\TRCustomer**](TRCustomer.md) |  |
-**project** | [**\OpenAPI\Client\Model\TRProject**](TRProject.md) |  | [optional]
-**article_registrations** | [**\OpenAPI\Client\Model\ArticleRegistration[]**](ArticleRegistration.md) |  | [optional]
-**registered_article** | [**\OpenAPI\Client\Model\ArticleRegistration**](ArticleRegistration.md) |  | [optional]
+**cost_center** | [**\FortnoxApi\Model\TRCostCenter**](TRCostCenter.md) |  | [optional]
+**customer** | [**\FortnoxApi\Model\TRCustomer**](TRCustomer.md) |  |
+**project** | [**\FortnoxApi\Model\TRProject**](TRProject.md) |  | [optional]
+**article_registrations** | [**\FortnoxApi\Model\ArticleRegistration[]**](ArticleRegistration.md) |  | [optional]
+**registered_article** | [**\FortnoxApi\Model\ArticleRegistration**](ArticleRegistration.md) |  | [optional]
 **purchase_date** | **\DateTime** |  |
 **owner_id** | **string** |  | [optional]
 **version** | **int** |  | [optional]

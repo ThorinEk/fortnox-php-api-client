@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * InvoiceAccrual Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class InvoiceAccrual implements ModelInterface, ArrayAccess, \JsonSerializable
         'accrual_account' => 'int',
         'description' => 'string',
         'end_date' => '\DateTime',
-        'invoice_accrual_rows' => '\OpenAPI\Client\Model\InvoiceAccrualInvoiceAccrualRow[]',
+        'invoice_accrual_rows' => '\FortnoxApi\Model\InvoiceAccrualInvoiceAccrualRow[]',
         'invoice_number' => 'int',
         'period' => 'string',
         'revenue_account' => 'int',
@@ -571,7 +571,7 @@ class InvoiceAccrual implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets invoice_accrual_rows
      *
-     * @return \OpenAPI\Client\Model\InvoiceAccrualInvoiceAccrualRow[]
+     * @return \FortnoxApi\Model\InvoiceAccrualInvoiceAccrualRow[]
      */
     public function getInvoiceAccrualRows()
     {
@@ -581,7 +581,7 @@ class InvoiceAccrual implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets invoice_accrual_rows
      *
-     * @param \OpenAPI\Client\Model\InvoiceAccrualInvoiceAccrualRow[] $invoice_accrual_rows invoice_accrual_rows
+     * @param \FortnoxApi\Model\InvoiceAccrualInvoiceAccrualRow[] $invoice_accrual_rows invoice_accrual_rows
      *
      * @return self
      */

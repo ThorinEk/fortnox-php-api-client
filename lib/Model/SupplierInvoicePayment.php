@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * SupplierInvoicePayment Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -76,7 +76,7 @@ class SupplierInvoicePayment implements ModelInterface, ArrayAccess, \JsonSerial
         'voucher_number' => 'int',
         'voucher_series' => 'string',
         'voucher_year' => 'int',
-        'write_offs' => '\OpenAPI\Client\Model\SupplierInvoicePaymentWriteOff[]'
+        'write_offs' => '\FortnoxApi\Model\SupplierInvoicePaymentWriteOff[]'
     ];
 
     /**
@@ -1056,7 +1056,7 @@ class SupplierInvoicePayment implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets write_offs
      *
-     * @return \OpenAPI\Client\Model\SupplierInvoicePaymentWriteOff[]|null
+     * @return \FortnoxApi\Model\SupplierInvoicePaymentWriteOff[]|null
      */
     public function getWriteOffs()
     {
@@ -1066,7 +1066,7 @@ class SupplierInvoicePayment implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets write_offs
      *
-     * @param \OpenAPI\Client\Model\SupplierInvoicePaymentWriteOff[]|null $write_offs write_offs
+     * @param \FortnoxApi\Model\SupplierInvoicePaymentWriteOff[]|null $write_offs write_offs
      *
      * @return self
      */

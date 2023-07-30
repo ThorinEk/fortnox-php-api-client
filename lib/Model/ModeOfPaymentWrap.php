@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ModeOfPaymentWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class ModeOfPaymentWrap implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'mode_of_payment' => '\OpenAPI\Client\Model\ModeOfPayment'
+        'mode_of_payment' => '\FortnoxApi\Model\ModeOfPayment'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ModeOfPaymentWrap implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets mode_of_payment
      *
-     * @return \OpenAPI\Client\Model\ModeOfPayment
+     * @return \FortnoxApi\Model\ModeOfPayment
      */
     public function getModeOfPayment()
     {
@@ -303,7 +303,7 @@ class ModeOfPaymentWrap implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets mode_of_payment
      *
-     * @param \OpenAPI\Client\Model\ModeOfPayment $mode_of_payment mode_of_payment
+     * @param \FortnoxApi\Model\ModeOfPayment $mode_of_payment mode_of_payment
      *
      * @return self
      */

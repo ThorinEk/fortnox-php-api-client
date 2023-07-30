@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * CustomerReferenceWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class CustomerReferenceWrap implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'customer_reference' => '\OpenAPI\Client\Model\CustomerReference'
+        'customer_reference' => '\FortnoxApi\Model\CustomerReference'
     ];
 
     /**
@@ -290,7 +290,7 @@ class CustomerReferenceWrap implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets customer_reference
      *
-     * @return \OpenAPI\Client\Model\CustomerReference|null
+     * @return \FortnoxApi\Model\CustomerReference|null
      */
     public function getCustomerReference()
     {
@@ -300,7 +300,7 @@ class CustomerReferenceWrap implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets customer_reference
      *
-     * @param \OpenAPI\Client\Model\CustomerReference|null $customer_reference customer_reference
+     * @param \FortnoxApi\Model\CustomerReference|null $customer_reference customer_reference
      *
      * @return self
      */

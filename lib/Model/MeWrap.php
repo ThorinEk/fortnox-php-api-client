@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * MeWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class MeWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'me_information' => '\OpenAPI\Client\Model\Me'
+        'me_information' => '\FortnoxApi\Model\Me'
     ];
 
     /**
@@ -290,7 +290,7 @@ class MeWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets me_information
      *
-     * @return \OpenAPI\Client\Model\Me|null
+     * @return \FortnoxApi\Model\Me|null
      */
     public function getMeInformation()
     {
@@ -300,7 +300,7 @@ class MeWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets me_information
      *
-     * @param \OpenAPI\Client\Model\Me|null $me_information me_information
+     * @param \FortnoxApi\Model\Me|null $me_information me_information
      *
      * @return self
      */

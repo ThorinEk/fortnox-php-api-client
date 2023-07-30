@@ -1,4 +1,4 @@
-# OpenAPI\Client\SupplierInvoiceExternalUrlConnectionsResourceApi
+# FortnoxApi\SupplierInvoiceExternalUrlConnectionsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createSupplierInvoiceExternalUrlConnectionsResource()`
 
 ```php
-createSupplierInvoiceExternalUrlConnectionsResource($request): \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle
+createSupplierInvoiceExternalUrlConnectionsResource($request): \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle
 ```
 
 Create a supplier invoice external URL connection
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceExternalUrlConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceExternalUrlConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate(); // \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate | request
+$request = new \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate(); // \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate | request
 
 try {
     $result = $apiInstance->createSupplierInvoiceExternalUrlConnectionsResource($request);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate**](../Model/SupplierInvoiceExternalURLConnectionUpdate.md)| request | [optional] |
+| **request** | [**\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate**](../Model/SupplierInvoiceExternalURLConnectionUpdate.md)| request | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle**](../Model/SupplierInvoiceExternalURLConnectionSingle.md)
+[**\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle**](../Model/SupplierInvoiceExternalURLConnectionSingle.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceExternalUrlConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceExternalUrlConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -120,7 +120,7 @@ No authorization required
 ## `getSupplierInvoiceExternalUrlConnectionsResource()`
 
 ```php
-getSupplierInvoiceExternalUrlConnectionsResource($id): \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle
+getSupplierInvoiceExternalUrlConnectionsResource($id): \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle
 ```
 
 Retrieve a single supplier invoice external URL connection
@@ -133,7 +133,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceExternalUrlConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceExternalUrlConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -156,7 +156,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle**](../Model/SupplierInvoiceExternalURLConnectionSingle.md)
+[**\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle**](../Model/SupplierInvoiceExternalURLConnectionSingle.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
 ## `updateSupplierInvoiceExternalUrlConnectionsResource()`
 
 ```php
-updateSupplierInvoiceExternalUrlConnectionsResource($id, $request): \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle
+updateSupplierInvoiceExternalUrlConnectionsResource($id, $request): \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle
 ```
 
 Update a supplier invoice external URL connection
@@ -187,13 +187,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceExternalUrlConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceExternalUrlConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | id
-$request = new \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate(); // \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate | request
+$request = new \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate(); // \FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate | request
 
 try {
     $result = $apiInstance->updateSupplierInvoiceExternalUrlConnectionsResource($id, $request);
@@ -208,11 +208,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| id | |
-| **request** | [**\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionUpdate**](../Model/SupplierInvoiceExternalURLConnectionUpdate.md)| request | [optional] |
+| **request** | [**\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionUpdate**](../Model/SupplierInvoiceExternalURLConnectionUpdate.md)| request | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnectionSingle**](../Model/SupplierInvoiceExternalURLConnectionSingle.md)
+[**\FortnoxApi\Model\SupplierInvoiceExternalURLConnectionSingle**](../Model/SupplierInvoiceExternalURLConnectionSingle.md)
 
 ### Authorization
 

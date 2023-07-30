@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * AttendanceTransactionListItemList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class AttendanceTransactionListItemList implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'attendance_transactions' => '\OpenAPI\Client\Model\AttendanceTransactionListItem[]'
+        'attendance_transactions' => '\FortnoxApi\Model\AttendanceTransactionListItem[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class AttendanceTransactionListItemList implements ModelInterface, ArrayAccess, 
     /**
      * Gets attendance_transactions
      *
-     * @return \OpenAPI\Client\Model\AttendanceTransactionListItem[]|null
+     * @return \FortnoxApi\Model\AttendanceTransactionListItem[]|null
      */
     public function getAttendanceTransactions()
     {
@@ -300,7 +300,7 @@ class AttendanceTransactionListItemList implements ModelInterface, ArrayAccess, 
     /**
      * Sets attendance_transactions
      *
-     * @param \OpenAPI\Client\Model\AttendanceTransactionListItem[]|null $attendance_transactions attendance_transactions
+     * @param \FortnoxApi\Model\AttendanceTransactionListItem[]|null $attendance_transactions attendance_transactions
      *
      * @return self
      */

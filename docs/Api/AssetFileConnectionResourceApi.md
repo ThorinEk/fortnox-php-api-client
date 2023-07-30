@@ -1,4 +1,4 @@
-# OpenAPI\Client\AssetFileConnectionResourceApi
+# FortnoxApi\AssetFileConnectionResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createAssetFileConnectionResource()`
 
 ```php
-createAssetFileConnectionResource($asset_file_connection): \OpenAPI\Client\Model\AssetFileConnection
+createAssetFileConnectionResource($asset_file_connection): \FortnoxApi\Model\AssetFileConnection
 ```
 
 Create an asset file connection
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetFileConnectionResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetFileConnectionResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$asset_file_connection = new \OpenAPI\Client\Model\CreateAssetFileConnection(); // \OpenAPI\Client\Model\CreateAssetFileConnection | asset file connection
+$asset_file_connection = new \FortnoxApi\Model\CreateAssetFileConnection(); // \FortnoxApi\Model\CreateAssetFileConnection | asset file connection
 
 try {
     $result = $apiInstance->createAssetFileConnectionResource($asset_file_connection);
@@ -44,11 +44,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **asset_file_connection** | [**\OpenAPI\Client\Model\CreateAssetFileConnection**](../Model/CreateAssetFileConnection.md)| asset file connection | [optional] |
+| **asset_file_connection** | [**\FortnoxApi\Model\CreateAssetFileConnection**](../Model/CreateAssetFileConnection.md)| asset file connection | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetFileConnection**](../Model/AssetFileConnection.md)
+[**\FortnoxApi\Model\AssetFileConnection**](../Model/AssetFileConnection.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetFileConnectionResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetFileConnectionResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -119,7 +119,7 @@ No authorization required
 ## `getAllAssetFileConnectionResource()`
 
 ```php
-getAllAssetFileConnectionResource(): \OpenAPI\Client\Model\AssetFileConnectionResponse
+getAllAssetFileConnectionResource(): \FortnoxApi\Model\AssetFileConnectionResponse
 ```
 
 Retrieve a list of asset file connections
@@ -134,7 +134,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AssetFileConnectionResourceApi(
+$apiInstance = new FortnoxApi\Api\AssetFileConnectionResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -154,7 +154,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssetFileConnectionResponse**](../Model/AssetFileConnectionResponse.md)
+[**\FortnoxApi\Model\AssetFileConnectionResponse**](../Model/AssetFileConnectionResponse.md)
 
 ### Authorization
 

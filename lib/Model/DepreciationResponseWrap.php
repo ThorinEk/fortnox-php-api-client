@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * DepreciationResponseWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class DepreciationResponseWrap implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'assets_depreciation' => '\OpenAPI\Client\Model\DepreciationResponse[]'
+        'assets_depreciation' => '\FortnoxApi\Model\DepreciationResponse[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class DepreciationResponseWrap implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets assets_depreciation
      *
-     * @return \OpenAPI\Client\Model\DepreciationResponse[]|null
+     * @return \FortnoxApi\Model\DepreciationResponse[]|null
      */
     public function getAssetsDepreciation()
     {
@@ -300,7 +300,7 @@ class DepreciationResponseWrap implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets assets_depreciation
      *
-     * @param \OpenAPI\Client\Model\DepreciationResponse[]|null $assets_depreciation assets_depreciation
+     * @param \FortnoxApi\Model\DepreciationResponse[]|null $assets_depreciation assets_depreciation
      *
      * @return self
      */

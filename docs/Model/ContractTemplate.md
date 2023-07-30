@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **contract_length** | **int** |  | [optional]
 **freight** | **float** |  | [optional]
 **invoice_interval** | **int** |  | [optional]
-**invoice_rows** | [**\OpenAPI\Client\Model\ContractTemplateInvoiceRow[]**](ContractTemplateInvoiceRow.md) |  | [optional]
+**invoice_rows** | [**\FortnoxApi\Model\ContractTemplateInvoiceRow[]**](ContractTemplateInvoiceRow.md) |  | [optional]
 **continuous** | **bool** |  | [optional]
 **our_reference** | **string** |  | [optional]
 **print_template** | **string** |  | [optional]

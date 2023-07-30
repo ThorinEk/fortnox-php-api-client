@@ -81,12 +81,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AbsenceTransactionsResourceApi(
+$apiInstance = new FortnoxApi\Api\AbsenceTransactionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$absence_transactions_payload = new \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap(); // \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap | to create
+$absence_transactions_payload = new \FortnoxApi\Model\AbsenceTransactionPayloadWrap(); // \FortnoxApi\Model\AbsenceTransactionPayloadWrap | to create
 
 try {
     $result = $apiInstance->createAbsenceTransactionsResource($absence_transactions_payload);

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * ModesOfPaymentsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,12 +134,12 @@ class ModesOfPaymentsResourceApi
      *
      * Create a mode of payment
      *
-     * @param  \OpenAPI\Client\Model\ModeOfPaymentWrap $mode_of_payment to create (optional)
+     * @param  \FortnoxApi\Model\ModeOfPaymentWrap $mode_of_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createModesOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ModeOfPaymentWrap
+     * @return \FortnoxApi\Model\ModeOfPaymentWrap
      */
     public function createModesOfPaymentsResource($mode_of_payment = null, string $contentType = self::contentTypes['createModesOfPaymentsResource'][0])
     {
@@ -152,12 +152,12 @@ class ModesOfPaymentsResourceApi
      *
      * Create a mode of payment
      *
-     * @param  \OpenAPI\Client\Model\ModeOfPaymentWrap $mode_of_payment to create (optional)
+     * @param  \FortnoxApi\Model\ModeOfPaymentWrap $mode_of_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createModesOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ModeOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ModeOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createModesOfPaymentsResourceWithHttpInfo($mode_of_payment = null, string $contentType = self::contentTypes['createModesOfPaymentsResource'][0])
     {
@@ -200,23 +200,23 @@ class ModesOfPaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ModeOfPaymentWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ModeOfPaymentWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ModeOfPaymentWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ModeOfPaymentWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ModeOfPaymentWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ModeOfPaymentWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ModeOfPaymentWrap';
+            $returnType = '\FortnoxApi\Model\ModeOfPaymentWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -237,7 +237,7 @@ class ModesOfPaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ModeOfPaymentWrap',
+                        '\FortnoxApi\Model\ModeOfPaymentWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class ModesOfPaymentsResourceApi
      *
      * Create a mode of payment
      *
-     * @param  \OpenAPI\Client\Model\ModeOfPaymentWrap $mode_of_payment to create (optional)
+     * @param  \FortnoxApi\Model\ModeOfPaymentWrap $mode_of_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createModesOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class ModesOfPaymentsResourceApi
      *
      * Create a mode of payment
      *
-     * @param  \OpenAPI\Client\Model\ModeOfPaymentWrap $mode_of_payment to create (optional)
+     * @param  \FortnoxApi\Model\ModeOfPaymentWrap $mode_of_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createModesOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class ModesOfPaymentsResourceApi
      */
     public function createModesOfPaymentsResourceAsyncWithHttpInfo($mode_of_payment = null, string $contentType = self::contentTypes['createModesOfPaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ModeOfPaymentWrap';
+        $returnType = '\FortnoxApi\Model\ModeOfPaymentWrap';
         $request = $this->createModesOfPaymentsResourceRequest($mode_of_payment, $contentType);
 
         return $this->client
@@ -323,7 +323,7 @@ class ModesOfPaymentsResourceApi
     /**
      * Create request for operation 'createModesOfPaymentsResource'
      *
-     * @param  \OpenAPI\Client\Model\ModeOfPaymentWrap $mode_of_payment to create (optional)
+     * @param  \FortnoxApi\Model\ModeOfPaymentWrap $mode_of_payment to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createModesOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -413,9 +413,9 @@ class ModesOfPaymentsResourceApi
      * @param  string $code identifies the mode of payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getModesOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ModeOfPaymentWrap
+     * @return \FortnoxApi\Model\ModeOfPaymentWrap
      */
     public function getModesOfPaymentsResource($code, string $contentType = self::contentTypes['getModesOfPaymentsResource'][0])
     {
@@ -431,9 +431,9 @@ class ModesOfPaymentsResourceApi
      * @param  string $code identifies the mode of payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getModesOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ModeOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ModeOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getModesOfPaymentsResourceWithHttpInfo($code, string $contentType = self::contentTypes['getModesOfPaymentsResource'][0])
     {
@@ -476,23 +476,23 @@ class ModesOfPaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ModeOfPaymentWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ModeOfPaymentWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ModeOfPaymentWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ModeOfPaymentWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ModeOfPaymentWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ModeOfPaymentWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ModeOfPaymentWrap';
+            $returnType = '\FortnoxApi\Model\ModeOfPaymentWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -513,7 +513,7 @@ class ModesOfPaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ModeOfPaymentWrap',
+                        '\FortnoxApi\Model\ModeOfPaymentWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -557,7 +557,7 @@ class ModesOfPaymentsResourceApi
      */
     public function getModesOfPaymentsResourceAsyncWithHttpInfo($code, string $contentType = self::contentTypes['getModesOfPaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ModeOfPaymentWrap';
+        $returnType = '\FortnoxApi\Model\ModeOfPaymentWrap';
         $request = $this->getModesOfPaymentsResourceRequest($code, $contentType);
 
         return $this->client
@@ -695,9 +695,9 @@ class ModesOfPaymentsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listModesOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ModeOfPaymentList
+     * @return \FortnoxApi\Model\ModeOfPaymentList
      */
     public function listModesOfPaymentsResource(string $contentType = self::contentTypes['listModesOfPaymentsResource'][0])
     {
@@ -712,9 +712,9 @@ class ModesOfPaymentsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listModesOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ModeOfPaymentList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ModeOfPaymentList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listModesOfPaymentsResourceWithHttpInfo(string $contentType = self::contentTypes['listModesOfPaymentsResource'][0])
     {
@@ -757,23 +757,23 @@ class ModesOfPaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ModeOfPaymentList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ModeOfPaymentList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ModeOfPaymentList' !== 'string') {
+                        if ('\FortnoxApi\Model\ModeOfPaymentList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ModeOfPaymentList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ModeOfPaymentList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ModeOfPaymentList';
+            $returnType = '\FortnoxApi\Model\ModeOfPaymentList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -794,7 +794,7 @@ class ModesOfPaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ModeOfPaymentList',
+                        '\FortnoxApi\Model\ModeOfPaymentList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -836,7 +836,7 @@ class ModesOfPaymentsResourceApi
      */
     public function listModesOfPaymentsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listModesOfPaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ModeOfPaymentList';
+        $returnType = '\FortnoxApi\Model\ModeOfPaymentList';
         $request = $this->listModesOfPaymentsResourceRequest($contentType);
 
         return $this->client
@@ -957,12 +957,12 @@ class ModesOfPaymentsResourceApi
      * Update a mode of payment
      *
      * @param  string $code identifies the mode of payment (required)
-     * @param  \OpenAPI\Client\Model\ModeOfPaymentWrap $unit mode of payment to update (optional)
+     * @param  \FortnoxApi\Model\ModeOfPaymentWrap $unit mode of payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateModesOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ModeOfPaymentWrap
+     * @return \FortnoxApi\Model\ModeOfPaymentWrap
      */
     public function updateModesOfPaymentsResource($code, $unit = null, string $contentType = self::contentTypes['updateModesOfPaymentsResource'][0])
     {
@@ -976,12 +976,12 @@ class ModesOfPaymentsResourceApi
      * Update a mode of payment
      *
      * @param  string $code identifies the mode of payment (required)
-     * @param  \OpenAPI\Client\Model\ModeOfPaymentWrap $unit mode of payment to update (optional)
+     * @param  \FortnoxApi\Model\ModeOfPaymentWrap $unit mode of payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateModesOfPaymentsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ModeOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ModeOfPaymentWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateModesOfPaymentsResourceWithHttpInfo($code, $unit = null, string $contentType = self::contentTypes['updateModesOfPaymentsResource'][0])
     {
@@ -1024,23 +1024,23 @@ class ModesOfPaymentsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ModeOfPaymentWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ModeOfPaymentWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ModeOfPaymentWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ModeOfPaymentWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ModeOfPaymentWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ModeOfPaymentWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ModeOfPaymentWrap';
+            $returnType = '\FortnoxApi\Model\ModeOfPaymentWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1061,7 +1061,7 @@ class ModesOfPaymentsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ModeOfPaymentWrap',
+                        '\FortnoxApi\Model\ModeOfPaymentWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1077,7 +1077,7 @@ class ModesOfPaymentsResourceApi
      * Update a mode of payment
      *
      * @param  string $code identifies the mode of payment (required)
-     * @param  \OpenAPI\Client\Model\ModeOfPaymentWrap $unit mode of payment to update (optional)
+     * @param  \FortnoxApi\Model\ModeOfPaymentWrap $unit mode of payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateModesOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1099,7 +1099,7 @@ class ModesOfPaymentsResourceApi
      * Update a mode of payment
      *
      * @param  string $code identifies the mode of payment (required)
-     * @param  \OpenAPI\Client\Model\ModeOfPaymentWrap $unit mode of payment to update (optional)
+     * @param  \FortnoxApi\Model\ModeOfPaymentWrap $unit mode of payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateModesOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1107,7 +1107,7 @@ class ModesOfPaymentsResourceApi
      */
     public function updateModesOfPaymentsResourceAsyncWithHttpInfo($code, $unit = null, string $contentType = self::contentTypes['updateModesOfPaymentsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ModeOfPaymentWrap';
+        $returnType = '\FortnoxApi\Model\ModeOfPaymentWrap';
         $request = $this->updateModesOfPaymentsResourceRequest($code, $unit, $contentType);
 
         return $this->client
@@ -1150,7 +1150,7 @@ class ModesOfPaymentsResourceApi
      * Create request for operation 'updateModesOfPaymentsResource'
      *
      * @param  string $code identifies the mode of payment (required)
-     * @param  \OpenAPI\Client\Model\ModeOfPaymentWrap $unit mode of payment to update (optional)
+     * @param  \FortnoxApi\Model\ModeOfPaymentWrap $unit mode of payment to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateModesOfPaymentsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

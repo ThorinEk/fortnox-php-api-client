@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * TaxReductionsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class TaxReductionsResourceApi
      *
      * Create a Tax Reduction
      *
-     * @param  \OpenAPI\Client\Model\TaxReductionWrap $tax_reduction to create (optional)
+     * @param  \FortnoxApi\Model\TaxReductionWrap $tax_reduction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaxReductionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TaxReductionWrap
+     * @return \FortnoxApi\Model\TaxReductionWrap
      */
     public function createTaxReductionsResource($tax_reduction = null, string $contentType = self::contentTypes['createTaxReductionsResource'][0])
     {
@@ -155,12 +155,12 @@ class TaxReductionsResourceApi
      *
      * Create a Tax Reduction
      *
-     * @param  \OpenAPI\Client\Model\TaxReductionWrap $tax_reduction to create (optional)
+     * @param  \FortnoxApi\Model\TaxReductionWrap $tax_reduction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaxReductionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TaxReductionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TaxReductionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTaxReductionsResourceWithHttpInfo($tax_reduction = null, string $contentType = self::contentTypes['createTaxReductionsResource'][0])
     {
@@ -203,23 +203,23 @@ class TaxReductionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TaxReductionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TaxReductionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TaxReductionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\TaxReductionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TaxReductionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TaxReductionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TaxReductionWrap';
+            $returnType = '\FortnoxApi\Model\TaxReductionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class TaxReductionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TaxReductionWrap',
+                        '\FortnoxApi\Model\TaxReductionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class TaxReductionsResourceApi
      *
      * Create a Tax Reduction
      *
-     * @param  \OpenAPI\Client\Model\TaxReductionWrap $tax_reduction to create (optional)
+     * @param  \FortnoxApi\Model\TaxReductionWrap $tax_reduction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaxReductionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class TaxReductionsResourceApi
      *
      * Create a Tax Reduction
      *
-     * @param  \OpenAPI\Client\Model\TaxReductionWrap $tax_reduction to create (optional)
+     * @param  \FortnoxApi\Model\TaxReductionWrap $tax_reduction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaxReductionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class TaxReductionsResourceApi
      */
     public function createTaxReductionsResourceAsyncWithHttpInfo($tax_reduction = null, string $contentType = self::contentTypes['createTaxReductionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TaxReductionWrap';
+        $returnType = '\FortnoxApi\Model\TaxReductionWrap';
         $request = $this->createTaxReductionsResourceRequest($tax_reduction, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class TaxReductionsResourceApi
     /**
      * Create request for operation 'createTaxReductionsResource'
      *
-     * @param  \OpenAPI\Client\Model\TaxReductionWrap $tax_reduction to create (optional)
+     * @param  \FortnoxApi\Model\TaxReductionWrap $tax_reduction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaxReductionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class TaxReductionsResourceApi
      * @param  int $id identifies the tax reduction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTaxReductionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TaxReductionWrap
+     * @return \FortnoxApi\Model\TaxReductionWrap
      */
     public function getTaxReductionsResource($id, string $contentType = self::contentTypes['getTaxReductionsResource'][0])
     {
@@ -434,9 +434,9 @@ class TaxReductionsResourceApi
      * @param  int $id identifies the tax reduction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTaxReductionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TaxReductionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TaxReductionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaxReductionsResourceWithHttpInfo($id, string $contentType = self::contentTypes['getTaxReductionsResource'][0])
     {
@@ -479,23 +479,23 @@ class TaxReductionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TaxReductionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TaxReductionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TaxReductionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\TaxReductionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TaxReductionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TaxReductionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TaxReductionWrap';
+            $returnType = '\FortnoxApi\Model\TaxReductionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class TaxReductionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TaxReductionWrap',
+                        '\FortnoxApi\Model\TaxReductionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class TaxReductionsResourceApi
      */
     public function getTaxReductionsResourceAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getTaxReductionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TaxReductionWrap';
+        $returnType = '\FortnoxApi\Model\TaxReductionWrap';
         $request = $this->getTaxReductionsResourceRequest($id, $contentType);
 
         return $this->client
@@ -699,9 +699,9 @@ class TaxReductionsResourceApi
      * @param  string $filter possibility to filter tax reductions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTaxReductionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TaxReductionListItemList
+     * @return \FortnoxApi\Model\TaxReductionListItemList
      */
     public function listTaxReductionsResource($filter = null, string $contentType = self::contentTypes['listTaxReductionsResource'][0])
     {
@@ -717,9 +717,9 @@ class TaxReductionsResourceApi
      * @param  string $filter possibility to filter tax reductions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTaxReductionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TaxReductionListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TaxReductionListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTaxReductionsResourceWithHttpInfo($filter = null, string $contentType = self::contentTypes['listTaxReductionsResource'][0])
     {
@@ -762,23 +762,23 @@ class TaxReductionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TaxReductionListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TaxReductionListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TaxReductionListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\TaxReductionListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TaxReductionListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TaxReductionListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TaxReductionListItemList';
+            $returnType = '\FortnoxApi\Model\TaxReductionListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -799,7 +799,7 @@ class TaxReductionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TaxReductionListItemList',
+                        '\FortnoxApi\Model\TaxReductionListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -843,7 +843,7 @@ class TaxReductionsResourceApi
      */
     public function listTaxReductionsResourceAsyncWithHttpInfo($filter = null, string $contentType = self::contentTypes['listTaxReductionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TaxReductionListItemList';
+        $returnType = '\FortnoxApi\Model\TaxReductionListItemList';
         $request = $this->listTaxReductionsResourceRequest($filter, $contentType);
 
         return $this->client
@@ -977,7 +977,7 @@ class TaxReductionsResourceApi
      * @param  int $id identifies the tax reduction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeTaxReductionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -994,7 +994,7 @@ class TaxReductionsResourceApi
      * @param  int $id identifies the tax reduction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeTaxReductionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1204,12 +1204,12 @@ class TaxReductionsResourceApi
      * Update a tax reduction
      *
      * @param  int $id identifies the tax reduction (required)
-     * @param  \OpenAPI\Client\Model\TaxReductionWrap $tax_reduction to update (optional)
+     * @param  \FortnoxApi\Model\TaxReductionWrap $tax_reduction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaxReductionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TaxReductionWrap
+     * @return \FortnoxApi\Model\TaxReductionWrap
      */
     public function updateTaxReductionsResource($id, $tax_reduction = null, string $contentType = self::contentTypes['updateTaxReductionsResource'][0])
     {
@@ -1223,12 +1223,12 @@ class TaxReductionsResourceApi
      * Update a tax reduction
      *
      * @param  int $id identifies the tax reduction (required)
-     * @param  \OpenAPI\Client\Model\TaxReductionWrap $tax_reduction to update (optional)
+     * @param  \FortnoxApi\Model\TaxReductionWrap $tax_reduction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaxReductionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TaxReductionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TaxReductionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateTaxReductionsResourceWithHttpInfo($id, $tax_reduction = null, string $contentType = self::contentTypes['updateTaxReductionsResource'][0])
     {
@@ -1271,23 +1271,23 @@ class TaxReductionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TaxReductionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TaxReductionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TaxReductionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\TaxReductionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TaxReductionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TaxReductionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TaxReductionWrap';
+            $returnType = '\FortnoxApi\Model\TaxReductionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1308,7 +1308,7 @@ class TaxReductionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TaxReductionWrap',
+                        '\FortnoxApi\Model\TaxReductionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1324,7 +1324,7 @@ class TaxReductionsResourceApi
      * Update a tax reduction
      *
      * @param  int $id identifies the tax reduction (required)
-     * @param  \OpenAPI\Client\Model\TaxReductionWrap $tax_reduction to update (optional)
+     * @param  \FortnoxApi\Model\TaxReductionWrap $tax_reduction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaxReductionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1346,7 +1346,7 @@ class TaxReductionsResourceApi
      * Update a tax reduction
      *
      * @param  int $id identifies the tax reduction (required)
-     * @param  \OpenAPI\Client\Model\TaxReductionWrap $tax_reduction to update (optional)
+     * @param  \FortnoxApi\Model\TaxReductionWrap $tax_reduction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaxReductionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1354,7 +1354,7 @@ class TaxReductionsResourceApi
      */
     public function updateTaxReductionsResourceAsyncWithHttpInfo($id, $tax_reduction = null, string $contentType = self::contentTypes['updateTaxReductionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TaxReductionWrap';
+        $returnType = '\FortnoxApi\Model\TaxReductionWrap';
         $request = $this->updateTaxReductionsResourceRequest($id, $tax_reduction, $contentType);
 
         return $this->client
@@ -1397,7 +1397,7 @@ class TaxReductionsResourceApi
      * Create request for operation 'updateTaxReductionsResource'
      *
      * @param  int $id identifies the tax reduction (required)
-     * @param  \OpenAPI\Client\Model\TaxReductionWrap $tax_reduction to update (optional)
+     * @param  \FortnoxApi\Model\TaxReductionWrap $tax_reduction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaxReductionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

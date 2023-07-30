@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * Folder Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class Folder implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'at_url' => 'string',
         'email' => 'string',
-        'files' => '\OpenAPI\Client\Model\FolderFileRow[]',
-        'folders' => '\OpenAPI\Client\Model\FolderFolderRow[]',
+        'files' => '\FortnoxApi\Model\FolderFileRow[]',
+        'folders' => '\FortnoxApi\Model\FolderFolderRow[]',
         'id' => 'string',
         'name' => 'string'
     ];
@@ -379,7 +379,7 @@ class Folder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets files
      *
-     * @return \OpenAPI\Client\Model\FolderFileRow[]|null
+     * @return \FortnoxApi\Model\FolderFileRow[]|null
      */
     public function getFiles()
     {
@@ -389,7 +389,7 @@ class Folder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets files
      *
-     * @param \OpenAPI\Client\Model\FolderFileRow[]|null $files files
+     * @param \FortnoxApi\Model\FolderFileRow[]|null $files files
      *
      * @return self
      */
@@ -406,7 +406,7 @@ class Folder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets folders
      *
-     * @return \OpenAPI\Client\Model\FolderFolderRow[]|null
+     * @return \FortnoxApi\Model\FolderFolderRow[]|null
      */
     public function getFolders()
     {
@@ -416,7 +416,7 @@ class Folder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets folders
      *
-     * @param \OpenAPI\Client\Model\FolderFolderRow[]|null $folders folders
+     * @param \FortnoxApi\Model\FolderFolderRow[]|null $folders folders
      *
      * @return self
      */

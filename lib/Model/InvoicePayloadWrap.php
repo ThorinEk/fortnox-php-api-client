@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * InvoicePayloadWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class InvoicePayloadWrap implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'invoice' => '\OpenAPI\Client\Model\InvoicePayload'
+        'invoice' => '\FortnoxApi\Model\InvoicePayload'
     ];
 
     /**
@@ -290,7 +290,7 @@ class InvoicePayloadWrap implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets invoice
      *
-     * @return \OpenAPI\Client\Model\InvoicePayload|null
+     * @return \FortnoxApi\Model\InvoicePayload|null
      */
     public function getInvoice()
     {
@@ -300,7 +300,7 @@ class InvoicePayloadWrap implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets invoice
      *
-     * @param \OpenAPI\Client\Model\InvoicePayload|null $invoice invoice
+     * @param \FortnoxApi\Model\InvoicePayload|null $invoice invoice
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * OrdersResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -155,9 +155,9 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderWrap
+     * @return \FortnoxApi\Model\OrderWrap
      */
     public function cancelOrdersResource($document_number, string $contentType = self::contentTypes['cancelOrdersResource'][0])
     {
@@ -173,9 +173,9 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelOrdersResourceWithHttpInfo($document_number, string $contentType = self::contentTypes['cancelOrdersResource'][0])
     {
@@ -218,23 +218,23 @@ class OrdersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OrderWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OrderWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OrderWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderWrap';
+            $returnType = '\FortnoxApi\Model\OrderWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -255,7 +255,7 @@ class OrdersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderWrap',
+                        '\FortnoxApi\Model\OrderWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -299,7 +299,7 @@ class OrdersResourceApi
      */
     public function cancelOrdersResourceAsyncWithHttpInfo($document_number, string $contentType = self::contentTypes['cancelOrdersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderWrap';
+        $returnType = '\FortnoxApi\Model\OrderWrap';
         $request = $this->cancelOrdersResourceRequest($document_number, $contentType);
 
         return $this->client
@@ -435,12 +435,12 @@ class OrdersResourceApi
      *
      * Create a new order
      *
-     * @param  \OpenAPI\Client\Model\OrderWrap $order order to create (optional)
+     * @param  \FortnoxApi\Model\OrderWrap $order order to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderWrap
+     * @return \FortnoxApi\Model\OrderWrap
      */
     public function createOrdersResource($order = null, string $contentType = self::contentTypes['createOrdersResource'][0])
     {
@@ -453,12 +453,12 @@ class OrdersResourceApi
      *
      * Create a new order
      *
-     * @param  \OpenAPI\Client\Model\OrderWrap $order order to create (optional)
+     * @param  \FortnoxApi\Model\OrderWrap $order order to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrdersResourceWithHttpInfo($order = null, string $contentType = self::contentTypes['createOrdersResource'][0])
     {
@@ -501,23 +501,23 @@ class OrdersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OrderWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OrderWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OrderWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderWrap';
+            $returnType = '\FortnoxApi\Model\OrderWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -538,7 +538,7 @@ class OrdersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderWrap',
+                        '\FortnoxApi\Model\OrderWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class OrdersResourceApi
      *
      * Create a new order
      *
-     * @param  \OpenAPI\Client\Model\OrderWrap $order order to create (optional)
+     * @param  \FortnoxApi\Model\OrderWrap $order order to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrdersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -574,7 +574,7 @@ class OrdersResourceApi
      *
      * Create a new order
      *
-     * @param  \OpenAPI\Client\Model\OrderWrap $order order to create (optional)
+     * @param  \FortnoxApi\Model\OrderWrap $order order to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrdersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -582,7 +582,7 @@ class OrdersResourceApi
      */
     public function createOrdersResourceAsyncWithHttpInfo($order = null, string $contentType = self::contentTypes['createOrdersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderWrap';
+        $returnType = '\FortnoxApi\Model\OrderWrap';
         $request = $this->createOrdersResourceRequest($order, $contentType);
 
         return $this->client
@@ -624,7 +624,7 @@ class OrdersResourceApi
     /**
      * Create request for operation 'createOrdersResource'
      *
-     * @param  \OpenAPI\Client\Model\OrderWrap $order order to create (optional)
+     * @param  \FortnoxApi\Model\OrderWrap $order order to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrdersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -714,9 +714,9 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createinvoiceOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceWrap
+     * @return \FortnoxApi\Model\InvoiceWrap
      */
     public function createinvoiceOrdersResource($document_number, string $contentType = self::contentTypes['createinvoiceOrdersResource'][0])
     {
@@ -732,9 +732,9 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createinvoiceOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\InvoiceWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createinvoiceOrdersResourceWithHttpInfo($document_number, string $contentType = self::contentTypes['createinvoiceOrdersResource'][0])
     {
@@ -777,23 +777,23 @@ class OrdersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\InvoiceWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\InvoiceWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\InvoiceWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceWrap';
+            $returnType = '\FortnoxApi\Model\InvoiceWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -814,7 +814,7 @@ class OrdersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceWrap',
+                        '\FortnoxApi\Model\InvoiceWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -858,7 +858,7 @@ class OrdersResourceApi
      */
     public function createinvoiceOrdersResourceAsyncWithHttpInfo($document_number, string $contentType = self::contentTypes['createinvoiceOrdersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceWrap';
+        $returnType = '\FortnoxApi\Model\InvoiceWrap';
         $request = $this->createinvoiceOrdersResourceRequest($document_number, $contentType);
 
         return $this->client
@@ -997,9 +997,9 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderWrap
+     * @return \FortnoxApi\Model\OrderWrap
      */
     public function emailOrdersResource($document_number, string $contentType = self::contentTypes['emailOrdersResource'][0])
     {
@@ -1015,9 +1015,9 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function emailOrdersResourceWithHttpInfo($document_number, string $contentType = self::contentTypes['emailOrdersResource'][0])
     {
@@ -1060,23 +1060,23 @@ class OrdersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OrderWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OrderWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OrderWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderWrap';
+            $returnType = '\FortnoxApi\Model\OrderWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1097,7 +1097,7 @@ class OrdersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderWrap',
+                        '\FortnoxApi\Model\OrderWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1141,7 +1141,7 @@ class OrdersResourceApi
      */
     public function emailOrdersResourceAsyncWithHttpInfo($document_number, string $contentType = self::contentTypes['emailOrdersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderWrap';
+        $returnType = '\FortnoxApi\Model\OrderWrap';
         $request = $this->emailOrdersResourceRequest($document_number, $contentType);
 
         return $this->client
@@ -1280,9 +1280,9 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['externalprintOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderWrap
+     * @return \FortnoxApi\Model\OrderWrap
      */
     public function externalprintOrdersResource($document_number, string $contentType = self::contentTypes['externalprintOrdersResource'][0])
     {
@@ -1298,9 +1298,9 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['externalprintOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function externalprintOrdersResourceWithHttpInfo($document_number, string $contentType = self::contentTypes['externalprintOrdersResource'][0])
     {
@@ -1343,23 +1343,23 @@ class OrdersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OrderWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OrderWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OrderWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderWrap';
+            $returnType = '\FortnoxApi\Model\OrderWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1380,7 +1380,7 @@ class OrdersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderWrap',
+                        '\FortnoxApi\Model\OrderWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1424,7 +1424,7 @@ class OrdersResourceApi
      */
     public function externalprintOrdersResourceAsyncWithHttpInfo($document_number, string $contentType = self::contentTypes['externalprintOrdersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderWrap';
+        $returnType = '\FortnoxApi\Model\OrderWrap';
         $request = $this->externalprintOrdersResourceRequest($document_number, $contentType);
 
         return $this->client
@@ -1563,9 +1563,9 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderWrap
+     * @return \FortnoxApi\Model\OrderWrap
      */
     public function getOrdersResource($document_number, string $contentType = self::contentTypes['getOrdersResource'][0])
     {
@@ -1581,9 +1581,9 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrdersResourceWithHttpInfo($document_number, string $contentType = self::contentTypes['getOrdersResource'][0])
     {
@@ -1626,23 +1626,23 @@ class OrdersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OrderWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OrderWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OrderWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderWrap';
+            $returnType = '\FortnoxApi\Model\OrderWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1663,7 +1663,7 @@ class OrdersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderWrap',
+                        '\FortnoxApi\Model\OrderWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1707,7 +1707,7 @@ class OrdersResourceApi
      */
     public function getOrdersResourceAsyncWithHttpInfo($document_number, string $contentType = self::contentTypes['getOrdersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderWrap';
+        $returnType = '\FortnoxApi\Model\OrderWrap';
         $request = $this->getOrdersResourceRequest($document_number, $contentType);
 
         return $this->client
@@ -1863,9 +1863,9 @@ class OrdersResourceApi
      * @param  string $sortby field to sort returned list (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderListItemList
+     * @return \FortnoxApi\Model\OrderListItemList
      */
     public function listOrdersResource($filter = null, $customername = null, $customernumber = null, $label = null, $documentnumber = null, $externalinvoicereference1 = null, $externalinvoicereference2 = null, $fromdate = null, $todate = null, $costcenter = null, $project = null, $sent = null, $notcompleted = null, $ourreference = null, $yourreference = null, $lastmodified = null, $ordertype = null, $sortby = null, string $contentType = self::contentTypes['listOrdersResource'][0])
     {
@@ -1898,9 +1898,9 @@ class OrdersResourceApi
      * @param  string $sortby field to sort returned list (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OrderListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listOrdersResourceWithHttpInfo($filter = null, $customername = null, $customernumber = null, $label = null, $documentnumber = null, $externalinvoicereference1 = null, $externalinvoicereference2 = null, $fromdate = null, $todate = null, $costcenter = null, $project = null, $sent = null, $notcompleted = null, $ourreference = null, $yourreference = null, $lastmodified = null, $ordertype = null, $sortby = null, string $contentType = self::contentTypes['listOrdersResource'][0])
     {
@@ -1943,23 +1943,23 @@ class OrdersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OrderListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\OrderListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OrderListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderListItemList';
+            $returnType = '\FortnoxApi\Model\OrderListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1980,7 +1980,7 @@ class OrdersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderListItemList',
+                        '\FortnoxApi\Model\OrderListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2058,7 +2058,7 @@ class OrdersResourceApi
      */
     public function listOrdersResourceAsyncWithHttpInfo($filter = null, $customername = null, $customernumber = null, $label = null, $documentnumber = null, $externalinvoicereference1 = null, $externalinvoicereference2 = null, $fromdate = null, $todate = null, $costcenter = null, $project = null, $sent = null, $notcompleted = null, $ourreference = null, $yourreference = null, $lastmodified = null, $ordertype = null, $sortby = null, string $contentType = self::contentTypes['listOrdersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderListItemList';
+        $returnType = '\FortnoxApi\Model\OrderListItemList';
         $request = $this->listOrdersResourceRequest($filter, $customername, $customernumber, $label, $documentnumber, $externalinvoicereference1, $externalinvoicereference2, $fromdate, $todate, $costcenter, $project, $sent, $notcompleted, $ourreference, $yourreference, $lastmodified, $ordertype, $sortby, $contentType);
 
         return $this->client
@@ -2379,7 +2379,7 @@ class OrdersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['previewOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -2397,7 +2397,7 @@ class OrdersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['previewOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2662,7 +2662,7 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['printOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -2680,7 +2680,7 @@ class OrdersResourceApi
      * @param  string $document_number identifies the order (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['printOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2943,12 +2943,12 @@ class OrdersResourceApi
      * Update an order
      *
      * @param  string $document_number identifies the order (required)
-     * @param  \OpenAPI\Client\Model\OrderWrap $order order to update (optional)
+     * @param  \FortnoxApi\Model\OrderWrap $order order to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderWrap
+     * @return \FortnoxApi\Model\OrderWrap
      */
     public function updateOrdersResource($document_number, $order = null, string $contentType = self::contentTypes['updateOrdersResource'][0])
     {
@@ -2962,12 +2962,12 @@ class OrdersResourceApi
      * Update an order
      *
      * @param  string $document_number identifies the order (required)
-     * @param  \OpenAPI\Client\Model\OrderWrap $order order to update (optional)
+     * @param  \FortnoxApi\Model\OrderWrap $order order to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrdersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateOrdersResourceWithHttpInfo($document_number, $order = null, string $contentType = self::contentTypes['updateOrdersResource'][0])
     {
@@ -3010,23 +3010,23 @@ class OrdersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OrderWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OrderWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OrderWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderWrap';
+            $returnType = '\FortnoxApi\Model\OrderWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3047,7 +3047,7 @@ class OrdersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderWrap',
+                        '\FortnoxApi\Model\OrderWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3063,7 +3063,7 @@ class OrdersResourceApi
      * Update an order
      *
      * @param  string $document_number identifies the order (required)
-     * @param  \OpenAPI\Client\Model\OrderWrap $order order to update (optional)
+     * @param  \FortnoxApi\Model\OrderWrap $order order to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrdersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3085,7 +3085,7 @@ class OrdersResourceApi
      * Update an order
      *
      * @param  string $document_number identifies the order (required)
-     * @param  \OpenAPI\Client\Model\OrderWrap $order order to update (optional)
+     * @param  \FortnoxApi\Model\OrderWrap $order order to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrdersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3093,7 +3093,7 @@ class OrdersResourceApi
      */
     public function updateOrdersResourceAsyncWithHttpInfo($document_number, $order = null, string $contentType = self::contentTypes['updateOrdersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderWrap';
+        $returnType = '\FortnoxApi\Model\OrderWrap';
         $request = $this->updateOrdersResourceRequest($document_number, $order, $contentType);
 
         return $this->client
@@ -3136,7 +3136,7 @@ class OrdersResourceApi
      * Create request for operation 'updateOrdersResource'
      *
      * @param  string $document_number identifies the order (required)
-     * @param  \OpenAPI\Client\Model\OrderWrap $order order to update (optional)
+     * @param  \FortnoxApi\Model\OrderWrap $order order to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrdersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

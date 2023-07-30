@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ArticleFileConnectionListItemWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class ArticleFileConnectionListItemWrap implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'article_file_connections' => '\OpenAPI\Client\Model\ArticleFileConnectionListItem[]'
+        'article_file_connections' => '\FortnoxApi\Model\ArticleFileConnectionListItem[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class ArticleFileConnectionListItemWrap implements ModelInterface, ArrayAccess, 
     /**
      * Gets article_file_connections
      *
-     * @return \OpenAPI\Client\Model\ArticleFileConnectionListItem[]|null
+     * @return \FortnoxApi\Model\ArticleFileConnectionListItem[]|null
      */
     public function getArticleFileConnections()
     {
@@ -300,7 +300,7 @@ class ArticleFileConnectionListItemWrap implements ModelInterface, ArrayAccess, 
     /**
      * Sets article_file_connections
      *
-     * @param \OpenAPI\Client\Model\ArticleFileConnectionListItem[]|null $article_file_connections article_file_connections
+     * @param \FortnoxApi\Model\ArticleFileConnectionListItem[]|null $article_file_connections article_file_connections
      *
      * @return self
      */

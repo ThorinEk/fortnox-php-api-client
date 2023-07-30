@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ContractAccrualWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class ContractAccrualWrap implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'contract_accrual' => '\OpenAPI\Client\Model\ContractAccrual'
+        'contract_accrual' => '\FortnoxApi\Model\ContractAccrual'
     ];
 
     /**
@@ -290,7 +290,7 @@ class ContractAccrualWrap implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets contract_accrual
      *
-     * @return \OpenAPI\Client\Model\ContractAccrual|null
+     * @return \FortnoxApi\Model\ContractAccrual|null
      */
     public function getContractAccrual()
     {
@@ -300,7 +300,7 @@ class ContractAccrualWrap implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets contract_accrual
      *
-     * @param \OpenAPI\Client\Model\ContractAccrual|null $contract_accrual contract_accrual
+     * @param \FortnoxApi\Model\ContractAccrual|null $contract_accrual contract_accrual
      *
      * @return self
      */

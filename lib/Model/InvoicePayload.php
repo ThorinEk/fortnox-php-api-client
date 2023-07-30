@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * InvoicePayload Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -77,16 +77,16 @@ class InvoicePayload implements ModelInterface, ArrayAccess, \JsonSerializable
         'delivery_zip_code' => 'string',
         'document_number' => 'string',
         'due_date' => '\DateTime',
-        'edi_information' => '\OpenAPI\Client\Model\InvoicePayloadEDIInformation',
-        'email_information' => '\OpenAPI\Client\Model\InvoicePayloadEmailInformation',
+        'edi_information' => '\FortnoxApi\Model\InvoicePayloadEDIInformation',
+        'email_information' => '\FortnoxApi\Model\InvoicePayloadEmailInformation',
         'eu_quarterly_report' => 'bool',
         'external_invoice_reference1' => 'string',
         'external_invoice_reference2' => 'string',
         'freight' => 'float',
         'invoice_date' => '\DateTime',
-        'invoice_rows' => '\OpenAPI\Client\Model\InvoicePayloadInvoiceRow[]',
+        'invoice_rows' => '\FortnoxApi\Model\InvoicePayloadInvoiceRow[]',
         'invoice_type' => 'string',
-        'labels' => '\OpenAPI\Client\Model\InvoicePayloadLabel[]',
+        'labels' => '\FortnoxApi\Model\InvoicePayloadLabel[]',
         'language' => 'string',
         'not_completed' => 'bool',
         'ocr' => 'string',
@@ -1503,7 +1503,7 @@ class InvoicePayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets edi_information
      *
-     * @return \OpenAPI\Client\Model\InvoicePayloadEDIInformation|null
+     * @return \FortnoxApi\Model\InvoicePayloadEDIInformation|null
      */
     public function getEdiInformation()
     {
@@ -1513,7 +1513,7 @@ class InvoicePayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets edi_information
      *
-     * @param \OpenAPI\Client\Model\InvoicePayloadEDIInformation|null $edi_information edi_information
+     * @param \FortnoxApi\Model\InvoicePayloadEDIInformation|null $edi_information edi_information
      *
      * @return self
      */
@@ -1530,7 +1530,7 @@ class InvoicePayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets email_information
      *
-     * @return \OpenAPI\Client\Model\InvoicePayloadEmailInformation|null
+     * @return \FortnoxApi\Model\InvoicePayloadEmailInformation|null
      */
     public function getEmailInformation()
     {
@@ -1540,7 +1540,7 @@ class InvoicePayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets email_information
      *
-     * @param \OpenAPI\Client\Model\InvoicePayloadEmailInformation|null $email_information email_information
+     * @param \FortnoxApi\Model\InvoicePayloadEmailInformation|null $email_information email_information
      *
      * @return self
      */
@@ -1706,7 +1706,7 @@ class InvoicePayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets invoice_rows
      *
-     * @return \OpenAPI\Client\Model\InvoicePayloadInvoiceRow[]|null
+     * @return \FortnoxApi\Model\InvoicePayloadInvoiceRow[]|null
      */
     public function getInvoiceRows()
     {
@@ -1716,7 +1716,7 @@ class InvoicePayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets invoice_rows
      *
-     * @param \OpenAPI\Client\Model\InvoicePayloadInvoiceRow[]|null $invoice_rows invoice_rows
+     * @param \FortnoxApi\Model\InvoicePayloadInvoiceRow[]|null $invoice_rows invoice_rows
      *
      * @return self
      */
@@ -1770,7 +1770,7 @@ class InvoicePayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets labels
      *
-     * @return \OpenAPI\Client\Model\InvoicePayloadLabel[]|null
+     * @return \FortnoxApi\Model\InvoicePayloadLabel[]|null
      */
     public function getLabels()
     {
@@ -1780,7 +1780,7 @@ class InvoicePayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets labels
      *
-     * @param \OpenAPI\Client\Model\InvoicePayloadLabel[]|null $labels labels
+     * @param \FortnoxApi\Model\InvoicePayloadLabel[]|null $labels labels
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# OpenAPI\Client\ContractsResourceApi
+# FortnoxApi\ContractsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createContractsResource()`
 
 ```php
-createContractsResource($contract): \OpenAPI\Client\Model\ContractWrap
+createContractsResource($contract): \FortnoxApi\Model\ContractWrap
 ```
 
 Create a contract
@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$contract = new \OpenAPI\Client\Model\ContractWrap(); // \OpenAPI\Client\Model\ContractWrap | contract to create
+$contract = new \FortnoxApi\Model\ContractWrap(); // \FortnoxApi\Model\ContractWrap | contract to create
 
 try {
     $result = $apiInstance->createContractsResource($contract);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **contract** | [**\OpenAPI\Client\Model\ContractWrap**](../Model/ContractWrap.md)| contract to create | [optional] |
+| **contract** | [**\FortnoxApi\Model\ContractWrap**](../Model/ContractWrap.md)| contract to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContractWrap**](../Model/ContractWrap.md)
+[**\FortnoxApi\Model\ContractWrap**](../Model/ContractWrap.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `createinvoice()`
 
 ```php
-createinvoice($document_number): \OpenAPI\Client\Model\InvoiceWrap
+createinvoice($document_number): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Create invoice from contract
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -106,7 +106,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ No authorization required
 ## `finish()`
 
 ```php
-finish($document_number): \OpenAPI\Client\Model\ContractWrap
+finish($document_number): \FortnoxApi\Model\ContractWrap
 ```
 
 Set a contract as finished
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -160,7 +160,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContractWrap**](../Model/ContractWrap.md)
+[**\FortnoxApi\Model\ContractWrap**](../Model/ContractWrap.md)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ No authorization required
 ## `getContractsResource()`
 
 ```php
-getContractsResource($document_number): \OpenAPI\Client\Model\ContractWrap
+getContractsResource($document_number): \FortnoxApi\Model\ContractWrap
 ```
 
 Retrieve a single contract
@@ -191,7 +191,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -214,7 +214,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContractWrap**](../Model/ContractWrap.md)
+[**\FortnoxApi\Model\ContractWrap**](../Model/ContractWrap.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ No authorization required
 ## `increaseinvoicecount()`
 
 ```php
-increaseinvoicecount($document_number): \OpenAPI\Client\Model\ContractWrap
+increaseinvoicecount($document_number): \FortnoxApi\Model\ContractWrap
 ```
 
 Increases the invoice count without creating an invoice
@@ -245,7 +245,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -268,7 +268,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContractWrap**](../Model/ContractWrap.md)
+[**\FortnoxApi\Model\ContractWrap**](../Model/ContractWrap.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ No authorization required
 ## `listContractsResource()`
 
 ```php
-listContractsResource($filter): \OpenAPI\Client\Model\ContractListItemList
+listContractsResource($filter): \FortnoxApi\Model\ContractListItemList
 ```
 
 Retrieve a list of contracts
@@ -299,7 +299,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -322,7 +322,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContractListItemList**](../Model/ContractListItemList.md)
+[**\FortnoxApi\Model\ContractListItemList**](../Model/ContractListItemList.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ No authorization required
 ## `updateContractsResource()`
 
 ```php
-updateContractsResource($document_number, $contract): \OpenAPI\Client\Model\ContractWrap
+updateContractsResource($document_number, $contract): \FortnoxApi\Model\ContractWrap
 ```
 
 Update a contract
@@ -355,13 +355,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ContractsResourceApi(
+$apiInstance = new FortnoxApi\Api\ContractsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $document_number = 'document_number_example'; // string | identifies the contract
-$contract = new \OpenAPI\Client\Model\ContractWrap(); // \OpenAPI\Client\Model\ContractWrap | contract to update
+$contract = new \FortnoxApi\Model\ContractWrap(); // \FortnoxApi\Model\ContractWrap | contract to update
 
 try {
     $result = $apiInstance->updateContractsResource($document_number, $contract);
@@ -376,11 +376,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **document_number** | **string**| identifies the contract | |
-| **contract** | [**\OpenAPI\Client\Model\ContractWrap**](../Model/ContractWrap.md)| contract to update | [optional] |
+| **contract** | [**\FortnoxApi\Model\ContractWrap**](../Model/ContractWrap.md)| contract to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContractWrap**](../Model/ContractWrap.md)
+[**\FortnoxApi\Model\ContractWrap**](../Model/ContractWrap.md)
 
 ### Authorization
 

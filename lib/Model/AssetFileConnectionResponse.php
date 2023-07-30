@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * AssetFileConnectionResponse Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,8 +55,8 @@ class AssetFileConnectionResponse implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'asset_file_connections' => '\OpenAPI\Client\Model\AssetFileConnection[]',
-        'meta_information' => '\OpenAPI\Client\Model\MetaInformation'
+        'asset_file_connections' => '\FortnoxApi\Model\AssetFileConnection[]',
+        'meta_information' => '\FortnoxApi\Model\MetaInformation'
     ];
 
     /**
@@ -297,7 +297,7 @@ class AssetFileConnectionResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets asset_file_connections
      *
-     * @return \OpenAPI\Client\Model\AssetFileConnection[]|null
+     * @return \FortnoxApi\Model\AssetFileConnection[]|null
      */
     public function getAssetFileConnections()
     {
@@ -307,7 +307,7 @@ class AssetFileConnectionResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets asset_file_connections
      *
-     * @param \OpenAPI\Client\Model\AssetFileConnection[]|null $asset_file_connections asset_file_connections
+     * @param \FortnoxApi\Model\AssetFileConnection[]|null $asset_file_connections asset_file_connections
      *
      * @return self
      */
@@ -324,7 +324,7 @@ class AssetFileConnectionResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets meta_information
      *
-     * @return \OpenAPI\Client\Model\MetaInformation|null
+     * @return \FortnoxApi\Model\MetaInformation|null
      */
     public function getMetaInformation()
     {
@@ -334,7 +334,7 @@ class AssetFileConnectionResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets meta_information
      *
-     * @param \OpenAPI\Client\Model\MetaInformation|null $meta_information meta_information
+     * @param \FortnoxApi\Model\MetaInformation|null $meta_information meta_information
      *
      * @return self
      */

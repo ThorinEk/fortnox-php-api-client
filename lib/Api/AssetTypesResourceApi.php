@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * AssetTypesResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,12 +138,12 @@ class AssetTypesResourceApi
      * Create an asset type
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\CreateAssetWrap $create_asset_request request (optional)
+     * @param  \FortnoxApi\Model\CreateAssetWrap $create_asset_request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssetTypesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AssetTypeWrapSingle
+     * @return \FortnoxApi\Model\AssetTypeWrapSingle
      */
     public function createAssetTypesResource($id, $create_asset_request = null, string $contentType = self::contentTypes['createAssetTypesResource'][0])
     {
@@ -157,12 +157,12 @@ class AssetTypesResourceApi
      * Create an asset type
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\CreateAssetWrap $create_asset_request request (optional)
+     * @param  \FortnoxApi\Model\CreateAssetWrap $create_asset_request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssetTypesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AssetTypeWrapSingle, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AssetTypeWrapSingle, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAssetTypesResourceWithHttpInfo($id, $create_asset_request = null, string $contentType = self::contentTypes['createAssetTypesResource'][0])
     {
@@ -205,23 +205,23 @@ class AssetTypesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AssetTypeWrapSingle' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AssetTypeWrapSingle' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AssetTypeWrapSingle' !== 'string') {
+                        if ('\FortnoxApi\Model\AssetTypeWrapSingle' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AssetTypeWrapSingle', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AssetTypeWrapSingle', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AssetTypeWrapSingle';
+            $returnType = '\FortnoxApi\Model\AssetTypeWrapSingle';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -242,7 +242,7 @@ class AssetTypesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AssetTypeWrapSingle',
+                        '\FortnoxApi\Model\AssetTypeWrapSingle',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -258,7 +258,7 @@ class AssetTypesResourceApi
      * Create an asset type
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\CreateAssetWrap $create_asset_request request (optional)
+     * @param  \FortnoxApi\Model\CreateAssetWrap $create_asset_request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssetTypesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -280,7 +280,7 @@ class AssetTypesResourceApi
      * Create an asset type
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\CreateAssetWrap $create_asset_request request (optional)
+     * @param  \FortnoxApi\Model\CreateAssetWrap $create_asset_request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssetTypesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -288,7 +288,7 @@ class AssetTypesResourceApi
      */
     public function createAssetTypesResourceAsyncWithHttpInfo($id, $create_asset_request = null, string $contentType = self::contentTypes['createAssetTypesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AssetTypeWrapSingle';
+        $returnType = '\FortnoxApi\Model\AssetTypeWrapSingle';
         $request = $this->createAssetTypesResourceRequest($id, $create_asset_request, $contentType);
 
         return $this->client
@@ -331,7 +331,7 @@ class AssetTypesResourceApi
      * Create request for operation 'createAssetTypesResource'
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\CreateAssetWrap $create_asset_request request (optional)
+     * @param  \FortnoxApi\Model\CreateAssetWrap $create_asset_request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssetTypesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -436,7 +436,7 @@ class AssetTypesResourceApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssetTypesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -453,7 +453,7 @@ class AssetTypesResourceApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssetTypesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -664,9 +664,9 @@ class AssetTypesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllAssetTypesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AssetTypeWrapList
+     * @return \FortnoxApi\Model\AssetTypeWrapList
      */
     public function getAllAssetTypesResource(string $contentType = self::contentTypes['getAllAssetTypesResource'][0])
     {
@@ -681,9 +681,9 @@ class AssetTypesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllAssetTypesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AssetTypeWrapList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AssetTypeWrapList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllAssetTypesResourceWithHttpInfo(string $contentType = self::contentTypes['getAllAssetTypesResource'][0])
     {
@@ -726,23 +726,23 @@ class AssetTypesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AssetTypeWrapList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AssetTypeWrapList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AssetTypeWrapList' !== 'string') {
+                        if ('\FortnoxApi\Model\AssetTypeWrapList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AssetTypeWrapList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AssetTypeWrapList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AssetTypeWrapList';
+            $returnType = '\FortnoxApi\Model\AssetTypeWrapList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -763,7 +763,7 @@ class AssetTypesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AssetTypeWrapList',
+                        '\FortnoxApi\Model\AssetTypeWrapList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -805,7 +805,7 @@ class AssetTypesResourceApi
      */
     public function getAllAssetTypesResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['getAllAssetTypesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AssetTypeWrapList';
+        $returnType = '\FortnoxApi\Model\AssetTypeWrapList';
         $request = $this->getAllAssetTypesResourceRequest($contentType);
 
         return $this->client
@@ -928,9 +928,9 @@ class AssetTypesResourceApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssetTypesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AssetTypeWrapSingle
+     * @return \FortnoxApi\Model\AssetTypeWrapSingle
      */
     public function getAssetTypesResource($id, string $contentType = self::contentTypes['getAssetTypesResource'][0])
     {
@@ -946,9 +946,9 @@ class AssetTypesResourceApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssetTypesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AssetTypeWrapSingle, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AssetTypeWrapSingle, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssetTypesResourceWithHttpInfo($id, string $contentType = self::contentTypes['getAssetTypesResource'][0])
     {
@@ -991,23 +991,23 @@ class AssetTypesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AssetTypeWrapSingle' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AssetTypeWrapSingle' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AssetTypeWrapSingle' !== 'string') {
+                        if ('\FortnoxApi\Model\AssetTypeWrapSingle' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AssetTypeWrapSingle', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AssetTypeWrapSingle', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AssetTypeWrapSingle';
+            $returnType = '\FortnoxApi\Model\AssetTypeWrapSingle';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1028,7 +1028,7 @@ class AssetTypesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AssetTypeWrapSingle',
+                        '\FortnoxApi\Model\AssetTypeWrapSingle',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1072,7 +1072,7 @@ class AssetTypesResourceApi
      */
     public function getAssetTypesResourceAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getAssetTypesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AssetTypeWrapSingle';
+        $returnType = '\FortnoxApi\Model\AssetTypeWrapSingle';
         $request = $this->getAssetTypesResourceRequest($id, $contentType);
 
         return $this->client
@@ -1209,12 +1209,12 @@ class AssetTypesResourceApi
      * Update an asset type
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\UpdateAssetWrap $update_asset_request request (optional)
+     * @param  \FortnoxApi\Model\UpdateAssetWrap $update_asset_request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAssetTypesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AssetTypeWrapSingle
+     * @return \FortnoxApi\Model\AssetTypeWrapSingle
      */
     public function updateAssetTypesResource($id, $update_asset_request = null, string $contentType = self::contentTypes['updateAssetTypesResource'][0])
     {
@@ -1228,12 +1228,12 @@ class AssetTypesResourceApi
      * Update an asset type
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\UpdateAssetWrap $update_asset_request request (optional)
+     * @param  \FortnoxApi\Model\UpdateAssetWrap $update_asset_request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAssetTypesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AssetTypeWrapSingle, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AssetTypeWrapSingle, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAssetTypesResourceWithHttpInfo($id, $update_asset_request = null, string $contentType = self::contentTypes['updateAssetTypesResource'][0])
     {
@@ -1276,23 +1276,23 @@ class AssetTypesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AssetTypeWrapSingle' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AssetTypeWrapSingle' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AssetTypeWrapSingle' !== 'string') {
+                        if ('\FortnoxApi\Model\AssetTypeWrapSingle' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AssetTypeWrapSingle', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AssetTypeWrapSingle', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AssetTypeWrapSingle';
+            $returnType = '\FortnoxApi\Model\AssetTypeWrapSingle';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1313,7 +1313,7 @@ class AssetTypesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AssetTypeWrapSingle',
+                        '\FortnoxApi\Model\AssetTypeWrapSingle',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1329,7 +1329,7 @@ class AssetTypesResourceApi
      * Update an asset type
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\UpdateAssetWrap $update_asset_request request (optional)
+     * @param  \FortnoxApi\Model\UpdateAssetWrap $update_asset_request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAssetTypesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1351,7 +1351,7 @@ class AssetTypesResourceApi
      * Update an asset type
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\UpdateAssetWrap $update_asset_request request (optional)
+     * @param  \FortnoxApi\Model\UpdateAssetWrap $update_asset_request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAssetTypesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1359,7 +1359,7 @@ class AssetTypesResourceApi
      */
     public function updateAssetTypesResourceAsyncWithHttpInfo($id, $update_asset_request = null, string $contentType = self::contentTypes['updateAssetTypesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AssetTypeWrapSingle';
+        $returnType = '\FortnoxApi\Model\AssetTypeWrapSingle';
         $request = $this->updateAssetTypesResourceRequest($id, $update_asset_request, $contentType);
 
         return $this->client
@@ -1402,7 +1402,7 @@ class AssetTypesResourceApi
      * Create request for operation 'updateAssetTypesResource'
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\UpdateAssetWrap $update_asset_request request (optional)
+     * @param  \FortnoxApi\Model\UpdateAssetWrap $update_asset_request request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAssetTypesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

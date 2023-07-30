@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * CustomerWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class CustomerWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'customer' => '\OpenAPI\Client\Model\Customer'
+        'customer' => '\FortnoxApi\Model\Customer'
     ];
 
     /**
@@ -290,7 +290,7 @@ class CustomerWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets customer
      *
-     * @return \OpenAPI\Client\Model\Customer|null
+     * @return \FortnoxApi\Model\Customer|null
      */
     public function getCustomer()
     {
@@ -300,7 +300,7 @@ class CustomerWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets customer
      *
-     * @param \OpenAPI\Client\Model\Customer|null $customer customer
+     * @param \FortnoxApi\Model\Customer|null $customer customer
      *
      * @return self
      */

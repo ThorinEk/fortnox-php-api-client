@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * SupplierInvoiceExternalURLConnectionSingle Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class SupplierInvoiceExternalURLConnectionSingle implements ModelInterface, Arra
       * @var string[]
       */
     protected static $openAPITypes = [
-        'supplier_invoice_external_url_connection' => '\OpenAPI\Client\Model\SupplierInvoiceExternalURLConnection'
+        'supplier_invoice_external_url_connection' => '\FortnoxApi\Model\SupplierInvoiceExternalURLConnection'
     ];
 
     /**
@@ -290,7 +290,7 @@ class SupplierInvoiceExternalURLConnectionSingle implements ModelInterface, Arra
     /**
      * Gets supplier_invoice_external_url_connection
      *
-     * @return \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnection|null
+     * @return \FortnoxApi\Model\SupplierInvoiceExternalURLConnection|null
      */
     public function getSupplierInvoiceExternalUrlConnection()
     {
@@ -300,7 +300,7 @@ class SupplierInvoiceExternalURLConnectionSingle implements ModelInterface, Arra
     /**
      * Sets supplier_invoice_external_url_connection
      *
-     * @param \OpenAPI\Client\Model\SupplierInvoiceExternalURLConnection|null $supplier_invoice_external_url_connection supplier_invoice_external_url_connection
+     * @param \FortnoxApi\Model\SupplierInvoiceExternalURLConnection|null $supplier_invoice_external_url_connection supplier_invoice_external_url_connection
      *
      * @return self
      */

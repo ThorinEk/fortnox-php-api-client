@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * PurchaseOrderResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -165,12 +165,12 @@ class PurchaseOrderResourceApi
      * Update response states
      *
      * @param  int[] $ids List of purchase order ids. (optional)
-     * @param  \OpenAPI\Client\Model\ResponseStateChange $response_state_change The new response state. (optional)
+     * @param  \FortnoxApi\Model\ResponseStateChange $response_state_change The new response state. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateResponseState'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PurchaseOrder[]
+     * @return \FortnoxApi\Model\PurchaseOrder[]
      */
     public function batchUpdateResponseState($ids = null, $response_state_change = null, string $contentType = self::contentTypes['batchUpdateResponseState'][0])
     {
@@ -184,12 +184,12 @@ class PurchaseOrderResourceApi
      * Update response states
      *
      * @param  int[] $ids List of purchase order ids. (optional)
-     * @param  \OpenAPI\Client\Model\ResponseStateChange $response_state_change The new response state. (optional)
+     * @param  \FortnoxApi\Model\ResponseStateChange $response_state_change The new response state. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateResponseState'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PurchaseOrder[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PurchaseOrder[], HTTP status code, HTTP response headers (array of strings)
      */
     public function batchUpdateResponseStateWithHttpInfo($ids = null, $response_state_change = null, string $contentType = self::contentTypes['batchUpdateResponseState'][0])
     {
@@ -232,23 +232,23 @@ class PurchaseOrderResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PurchaseOrder[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PurchaseOrder[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PurchaseOrder[]' !== 'string') {
+                        if ('\FortnoxApi\Model\PurchaseOrder[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PurchaseOrder[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PurchaseOrder[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PurchaseOrder[]';
+            $returnType = '\FortnoxApi\Model\PurchaseOrder[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -269,7 +269,7 @@ class PurchaseOrderResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PurchaseOrder[]',
+                        '\FortnoxApi\Model\PurchaseOrder[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -285,7 +285,7 @@ class PurchaseOrderResourceApi
      * Update response states
      *
      * @param  int[] $ids List of purchase order ids. (optional)
-     * @param  \OpenAPI\Client\Model\ResponseStateChange $response_state_change The new response state. (optional)
+     * @param  \FortnoxApi\Model\ResponseStateChange $response_state_change The new response state. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateResponseState'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -307,7 +307,7 @@ class PurchaseOrderResourceApi
      * Update response states
      *
      * @param  int[] $ids List of purchase order ids. (optional)
-     * @param  \OpenAPI\Client\Model\ResponseStateChange $response_state_change The new response state. (optional)
+     * @param  \FortnoxApi\Model\ResponseStateChange $response_state_change The new response state. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateResponseState'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -315,7 +315,7 @@ class PurchaseOrderResourceApi
      */
     public function batchUpdateResponseStateAsyncWithHttpInfo($ids = null, $response_state_change = null, string $contentType = self::contentTypes['batchUpdateResponseState'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PurchaseOrder[]';
+        $returnType = '\FortnoxApi\Model\PurchaseOrder[]';
         $request = $this->batchUpdateResponseStateRequest($ids, $response_state_change, $contentType);
 
         return $this->client
@@ -358,7 +358,7 @@ class PurchaseOrderResourceApi
      * Create request for operation 'batchUpdateResponseState'
      *
      * @param  int[] $ids List of purchase order ids. (optional)
-     * @param  \OpenAPI\Client\Model\ResponseStateChange $response_state_change The new response state. (optional)
+     * @param  \FortnoxApi\Model\ResponseStateChange $response_state_change The new response state. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateResponseState'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -455,12 +455,12 @@ class PurchaseOrderResourceApi
      *
      * Create Purchase Order
      *
-     * @param  \OpenAPI\Client\Model\PurchaseOrder $purchase_order &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrder $purchase_order &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPurchaseOrderResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PurchaseOrder
+     * @return \FortnoxApi\Model\PurchaseOrder
      */
     public function createPurchaseOrderResource($purchase_order = null, string $contentType = self::contentTypes['createPurchaseOrderResource'][0])
     {
@@ -473,12 +473,12 @@ class PurchaseOrderResourceApi
      *
      * Create Purchase Order
      *
-     * @param  \OpenAPI\Client\Model\PurchaseOrder $purchase_order &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrder $purchase_order &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPurchaseOrderResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PurchaseOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PurchaseOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPurchaseOrderResourceWithHttpInfo($purchase_order = null, string $contentType = self::contentTypes['createPurchaseOrderResource'][0])
     {
@@ -521,23 +521,23 @@ class PurchaseOrderResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PurchaseOrder' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PurchaseOrder' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PurchaseOrder' !== 'string') {
+                        if ('\FortnoxApi\Model\PurchaseOrder' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PurchaseOrder', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PurchaseOrder', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PurchaseOrder';
+            $returnType = '\FortnoxApi\Model\PurchaseOrder';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -558,7 +558,7 @@ class PurchaseOrderResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PurchaseOrder',
+                        '\FortnoxApi\Model\PurchaseOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -573,7 +573,7 @@ class PurchaseOrderResourceApi
      *
      * Create Purchase Order
      *
-     * @param  \OpenAPI\Client\Model\PurchaseOrder $purchase_order &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrder $purchase_order &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPurchaseOrderResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -594,7 +594,7 @@ class PurchaseOrderResourceApi
      *
      * Create Purchase Order
      *
-     * @param  \OpenAPI\Client\Model\PurchaseOrder $purchase_order &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrder $purchase_order &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPurchaseOrderResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -602,7 +602,7 @@ class PurchaseOrderResourceApi
      */
     public function createPurchaseOrderResourceAsyncWithHttpInfo($purchase_order = null, string $contentType = self::contentTypes['createPurchaseOrderResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PurchaseOrder';
+        $returnType = '\FortnoxApi\Model\PurchaseOrder';
         $request = $this->createPurchaseOrderResourceRequest($purchase_order, $contentType);
 
         return $this->client
@@ -644,7 +644,7 @@ class PurchaseOrderResourceApi
     /**
      * Create request for operation 'createPurchaseOrderResource'
      *
-     * @param  \OpenAPI\Client\Model\PurchaseOrder $purchase_order &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrder $purchase_order &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPurchaseOrderResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -740,9 +740,9 @@ class PurchaseOrderResourceApi
      * @param  string $note Include only documents where &#x60;note&#x60;-field contains the given text (case-insensitive). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllPurchaseOrderResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PurchaseOrder[]
+     * @return \FortnoxApi\Model\PurchaseOrder[]
      */
     public function getAllPurchaseOrderResource($q = null, $supplier_number = null, $state = null, $item_id = null, $purchase_type = null, $internal_reference = null, $note = null, string $contentType = self::contentTypes['getAllPurchaseOrderResource'][0])
     {
@@ -764,9 +764,9 @@ class PurchaseOrderResourceApi
      * @param  string $note Include only documents where &#x60;note&#x60;-field contains the given text (case-insensitive). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllPurchaseOrderResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PurchaseOrder[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PurchaseOrder[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllPurchaseOrderResourceWithHttpInfo($q = null, $supplier_number = null, $state = null, $item_id = null, $purchase_type = null, $internal_reference = null, $note = null, string $contentType = self::contentTypes['getAllPurchaseOrderResource'][0])
     {
@@ -809,23 +809,23 @@ class PurchaseOrderResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PurchaseOrder[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PurchaseOrder[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PurchaseOrder[]' !== 'string') {
+                        if ('\FortnoxApi\Model\PurchaseOrder[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PurchaseOrder[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PurchaseOrder[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PurchaseOrder[]';
+            $returnType = '\FortnoxApi\Model\PurchaseOrder[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -846,7 +846,7 @@ class PurchaseOrderResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PurchaseOrder[]',
+                        '\FortnoxApi\Model\PurchaseOrder[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -902,7 +902,7 @@ class PurchaseOrderResourceApi
      */
     public function getAllPurchaseOrderResourceAsyncWithHttpInfo($q = null, $supplier_number = null, $state = null, $item_id = null, $purchase_type = null, $internal_reference = null, $note = null, string $contentType = self::contentTypes['getAllPurchaseOrderResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PurchaseOrder[]';
+        $returnType = '\FortnoxApi\Model\PurchaseOrder[]';
         $request = $this->getAllPurchaseOrderResourceRequest($q, $supplier_number, $state, $item_id, $purchase_type, $internal_reference, $note, $contentType);
 
         return $this->client
@@ -1102,9 +1102,9 @@ class PurchaseOrderResourceApi
      * @param  int $id Purchase order id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttachedNotes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PurchaseOrderRowNote[]
+     * @return \FortnoxApi\Model\PurchaseOrderRowNote[]
      */
     public function getAttachedNotes($id, string $contentType = self::contentTypes['getAttachedNotes'][0])
     {
@@ -1120,9 +1120,9 @@ class PurchaseOrderResourceApi
      * @param  int $id Purchase order id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttachedNotes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PurchaseOrderRowNote[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PurchaseOrderRowNote[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAttachedNotesWithHttpInfo($id, string $contentType = self::contentTypes['getAttachedNotes'][0])
     {
@@ -1165,23 +1165,23 @@ class PurchaseOrderResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PurchaseOrderRowNote[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PurchaseOrderRowNote[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PurchaseOrderRowNote[]' !== 'string') {
+                        if ('\FortnoxApi\Model\PurchaseOrderRowNote[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PurchaseOrderRowNote[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PurchaseOrderRowNote[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PurchaseOrderRowNote[]';
+            $returnType = '\FortnoxApi\Model\PurchaseOrderRowNote[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1202,7 +1202,7 @@ class PurchaseOrderResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PurchaseOrderRowNote[]',
+                        '\FortnoxApi\Model\PurchaseOrderRowNote[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1246,7 +1246,7 @@ class PurchaseOrderResourceApi
      */
     public function getAttachedNotesAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getAttachedNotes'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PurchaseOrderRowNote[]';
+        $returnType = '\FortnoxApi\Model\PurchaseOrderRowNote[]';
         $request = $this->getAttachedNotesRequest($id, $contentType);
 
         return $this->client
@@ -1392,7 +1392,7 @@ class PurchaseOrderResourceApi
      * @param  bool $show_purchase_type_column True to include the purchase type column, default is false. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCsvReport'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1417,7 +1417,7 @@ class PurchaseOrderResourceApi
      * @param  bool $show_purchase_type_column True to include the purchase type column, default is false. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCsvReport'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1768,9 +1768,9 @@ class PurchaseOrderResourceApi
      * @param  int $id Purchase order id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMatchedDocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DocumentReference[]
+     * @return \FortnoxApi\Model\DocumentReference[]
      */
     public function getMatchedDocuments($id, string $contentType = self::contentTypes['getMatchedDocuments'][0])
     {
@@ -1786,9 +1786,9 @@ class PurchaseOrderResourceApi
      * @param  int $id Purchase order id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMatchedDocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DocumentReference[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\DocumentReference[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getMatchedDocumentsWithHttpInfo($id, string $contentType = self::contentTypes['getMatchedDocuments'][0])
     {
@@ -1831,23 +1831,23 @@ class PurchaseOrderResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DocumentReference[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\DocumentReference[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DocumentReference[]' !== 'string') {
+                        if ('\FortnoxApi\Model\DocumentReference[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DocumentReference[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\DocumentReference[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DocumentReference[]';
+            $returnType = '\FortnoxApi\Model\DocumentReference[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1868,7 +1868,7 @@ class PurchaseOrderResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DocumentReference[]',
+                        '\FortnoxApi\Model\DocumentReference[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1912,7 +1912,7 @@ class PurchaseOrderResourceApi
      */
     public function getMatchedDocumentsAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getMatchedDocuments'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DocumentReference[]';
+        $returnType = '\FortnoxApi\Model\DocumentReference[]';
         $request = $this->getMatchedDocumentsRequest($id, $contentType);
 
         return $this->client
@@ -2052,9 +2052,9 @@ class PurchaseOrderResourceApi
      * @param  int $ignore_incoming_goods_id used for calculating the remaining ordered quantity. null will take the received quantity from all incoming goods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPurchaseOrderResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PurchaseOrder
+     * @return \FortnoxApi\Model\PurchaseOrder
      */
     public function getPurchaseOrderResource($id, $ignore_incoming_goods_id = null, string $contentType = self::contentTypes['getPurchaseOrderResource'][0])
     {
@@ -2071,9 +2071,9 @@ class PurchaseOrderResourceApi
      * @param  int $ignore_incoming_goods_id used for calculating the remaining ordered quantity. null will take the received quantity from all incoming goods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPurchaseOrderResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PurchaseOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PurchaseOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPurchaseOrderResourceWithHttpInfo($id, $ignore_incoming_goods_id = null, string $contentType = self::contentTypes['getPurchaseOrderResource'][0])
     {
@@ -2116,23 +2116,23 @@ class PurchaseOrderResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PurchaseOrder' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PurchaseOrder' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PurchaseOrder' !== 'string') {
+                        if ('\FortnoxApi\Model\PurchaseOrder' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PurchaseOrder', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PurchaseOrder', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PurchaseOrder';
+            $returnType = '\FortnoxApi\Model\PurchaseOrder';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2153,7 +2153,7 @@ class PurchaseOrderResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PurchaseOrder',
+                        '\FortnoxApi\Model\PurchaseOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2199,7 +2199,7 @@ class PurchaseOrderResourceApi
      */
     public function getPurchaseOrderResourceAsyncWithHttpInfo($id, $ignore_incoming_goods_id = null, string $contentType = self::contentTypes['getPurchaseOrderResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PurchaseOrder';
+        $returnType = '\FortnoxApi\Model\PurchaseOrder';
         $request = $this->getPurchaseOrderResourceRequest($id, $ignore_incoming_goods_id, $contentType);
 
         return $this->client
@@ -2347,10 +2347,10 @@ class PurchaseOrderResourceApi
      * Send purchase order via email
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\PurchaseOrderMailSettings $settings see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrderMailSettings $settings see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPurchaseOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2365,10 +2365,10 @@ class PurchaseOrderResourceApi
      * Send purchase order via email
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\PurchaseOrderMailSettings $settings see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrderMailSettings $settings see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPurchaseOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2426,7 +2426,7 @@ class PurchaseOrderResourceApi
      * Send purchase order via email
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\PurchaseOrderMailSettings $settings see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrderMailSettings $settings see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPurchaseOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2448,7 +2448,7 @@ class PurchaseOrderResourceApi
      * Send purchase order via email
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\PurchaseOrderMailSettings $settings see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrderMailSettings $settings see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPurchaseOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2486,7 +2486,7 @@ class PurchaseOrderResourceApi
      * Create request for operation 'sendPurchaseOrder'
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\PurchaseOrderMailSettings $settings see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrderMailSettings $settings see &lt;code&gt;PurchaseOrderMailSettings&lt;/code&gt; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPurchaseOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2591,7 +2591,7 @@ class PurchaseOrderResourceApi
      * @param  int[] $purchase_order_ids List of Purchase order ids. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPurchaseOrders'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2608,7 +2608,7 @@ class PurchaseOrderResourceApi
      * @param  int[] $purchase_order_ids List of Purchase order ids. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPurchaseOrders'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2813,9 +2813,9 @@ class PurchaseOrderResourceApi
      * @param  int $id Purchase order id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setDropshipManuallyCompleted'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReleaseParentOrder
+     * @return \FortnoxApi\Model\ReleaseParentOrder
      */
     public function setDropshipManuallyCompleted($id, string $contentType = self::contentTypes['setDropshipManuallyCompleted'][0])
     {
@@ -2831,9 +2831,9 @@ class PurchaseOrderResourceApi
      * @param  int $id Purchase order id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setDropshipManuallyCompleted'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReleaseParentOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ReleaseParentOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function setDropshipManuallyCompletedWithHttpInfo($id, string $contentType = self::contentTypes['setDropshipManuallyCompleted'][0])
     {
@@ -2876,23 +2876,23 @@ class PurchaseOrderResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReleaseParentOrder' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ReleaseParentOrder' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReleaseParentOrder' !== 'string') {
+                        if ('\FortnoxApi\Model\ReleaseParentOrder' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReleaseParentOrder', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ReleaseParentOrder', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReleaseParentOrder';
+            $returnType = '\FortnoxApi\Model\ReleaseParentOrder';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2913,7 +2913,7 @@ class PurchaseOrderResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReleaseParentOrder',
+                        '\FortnoxApi\Model\ReleaseParentOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2957,7 +2957,7 @@ class PurchaseOrderResourceApi
      */
     public function setDropshipManuallyCompletedAsyncWithHttpInfo($id, string $contentType = self::contentTypes['setDropshipManuallyCompleted'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReleaseParentOrder';
+        $returnType = '\FortnoxApi\Model\ReleaseParentOrder';
         $request = $this->setDropshipManuallyCompletedRequest($id, $contentType);
 
         return $this->client
@@ -3096,7 +3096,7 @@ class PurchaseOrderResourceApi
      * @param  int $id Purchase order id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setManuallyCompleted'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3113,7 +3113,7 @@ class PurchaseOrderResourceApi
      * @param  int $id Purchase order id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setManuallyCompleted'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3323,12 +3323,12 @@ class PurchaseOrderResourceApi
      * Update Purchase Order
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\PurchaseOrder $purchase_order The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrder $purchase_order The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePurchaseOrderResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PurchaseOrder
+     * @return \FortnoxApi\Model\PurchaseOrder
      */
     public function updatePurchaseOrderResource($id, $purchase_order = null, string $contentType = self::contentTypes['updatePurchaseOrderResource'][0])
     {
@@ -3342,12 +3342,12 @@ class PurchaseOrderResourceApi
      * Update Purchase Order
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\PurchaseOrder $purchase_order The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrder $purchase_order The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePurchaseOrderResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PurchaseOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PurchaseOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePurchaseOrderResourceWithHttpInfo($id, $purchase_order = null, string $contentType = self::contentTypes['updatePurchaseOrderResource'][0])
     {
@@ -3390,23 +3390,23 @@ class PurchaseOrderResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PurchaseOrder' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PurchaseOrder' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PurchaseOrder' !== 'string') {
+                        if ('\FortnoxApi\Model\PurchaseOrder' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PurchaseOrder', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PurchaseOrder', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PurchaseOrder';
+            $returnType = '\FortnoxApi\Model\PurchaseOrder';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3427,7 +3427,7 @@ class PurchaseOrderResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PurchaseOrder',
+                        '\FortnoxApi\Model\PurchaseOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3443,7 +3443,7 @@ class PurchaseOrderResourceApi
      * Update Purchase Order
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\PurchaseOrder $purchase_order The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrder $purchase_order The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePurchaseOrderResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3465,7 +3465,7 @@ class PurchaseOrderResourceApi
      * Update Purchase Order
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\PurchaseOrder $purchase_order The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrder $purchase_order The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePurchaseOrderResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3473,7 +3473,7 @@ class PurchaseOrderResourceApi
      */
     public function updatePurchaseOrderResourceAsyncWithHttpInfo($id, $purchase_order = null, string $contentType = self::contentTypes['updatePurchaseOrderResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PurchaseOrder';
+        $returnType = '\FortnoxApi\Model\PurchaseOrder';
         $request = $this->updatePurchaseOrderResourceRequest($id, $purchase_order, $contentType);
 
         return $this->client
@@ -3516,7 +3516,7 @@ class PurchaseOrderResourceApi
      * Create request for operation 'updatePurchaseOrderResource'
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\PurchaseOrder $purchase_order The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
+     * @param  \FortnoxApi\Model\PurchaseOrder $purchase_order The &lt;code&gt;PurchaseOrder&lt;/code&gt; document. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePurchaseOrderResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3619,12 +3619,12 @@ class PurchaseOrderResourceApi
      * Update response state
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\ResponseStateChange $response_state_change The new response state. (optional)
+     * @param  \FortnoxApi\Model\ResponseStateChange $response_state_change The new response state. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateResponseState'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PurchaseOrder
+     * @return \FortnoxApi\Model\PurchaseOrder
      */
     public function updateResponseState($id, $response_state_change = null, string $contentType = self::contentTypes['updateResponseState'][0])
     {
@@ -3638,12 +3638,12 @@ class PurchaseOrderResourceApi
      * Update response state
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\ResponseStateChange $response_state_change The new response state. (optional)
+     * @param  \FortnoxApi\Model\ResponseStateChange $response_state_change The new response state. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateResponseState'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PurchaseOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PurchaseOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateResponseStateWithHttpInfo($id, $response_state_change = null, string $contentType = self::contentTypes['updateResponseState'][0])
     {
@@ -3686,23 +3686,23 @@ class PurchaseOrderResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PurchaseOrder' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PurchaseOrder' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PurchaseOrder' !== 'string') {
+                        if ('\FortnoxApi\Model\PurchaseOrder' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PurchaseOrder', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PurchaseOrder', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PurchaseOrder';
+            $returnType = '\FortnoxApi\Model\PurchaseOrder';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3723,7 +3723,7 @@ class PurchaseOrderResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PurchaseOrder',
+                        '\FortnoxApi\Model\PurchaseOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3739,7 +3739,7 @@ class PurchaseOrderResourceApi
      * Update response state
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\ResponseStateChange $response_state_change The new response state. (optional)
+     * @param  \FortnoxApi\Model\ResponseStateChange $response_state_change The new response state. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateResponseState'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3761,7 +3761,7 @@ class PurchaseOrderResourceApi
      * Update response state
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\ResponseStateChange $response_state_change The new response state. (optional)
+     * @param  \FortnoxApi\Model\ResponseStateChange $response_state_change The new response state. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateResponseState'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3769,7 +3769,7 @@ class PurchaseOrderResourceApi
      */
     public function updateResponseStateAsyncWithHttpInfo($id, $response_state_change = null, string $contentType = self::contentTypes['updateResponseState'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PurchaseOrder';
+        $returnType = '\FortnoxApi\Model\PurchaseOrder';
         $request = $this->updateResponseStateRequest($id, $response_state_change, $contentType);
 
         return $this->client
@@ -3812,7 +3812,7 @@ class PurchaseOrderResourceApi
      * Create request for operation 'updateResponseState'
      *
      * @param  int $id Purchase order id. (required)
-     * @param  \OpenAPI\Client\Model\ResponseStateChange $response_state_change The new response state. (optional)
+     * @param  \FortnoxApi\Model\ResponseStateChange $response_state_change The new response state. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateResponseState'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3917,7 +3917,7 @@ class PurchaseOrderResourceApi
      * @param  int $id Purchase order id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['voidDocumentPurchaseOrderResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3934,7 +3934,7 @@ class PurchaseOrderResourceApi
      * @param  int $id Purchase order id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['voidDocumentPurchaseOrderResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

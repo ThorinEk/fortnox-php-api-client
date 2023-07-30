@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * CostCentersResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class CostCentersResourceApi
      *
      * Create a cost center
      *
-     * @param  \OpenAPI\Client\Model\CostCenterWrap $cost_center cost center to create (optional)
+     * @param  \FortnoxApi\Model\CostCenterWrap $cost_center cost center to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCostCentersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CostCenterWrap
+     * @return \FortnoxApi\Model\CostCenterWrap
      */
     public function createCostCentersResource($cost_center = null, string $contentType = self::contentTypes['createCostCentersResource'][0])
     {
@@ -155,12 +155,12 @@ class CostCentersResourceApi
      *
      * Create a cost center
      *
-     * @param  \OpenAPI\Client\Model\CostCenterWrap $cost_center cost center to create (optional)
+     * @param  \FortnoxApi\Model\CostCenterWrap $cost_center cost center to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCostCentersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CostCenterWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CostCenterWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCostCentersResourceWithHttpInfo($cost_center = null, string $contentType = self::contentTypes['createCostCentersResource'][0])
     {
@@ -203,23 +203,23 @@ class CostCentersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CostCenterWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CostCenterWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CostCenterWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\CostCenterWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CostCenterWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CostCenterWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CostCenterWrap';
+            $returnType = '\FortnoxApi\Model\CostCenterWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class CostCentersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CostCenterWrap',
+                        '\FortnoxApi\Model\CostCenterWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class CostCentersResourceApi
      *
      * Create a cost center
      *
-     * @param  \OpenAPI\Client\Model\CostCenterWrap $cost_center cost center to create (optional)
+     * @param  \FortnoxApi\Model\CostCenterWrap $cost_center cost center to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCostCentersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class CostCentersResourceApi
      *
      * Create a cost center
      *
-     * @param  \OpenAPI\Client\Model\CostCenterWrap $cost_center cost center to create (optional)
+     * @param  \FortnoxApi\Model\CostCenterWrap $cost_center cost center to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCostCentersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class CostCentersResourceApi
      */
     public function createCostCentersResourceAsyncWithHttpInfo($cost_center = null, string $contentType = self::contentTypes['createCostCentersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CostCenterWrap';
+        $returnType = '\FortnoxApi\Model\CostCenterWrap';
         $request = $this->createCostCentersResourceRequest($cost_center, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class CostCentersResourceApi
     /**
      * Create request for operation 'createCostCentersResource'
      *
-     * @param  \OpenAPI\Client\Model\CostCenterWrap $cost_center cost center to create (optional)
+     * @param  \FortnoxApi\Model\CostCenterWrap $cost_center cost center to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCostCentersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class CostCentersResourceApi
      * @param  string $code identifies the cost center (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCostCentersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CostCenterWrap
+     * @return \FortnoxApi\Model\CostCenterWrap
      */
     public function getCostCentersResource($code, string $contentType = self::contentTypes['getCostCentersResource'][0])
     {
@@ -434,9 +434,9 @@ class CostCentersResourceApi
      * @param  string $code identifies the cost center (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCostCentersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CostCenterWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CostCenterWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCostCentersResourceWithHttpInfo($code, string $contentType = self::contentTypes['getCostCentersResource'][0])
     {
@@ -479,23 +479,23 @@ class CostCentersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CostCenterWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CostCenterWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CostCenterWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\CostCenterWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CostCenterWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CostCenterWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CostCenterWrap';
+            $returnType = '\FortnoxApi\Model\CostCenterWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class CostCentersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CostCenterWrap',
+                        '\FortnoxApi\Model\CostCenterWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class CostCentersResourceApi
      */
     public function getCostCentersResourceAsyncWithHttpInfo($code, string $contentType = self::contentTypes['getCostCentersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CostCenterWrap';
+        $returnType = '\FortnoxApi\Model\CostCenterWrap';
         $request = $this->getCostCentersResourceRequest($code, $contentType);
 
         return $this->client
@@ -698,9 +698,9 @@ class CostCentersResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCostCentersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CostCenterList
+     * @return \FortnoxApi\Model\CostCenterList
      */
     public function listCostCentersResource(string $contentType = self::contentTypes['listCostCentersResource'][0])
     {
@@ -715,9 +715,9 @@ class CostCentersResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCostCentersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CostCenterList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CostCenterList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCostCentersResourceWithHttpInfo(string $contentType = self::contentTypes['listCostCentersResource'][0])
     {
@@ -760,23 +760,23 @@ class CostCentersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CostCenterList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CostCenterList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CostCenterList' !== 'string') {
+                        if ('\FortnoxApi\Model\CostCenterList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CostCenterList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CostCenterList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CostCenterList';
+            $returnType = '\FortnoxApi\Model\CostCenterList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -797,7 +797,7 @@ class CostCentersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CostCenterList',
+                        '\FortnoxApi\Model\CostCenterList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class CostCentersResourceApi
      */
     public function listCostCentersResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listCostCentersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CostCenterList';
+        $returnType = '\FortnoxApi\Model\CostCenterList';
         $request = $this->listCostCentersResourceRequest($contentType);
 
         return $this->client
@@ -962,7 +962,7 @@ class CostCentersResourceApi
      * @param  string $code identifies the cost center to remove (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeCostCentersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -979,7 +979,7 @@ class CostCentersResourceApi
      * @param  string $code identifies the cost center to remove (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeCostCentersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1189,12 +1189,12 @@ class CostCentersResourceApi
      * Update a cost center
      *
      * @param  string $code identifies the cost center (required)
-     * @param  \OpenAPI\Client\Model\CostCenterWrap $cost_center cost center to update (optional)
+     * @param  \FortnoxApi\Model\CostCenterWrap $cost_center cost center to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCostCentersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CostCenterWrap
+     * @return \FortnoxApi\Model\CostCenterWrap
      */
     public function updateCostCentersResource($code, $cost_center = null, string $contentType = self::contentTypes['updateCostCentersResource'][0])
     {
@@ -1208,12 +1208,12 @@ class CostCentersResourceApi
      * Update a cost center
      *
      * @param  string $code identifies the cost center (required)
-     * @param  \OpenAPI\Client\Model\CostCenterWrap $cost_center cost center to update (optional)
+     * @param  \FortnoxApi\Model\CostCenterWrap $cost_center cost center to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCostCentersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CostCenterWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CostCenterWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCostCentersResourceWithHttpInfo($code, $cost_center = null, string $contentType = self::contentTypes['updateCostCentersResource'][0])
     {
@@ -1256,23 +1256,23 @@ class CostCentersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CostCenterWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CostCenterWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CostCenterWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\CostCenterWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CostCenterWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CostCenterWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CostCenterWrap';
+            $returnType = '\FortnoxApi\Model\CostCenterWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1293,7 +1293,7 @@ class CostCentersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CostCenterWrap',
+                        '\FortnoxApi\Model\CostCenterWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1309,7 +1309,7 @@ class CostCentersResourceApi
      * Update a cost center
      *
      * @param  string $code identifies the cost center (required)
-     * @param  \OpenAPI\Client\Model\CostCenterWrap $cost_center cost center to update (optional)
+     * @param  \FortnoxApi\Model\CostCenterWrap $cost_center cost center to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCostCentersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1331,7 +1331,7 @@ class CostCentersResourceApi
      * Update a cost center
      *
      * @param  string $code identifies the cost center (required)
-     * @param  \OpenAPI\Client\Model\CostCenterWrap $cost_center cost center to update (optional)
+     * @param  \FortnoxApi\Model\CostCenterWrap $cost_center cost center to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCostCentersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1339,7 +1339,7 @@ class CostCentersResourceApi
      */
     public function updateCostCentersResourceAsyncWithHttpInfo($code, $cost_center = null, string $contentType = self::contentTypes['updateCostCentersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CostCenterWrap';
+        $returnType = '\FortnoxApi\Model\CostCenterWrap';
         $request = $this->updateCostCentersResourceRequest($code, $cost_center, $contentType);
 
         return $this->client
@@ -1382,7 +1382,7 @@ class CostCentersResourceApi
      * Create request for operation 'updateCostCentersResource'
      *
      * @param  string $code identifies the cost center (required)
-     * @param  \OpenAPI\Client\Model\CostCenterWrap $cost_center cost center to update (optional)
+     * @param  \FortnoxApi\Model\CostCenterWrap $cost_center cost center to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCostCentersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

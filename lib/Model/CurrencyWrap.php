@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * CurrencyWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class CurrencyWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'currency' => '\OpenAPI\Client\Model\Currency'
+        'currency' => '\FortnoxApi\Model\Currency'
     ];
 
     /**
@@ -293,7 +293,7 @@ class CurrencyWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets currency
      *
-     * @return \OpenAPI\Client\Model\Currency
+     * @return \FortnoxApi\Model\Currency
      */
     public function getCurrency()
     {
@@ -303,7 +303,7 @@ class CurrencyWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currency
      *
-     * @param \OpenAPI\Client\Model\Currency $currency currency
+     * @param \FortnoxApi\Model\Currency $currency currency
      *
      * @return self
      */

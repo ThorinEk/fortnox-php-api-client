@@ -1,4 +1,4 @@
-# OpenAPI\Client\OrdersResourceApi
+# FortnoxApi\OrdersResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -19,7 +19,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `cancelOrdersResource()`
 
 ```php
-cancelOrdersResource($document_number): \OpenAPI\Client\Model\OrderWrap
+cancelOrdersResource($document_number): \FortnoxApi\Model\OrderWrap
 ```
 
 Cancels given order
@@ -32,7 +32,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersResourceApi(
+$apiInstance = new FortnoxApi\Api\OrdersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderWrap**](../Model/OrderWrap.md)
+[**\FortnoxApi\Model\OrderWrap**](../Model/OrderWrap.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 ## `createOrdersResource()`
 
 ```php
-createOrdersResource($order): \OpenAPI\Client\Model\OrderWrap
+createOrdersResource($order): \FortnoxApi\Model\OrderWrap
 ```
 
 Create a new order
@@ -88,12 +88,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersResourceApi(
+$apiInstance = new FortnoxApi\Api\OrdersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$order = new \OpenAPI\Client\Model\OrderWrap(); // \OpenAPI\Client\Model\OrderWrap | order to create
+$order = new \FortnoxApi\Model\OrderWrap(); // \FortnoxApi\Model\OrderWrap | order to create
 
 try {
     $result = $apiInstance->createOrdersResource($order);
@@ -107,11 +107,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **order** | [**\OpenAPI\Client\Model\OrderWrap**](../Model/OrderWrap.md)| order to create | [optional] |
+| **order** | [**\FortnoxApi\Model\OrderWrap**](../Model/OrderWrap.md)| order to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderWrap**](../Model/OrderWrap.md)
+[**\FortnoxApi\Model\OrderWrap**](../Model/OrderWrap.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ No authorization required
 ## `createinvoiceOrdersResource()`
 
 ```php
-createinvoiceOrdersResource($document_number): \OpenAPI\Client\Model\InvoiceWrap
+createinvoiceOrdersResource($document_number): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Create invoice out of given order
@@ -142,7 +142,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersResourceApi(
+$apiInstance = new FortnoxApi\Api\OrdersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -165,7 +165,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ No authorization required
 ## `emailOrdersResource()`
 
 ```php
-emailOrdersResource($document_number): \OpenAPI\Client\Model\OrderWrap
+emailOrdersResource($document_number): \FortnoxApi\Model\OrderWrap
 ```
 
 Send given order as email
@@ -198,7 +198,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersResourceApi(
+$apiInstance = new FortnoxApi\Api\OrdersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -221,7 +221,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderWrap**](../Model/OrderWrap.md)
+[**\FortnoxApi\Model\OrderWrap**](../Model/OrderWrap.md)
 
 ### Authorization
 
@@ -239,7 +239,7 @@ No authorization required
 ## `externalprintOrdersResource()`
 
 ```php
-externalprintOrdersResource($document_number): \OpenAPI\Client\Model\OrderWrap
+externalprintOrdersResource($document_number): \FortnoxApi\Model\OrderWrap
 ```
 
 Set given order as sent
@@ -254,7 +254,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersResourceApi(
+$apiInstance = new FortnoxApi\Api\OrdersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -277,7 +277,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderWrap**](../Model/OrderWrap.md)
+[**\FortnoxApi\Model\OrderWrap**](../Model/OrderWrap.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ No authorization required
 ## `getOrdersResource()`
 
 ```php
-getOrdersResource($document_number): \OpenAPI\Client\Model\OrderWrap
+getOrdersResource($document_number): \FortnoxApi\Model\OrderWrap
 ```
 
 Retrieve a single order
@@ -308,7 +308,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersResourceApi(
+$apiInstance = new FortnoxApi\Api\OrdersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -331,7 +331,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderWrap**](../Model/OrderWrap.md)
+[**\FortnoxApi\Model\OrderWrap**](../Model/OrderWrap.md)
 
 ### Authorization
 
@@ -349,7 +349,7 @@ No authorization required
 ## `listOrdersResource()`
 
 ```php
-listOrdersResource($filter, $customername, $customernumber, $label, $documentnumber, $externalinvoicereference1, $externalinvoicereference2, $fromdate, $todate, $costcenter, $project, $sent, $notcompleted, $ourreference, $yourreference, $lastmodified, $ordertype, $sortby): \OpenAPI\Client\Model\OrderListItemList
+listOrdersResource($filter, $customername, $customernumber, $label, $documentnumber, $externalinvoicereference1, $externalinvoicereference2, $fromdate, $todate, $costcenter, $project, $sent, $notcompleted, $ourreference, $yourreference, $lastmodified, $ordertype, $sortby): \FortnoxApi\Model\OrderListItemList
 ```
 
 Retrieve a list of orders
@@ -362,7 +362,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersResourceApi(
+$apiInstance = new FortnoxApi\Api\OrdersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -419,7 +419,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderListItemList**](../Model/OrderListItemList.md)
+[**\FortnoxApi\Model\OrderListItemList**](../Model/OrderListItemList.md)
 
 ### Authorization
 
@@ -452,7 +452,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersResourceApi(
+$apiInstance = new FortnoxApi\Api\OrdersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -506,7 +506,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersResourceApi(
+$apiInstance = new FortnoxApi\Api\OrdersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -547,7 +547,7 @@ No authorization required
 ## `updateOrdersResource()`
 
 ```php
-updateOrdersResource($document_number, $order): \OpenAPI\Client\Model\OrderWrap
+updateOrdersResource($document_number, $order): \FortnoxApi\Model\OrderWrap
 ```
 
 Update an order
@@ -562,13 +562,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersResourceApi(
+$apiInstance = new FortnoxApi\Api\OrdersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $document_number = 'document_number_example'; // string | identifies the order
-$order = new \OpenAPI\Client\Model\OrderWrap(); // \OpenAPI\Client\Model\OrderWrap | order to update
+$order = new \FortnoxApi\Model\OrderWrap(); // \FortnoxApi\Model\OrderWrap | order to update
 
 try {
     $result = $apiInstance->updateOrdersResource($document_number, $order);
@@ -583,11 +583,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **document_number** | **string**| identifies the order | |
-| **order** | [**\OpenAPI\Client\Model\OrderWrap**](../Model/OrderWrap.md)| order to update | [optional] |
+| **order** | [**\FortnoxApi\Model\OrderWrap**](../Model/OrderWrap.md)| order to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderWrap**](../Model/OrderWrap.md)
+[**\FortnoxApi\Model\OrderWrap**](../Model/OrderWrap.md)
 
 ### Authorization
 

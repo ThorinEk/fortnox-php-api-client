@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * AccountSingleItem Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -72,7 +72,7 @@ class AccountSingleItem implements ModelInterface, ArrayAccess, \JsonSerializabl
         'transaction_information_settings' => 'string',
         'quantity_settings' => 'string',
         'quantity_unit' => 'string',
-        'opening_quantities' => '\OpenAPI\Client\Model\AccountSingleItemOpeningQuantities[]'
+        'opening_quantities' => '\FortnoxApi\Model\AccountSingleItemOpeningQuantities[]'
     ];
 
     /**
@@ -1049,7 +1049,7 @@ class AccountSingleItem implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets opening_quantities
      *
-     * @return \OpenAPI\Client\Model\AccountSingleItemOpeningQuantities[]|null
+     * @return \FortnoxApi\Model\AccountSingleItemOpeningQuantities[]|null
      */
     public function getOpeningQuantities()
     {
@@ -1059,7 +1059,7 @@ class AccountSingleItem implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets opening_quantities
      *
-     * @param \OpenAPI\Client\Model\AccountSingleItemOpeningQuantities[]|null $opening_quantities opening_quantities
+     * @param \FortnoxApi\Model\AccountSingleItemOpeningQuantities[]|null $opening_quantities opening_quantities
      *
      * @return self
      */

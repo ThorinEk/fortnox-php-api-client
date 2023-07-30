@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * OfferWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class OfferWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'offer' => '\OpenAPI\Client\Model\Offer'
+        'offer' => '\FortnoxApi\Model\Offer'
     ];
 
     /**
@@ -290,7 +290,7 @@ class OfferWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets offer
      *
-     * @return \OpenAPI\Client\Model\Offer|null
+     * @return \FortnoxApi\Model\Offer|null
      */
     public function getOffer()
     {
@@ -300,7 +300,7 @@ class OfferWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets offer
      *
-     * @param \OpenAPI\Client\Model\Offer|null $offer offer
+     * @param \FortnoxApi\Model\Offer|null $offer offer
      *
      * @return self
      */

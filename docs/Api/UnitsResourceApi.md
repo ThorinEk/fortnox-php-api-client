@@ -1,4 +1,4 @@
-# OpenAPI\Client\UnitsResourceApi
+# FortnoxApi\UnitsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createUnitsResource()`
 
 ```php
-createUnitsResource($unit): \OpenAPI\Client\Model\UnitWrap
+createUnitsResource($unit): \FortnoxApi\Model\UnitWrap
 ```
 
 Create a unit
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UnitsResourceApi(
+$apiInstance = new FortnoxApi\Api\UnitsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$unit = new \OpenAPI\Client\Model\UnitWrap(); // \OpenAPI\Client\Model\UnitWrap | to create
+$unit = new \FortnoxApi\Model\UnitWrap(); // \FortnoxApi\Model\UnitWrap | to create
 
 try {
     $result = $apiInstance->createUnitsResource($unit);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **unit** | [**\OpenAPI\Client\Model\UnitWrap**](../Model/UnitWrap.md)| to create | [optional] |
+| **unit** | [**\FortnoxApi\Model\UnitWrap**](../Model/UnitWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UnitWrap**](../Model/UnitWrap.md)
+[**\FortnoxApi\Model\UnitWrap**](../Model/UnitWrap.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getUnitsResource()`
 
 ```php
-getUnitsResource($code): \OpenAPI\Client\Model\UnitWrap
+getUnitsResource($code): \FortnoxApi\Model\UnitWrap
 ```
 
 Retrieve a single unit
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UnitsResourceApi(
+$apiInstance = new FortnoxApi\Api\UnitsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UnitWrap**](../Model/UnitWrap.md)
+[**\FortnoxApi\Model\UnitWrap**](../Model/UnitWrap.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `listUnitsResource()`
 
 ```php
-listUnitsResource(): \OpenAPI\Client\Model\UnitList
+listUnitsResource(): \FortnoxApi\Model\UnitList
 ```
 
 Retrieve a list of units
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UnitsResourceApi(
+$apiInstance = new FortnoxApi\Api\UnitsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UnitList**](../Model/UnitList.md)
+[**\FortnoxApi\Model\UnitList**](../Model/UnitList.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UnitsResourceApi(
+$apiInstance = new FortnoxApi\Api\UnitsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -228,7 +228,7 @@ No authorization required
 ## `updateUnitsResource()`
 
 ```php
-updateUnitsResource($code, $unit): \OpenAPI\Client\Model\UnitWrap
+updateUnitsResource($code, $unit): \FortnoxApi\Model\UnitWrap
 ```
 
 Update a unit
@@ -241,13 +241,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UnitsResourceApi(
+$apiInstance = new FortnoxApi\Api\UnitsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $code = 'code_example'; // string | identifies the unit
-$unit = new \OpenAPI\Client\Model\UnitWrap(); // \OpenAPI\Client\Model\UnitWrap | unit to update
+$unit = new \FortnoxApi\Model\UnitWrap(); // \FortnoxApi\Model\UnitWrap | unit to update
 
 try {
     $result = $apiInstance->updateUnitsResource($code, $unit);
@@ -262,11 +262,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **code** | **string**| identifies the unit | |
-| **unit** | [**\OpenAPI\Client\Model\UnitWrap**](../Model/UnitWrap.md)| unit to update | [optional] |
+| **unit** | [**\FortnoxApi\Model\UnitWrap**](../Model/UnitWrap.md)| unit to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UnitWrap**](../Model/UnitWrap.md)
+[**\FortnoxApi\Model\UnitWrap**](../Model/UnitWrap.md)
 
 ### Authorization
 

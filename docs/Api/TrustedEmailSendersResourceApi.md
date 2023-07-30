@@ -1,4 +1,4 @@
-# OpenAPI\Client\TrustedEmailSendersResourceApi
+# FortnoxApi\TrustedEmailSendersResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createTrustedEmailSendersResource()`
 
 ```php
-createTrustedEmailSendersResource($trusted_email_sender): \OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap
+createTrustedEmailSendersResource($trusted_email_sender): \FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap
 ```
 
 Add a new email address as trusted
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TrustedEmailSendersResourceApi(
+$apiInstance = new FortnoxApi\Api\TrustedEmailSendersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$trusted_email_sender = new \OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap(); // \OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap | trusted email sender to create
+$trusted_email_sender = new \FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap(); // \FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap | trusted email sender to create
 
 try {
     $result = $apiInstance->createTrustedEmailSendersResource($trusted_email_sender);
@@ -44,11 +44,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **trusted_email_sender** | [**\OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap**](../Model/TrustedEmailSenderTrustedSenderWrap.md)| trusted email sender to create | [optional] |
+| **trusted_email_sender** | [**\FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap**](../Model/TrustedEmailSenderTrustedSenderWrap.md)| trusted email sender to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap**](../Model/TrustedEmailSenderTrustedSenderWrap.md)
+[**\FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap**](../Model/TrustedEmailSenderTrustedSenderWrap.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ No authorization required
 ## `getTrustedEmailSendersResource()`
 
 ```php
-getTrustedEmailSendersResource(): \OpenAPI\Client\Model\TrustedEmailSenderWrap
+getTrustedEmailSendersResource(): \FortnoxApi\Model\TrustedEmailSenderWrap
 ```
 
 Retrieve a list of all trusted and rejected senders
@@ -79,7 +79,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TrustedEmailSendersResourceApi(
+$apiInstance = new FortnoxApi\Api\TrustedEmailSendersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -99,7 +99,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrustedEmailSenderWrap**](../Model/TrustedEmailSenderWrap.md)
+[**\FortnoxApi\Model\TrustedEmailSenderWrap**](../Model/TrustedEmailSenderWrap.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TrustedEmailSendersResourceApi(
+$apiInstance = new FortnoxApi\Api\TrustedEmailSendersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

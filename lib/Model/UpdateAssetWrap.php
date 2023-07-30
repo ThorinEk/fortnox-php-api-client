@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * UpdateAssetWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class UpdateAssetWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'asset_type' => '\OpenAPI\Client\Model\UpdateAsset'
+        'asset_type' => '\FortnoxApi\Model\UpdateAsset'
     ];
 
     /**
@@ -290,7 +290,7 @@ class UpdateAssetWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets asset_type
      *
-     * @return \OpenAPI\Client\Model\UpdateAsset|null
+     * @return \FortnoxApi\Model\UpdateAsset|null
      */
     public function getAssetType()
     {
@@ -300,7 +300,7 @@ class UpdateAssetWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets asset_type
      *
-     * @param \OpenAPI\Client\Model\UpdateAsset|null $asset_type asset_type
+     * @param \FortnoxApi\Model\UpdateAsset|null $asset_type asset_type
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# OpenAPI\Client\ArchiveResourceApi
+# FortnoxApi\ArchiveResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -29,7 +29,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArchiveResourceApi(
+$apiInstance = new FortnoxApi\Api\ArchiveResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -72,7 +72,7 @@ No authorization required
 ## `getFolder()`
 
 ```php
-getFolder($path, $fileid): \OpenAPI\Client\Model\FolderWrap
+getFolder($path, $fileid): \FortnoxApi\Model\FolderWrap
 ```
 
 Retrieve folder or file
@@ -87,7 +87,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArchiveResourceApi(
+$apiInstance = new FortnoxApi\Api\ArchiveResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -112,7 +112,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FolderWrap**](../Model/FolderWrap.md)
+[**\FortnoxApi\Model\FolderWrap**](../Model/FolderWrap.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArchiveResourceApi(
+$apiInstance = new FortnoxApi\Api\ArchiveResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -198,7 +198,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArchiveResourceApi(
+$apiInstance = new FortnoxApi\Api\ArchiveResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -238,7 +238,7 @@ No authorization required
 ## `uploadFile()`
 
 ```php
-uploadFile($path, $folderid, $file): \OpenAPI\Client\Model\FolderFileRowWrap
+uploadFile($path, $folderid, $file): \FortnoxApi\Model\FolderFileRowWrap
 ```
 
 Upload a file to a specific subdirectory
@@ -253,7 +253,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArchiveResourceApi(
+$apiInstance = new FortnoxApi\Api\ArchiveResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -280,7 +280,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FolderFileRowWrap**](../Model/FolderFileRowWrap.md)
+[**\FortnoxApi\Model\FolderFileRowWrap**](../Model/FolderFileRowWrap.md)
 
 ### Authorization
 

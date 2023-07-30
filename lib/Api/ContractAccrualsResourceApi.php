@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * ContractAccrualsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class ContractAccrualsResourceApi
      *
      * Create a contract accrual
      *
-     * @param  \OpenAPI\Client\Model\ContractAccrualWrap $contract_accrual contract accrual to create (optional)
+     * @param  \FortnoxApi\Model\ContractAccrualWrap $contract_accrual contract accrual to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContractAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ContractAccrualWrap
+     * @return \FortnoxApi\Model\ContractAccrualWrap
      */
     public function createContractAccrualsResource($contract_accrual = null, string $contentType = self::contentTypes['createContractAccrualsResource'][0])
     {
@@ -155,12 +155,12 @@ class ContractAccrualsResourceApi
      *
      * Create a contract accrual
      *
-     * @param  \OpenAPI\Client\Model\ContractAccrualWrap $contract_accrual contract accrual to create (optional)
+     * @param  \FortnoxApi\Model\ContractAccrualWrap $contract_accrual contract accrual to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContractAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ContractAccrualWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ContractAccrualWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createContractAccrualsResourceWithHttpInfo($contract_accrual = null, string $contentType = self::contentTypes['createContractAccrualsResource'][0])
     {
@@ -203,23 +203,23 @@ class ContractAccrualsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ContractAccrualWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ContractAccrualWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ContractAccrualWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ContractAccrualWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ContractAccrualWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ContractAccrualWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ContractAccrualWrap';
+            $returnType = '\FortnoxApi\Model\ContractAccrualWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class ContractAccrualsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ContractAccrualWrap',
+                        '\FortnoxApi\Model\ContractAccrualWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class ContractAccrualsResourceApi
      *
      * Create a contract accrual
      *
-     * @param  \OpenAPI\Client\Model\ContractAccrualWrap $contract_accrual contract accrual to create (optional)
+     * @param  \FortnoxApi\Model\ContractAccrualWrap $contract_accrual contract accrual to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContractAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class ContractAccrualsResourceApi
      *
      * Create a contract accrual
      *
-     * @param  \OpenAPI\Client\Model\ContractAccrualWrap $contract_accrual contract accrual to create (optional)
+     * @param  \FortnoxApi\Model\ContractAccrualWrap $contract_accrual contract accrual to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContractAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class ContractAccrualsResourceApi
      */
     public function createContractAccrualsResourceAsyncWithHttpInfo($contract_accrual = null, string $contentType = self::contentTypes['createContractAccrualsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ContractAccrualWrap';
+        $returnType = '\FortnoxApi\Model\ContractAccrualWrap';
         $request = $this->createContractAccrualsResourceRequest($contract_accrual, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class ContractAccrualsResourceApi
     /**
      * Create request for operation 'createContractAccrualsResource'
      *
-     * @param  \OpenAPI\Client\Model\ContractAccrualWrap $contract_accrual contract accrual to create (optional)
+     * @param  \FortnoxApi\Model\ContractAccrualWrap $contract_accrual contract accrual to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContractAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class ContractAccrualsResourceApi
      * @param  int $document_number identifies the contract accrual (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getContractAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ContractAccrualWrap
+     * @return \FortnoxApi\Model\ContractAccrualWrap
      */
     public function getContractAccrualsResource($document_number, string $contentType = self::contentTypes['getContractAccrualsResource'][0])
     {
@@ -434,9 +434,9 @@ class ContractAccrualsResourceApi
      * @param  int $document_number identifies the contract accrual (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getContractAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ContractAccrualWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ContractAccrualWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getContractAccrualsResourceWithHttpInfo($document_number, string $contentType = self::contentTypes['getContractAccrualsResource'][0])
     {
@@ -479,23 +479,23 @@ class ContractAccrualsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ContractAccrualWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ContractAccrualWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ContractAccrualWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ContractAccrualWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ContractAccrualWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ContractAccrualWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ContractAccrualWrap';
+            $returnType = '\FortnoxApi\Model\ContractAccrualWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class ContractAccrualsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ContractAccrualWrap',
+                        '\FortnoxApi\Model\ContractAccrualWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class ContractAccrualsResourceApi
      */
     public function getContractAccrualsResourceAsyncWithHttpInfo($document_number, string $contentType = self::contentTypes['getContractAccrualsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ContractAccrualWrap';
+        $returnType = '\FortnoxApi\Model\ContractAccrualWrap';
         $request = $this->getContractAccrualsResourceRequest($document_number, $contentType);
 
         return $this->client
@@ -698,9 +698,9 @@ class ContractAccrualsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContractAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ContractAccrualListItemList
+     * @return \FortnoxApi\Model\ContractAccrualListItemList
      */
     public function listContractAccrualsResource(string $contentType = self::contentTypes['listContractAccrualsResource'][0])
     {
@@ -715,9 +715,9 @@ class ContractAccrualsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContractAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ContractAccrualListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ContractAccrualListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listContractAccrualsResourceWithHttpInfo(string $contentType = self::contentTypes['listContractAccrualsResource'][0])
     {
@@ -760,23 +760,23 @@ class ContractAccrualsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ContractAccrualListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ContractAccrualListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ContractAccrualListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\ContractAccrualListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ContractAccrualListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ContractAccrualListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ContractAccrualListItemList';
+            $returnType = '\FortnoxApi\Model\ContractAccrualListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -797,7 +797,7 @@ class ContractAccrualsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ContractAccrualListItemList',
+                        '\FortnoxApi\Model\ContractAccrualListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class ContractAccrualsResourceApi
      */
     public function listContractAccrualsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listContractAccrualsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ContractAccrualListItemList';
+        $returnType = '\FortnoxApi\Model\ContractAccrualListItemList';
         $request = $this->listContractAccrualsResourceRequest($contentType);
 
         return $this->client
@@ -962,7 +962,7 @@ class ContractAccrualsResourceApi
      * @param  int $document_number identifies the contract accrual (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeContractAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -979,7 +979,7 @@ class ContractAccrualsResourceApi
      * @param  int $document_number identifies the contract accrual (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeContractAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1189,12 +1189,12 @@ class ContractAccrualsResourceApi
      * Update a contract accrual
      *
      * @param  int $document_number identifies the contract accrual (required)
-     * @param  \OpenAPI\Client\Model\ContractAccrualWrap $contract_accrual contract accrual to update (optional)
+     * @param  \FortnoxApi\Model\ContractAccrualWrap $contract_accrual contract accrual to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContractAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ContractAccrualWrap
+     * @return \FortnoxApi\Model\ContractAccrualWrap
      */
     public function updateContractAccrualsResource($document_number, $contract_accrual = null, string $contentType = self::contentTypes['updateContractAccrualsResource'][0])
     {
@@ -1208,12 +1208,12 @@ class ContractAccrualsResourceApi
      * Update a contract accrual
      *
      * @param  int $document_number identifies the contract accrual (required)
-     * @param  \OpenAPI\Client\Model\ContractAccrualWrap $contract_accrual contract accrual to update (optional)
+     * @param  \FortnoxApi\Model\ContractAccrualWrap $contract_accrual contract accrual to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContractAccrualsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ContractAccrualWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\ContractAccrualWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateContractAccrualsResourceWithHttpInfo($document_number, $contract_accrual = null, string $contentType = self::contentTypes['updateContractAccrualsResource'][0])
     {
@@ -1256,23 +1256,23 @@ class ContractAccrualsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ContractAccrualWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\ContractAccrualWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ContractAccrualWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\ContractAccrualWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ContractAccrualWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\ContractAccrualWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ContractAccrualWrap';
+            $returnType = '\FortnoxApi\Model\ContractAccrualWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1293,7 +1293,7 @@ class ContractAccrualsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ContractAccrualWrap',
+                        '\FortnoxApi\Model\ContractAccrualWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1309,7 +1309,7 @@ class ContractAccrualsResourceApi
      * Update a contract accrual
      *
      * @param  int $document_number identifies the contract accrual (required)
-     * @param  \OpenAPI\Client\Model\ContractAccrualWrap $contract_accrual contract accrual to update (optional)
+     * @param  \FortnoxApi\Model\ContractAccrualWrap $contract_accrual contract accrual to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContractAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1331,7 +1331,7 @@ class ContractAccrualsResourceApi
      * Update a contract accrual
      *
      * @param  int $document_number identifies the contract accrual (required)
-     * @param  \OpenAPI\Client\Model\ContractAccrualWrap $contract_accrual contract accrual to update (optional)
+     * @param  \FortnoxApi\Model\ContractAccrualWrap $contract_accrual contract accrual to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContractAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1339,7 +1339,7 @@ class ContractAccrualsResourceApi
      */
     public function updateContractAccrualsResourceAsyncWithHttpInfo($document_number, $contract_accrual = null, string $contentType = self::contentTypes['updateContractAccrualsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ContractAccrualWrap';
+        $returnType = '\FortnoxApi\Model\ContractAccrualWrap';
         $request = $this->updateContractAccrualsResourceRequest($document_number, $contract_accrual, $contentType);
 
         return $this->client
@@ -1382,7 +1382,7 @@ class ContractAccrualsResourceApi
      * Create request for operation 'updateContractAccrualsResource'
      *
      * @param  int $document_number identifies the contract accrual (required)
-     * @param  \OpenAPI\Client\Model\ContractAccrualWrap $contract_accrual contract accrual to update (optional)
+     * @param  \FortnoxApi\Model\ContractAccrualWrap $contract_accrual contract accrual to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContractAccrualsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * SupplierInvoiceWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class SupplierInvoiceWrap implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'supplier_invoice' => '\OpenAPI\Client\Model\SupplierInvoice'
+        'supplier_invoice' => '\FortnoxApi\Model\SupplierInvoice'
     ];
 
     /**
@@ -290,7 +290,7 @@ class SupplierInvoiceWrap implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets supplier_invoice
      *
-     * @return \OpenAPI\Client\Model\SupplierInvoice|null
+     * @return \FortnoxApi\Model\SupplierInvoice|null
      */
     public function getSupplierInvoice()
     {
@@ -300,7 +300,7 @@ class SupplierInvoiceWrap implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets supplier_invoice
      *
-     * @param \OpenAPI\Client\Model\SupplierInvoice|null $supplier_invoice supplier_invoice
+     * @param \FortnoxApi\Model\SupplierInvoice|null $supplier_invoice supplier_invoice
      *
      * @return self
      */

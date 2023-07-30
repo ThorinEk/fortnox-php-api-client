@@ -37,8 +37,8 @@ Name | Type | Description | Notes
 **employed_to** | **\DateTime** |  | [optional]
 **average_weekly_hours** | **string** |  | [optional]
 **average_hourly_wage** | **string** |  | [optional]
-**dated_wages** | [**\OpenAPI\Client\Model\EmployeeDatedWage[]**](EmployeeDatedWage.md) |  | [optional]
-**dated_schedules** | [**\OpenAPI\Client\Model\EmployeeDatedSchedule[]**](EmployeeDatedSchedule.md) |  | [optional]
+**dated_wages** | [**\FortnoxApi\Model\EmployeeDatedWage[]**](EmployeeDatedWage.md) |  | [optional]
+**dated_schedules** | [**\FortnoxApi\Model\EmployeeDatedSchedule[]**](EmployeeDatedSchedule.md) |  | [optional]
 **at_url** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * SuppliersResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,12 +134,12 @@ class SuppliersResourceApi
      *
      * Create a supplier
      *
-     * @param  \OpenAPI\Client\Model\SupplierWrap $supplier to create (optional)
+     * @param  \FortnoxApi\Model\SupplierWrap $supplier to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSuppliersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierWrap
+     * @return \FortnoxApi\Model\SupplierWrap
      */
     public function createSuppliersResource($supplier = null, string $contentType = self::contentTypes['createSuppliersResource'][0])
     {
@@ -152,12 +152,12 @@ class SuppliersResourceApi
      *
      * Create a supplier
      *
-     * @param  \OpenAPI\Client\Model\SupplierWrap $supplier to create (optional)
+     * @param  \FortnoxApi\Model\SupplierWrap $supplier to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSuppliersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSuppliersResourceWithHttpInfo($supplier = null, string $contentType = self::contentTypes['createSuppliersResource'][0])
     {
@@ -200,23 +200,23 @@ class SuppliersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierWrap';
+            $returnType = '\FortnoxApi\Model\SupplierWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -237,7 +237,7 @@ class SuppliersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierWrap',
+                        '\FortnoxApi\Model\SupplierWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class SuppliersResourceApi
      *
      * Create a supplier
      *
-     * @param  \OpenAPI\Client\Model\SupplierWrap $supplier to create (optional)
+     * @param  \FortnoxApi\Model\SupplierWrap $supplier to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSuppliersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class SuppliersResourceApi
      *
      * Create a supplier
      *
-     * @param  \OpenAPI\Client\Model\SupplierWrap $supplier to create (optional)
+     * @param  \FortnoxApi\Model\SupplierWrap $supplier to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSuppliersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class SuppliersResourceApi
      */
     public function createSuppliersResourceAsyncWithHttpInfo($supplier = null, string $contentType = self::contentTypes['createSuppliersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierWrap';
+        $returnType = '\FortnoxApi\Model\SupplierWrap';
         $request = $this->createSuppliersResourceRequest($supplier, $contentType);
 
         return $this->client
@@ -323,7 +323,7 @@ class SuppliersResourceApi
     /**
      * Create request for operation 'createSuppliersResource'
      *
-     * @param  \OpenAPI\Client\Model\SupplierWrap $supplier to create (optional)
+     * @param  \FortnoxApi\Model\SupplierWrap $supplier to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSuppliersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -413,9 +413,9 @@ class SuppliersResourceApi
      * @param  string $supplier_number identifies the supplier (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSuppliersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierWrap
+     * @return \FortnoxApi\Model\SupplierWrap
      */
     public function getSuppliersResource($supplier_number, string $contentType = self::contentTypes['getSuppliersResource'][0])
     {
@@ -431,9 +431,9 @@ class SuppliersResourceApi
      * @param  string $supplier_number identifies the supplier (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSuppliersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSuppliersResourceWithHttpInfo($supplier_number, string $contentType = self::contentTypes['getSuppliersResource'][0])
     {
@@ -476,23 +476,23 @@ class SuppliersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierWrap';
+            $returnType = '\FortnoxApi\Model\SupplierWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -513,7 +513,7 @@ class SuppliersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierWrap',
+                        '\FortnoxApi\Model\SupplierWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -557,7 +557,7 @@ class SuppliersResourceApi
      */
     public function getSuppliersResourceAsyncWithHttpInfo($supplier_number, string $contentType = self::contentTypes['getSuppliersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierWrap';
+        $returnType = '\FortnoxApi\Model\SupplierWrap';
         $request = $this->getSuppliersResourceRequest($supplier_number, $contentType);
 
         return $this->client
@@ -695,9 +695,9 @@ class SuppliersResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listSuppliersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierListItemList
+     * @return \FortnoxApi\Model\SupplierListItemList
      */
     public function listSuppliersResource(string $contentType = self::contentTypes['listSuppliersResource'][0])
     {
@@ -712,9 +712,9 @@ class SuppliersResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listSuppliersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSuppliersResourceWithHttpInfo(string $contentType = self::contentTypes['listSuppliersResource'][0])
     {
@@ -757,23 +757,23 @@ class SuppliersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierListItemList';
+            $returnType = '\FortnoxApi\Model\SupplierListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -794,7 +794,7 @@ class SuppliersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierListItemList',
+                        '\FortnoxApi\Model\SupplierListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -836,7 +836,7 @@ class SuppliersResourceApi
      */
     public function listSuppliersResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listSuppliersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierListItemList';
+        $returnType = '\FortnoxApi\Model\SupplierListItemList';
         $request = $this->listSuppliersResourceRequest($contentType);
 
         return $this->client
@@ -957,12 +957,12 @@ class SuppliersResourceApi
      * Update a supplier
      *
      * @param  string $supplier_number identifies the supplier (required)
-     * @param  \OpenAPI\Client\Model\SupplierWrap $supplier to update (optional)
+     * @param  \FortnoxApi\Model\SupplierWrap $supplier to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSuppliersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SupplierWrap
+     * @return \FortnoxApi\Model\SupplierWrap
      */
     public function updateSuppliersResource($supplier_number, $supplier = null, string $contentType = self::contentTypes['updateSuppliersResource'][0])
     {
@@ -976,12 +976,12 @@ class SuppliersResourceApi
      * Update a supplier
      *
      * @param  string $supplier_number identifies the supplier (required)
-     * @param  \OpenAPI\Client\Model\SupplierWrap $supplier to update (optional)
+     * @param  \FortnoxApi\Model\SupplierWrap $supplier to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSuppliersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SupplierWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SupplierWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSuppliersResourceWithHttpInfo($supplier_number, $supplier = null, string $contentType = self::contentTypes['updateSuppliersResource'][0])
     {
@@ -1024,23 +1024,23 @@ class SuppliersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SupplierWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SupplierWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SupplierWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\SupplierWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SupplierWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SupplierWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SupplierWrap';
+            $returnType = '\FortnoxApi\Model\SupplierWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1061,7 +1061,7 @@ class SuppliersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SupplierWrap',
+                        '\FortnoxApi\Model\SupplierWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1077,7 +1077,7 @@ class SuppliersResourceApi
      * Update a supplier
      *
      * @param  string $supplier_number identifies the supplier (required)
-     * @param  \OpenAPI\Client\Model\SupplierWrap $supplier to update (optional)
+     * @param  \FortnoxApi\Model\SupplierWrap $supplier to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSuppliersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1099,7 +1099,7 @@ class SuppliersResourceApi
      * Update a supplier
      *
      * @param  string $supplier_number identifies the supplier (required)
-     * @param  \OpenAPI\Client\Model\SupplierWrap $supplier to update (optional)
+     * @param  \FortnoxApi\Model\SupplierWrap $supplier to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSuppliersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1107,7 +1107,7 @@ class SuppliersResourceApi
      */
     public function updateSuppliersResourceAsyncWithHttpInfo($supplier_number, $supplier = null, string $contentType = self::contentTypes['updateSuppliersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SupplierWrap';
+        $returnType = '\FortnoxApi\Model\SupplierWrap';
         $request = $this->updateSuppliersResourceRequest($supplier_number, $supplier, $contentType);
 
         return $this->client
@@ -1150,7 +1150,7 @@ class SuppliersResourceApi
      * Create request for operation 'updateSuppliersResource'
      *
      * @param  string $supplier_number identifies the supplier (required)
-     * @param  \OpenAPI\Client\Model\SupplierWrap $supplier to update (optional)
+     * @param  \FortnoxApi\Model\SupplierWrap $supplier to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSuppliersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * VoucherListItemList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class VoucherListItemList implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'vouchers' => '\OpenAPI\Client\Model\VoucherListItem[]'
+        'vouchers' => '\FortnoxApi\Model\VoucherListItem[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class VoucherListItemList implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets vouchers
      *
-     * @return \OpenAPI\Client\Model\VoucherListItem[]|null
+     * @return \FortnoxApi\Model\VoucherListItem[]|null
      */
     public function getVouchers()
     {
@@ -300,7 +300,7 @@ class VoucherListItemList implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets vouchers
      *
-     * @param \OpenAPI\Client\Model\VoucherListItem[]|null $vouchers vouchers
+     * @param \FortnoxApi\Model\VoucherListItem[]|null $vouchers vouchers
      *
      * @return self
      */

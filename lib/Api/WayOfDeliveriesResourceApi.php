@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * WayOfDeliveriesResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class WayOfDeliveriesResourceApi
      *
      * Create a way of delivery
      *
-     * @param  \OpenAPI\Client\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to create (optional)
+     * @param  \FortnoxApi\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWayOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WayOfDeliveryWrap
+     * @return \FortnoxApi\Model\WayOfDeliveryWrap
      */
     public function createWayOfDeliveriesResource($way_of_delivery = null, string $contentType = self::contentTypes['createWayOfDeliveriesResource'][0])
     {
@@ -155,12 +155,12 @@ class WayOfDeliveriesResourceApi
      *
      * Create a way of delivery
      *
-     * @param  \OpenAPI\Client\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to create (optional)
+     * @param  \FortnoxApi\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWayOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WayOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\WayOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWayOfDeliveriesResourceWithHttpInfo($way_of_delivery = null, string $contentType = self::contentTypes['createWayOfDeliveriesResource'][0])
     {
@@ -203,23 +203,23 @@ class WayOfDeliveriesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WayOfDeliveryWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\WayOfDeliveryWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WayOfDeliveryWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\WayOfDeliveryWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WayOfDeliveryWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\WayOfDeliveryWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WayOfDeliveryWrap';
+            $returnType = '\FortnoxApi\Model\WayOfDeliveryWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class WayOfDeliveriesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WayOfDeliveryWrap',
+                        '\FortnoxApi\Model\WayOfDeliveryWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class WayOfDeliveriesResourceApi
      *
      * Create a way of delivery
      *
-     * @param  \OpenAPI\Client\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to create (optional)
+     * @param  \FortnoxApi\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWayOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class WayOfDeliveriesResourceApi
      *
      * Create a way of delivery
      *
-     * @param  \OpenAPI\Client\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to create (optional)
+     * @param  \FortnoxApi\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWayOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class WayOfDeliveriesResourceApi
      */
     public function createWayOfDeliveriesResourceAsyncWithHttpInfo($way_of_delivery = null, string $contentType = self::contentTypes['createWayOfDeliveriesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WayOfDeliveryWrap';
+        $returnType = '\FortnoxApi\Model\WayOfDeliveryWrap';
         $request = $this->createWayOfDeliveriesResourceRequest($way_of_delivery, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class WayOfDeliveriesResourceApi
     /**
      * Create request for operation 'createWayOfDeliveriesResource'
      *
-     * @param  \OpenAPI\Client\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to create (optional)
+     * @param  \FortnoxApi\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWayOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class WayOfDeliveriesResourceApi
      * @param  string $code identifies the way of delivery (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWayOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WayOfDeliveryWrap
+     * @return \FortnoxApi\Model\WayOfDeliveryWrap
      */
     public function getWayOfDeliveriesResource($code, string $contentType = self::contentTypes['getWayOfDeliveriesResource'][0])
     {
@@ -434,9 +434,9 @@ class WayOfDeliveriesResourceApi
      * @param  string $code identifies the way of delivery (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWayOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WayOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\WayOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWayOfDeliveriesResourceWithHttpInfo($code, string $contentType = self::contentTypes['getWayOfDeliveriesResource'][0])
     {
@@ -479,23 +479,23 @@ class WayOfDeliveriesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WayOfDeliveryWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\WayOfDeliveryWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WayOfDeliveryWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\WayOfDeliveryWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WayOfDeliveryWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\WayOfDeliveryWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WayOfDeliveryWrap';
+            $returnType = '\FortnoxApi\Model\WayOfDeliveryWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class WayOfDeliveriesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WayOfDeliveryWrap',
+                        '\FortnoxApi\Model\WayOfDeliveryWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class WayOfDeliveriesResourceApi
      */
     public function getWayOfDeliveriesResourceAsyncWithHttpInfo($code, string $contentType = self::contentTypes['getWayOfDeliveriesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WayOfDeliveryWrap';
+        $returnType = '\FortnoxApi\Model\WayOfDeliveryWrap';
         $request = $this->getWayOfDeliveriesResourceRequest($code, $contentType);
 
         return $this->client
@@ -698,9 +698,9 @@ class WayOfDeliveriesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listWayOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WayOfDeliveryList
+     * @return \FortnoxApi\Model\WayOfDeliveryList
      */
     public function listWayOfDeliveriesResource(string $contentType = self::contentTypes['listWayOfDeliveriesResource'][0])
     {
@@ -715,9 +715,9 @@ class WayOfDeliveriesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listWayOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WayOfDeliveryList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\WayOfDeliveryList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listWayOfDeliveriesResourceWithHttpInfo(string $contentType = self::contentTypes['listWayOfDeliveriesResource'][0])
     {
@@ -760,23 +760,23 @@ class WayOfDeliveriesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WayOfDeliveryList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\WayOfDeliveryList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WayOfDeliveryList' !== 'string') {
+                        if ('\FortnoxApi\Model\WayOfDeliveryList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WayOfDeliveryList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\WayOfDeliveryList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WayOfDeliveryList';
+            $returnType = '\FortnoxApi\Model\WayOfDeliveryList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -797,7 +797,7 @@ class WayOfDeliveriesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WayOfDeliveryList',
+                        '\FortnoxApi\Model\WayOfDeliveryList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class WayOfDeliveriesResourceApi
      */
     public function listWayOfDeliveriesResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listWayOfDeliveriesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WayOfDeliveryList';
+        $returnType = '\FortnoxApi\Model\WayOfDeliveryList';
         $request = $this->listWayOfDeliveriesResourceRequest($contentType);
 
         return $this->client
@@ -962,7 +962,7 @@ class WayOfDeliveriesResourceApi
      * @param  string $code identifies the way of delivery (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeWayOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -979,7 +979,7 @@ class WayOfDeliveriesResourceApi
      * @param  string $code identifies the way of delivery (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeWayOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1189,12 +1189,12 @@ class WayOfDeliveriesResourceApi
      * Update a way of delivery
      *
      * @param  string $code identifies the way of delivery (required)
-     * @param  \OpenAPI\Client\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to update (optional)
+     * @param  \FortnoxApi\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWayOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WayOfDeliveryWrap
+     * @return \FortnoxApi\Model\WayOfDeliveryWrap
      */
     public function updateWayOfDeliveriesResource($code, $way_of_delivery = null, string $contentType = self::contentTypes['updateWayOfDeliveriesResource'][0])
     {
@@ -1208,12 +1208,12 @@ class WayOfDeliveriesResourceApi
      * Update a way of delivery
      *
      * @param  string $code identifies the way of delivery (required)
-     * @param  \OpenAPI\Client\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to update (optional)
+     * @param  \FortnoxApi\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWayOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WayOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\WayOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWayOfDeliveriesResourceWithHttpInfo($code, $way_of_delivery = null, string $contentType = self::contentTypes['updateWayOfDeliveriesResource'][0])
     {
@@ -1256,23 +1256,23 @@ class WayOfDeliveriesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WayOfDeliveryWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\WayOfDeliveryWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WayOfDeliveryWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\WayOfDeliveryWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WayOfDeliveryWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\WayOfDeliveryWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WayOfDeliveryWrap';
+            $returnType = '\FortnoxApi\Model\WayOfDeliveryWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1293,7 +1293,7 @@ class WayOfDeliveriesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WayOfDeliveryWrap',
+                        '\FortnoxApi\Model\WayOfDeliveryWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1309,7 +1309,7 @@ class WayOfDeliveriesResourceApi
      * Update a way of delivery
      *
      * @param  string $code identifies the way of delivery (required)
-     * @param  \OpenAPI\Client\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to update (optional)
+     * @param  \FortnoxApi\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWayOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1331,7 +1331,7 @@ class WayOfDeliveriesResourceApi
      * Update a way of delivery
      *
      * @param  string $code identifies the way of delivery (required)
-     * @param  \OpenAPI\Client\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to update (optional)
+     * @param  \FortnoxApi\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWayOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1339,7 +1339,7 @@ class WayOfDeliveriesResourceApi
      */
     public function updateWayOfDeliveriesResourceAsyncWithHttpInfo($code, $way_of_delivery = null, string $contentType = self::contentTypes['updateWayOfDeliveriesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WayOfDeliveryWrap';
+        $returnType = '\FortnoxApi\Model\WayOfDeliveryWrap';
         $request = $this->updateWayOfDeliveriesResourceRequest($code, $way_of_delivery, $contentType);
 
         return $this->client
@@ -1382,7 +1382,7 @@ class WayOfDeliveriesResourceApi
      * Create request for operation 'updateWayOfDeliveriesResource'
      *
      * @param  string $code identifies the way of delivery (required)
-     * @param  \OpenAPI\Client\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to update (optional)
+     * @param  \FortnoxApi\Model\WayOfDeliveryWrap $way_of_delivery way of delivery to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWayOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

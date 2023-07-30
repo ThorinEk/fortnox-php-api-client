@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * SupplierInvoiceFileConnectionWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class SupplierInvoiceFileConnectionWrap implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'supplier_invoice_file_connection' => '\OpenAPI\Client\Model\SupplierInvoiceFileConnection'
+        'supplier_invoice_file_connection' => '\FortnoxApi\Model\SupplierInvoiceFileConnection'
     ];
 
     /**
@@ -290,7 +290,7 @@ class SupplierInvoiceFileConnectionWrap implements ModelInterface, ArrayAccess, 
     /**
      * Gets supplier_invoice_file_connection
      *
-     * @return \OpenAPI\Client\Model\SupplierInvoiceFileConnection|null
+     * @return \FortnoxApi\Model\SupplierInvoiceFileConnection|null
      */
     public function getSupplierInvoiceFileConnection()
     {
@@ -300,7 +300,7 @@ class SupplierInvoiceFileConnectionWrap implements ModelInterface, ArrayAccess, 
     /**
      * Sets supplier_invoice_file_connection
      *
-     * @param \OpenAPI\Client\Model\SupplierInvoiceFileConnection|null $supplier_invoice_file_connection supplier_invoice_file_connection
+     * @param \FortnoxApi\Model\SupplierInvoiceFileConnection|null $supplier_invoice_file_connection supplier_invoice_file_connection
      *
      * @return self
      */

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **unit_cost** | **float** |  | [optional]
 **unit_price** | **float** |  | [optional]
 **order_index** | **int** |  | [optional]
-**item** | [**\OpenAPI\Client\Model\TRItem**](TRItem.md) |  | [optional]
+**item** | [**\FortnoxApi\Model\TRItem**](TRItem.md) |  | [optional]
 **invoice_text** | **string** |  | [optional]
 **note** | **string** |  | [optional]
 **time_locked** | **bool** |  | [optional]

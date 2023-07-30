@@ -1,4 +1,4 @@
-# OpenAPI\Client\TermsOfDeliveriesResourceApi
+# FortnoxApi\TermsOfDeliveriesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createTermsOfDeliveriesResource()`
 
 ```php
-createTermsOfDeliveriesResource($term_of_delivery): \OpenAPI\Client\Model\TermsOfDeliveryWrap
+createTermsOfDeliveriesResource($term_of_delivery): \FortnoxApi\Model\TermsOfDeliveryWrap
 ```
 
 Create a terms of delivery
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TermsOfDeliveriesResourceApi(
+$apiInstance = new FortnoxApi\Api\TermsOfDeliveriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$term_of_delivery = new \OpenAPI\Client\Model\TermsOfDeliveryWrap(); // \OpenAPI\Client\Model\TermsOfDeliveryWrap | to create
+$term_of_delivery = new \FortnoxApi\Model\TermsOfDeliveryWrap(); // \FortnoxApi\Model\TermsOfDeliveryWrap | to create
 
 try {
     $result = $apiInstance->createTermsOfDeliveriesResource($term_of_delivery);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **term_of_delivery** | [**\OpenAPI\Client\Model\TermsOfDeliveryWrap**](../Model/TermsOfDeliveryWrap.md)| to create | [optional] |
+| **term_of_delivery** | [**\FortnoxApi\Model\TermsOfDeliveryWrap**](../Model/TermsOfDeliveryWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TermsOfDeliveryWrap**](../Model/TermsOfDeliveryWrap.md)
+[**\FortnoxApi\Model\TermsOfDeliveryWrap**](../Model/TermsOfDeliveryWrap.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `getTermsOfDeliveriesResource()`
 
 ```php
-getTermsOfDeliveriesResource($code): \OpenAPI\Client\Model\TermsOfDeliveryWrap
+getTermsOfDeliveriesResource($code): \FortnoxApi\Model\TermsOfDeliveryWrap
 ```
 
 Retrieve a single terms of delivery
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TermsOfDeliveriesResourceApi(
+$apiInstance = new FortnoxApi\Api\TermsOfDeliveriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TermsOfDeliveryWrap**](../Model/TermsOfDeliveryWrap.md)
+[**\FortnoxApi\Model\TermsOfDeliveryWrap**](../Model/TermsOfDeliveryWrap.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 ## `listTermsOfDeliveriesResource()`
 
 ```php
-listTermsOfDeliveriesResource(): \OpenAPI\Client\Model\TermsOfDeliveryList
+listTermsOfDeliveriesResource(): \FortnoxApi\Model\TermsOfDeliveryList
 ```
 
 Retrieve a list of terms of deliveries
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TermsOfDeliveriesResourceApi(
+$apiInstance = new FortnoxApi\Api\TermsOfDeliveriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -156,7 +156,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TermsOfDeliveryList**](../Model/TermsOfDeliveryList.md)
+[**\FortnoxApi\Model\TermsOfDeliveryList**](../Model/TermsOfDeliveryList.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
 ## `updateTermsOfDeliveriesResource()`
 
 ```php
-updateTermsOfDeliveriesResource($code, $terms_of_delivery): \OpenAPI\Client\Model\TermsOfDeliveryWrap
+updateTermsOfDeliveriesResource($code, $terms_of_delivery): \FortnoxApi\Model\TermsOfDeliveryWrap
 ```
 
 Update a terms of delivery
@@ -187,13 +187,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TermsOfDeliveriesResourceApi(
+$apiInstance = new FortnoxApi\Api\TermsOfDeliveriesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $code = 'code_example'; // string | identifies the terms of delivery
-$terms_of_delivery = new \OpenAPI\Client\Model\TermsOfDeliveryWrap(); // \OpenAPI\Client\Model\TermsOfDeliveryWrap | to update
+$terms_of_delivery = new \FortnoxApi\Model\TermsOfDeliveryWrap(); // \FortnoxApi\Model\TermsOfDeliveryWrap | to update
 
 try {
     $result = $apiInstance->updateTermsOfDeliveriesResource($code, $terms_of_delivery);
@@ -208,11 +208,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **code** | **string**| identifies the terms of delivery | |
-| **terms_of_delivery** | [**\OpenAPI\Client\Model\TermsOfDeliveryWrap**](../Model/TermsOfDeliveryWrap.md)| to update | [optional] |
+| **terms_of_delivery** | [**\FortnoxApi\Model\TermsOfDeliveryWrap**](../Model/TermsOfDeliveryWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TermsOfDeliveryWrap**](../Model/TermsOfDeliveryWrap.md)
+[**\FortnoxApi\Model\TermsOfDeliveryWrap**](../Model/TermsOfDeliveryWrap.md)
 
 ### Authorization
 

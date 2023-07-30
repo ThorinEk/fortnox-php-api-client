@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * VoucherSeriesWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class VoucherSeriesWrap implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'voucher_series' => '\OpenAPI\Client\Model\VoucherSeries'
+        'voucher_series' => '\FortnoxApi\Model\VoucherSeries'
     ];
 
     /**
@@ -293,7 +293,7 @@ class VoucherSeriesWrap implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets voucher_series
      *
-     * @return \OpenAPI\Client\Model\VoucherSeries
+     * @return \FortnoxApi\Model\VoucherSeries
      */
     public function getVoucherSeries()
     {
@@ -303,7 +303,7 @@ class VoucherSeriesWrap implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets voucher_series
      *
-     * @param \OpenAPI\Client\Model\VoucherSeries $voucher_series voucher_series
+     * @param \FortnoxApi\Model\VoucherSeries $voucher_series voucher_series
      *
      * @return self
      */

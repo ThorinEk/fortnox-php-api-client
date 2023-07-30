@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * EmployeeListItem Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -88,8 +88,8 @@ class EmployeeListItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'employed_to' => '\DateTime',
         'average_weekly_hours' => 'string',
         'average_hourly_wage' => 'string',
-        'dated_wages' => '\OpenAPI\Client\Model\EmployeeDatedWage[]',
-        'dated_schedules' => '\OpenAPI\Client\Model\EmployeeDatedSchedule[]',
+        'dated_wages' => '\FortnoxApi\Model\EmployeeDatedWage[]',
+        'dated_schedules' => '\FortnoxApi\Model\EmployeeDatedSchedule[]',
         'at_url' => 'string'
     ];
 
@@ -1815,7 +1815,7 @@ class EmployeeListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets dated_wages
      *
-     * @return \OpenAPI\Client\Model\EmployeeDatedWage[]|null
+     * @return \FortnoxApi\Model\EmployeeDatedWage[]|null
      */
     public function getDatedWages()
     {
@@ -1825,7 +1825,7 @@ class EmployeeListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets dated_wages
      *
-     * @param \OpenAPI\Client\Model\EmployeeDatedWage[]|null $dated_wages dated_wages
+     * @param \FortnoxApi\Model\EmployeeDatedWage[]|null $dated_wages dated_wages
      *
      * @return self
      */
@@ -1842,7 +1842,7 @@ class EmployeeListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets dated_schedules
      *
-     * @return \OpenAPI\Client\Model\EmployeeDatedSchedule[]|null
+     * @return \FortnoxApi\Model\EmployeeDatedSchedule[]|null
      */
     public function getDatedSchedules()
     {
@@ -1852,7 +1852,7 @@ class EmployeeListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets dated_schedules
      *
-     * @param \OpenAPI\Client\Model\EmployeeDatedSchedule[]|null $dated_schedules dated_schedules
+     * @param \FortnoxApi\Model\EmployeeDatedSchedule[]|null $dated_schedules dated_schedules
      *
      * @return self
      */

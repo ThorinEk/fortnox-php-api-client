@@ -1,4 +1,4 @@
-# OpenAPI\Client\TenantResourceApi
+# FortnoxApi\TenantResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getTenant()`
 
 ```php
-getTenant(): \OpenAPI\Client\Model\TenantInfo
+getTenant(): \FortnoxApi\Model\TenantInfo
 ```
 
 Get Warehouse activation status
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TenantResourceApi(
+$apiInstance = new FortnoxApi\Api\TenantResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TenantInfo**](../Model/TenantInfo.md)
+[**\FortnoxApi\Model\TenantInfo**](../Model/TenantInfo.md)
 
 ### Authorization
 

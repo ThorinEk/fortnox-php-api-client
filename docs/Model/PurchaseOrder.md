@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional]
 **order_date** | **\DateTime** |  |
 **supplier_number** | **string** |  |
-**rows** | [**\OpenAPI\Client\Model\PurchaseOrderRow[]**](PurchaseOrderRow.md) |  | [optional]
+**rows** | [**\FortnoxApi\Model\PurchaseOrderRow[]**](PurchaseOrderRow.md) |  | [optional]
 **stock_point_id** | **string** |  | [optional]
 **delivery_name** | **string** |  |
 **delivery_address** | **string** |  |
@@ -50,6 +50,6 @@ Name | Type | Description | Notes
 **order_value_in_sek** | **float** |  | [optional]
 **supplier** | **string** |  | [optional]
 **translated_response_state** | **string** |  | [optional]
-**outbound_document_reference** | [**\OpenAPI\Client\Model\DocumentReference**](DocumentReference.md) |  | [optional]
+**outbound_document_reference** | [**\FortnoxApi\Model\DocumentReference**](DocumentReference.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

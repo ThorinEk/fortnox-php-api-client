@@ -1,4 +1,4 @@
-# OpenAPI\Client\AttachmentResourceApi
+# FortnoxApi\AttachmentResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `attach()`
 
 ```php
-attach($attachments): \OpenAPI\Client\Model\Attachment[]
+attach($attachments): \FortnoxApi\Model\Attachment[]
 ```
 
 Attach files to one or more entities
@@ -28,12 +28,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AttachmentResourceApi(
+$apiInstance = new FortnoxApi\Api\AttachmentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$attachments = array(new \OpenAPI\Client\Model\Attachment()); // \OpenAPI\Client\Model\Attachment[] | A list of attachments
+$attachments = array(new \FortnoxApi\Model\Attachment()); // \FortnoxApi\Model\Attachment[] | A list of attachments
 
 try {
     $result = $apiInstance->attach($attachments);
@@ -47,11 +47,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **attachments** | [**\OpenAPI\Client\Model\Attachment[]**](../Model/Attachment.md)| A list of attachments | [optional] |
+| **attachments** | [**\FortnoxApi\Model\Attachment[]**](../Model/Attachment.md)| A list of attachments | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Attachment[]**](../Model/Attachment.md)
+[**\FortnoxApi\Model\Attachment[]**](../Model/Attachment.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AttachmentResourceApi(
+$apiInstance = new FortnoxApi\Api\AttachmentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -122,7 +122,7 @@ No authorization required
 ## `getAttachments()`
 
 ```php
-getAttachments($entityid, $entitytype): \OpenAPI\Client\Model\Attachment[]
+getAttachments($entityid, $entitytype): \FortnoxApi\Model\Attachment[]
 ```
 
 Get attached files on an entity
@@ -135,7 +135,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AttachmentResourceApi(
+$apiInstance = new FortnoxApi\Api\AttachmentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -160,7 +160,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Attachment[]**](../Model/Attachment.md)
+[**\FortnoxApi\Model\Attachment[]**](../Model/Attachment.md)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ No authorization required
 ## `getNumberOfAttachmentsForEntity()`
 
 ```php
-getNumberOfAttachmentsForEntity($entityids, $entitytype): \OpenAPI\Client\Model\NumberOfAttachments[]
+getNumberOfAttachmentsForEntity($entityids, $entitytype): \FortnoxApi\Model\NumberOfAttachments[]
 ```
 
 List number of attachments
@@ -191,7 +191,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AttachmentResourceApi(
+$apiInstance = new FortnoxApi\Api\AttachmentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -216,7 +216,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NumberOfAttachments[]**](../Model/NumberOfAttachments.md)
+[**\FortnoxApi\Model\NumberOfAttachments[]**](../Model/NumberOfAttachments.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ No authorization required
 ## `updateAttachment()`
 
 ```php
-updateAttachment($attachment_id, $attachment): \OpenAPI\Client\Model\Attachment
+updateAttachment($attachment_id, $attachment): \FortnoxApi\Model\Attachment
 ```
 
 Update attachment
@@ -247,13 +247,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AttachmentResourceApi(
+$apiInstance = new FortnoxApi\Api\AttachmentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $attachment_id = 'attachment_id_example'; // string | id of the attachment to be updated
-$attachment = new \OpenAPI\Client\Model\Attachment(); // \OpenAPI\Client\Model\Attachment | an attachment
+$attachment = new \FortnoxApi\Model\Attachment(); // \FortnoxApi\Model\Attachment | an attachment
 
 try {
     $result = $apiInstance->updateAttachment($attachment_id, $attachment);
@@ -268,11 +268,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **attachment_id** | **string**| id of the attachment to be updated | |
-| **attachment** | [**\OpenAPI\Client\Model\Attachment**](../Model/Attachment.md)| an attachment | [optional] |
+| **attachment** | [**\FortnoxApi\Model\Attachment**](../Model/Attachment.md)| an attachment | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Attachment**](../Model/Attachment.md)
+[**\FortnoxApi\Model\Attachment**](../Model/Attachment.md)
 
 ### Authorization
 
@@ -303,12 +303,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AttachmentResourceApi(
+$apiInstance = new FortnoxApi\Api\AttachmentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$attachments = array(new \OpenAPI\Client\Model\Attachment()); // \OpenAPI\Client\Model\Attachment[] | a list of Attachments
+$attachments = array(new \FortnoxApi\Model\Attachment()); // \FortnoxApi\Model\Attachment[] | a list of Attachments
 
 try {
     $apiInstance->validateIncludedOnSend($attachments);
@@ -321,7 +321,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **attachments** | [**\OpenAPI\Client\Model\Attachment[]**](../Model/Attachment.md)| a list of Attachments | [optional] |
+| **attachments** | [**\FortnoxApi\Model\Attachment[]**](../Model/Attachment.md)| a list of Attachments | [optional] |
 
 ### Return type
 

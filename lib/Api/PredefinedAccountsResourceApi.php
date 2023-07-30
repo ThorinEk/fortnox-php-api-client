@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * PredefinedAccountsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,9 +134,9 @@ class PredefinedAccountsResourceApi
      * @param  string $name identifies the predefined account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPredefinedAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PredefinedAccountWrap
+     * @return \FortnoxApi\Model\PredefinedAccountWrap
      */
     public function getPredefinedAccountsResource($name, string $contentType = self::contentTypes['getPredefinedAccountsResource'][0])
     {
@@ -152,9 +152,9 @@ class PredefinedAccountsResourceApi
      * @param  string $name identifies the predefined account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPredefinedAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PredefinedAccountWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PredefinedAccountWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPredefinedAccountsResourceWithHttpInfo($name, string $contentType = self::contentTypes['getPredefinedAccountsResource'][0])
     {
@@ -197,23 +197,23 @@ class PredefinedAccountsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PredefinedAccountWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PredefinedAccountWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PredefinedAccountWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\PredefinedAccountWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PredefinedAccountWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PredefinedAccountWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PredefinedAccountWrap';
+            $returnType = '\FortnoxApi\Model\PredefinedAccountWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -234,7 +234,7 @@ class PredefinedAccountsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PredefinedAccountWrap',
+                        '\FortnoxApi\Model\PredefinedAccountWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -278,7 +278,7 @@ class PredefinedAccountsResourceApi
      */
     public function getPredefinedAccountsResourceAsyncWithHttpInfo($name, string $contentType = self::contentTypes['getPredefinedAccountsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PredefinedAccountWrap';
+        $returnType = '\FortnoxApi\Model\PredefinedAccountWrap';
         $request = $this->getPredefinedAccountsResourceRequest($name, $contentType);
 
         return $this->client
@@ -416,9 +416,9 @@ class PredefinedAccountsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPredefinedAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PredefinedAccountList
+     * @return \FortnoxApi\Model\PredefinedAccountList
      */
     public function listPredefinedAccountsResource(string $contentType = self::contentTypes['listPredefinedAccountsResource'][0])
     {
@@ -433,9 +433,9 @@ class PredefinedAccountsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPredefinedAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PredefinedAccountList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PredefinedAccountList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPredefinedAccountsResourceWithHttpInfo(string $contentType = self::contentTypes['listPredefinedAccountsResource'][0])
     {
@@ -478,23 +478,23 @@ class PredefinedAccountsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PredefinedAccountList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PredefinedAccountList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PredefinedAccountList' !== 'string') {
+                        if ('\FortnoxApi\Model\PredefinedAccountList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PredefinedAccountList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PredefinedAccountList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PredefinedAccountList';
+            $returnType = '\FortnoxApi\Model\PredefinedAccountList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -515,7 +515,7 @@ class PredefinedAccountsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PredefinedAccountList',
+                        '\FortnoxApi\Model\PredefinedAccountList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -557,7 +557,7 @@ class PredefinedAccountsResourceApi
      */
     public function listPredefinedAccountsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listPredefinedAccountsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PredefinedAccountList';
+        $returnType = '\FortnoxApi\Model\PredefinedAccountList';
         $request = $this->listPredefinedAccountsResourceRequest($contentType);
 
         return $this->client
@@ -678,12 +678,12 @@ class PredefinedAccountsResourceApi
      * Update a Predefined Account
      *
      * @param  string $name identifies the predefined account (required)
-     * @param  \OpenAPI\Client\Model\PredefinedAccountWrap $predefined_account predefined account to update (optional)
+     * @param  \FortnoxApi\Model\PredefinedAccountWrap $predefined_account predefined account to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePredefinedAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PredefinedAccountWrap
+     * @return \FortnoxApi\Model\PredefinedAccountWrap
      */
     public function updatePredefinedAccountsResource($name, $predefined_account = null, string $contentType = self::contentTypes['updatePredefinedAccountsResource'][0])
     {
@@ -697,12 +697,12 @@ class PredefinedAccountsResourceApi
      * Update a Predefined Account
      *
      * @param  string $name identifies the predefined account (required)
-     * @param  \OpenAPI\Client\Model\PredefinedAccountWrap $predefined_account predefined account to update (optional)
+     * @param  \FortnoxApi\Model\PredefinedAccountWrap $predefined_account predefined account to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePredefinedAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PredefinedAccountWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PredefinedAccountWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePredefinedAccountsResourceWithHttpInfo($name, $predefined_account = null, string $contentType = self::contentTypes['updatePredefinedAccountsResource'][0])
     {
@@ -745,23 +745,23 @@ class PredefinedAccountsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PredefinedAccountWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PredefinedAccountWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PredefinedAccountWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\PredefinedAccountWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PredefinedAccountWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PredefinedAccountWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PredefinedAccountWrap';
+            $returnType = '\FortnoxApi\Model\PredefinedAccountWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -782,7 +782,7 @@ class PredefinedAccountsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PredefinedAccountWrap',
+                        '\FortnoxApi\Model\PredefinedAccountWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -798,7 +798,7 @@ class PredefinedAccountsResourceApi
      * Update a Predefined Account
      *
      * @param  string $name identifies the predefined account (required)
-     * @param  \OpenAPI\Client\Model\PredefinedAccountWrap $predefined_account predefined account to update (optional)
+     * @param  \FortnoxApi\Model\PredefinedAccountWrap $predefined_account predefined account to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePredefinedAccountsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -820,7 +820,7 @@ class PredefinedAccountsResourceApi
      * Update a Predefined Account
      *
      * @param  string $name identifies the predefined account (required)
-     * @param  \OpenAPI\Client\Model\PredefinedAccountWrap $predefined_account predefined account to update (optional)
+     * @param  \FortnoxApi\Model\PredefinedAccountWrap $predefined_account predefined account to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePredefinedAccountsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -828,7 +828,7 @@ class PredefinedAccountsResourceApi
      */
     public function updatePredefinedAccountsResourceAsyncWithHttpInfo($name, $predefined_account = null, string $contentType = self::contentTypes['updatePredefinedAccountsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PredefinedAccountWrap';
+        $returnType = '\FortnoxApi\Model\PredefinedAccountWrap';
         $request = $this->updatePredefinedAccountsResourceRequest($name, $predefined_account, $contentType);
 
         return $this->client
@@ -871,7 +871,7 @@ class PredefinedAccountsResourceApi
      * Create request for operation 'updatePredefinedAccountsResource'
      *
      * @param  string $name identifies the predefined account (required)
-     * @param  \OpenAPI\Client\Model\PredefinedAccountWrap $predefined_account predefined account to update (optional)
+     * @param  \FortnoxApi\Model\PredefinedAccountWrap $predefined_account predefined account to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePredefinedAccountsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

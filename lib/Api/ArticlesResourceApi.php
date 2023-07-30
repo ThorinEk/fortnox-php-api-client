@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * ArticlesResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,9 +140,9 @@ class ArticlesResourceApi
      * @param  bool $include_non_invoiceable_price If the price of the non-invoiceable article registration is included, or not. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['callList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BaseArticleRegistration[]
+     * @return \FortnoxApi\Model\BaseArticleRegistration[]
      */
     public function callList($from_date = null, $to_date = null, $customer_ids = null, $project_ids = null, $include_registrations_without_project = null, $item_ids = null, $cost_center_ids = null, $owner_ids = null, $invoiced = null, $in_invoice_basis = null, $internal_articles = null, $non_invoiceable = null, $include_non_invoiceable_price = null, string $contentType = self::contentTypes['callList'][0])
     {
@@ -170,9 +170,9 @@ class ArticlesResourceApi
      * @param  bool $include_non_invoiceable_price If the price of the non-invoiceable article registration is included, or not. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['callList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BaseArticleRegistration[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\BaseArticleRegistration[], HTTP status code, HTTP response headers (array of strings)
      */
     public function callListWithHttpInfo($from_date = null, $to_date = null, $customer_ids = null, $project_ids = null, $include_registrations_without_project = null, $item_ids = null, $cost_center_ids = null, $owner_ids = null, $invoiced = null, $in_invoice_basis = null, $internal_articles = null, $non_invoiceable = null, $include_non_invoiceable_price = null, string $contentType = self::contentTypes['callList'][0])
     {
@@ -215,23 +215,23 @@ class ArticlesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BaseArticleRegistration[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\BaseArticleRegistration[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BaseArticleRegistration[]' !== 'string') {
+                        if ('\FortnoxApi\Model\BaseArticleRegistration[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BaseArticleRegistration[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\BaseArticleRegistration[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BaseArticleRegistration[]';
+            $returnType = '\FortnoxApi\Model\BaseArticleRegistration[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -252,7 +252,7 @@ class ArticlesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BaseArticleRegistration[]',
+                        '\FortnoxApi\Model\BaseArticleRegistration[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -320,7 +320,7 @@ class ArticlesResourceApi
      */
     public function callListAsyncWithHttpInfo($from_date = null, $to_date = null, $customer_ids = null, $project_ids = null, $include_registrations_without_project = null, $item_ids = null, $cost_center_ids = null, $owner_ids = null, $invoiced = null, $in_invoice_basis = null, $internal_articles = null, $non_invoiceable = null, $include_non_invoiceable_price = null, string $contentType = self::contentTypes['callList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BaseArticleRegistration[]';
+        $returnType = '\FortnoxApi\Model\BaseArticleRegistration[]';
         $request = $this->callListRequest($from_date, $to_date, $customer_ids, $project_ids, $include_registrations_without_project, $item_ids, $cost_center_ids, $owner_ids, $invoiced, $in_invoice_basis, $internal_articles, $non_invoiceable, $include_non_invoiceable_price, $contentType);
 
         return $this->client

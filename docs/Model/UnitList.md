@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**units** | [**\OpenAPI\Client\Model\Unit[]**](Unit.md) |  | [optional]
+**units** | [**\FortnoxApi\Model\Unit[]**](Unit.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

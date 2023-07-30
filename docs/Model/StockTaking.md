@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **name** | **string** |  |
 **responsible** | **string** |  |
 **state** | **string** |  |
-**rows** | [**\OpenAPI\Client\Model\StockTakingRow[]**](StockTakingRow.md) |  | [optional]
+**rows** | [**\FortnoxApi\Model\StockTakingRow[]**](StockTakingRow.md) |  | [optional]
 **sorting_id** | **int** |  | [optional]
 **project_id** | **string** |  | [optional]
 **cost_center_code** | **string** |  | [optional]

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**company_information** | [**\OpenAPI\Client\Model\CompanyInfo**](CompanyInfo.md) |  | [optional]
+**company_information** | [**\FortnoxApi\Model\CompanyInfo**](CompanyInfo.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

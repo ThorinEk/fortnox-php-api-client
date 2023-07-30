@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * CustomInboundDocument Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,11 +58,11 @@ class CustomInboundDocument implements ModelInterface, ArrayAccess, \JsonSeriali
         'id' => 'string',
         'type' => 'string',
         'date' => '\DateTime',
-        'currency' => '\OpenAPI\Client\Model\Currency',
+        'currency' => '\FortnoxApi\Model\Currency',
         'note' => 'string',
         'warehouse_ready' => 'bool',
         'voided' => 'bool',
-        'rows' => '\OpenAPI\Client\Model\CustomInboundDocumentRow[]'
+        'rows' => '\FortnoxApi\Model\CustomInboundDocumentRow[]'
     ];
 
     /**
@@ -478,7 +478,7 @@ class CustomInboundDocument implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets currency
      *
-     * @return \OpenAPI\Client\Model\Currency|null
+     * @return \FortnoxApi\Model\Currency|null
      */
     public function getCurrency()
     {
@@ -488,7 +488,7 @@ class CustomInboundDocument implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets currency
      *
-     * @param \OpenAPI\Client\Model\Currency|null $currency currency
+     * @param \FortnoxApi\Model\Currency|null $currency currency
      *
      * @return self
      */
@@ -593,7 +593,7 @@ class CustomInboundDocument implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets rows
      *
-     * @return \OpenAPI\Client\Model\CustomInboundDocumentRow[]
+     * @return \FortnoxApi\Model\CustomInboundDocumentRow[]
      */
     public function getRows()
     {
@@ -603,7 +603,7 @@ class CustomInboundDocument implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets rows
      *
-     * @param \OpenAPI\Client\Model\CustomInboundDocumentRow[] $rows rows
+     * @param \FortnoxApi\Model\CustomInboundDocumentRow[] $rows rows
      *
      * @return self
      */

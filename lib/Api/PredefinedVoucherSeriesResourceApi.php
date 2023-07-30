@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * PredefinedVoucherSeriesResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,9 +134,9 @@ class PredefinedVoucherSeriesResourceApi
      * @param  string $name identifies the predefined voucher series (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPredefinedVoucherSeriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PredefinedVoucherSeriesWrap
+     * @return \FortnoxApi\Model\PredefinedVoucherSeriesWrap
      */
     public function getPredefinedVoucherSeriesResource($name, string $contentType = self::contentTypes['getPredefinedVoucherSeriesResource'][0])
     {
@@ -152,9 +152,9 @@ class PredefinedVoucherSeriesResourceApi
      * @param  string $name identifies the predefined voucher series (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPredefinedVoucherSeriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PredefinedVoucherSeriesWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PredefinedVoucherSeriesWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPredefinedVoucherSeriesResourceWithHttpInfo($name, string $contentType = self::contentTypes['getPredefinedVoucherSeriesResource'][0])
     {
@@ -197,23 +197,23 @@ class PredefinedVoucherSeriesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PredefinedVoucherSeriesWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\PredefinedVoucherSeriesWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PredefinedVoucherSeriesWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap';
+            $returnType = '\FortnoxApi\Model\PredefinedVoucherSeriesWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -234,7 +234,7 @@ class PredefinedVoucherSeriesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap',
+                        '\FortnoxApi\Model\PredefinedVoucherSeriesWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -278,7 +278,7 @@ class PredefinedVoucherSeriesResourceApi
      */
     public function getPredefinedVoucherSeriesResourceAsyncWithHttpInfo($name, string $contentType = self::contentTypes['getPredefinedVoucherSeriesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap';
+        $returnType = '\FortnoxApi\Model\PredefinedVoucherSeriesWrap';
         $request = $this->getPredefinedVoucherSeriesResourceRequest($name, $contentType);
 
         return $this->client
@@ -416,9 +416,9 @@ class PredefinedVoucherSeriesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPredefinedVoucherSeriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PredefinedVoucherSeriesList
+     * @return \FortnoxApi\Model\PredefinedVoucherSeriesList
      */
     public function listPredefinedVoucherSeriesResource(string $contentType = self::contentTypes['listPredefinedVoucherSeriesResource'][0])
     {
@@ -433,9 +433,9 @@ class PredefinedVoucherSeriesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPredefinedVoucherSeriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PredefinedVoucherSeriesList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PredefinedVoucherSeriesList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPredefinedVoucherSeriesResourceWithHttpInfo(string $contentType = self::contentTypes['listPredefinedVoucherSeriesResource'][0])
     {
@@ -478,23 +478,23 @@ class PredefinedVoucherSeriesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PredefinedVoucherSeriesList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PredefinedVoucherSeriesList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PredefinedVoucherSeriesList' !== 'string') {
+                        if ('\FortnoxApi\Model\PredefinedVoucherSeriesList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PredefinedVoucherSeriesList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PredefinedVoucherSeriesList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PredefinedVoucherSeriesList';
+            $returnType = '\FortnoxApi\Model\PredefinedVoucherSeriesList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -515,7 +515,7 @@ class PredefinedVoucherSeriesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PredefinedVoucherSeriesList',
+                        '\FortnoxApi\Model\PredefinedVoucherSeriesList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -557,7 +557,7 @@ class PredefinedVoucherSeriesResourceApi
      */
     public function listPredefinedVoucherSeriesResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listPredefinedVoucherSeriesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PredefinedVoucherSeriesList';
+        $returnType = '\FortnoxApi\Model\PredefinedVoucherSeriesList';
         $request = $this->listPredefinedVoucherSeriesResourceRequest($contentType);
 
         return $this->client
@@ -678,12 +678,12 @@ class PredefinedVoucherSeriesResourceApi
      * Update a predefined voucher series
      *
      * @param  string $name identifies the predefined voucher series (required)
-     * @param  \OpenAPI\Client\Model\PredefinedVoucherSeriesWrap $predefined_voucher_series predefined voucher series to update (optional)
+     * @param  \FortnoxApi\Model\PredefinedVoucherSeriesWrap $predefined_voucher_series predefined voucher series to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePredefinedVoucherSeriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PredefinedVoucherSeriesWrap
+     * @return \FortnoxApi\Model\PredefinedVoucherSeriesWrap
      */
     public function updatePredefinedVoucherSeriesResource($name, $predefined_voucher_series = null, string $contentType = self::contentTypes['updatePredefinedVoucherSeriesResource'][0])
     {
@@ -697,12 +697,12 @@ class PredefinedVoucherSeriesResourceApi
      * Update a predefined voucher series
      *
      * @param  string $name identifies the predefined voucher series (required)
-     * @param  \OpenAPI\Client\Model\PredefinedVoucherSeriesWrap $predefined_voucher_series predefined voucher series to update (optional)
+     * @param  \FortnoxApi\Model\PredefinedVoucherSeriesWrap $predefined_voucher_series predefined voucher series to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePredefinedVoucherSeriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PredefinedVoucherSeriesWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PredefinedVoucherSeriesWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePredefinedVoucherSeriesResourceWithHttpInfo($name, $predefined_voucher_series = null, string $contentType = self::contentTypes['updatePredefinedVoucherSeriesResource'][0])
     {
@@ -745,23 +745,23 @@ class PredefinedVoucherSeriesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PredefinedVoucherSeriesWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\PredefinedVoucherSeriesWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PredefinedVoucherSeriesWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap';
+            $returnType = '\FortnoxApi\Model\PredefinedVoucherSeriesWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -782,7 +782,7 @@ class PredefinedVoucherSeriesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap',
+                        '\FortnoxApi\Model\PredefinedVoucherSeriesWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -798,7 +798,7 @@ class PredefinedVoucherSeriesResourceApi
      * Update a predefined voucher series
      *
      * @param  string $name identifies the predefined voucher series (required)
-     * @param  \OpenAPI\Client\Model\PredefinedVoucherSeriesWrap $predefined_voucher_series predefined voucher series to update (optional)
+     * @param  \FortnoxApi\Model\PredefinedVoucherSeriesWrap $predefined_voucher_series predefined voucher series to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePredefinedVoucherSeriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -820,7 +820,7 @@ class PredefinedVoucherSeriesResourceApi
      * Update a predefined voucher series
      *
      * @param  string $name identifies the predefined voucher series (required)
-     * @param  \OpenAPI\Client\Model\PredefinedVoucherSeriesWrap $predefined_voucher_series predefined voucher series to update (optional)
+     * @param  \FortnoxApi\Model\PredefinedVoucherSeriesWrap $predefined_voucher_series predefined voucher series to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePredefinedVoucherSeriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -828,7 +828,7 @@ class PredefinedVoucherSeriesResourceApi
      */
     public function updatePredefinedVoucherSeriesResourceAsyncWithHttpInfo($name, $predefined_voucher_series = null, string $contentType = self::contentTypes['updatePredefinedVoucherSeriesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PredefinedVoucherSeriesWrap';
+        $returnType = '\FortnoxApi\Model\PredefinedVoucherSeriesWrap';
         $request = $this->updatePredefinedVoucherSeriesResourceRequest($name, $predefined_voucher_series, $contentType);
 
         return $this->client
@@ -871,7 +871,7 @@ class PredefinedVoucherSeriesResourceApi
      * Create request for operation 'updatePredefinedVoucherSeriesResource'
      *
      * @param  string $name identifies the predefined voucher series (required)
-     * @param  \OpenAPI\Client\Model\PredefinedVoucherSeriesWrap $predefined_voucher_series predefined voucher series to update (optional)
+     * @param  \FortnoxApi\Model\PredefinedVoucherSeriesWrap $predefined_voucher_series predefined voucher series to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePredefinedVoucherSeriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

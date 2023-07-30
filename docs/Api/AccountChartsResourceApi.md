@@ -1,4 +1,4 @@
-# OpenAPI\Client\AccountChartsResourceApi
+# FortnoxApi\AccountChartsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `listAccountChartsResource()`
 
 ```php
-listAccountChartsResource(): \OpenAPI\Client\Model\AccountChartWrap
+listAccountChartsResource(): \FortnoxApi\Model\AccountChartWrap
 ```
 
 List all account charts
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountChartsResourceApi(
+$apiInstance = new FortnoxApi\Api\AccountChartsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountChartWrap**](../Model/AccountChartWrap.md)
+[**\FortnoxApi\Model\AccountChartWrap**](../Model/AccountChartWrap.md)
 
 ### Authorization
 

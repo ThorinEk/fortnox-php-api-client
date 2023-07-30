@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * SalaryTransactionWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class SalaryTransactionWrap implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'salary_transaction' => '\OpenAPI\Client\Model\SalaryTransaction'
+        'salary_transaction' => '\FortnoxApi\Model\SalaryTransaction'
     ];
 
     /**
@@ -293,7 +293,7 @@ class SalaryTransactionWrap implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets salary_transaction
      *
-     * @return \OpenAPI\Client\Model\SalaryTransaction
+     * @return \FortnoxApi\Model\SalaryTransaction
      */
     public function getSalaryTransaction()
     {
@@ -303,7 +303,7 @@ class SalaryTransactionWrap implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets salary_transaction
      *
-     * @param \OpenAPI\Client\Model\SalaryTransaction $salary_transaction salary_transaction
+     * @param \FortnoxApi\Model\SalaryTransaction $salary_transaction salary_transaction
      *
      * @return self
      */

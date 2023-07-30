@@ -1,4 +1,4 @@
-# OpenAPI\Client\PredefinedAccountsResourceApi
+# FortnoxApi\PredefinedAccountsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getPredefinedAccountsResource()`
 
 ```php
-getPredefinedAccountsResource($name): \OpenAPI\Client\Model\PredefinedAccountWrap
+getPredefinedAccountsResource($name): \FortnoxApi\Model\PredefinedAccountWrap
 ```
 
 Retrieve information for a specific account type
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PredefinedAccountsResourceApi(
+$apiInstance = new FortnoxApi\Api\PredefinedAccountsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -48,7 +48,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PredefinedAccountWrap**](../Model/PredefinedAccountWrap.md)
+[**\FortnoxApi\Model\PredefinedAccountWrap**](../Model/PredefinedAccountWrap.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ No authorization required
 ## `listPredefinedAccountsResource()`
 
 ```php
-listPredefinedAccountsResource(): \OpenAPI\Client\Model\PredefinedAccountList
+listPredefinedAccountsResource(): \FortnoxApi\Model\PredefinedAccountList
 ```
 
 Retrieve a list of all predefined accounts
@@ -79,7 +79,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PredefinedAccountsResourceApi(
+$apiInstance = new FortnoxApi\Api\PredefinedAccountsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -99,7 +99,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PredefinedAccountList**](../Model/PredefinedAccountList.md)
+[**\FortnoxApi\Model\PredefinedAccountList**](../Model/PredefinedAccountList.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ No authorization required
 ## `updatePredefinedAccountsResource()`
 
 ```php
-updatePredefinedAccountsResource($name, $predefined_account): \OpenAPI\Client\Model\PredefinedAccountWrap
+updatePredefinedAccountsResource($name, $predefined_account): \FortnoxApi\Model\PredefinedAccountWrap
 ```
 
 Update a Predefined Account
@@ -132,13 +132,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PredefinedAccountsResourceApi(
+$apiInstance = new FortnoxApi\Api\PredefinedAccountsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $name = 'name_example'; // string | identifies the predefined account
-$predefined_account = new \OpenAPI\Client\Model\PredefinedAccountWrap(); // \OpenAPI\Client\Model\PredefinedAccountWrap | predefined account to update
+$predefined_account = new \FortnoxApi\Model\PredefinedAccountWrap(); // \FortnoxApi\Model\PredefinedAccountWrap | predefined account to update
 
 try {
     $result = $apiInstance->updatePredefinedAccountsResource($name, $predefined_account);
@@ -153,11 +153,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **string**| identifies the predefined account | |
-| **predefined_account** | [**\OpenAPI\Client\Model\PredefinedAccountWrap**](../Model/PredefinedAccountWrap.md)| predefined account to update | [optional] |
+| **predefined_account** | [**\FortnoxApi\Model\PredefinedAccountWrap**](../Model/PredefinedAccountWrap.md)| predefined account to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PredefinedAccountWrap**](../Model/PredefinedAccountWrap.md)
+[**\FortnoxApi\Model\PredefinedAccountWrap**](../Model/PredefinedAccountWrap.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\ArticlesResourceArticlesApi
+# FortnoxApi\ArticlesResourceArticlesApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createArticlesResourceArticles()`
 
 ```php
-createArticlesResourceArticles($article): \OpenAPI\Client\Model\ArticleWrap
+createArticlesResourceArticles($article): \FortnoxApi\Model\ArticleWrap
 ```
 
 Create an article
@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArticlesResourceArticlesApi(
+$apiInstance = new FortnoxApi\Api\ArticlesResourceArticlesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$article = new \OpenAPI\Client\Model\ArticleWrap(); // \OpenAPI\Client\Model\ArticleWrap | to create
+$article = new \FortnoxApi\Model\ArticleWrap(); // \FortnoxApi\Model\ArticleWrap | to create
 
 try {
     $result = $apiInstance->createArticlesResourceArticles($article);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **article** | [**\OpenAPI\Client\Model\ArticleWrap**](../Model/ArticleWrap.md)| to create | [optional] |
+| **article** | [**\FortnoxApi\Model\ArticleWrap**](../Model/ArticleWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ArticleWrap**](../Model/ArticleWrap.md)
+[**\FortnoxApi\Model\ArticleWrap**](../Model/ArticleWrap.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `getArticlesResourceArticles()`
 
 ```php
-getArticlesResourceArticles($article_number): \OpenAPI\Client\Model\ArticleWrap
+getArticlesResourceArticles($article_number): \FortnoxApi\Model\ArticleWrap
 ```
 
 Retrieve an article
@@ -85,7 +85,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArticlesResourceArticlesApi(
+$apiInstance = new FortnoxApi\Api\ArticlesResourceArticlesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -108,7 +108,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ArticleWrap**](../Model/ArticleWrap.md)
+[**\FortnoxApi\Model\ArticleWrap**](../Model/ArticleWrap.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 ## `listArticlesResourceArticles()`
 
 ```php
-listArticlesResourceArticles($filter, $articlenumber, $description, $ean, $suppliernumber, $manufacturer, $manufacturerarticlenumber, $webshop, $lastmodified, $sortby): \OpenAPI\Client\Model\ArticleListItemList
+listArticlesResourceArticles($filter, $articlenumber, $description, $ean, $suppliernumber, $manufacturer, $manufacturerarticlenumber, $webshop, $lastmodified, $sortby): \FortnoxApi\Model\ArticleListItemList
 ```
 
 Retrieve a list of articles
@@ -141,7 +141,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArticlesResourceArticlesApi(
+$apiInstance = new FortnoxApi\Api\ArticlesResourceArticlesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -182,7 +182,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ArticleListItemList**](../Model/ArticleListItemList.md)
+[**\FortnoxApi\Model\ArticleListItemList**](../Model/ArticleListItemList.md)
 
 ### Authorization
 
@@ -215,7 +215,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArticlesResourceArticlesApi(
+$apiInstance = new FortnoxApi\Api\ArticlesResourceArticlesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -255,7 +255,7 @@ No authorization required
 ## `updateArticlesResourceArticles()`
 
 ```php
-updateArticlesResourceArticles($article_number, $article): \OpenAPI\Client\Model\ArticleWrap
+updateArticlesResourceArticles($article_number, $article): \FortnoxApi\Model\ArticleWrap
 ```
 
 Update an article
@@ -270,13 +270,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArticlesResourceArticlesApi(
+$apiInstance = new FortnoxApi\Api\ArticlesResourceArticlesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $article_number = 56; // int | identifies the article
-$article = new \OpenAPI\Client\Model\ArticleWrap(); // \OpenAPI\Client\Model\ArticleWrap | to update
+$article = new \FortnoxApi\Model\ArticleWrap(); // \FortnoxApi\Model\ArticleWrap | to update
 
 try {
     $result = $apiInstance->updateArticlesResourceArticles($article_number, $article);
@@ -291,11 +291,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **article_number** | **int**| identifies the article | |
-| **article** | [**\OpenAPI\Client\Model\ArticleWrap**](../Model/ArticleWrap.md)| to update | [optional] |
+| **article** | [**\FortnoxApi\Model\ArticleWrap**](../Model/ArticleWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ArticleWrap**](../Model/ArticleWrap.md)
+[**\FortnoxApi\Model\ArticleWrap**](../Model/ArticleWrap.md)
 
 ### Authorization
 

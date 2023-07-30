@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * UnitList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class UnitList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'units' => '\OpenAPI\Client\Model\Unit[]'
+        'units' => '\FortnoxApi\Model\Unit[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class UnitList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets units
      *
-     * @return \OpenAPI\Client\Model\Unit[]|null
+     * @return \FortnoxApi\Model\Unit[]|null
      */
     public function getUnits()
     {
@@ -300,7 +300,7 @@ class UnitList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets units
      *
-     * @param \OpenAPI\Client\Model\Unit[]|null $units units
+     * @param \FortnoxApi\Model\Unit[]|null $units units
      *
      * @return self
      */

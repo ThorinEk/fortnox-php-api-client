@@ -1,4 +1,4 @@
-# OpenAPI\Client\SupplierInvoiceFileConnectionsResourceApi
+# FortnoxApi\SupplierInvoiceFileConnectionsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createSupplierInvoiceFileConnectionsResource()`
 
 ```php
-createSupplierInvoiceFileConnectionsResource($file_connection): \OpenAPI\Client\Model\SupplierInvoiceFileConnectionWrap
+createSupplierInvoiceFileConnectionsResource($file_connection): \FortnoxApi\Model\SupplierInvoiceFileConnectionWrap
 ```
 
 Create an supplier invoice file connection
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$file_connection = new \OpenAPI\Client\Model\SupplierInvoiceFileConnectionWrap(); // \OpenAPI\Client\Model\SupplierInvoiceFileConnectionWrap | supplier invoice file connection to create
+$file_connection = new \FortnoxApi\Model\SupplierInvoiceFileConnectionWrap(); // \FortnoxApi\Model\SupplierInvoiceFileConnectionWrap | supplier invoice file connection to create
 
 try {
     $result = $apiInstance->createSupplierInvoiceFileConnectionsResource($file_connection);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **file_connection** | [**\OpenAPI\Client\Model\SupplierInvoiceFileConnectionWrap**](../Model/SupplierInvoiceFileConnectionWrap.md)| supplier invoice file connection to create | [optional] |
+| **file_connection** | [**\FortnoxApi\Model\SupplierInvoiceFileConnectionWrap**](../Model/SupplierInvoiceFileConnectionWrap.md)| supplier invoice file connection to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierInvoiceFileConnectionWrap**](../Model/SupplierInvoiceFileConnectionWrap.md)
+[**\FortnoxApi\Model\SupplierInvoiceFileConnectionWrap**](../Model/SupplierInvoiceFileConnectionWrap.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `getSupplierInvoiceFileConnectionsResource()`
 
 ```php
-getSupplierInvoiceFileConnectionsResource($file_id): \OpenAPI\Client\Model\SupplierInvoiceFileConnectionWrap
+getSupplierInvoiceFileConnectionsResource($file_id): \FortnoxApi\Model\SupplierInvoiceFileConnectionWrap
 ```
 
 Retrieve a single supplier invoice file connection
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierInvoiceFileConnectionWrap**](../Model/SupplierInvoiceFileConnectionWrap.md)
+[**\FortnoxApi\Model\SupplierInvoiceFileConnectionWrap**](../Model/SupplierInvoiceFileConnectionWrap.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 ## `listSupplierInvoiceFileConnectionsResource()`
 
 ```php
-listSupplierInvoiceFileConnectionsResource(): \OpenAPI\Client\Model\SupplierInvoiceFileConnectionList
+listSupplierInvoiceFileConnectionsResource(): \FortnoxApi\Model\SupplierInvoiceFileConnectionList
 ```
 
 Retrieve a list of supplier invoice file connections
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -156,7 +156,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierInvoiceFileConnectionList**](../Model/SupplierInvoiceFileConnectionList.md)
+[**\FortnoxApi\Model\SupplierInvoiceFileConnectionList**](../Model/SupplierInvoiceFileConnectionList.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SupplierInvoiceFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\SupplierInvoiceFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

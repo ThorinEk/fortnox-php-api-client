@@ -1,4 +1,4 @@
-# OpenAPI\Client\CustomInboundDocumentResourceApi
+# FortnoxApi\CustomInboundDocumentResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getCustomInboundDocumentResource()`
 
 ```php
-getCustomInboundDocumentResource($type, $id): \OpenAPI\Client\Model\CustomInboundDocument
+getCustomInboundDocumentResource($type, $id): \FortnoxApi\Model\CustomInboundDocument
 ```
 
 Get custom inbound document
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomInboundDocumentResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomInboundDocumentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -51,7 +51,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomInboundDocument**](../Model/CustomInboundDocument.md)
+[**\FortnoxApi\Model\CustomInboundDocument**](../Model/CustomInboundDocument.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomInboundDocumentResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomInboundDocumentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -126,7 +126,7 @@ No authorization required
 ## `saveCustomInboundDocumentResource()`
 
 ```php
-saveCustomInboundDocumentResource($type, $id, $document): \OpenAPI\Client\Model\CustomInboundDocument
+saveCustomInboundDocumentResource($type, $id, $document): \FortnoxApi\Model\CustomInboundDocument
 ```
 
 Save custom inbound document
@@ -139,14 +139,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomInboundDocumentResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomInboundDocumentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $type = 'type_example'; // string | min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-), type is case-insensitive  <blockquote><pre>       Type is a custom name/reference of the document that will be used to reference the document type <br>       * If type is not known, it will be registered as belonging to the INBOUND category. <br>       * If type is an existing custom document type of category OUTBOUND an error is thrown. <br>       * If type is invalid an error is thrown. <br>  </pre></blockquote>
 $id = 'id_example'; // string | min 1 character, max 25 characters, may only contain digits 0-9
-$document = new \OpenAPI\Client\Model\CustomInboundDocument(); // \OpenAPI\Client\Model\CustomInboundDocument | the <code>CustomInboundDocument</code> to create
+$document = new \FortnoxApi\Model\CustomInboundDocument(); // \FortnoxApi\Model\CustomInboundDocument | the <code>CustomInboundDocument</code> to create
 
 try {
     $result = $apiInstance->saveCustomInboundDocumentResource($type, $id, $document);
@@ -162,11 +162,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **type** | **string**| min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-), type is case-insensitive  &lt;blockquote&gt;&lt;pre&gt;       Type is a custom name/reference of the document that will be used to reference the document type &lt;br&gt;       * If type is not known, it will be registered as belonging to the INBOUND category. &lt;br&gt;       * If type is an existing custom document type of category OUTBOUND an error is thrown. &lt;br&gt;       * If type is invalid an error is thrown. &lt;br&gt;  &lt;/pre&gt;&lt;/blockquote&gt; | |
 | **id** | **string**| min 1 character, max 25 characters, may only contain digits 0-9 | |
-| **document** | [**\OpenAPI\Client\Model\CustomInboundDocument**](../Model/CustomInboundDocument.md)| the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create | [optional] |
+| **document** | [**\FortnoxApi\Model\CustomInboundDocument**](../Model/CustomInboundDocument.md)| the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomInboundDocument**](../Model/CustomInboundDocument.md)
+[**\FortnoxApi\Model\CustomInboundDocument**](../Model/CustomInboundDocument.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomInboundDocumentResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomInboundDocumentResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

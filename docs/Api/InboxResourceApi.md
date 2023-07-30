@@ -1,4 +1,4 @@
-# OpenAPI\Client\InboxResourceApi
+# FortnoxApi\InboxResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InboxResourceApi(
+$apiInstance = new FortnoxApi\Api\InboxResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -67,7 +67,7 @@ No authorization required
 ## `getInboxResource()`
 
 ```php
-getInboxResource(): \OpenAPI\Client\Model\FolderWrap
+getInboxResource(): \FortnoxApi\Model\FolderWrap
 ```
 
 Retrieve the root folder containing files and folders
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InboxResourceApi(
+$apiInstance = new FortnoxApi\Api\InboxResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -100,7 +100,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FolderWrap**](../Model/FolderWrap.md)
+[**\FortnoxApi\Model\FolderWrap**](../Model/FolderWrap.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InboxResourceApi(
+$apiInstance = new FortnoxApi\Api\InboxResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -171,7 +171,7 @@ No authorization required
 ## `upload()`
 
 ```php
-upload($folder_id, $path, $file): \OpenAPI\Client\Model\FolderFileRowWrap
+upload($folder_id, $path, $file): \FortnoxApi\Model\FolderFileRowWrap
 ```
 
 Upload a file
@@ -186,7 +186,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InboxResourceApi(
+$apiInstance = new FortnoxApi\Api\InboxResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -213,7 +213,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FolderFileRowWrap**](../Model/FolderFileRowWrap.md)
+[**\FortnoxApi\Model\FolderFileRowWrap**](../Model/FolderFileRowWrap.md)
 
 ### Authorization
 

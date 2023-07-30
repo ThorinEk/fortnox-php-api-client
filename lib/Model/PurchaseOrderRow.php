@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * PurchaseOrderRow Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -76,7 +76,7 @@ class PurchaseOrderRow implements ModelInterface, ArrayAccess, \JsonSerializable
         'stock_location_code' => 'string',
         'stock_location_name' => 'string',
         'is_stock_item' => 'bool',
-        'notes' => '\OpenAPI\Client\Model\PurchaseOrderRowNote[]'
+        'notes' => '\FortnoxApi\Model\PurchaseOrderRowNote[]'
     ];
 
     /**
@@ -1103,7 +1103,7 @@ class PurchaseOrderRow implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets notes
      *
-     * @return \OpenAPI\Client\Model\PurchaseOrderRowNote[]|null
+     * @return \FortnoxApi\Model\PurchaseOrderRowNote[]|null
      */
     public function getNotes()
     {
@@ -1113,7 +1113,7 @@ class PurchaseOrderRow implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets notes
      *
-     * @param \OpenAPI\Client\Model\PurchaseOrderRowNote[]|null $notes notes
+     * @param \FortnoxApi\Model\PurchaseOrderRowNote[]|null $notes notes
      *
      * @return self
      */

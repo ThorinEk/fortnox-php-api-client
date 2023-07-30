@@ -1,4 +1,4 @@
-# OpenAPI\Client\VacationDebtBasisResourceApi
+# FortnoxApi\VacationDebtBasisResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getVacationDebtBasisResource()`
 
 ```php
-getVacationDebtBasisResource($year, $month): \OpenAPI\Client\Model\VacationDebtBasisWrap
+getVacationDebtBasisResource($year, $month): \FortnoxApi\Model\VacationDebtBasisWrap
 ```
 
 Retrieve a specific vacation debt basis for a posted voucher
@@ -23,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VacationDebtBasisResourceApi(
+$apiInstance = new FortnoxApi\Api\VacationDebtBasisResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -48,7 +48,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VacationDebtBasisWrap**](../Model/VacationDebtBasisWrap.md)
+[**\FortnoxApi\Model\VacationDebtBasisWrap**](../Model/VacationDebtBasisWrap.md)
 
 ### Authorization
 

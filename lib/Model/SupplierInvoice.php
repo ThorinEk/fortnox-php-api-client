@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * SupplierInvoice Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -80,7 +80,7 @@ class SupplierInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_pending' => 'bool',
         'project' => 'string',
         'round_off_value' => 'string',
-        'supplier_invoice_rows' => '\OpenAPI\Client\Model\SupplierInvoiceSupplierInvoiceRow[]',
+        'supplier_invoice_rows' => '\FortnoxApi\Model\SupplierInvoiceSupplierInvoiceRow[]',
         'supplier_number' => 'string',
         'supplier_name' => 'string',
         'total' => 'string',
@@ -92,7 +92,7 @@ class SupplierInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'vat_type' => 'string',
         'sales_type' => 'string',
         'accounting_method' => 'string',
-        'vouchers' => '\OpenAPI\Client\Model\SupplierInvoiceVoucher[]',
+        'vouchers' => '\FortnoxApi\Model\SupplierInvoiceVoucher[]',
         'final_pay_date' => '\DateTime'
     ];
 
@@ -1361,7 +1361,7 @@ class SupplierInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets supplier_invoice_rows
      *
-     * @return \OpenAPI\Client\Model\SupplierInvoiceSupplierInvoiceRow[]|null
+     * @return \FortnoxApi\Model\SupplierInvoiceSupplierInvoiceRow[]|null
      */
     public function getSupplierInvoiceRows()
     {
@@ -1371,7 +1371,7 @@ class SupplierInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets supplier_invoice_rows
      *
-     * @param \OpenAPI\Client\Model\SupplierInvoiceSupplierInvoiceRow[]|null $supplier_invoice_rows supplier_invoice_rows
+     * @param \FortnoxApi\Model\SupplierInvoiceSupplierInvoiceRow[]|null $supplier_invoice_rows supplier_invoice_rows
      *
      * @return self
      */
@@ -1722,7 +1722,7 @@ class SupplierInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets vouchers
      *
-     * @return \OpenAPI\Client\Model\SupplierInvoiceVoucher[]|null
+     * @return \FortnoxApi\Model\SupplierInvoiceVoucher[]|null
      */
     public function getVouchers()
     {
@@ -1732,7 +1732,7 @@ class SupplierInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vouchers
      *
-     * @param \OpenAPI\Client\Model\SupplierInvoiceVoucher[]|null $vouchers vouchers
+     * @param \FortnoxApi\Model\SupplierInvoiceVoucher[]|null $vouchers vouchers
      *
      * @return self
      */

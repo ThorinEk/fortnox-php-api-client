@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * CustomDocumentTypeResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,10 +131,10 @@ class CustomDocumentTypeResourceApi
      *
      * Create custom document type
      *
-     * @param  \OpenAPI\Client\Model\CustomDocumentType $custom_document_type The &lt;code&gt;CustomDocumentType&lt;/code&gt;. (optional)
+     * @param  \FortnoxApi\Model\CustomDocumentType $custom_document_type The &lt;code&gt;CustomDocumentType&lt;/code&gt;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomDocumentTypeResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return int
      */
@@ -149,10 +149,10 @@ class CustomDocumentTypeResourceApi
      *
      * Create custom document type
      *
-     * @param  \OpenAPI\Client\Model\CustomDocumentType $custom_document_type The &lt;code&gt;CustomDocumentType&lt;/code&gt;. (optional)
+     * @param  \FortnoxApi\Model\CustomDocumentType $custom_document_type The &lt;code&gt;CustomDocumentType&lt;/code&gt;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomDocumentTypeResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
@@ -249,7 +249,7 @@ class CustomDocumentTypeResourceApi
      *
      * Create custom document type
      *
-     * @param  \OpenAPI\Client\Model\CustomDocumentType $custom_document_type The &lt;code&gt;CustomDocumentType&lt;/code&gt;. (optional)
+     * @param  \FortnoxApi\Model\CustomDocumentType $custom_document_type The &lt;code&gt;CustomDocumentType&lt;/code&gt;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomDocumentTypeResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -270,7 +270,7 @@ class CustomDocumentTypeResourceApi
      *
      * Create custom document type
      *
-     * @param  \OpenAPI\Client\Model\CustomDocumentType $custom_document_type The &lt;code&gt;CustomDocumentType&lt;/code&gt;. (optional)
+     * @param  \FortnoxApi\Model\CustomDocumentType $custom_document_type The &lt;code&gt;CustomDocumentType&lt;/code&gt;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomDocumentTypeResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -320,7 +320,7 @@ class CustomDocumentTypeResourceApi
     /**
      * Create request for operation 'createCustomDocumentTypeResource'
      *
-     * @param  \OpenAPI\Client\Model\CustomDocumentType $custom_document_type The &lt;code&gt;CustomDocumentType&lt;/code&gt;. (optional)
+     * @param  \FortnoxApi\Model\CustomDocumentType $custom_document_type The &lt;code&gt;CustomDocumentType&lt;/code&gt;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomDocumentTypeResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -409,9 +409,9 @@ class CustomDocumentTypeResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllCustomDocumentTypeResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomDocumentType[]
+     * @return \FortnoxApi\Model\CustomDocumentType[]
      */
     public function getAllCustomDocumentTypeResource(string $contentType = self::contentTypes['getAllCustomDocumentTypeResource'][0])
     {
@@ -426,9 +426,9 @@ class CustomDocumentTypeResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllCustomDocumentTypeResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomDocumentType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomDocumentType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllCustomDocumentTypeResourceWithHttpInfo(string $contentType = self::contentTypes['getAllCustomDocumentTypeResource'][0])
     {
@@ -471,23 +471,23 @@ class CustomDocumentTypeResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomDocumentType[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomDocumentType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomDocumentType[]' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomDocumentType[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomDocumentType[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomDocumentType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomDocumentType[]';
+            $returnType = '\FortnoxApi\Model\CustomDocumentType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -508,7 +508,7 @@ class CustomDocumentTypeResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomDocumentType[]',
+                        '\FortnoxApi\Model\CustomDocumentType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -550,7 +550,7 @@ class CustomDocumentTypeResourceApi
      */
     public function getAllCustomDocumentTypeResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['getAllCustomDocumentTypeResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomDocumentType[]';
+        $returnType = '\FortnoxApi\Model\CustomDocumentType[]';
         $request = $this->getAllCustomDocumentTypeResourceRequest($contentType);
 
         return $this->client
@@ -673,9 +673,9 @@ class CustomDocumentTypeResourceApi
      * @param  string $type the name of the reference type (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomDocumentTypeResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomDocumentType
+     * @return \FortnoxApi\Model\CustomDocumentType
      */
     public function getCustomDocumentTypeResource($type, string $contentType = self::contentTypes['getCustomDocumentTypeResource'][0])
     {
@@ -691,9 +691,9 @@ class CustomDocumentTypeResourceApi
      * @param  string $type the name of the reference type (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomDocumentTypeResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomDocumentType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomDocumentType, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomDocumentTypeResourceWithHttpInfo($type, string $contentType = self::contentTypes['getCustomDocumentTypeResource'][0])
     {
@@ -736,23 +736,23 @@ class CustomDocumentTypeResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomDocumentType' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomDocumentType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomDocumentType' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomDocumentType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomDocumentType', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomDocumentType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomDocumentType';
+            $returnType = '\FortnoxApi\Model\CustomDocumentType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -773,7 +773,7 @@ class CustomDocumentTypeResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomDocumentType',
+                        '\FortnoxApi\Model\CustomDocumentType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -817,7 +817,7 @@ class CustomDocumentTypeResourceApi
      */
     public function getCustomDocumentTypeResourceAsyncWithHttpInfo($type, string $contentType = self::contentTypes['getCustomDocumentTypeResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomDocumentType';
+        $returnType = '\FortnoxApi\Model\CustomDocumentType';
         $request = $this->getCustomDocumentTypeResourceRequest($type, $contentType);
 
         return $this->client

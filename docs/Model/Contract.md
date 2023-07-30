@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **customer_name** | **string** |  | [optional]
 **customer_number** | **string** |  |
 **document_number** | **string** |  | [optional]
-**email_information** | [**\OpenAPI\Client\Model\ContractEmailInformation**](ContractEmailInformation.md) |  | [optional]
+**email_information** | [**\FortnoxApi\Model\ContractEmailInformation**](ContractEmailInformation.md) |  | [optional]
 **external_invoice_reference1** | **string** |  | [optional]
 **external_invoice_reference2** | **string** |  | [optional]
 **freight** | **float** |  | [optional]
@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **invoice_discount** | **float** |  | [optional]
 **invoice_interval** | **int** |  | [optional]
 **invoices_remaining** | **string** |  | [optional]
-**invoice_rows** | [**\OpenAPI\Client\Model\ContractInvoiceRow[]**](ContractInvoiceRow.md) |  |
+**invoice_rows** | [**\FortnoxApi\Model\ContractInvoiceRow[]**](ContractInvoiceRow.md) |  |
 **language** | **string** |  | [optional]
 **last_invoice_date** | **string** |  | [optional]
 **net** | **float** |  | [optional]

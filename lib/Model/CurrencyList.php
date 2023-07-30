@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * CurrencyList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class CurrencyList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'currencies' => '\OpenAPI\Client\Model\Currency[]'
+        'currencies' => '\FortnoxApi\Model\Currency[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class CurrencyList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets currencies
      *
-     * @return \OpenAPI\Client\Model\Currency[]|null
+     * @return \FortnoxApi\Model\Currency[]|null
      */
     public function getCurrencies()
     {
@@ -300,7 +300,7 @@ class CurrencyList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currencies
      *
-     * @param \OpenAPI\Client\Model\Currency[]|null $currencies currencies
+     * @param \FortnoxApi\Model\Currency[]|null $currencies currencies
      *
      * @return self
      */

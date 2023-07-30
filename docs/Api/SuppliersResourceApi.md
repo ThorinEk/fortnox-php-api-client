@@ -1,4 +1,4 @@
-# OpenAPI\Client\SuppliersResourceApi
+# FortnoxApi\SuppliersResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createSuppliersResource()`
 
 ```php
-createSuppliersResource($supplier): \OpenAPI\Client\Model\SupplierWrap
+createSuppliersResource($supplier): \FortnoxApi\Model\SupplierWrap
 ```
 
 Create a supplier
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SuppliersResourceApi(
+$apiInstance = new FortnoxApi\Api\SuppliersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$supplier = new \OpenAPI\Client\Model\SupplierWrap(); // \OpenAPI\Client\Model\SupplierWrap | to create
+$supplier = new \FortnoxApi\Model\SupplierWrap(); // \FortnoxApi\Model\SupplierWrap | to create
 
 try {
     $result = $apiInstance->createSuppliersResource($supplier);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **supplier** | [**\OpenAPI\Client\Model\SupplierWrap**](../Model/SupplierWrap.md)| to create | [optional] |
+| **supplier** | [**\FortnoxApi\Model\SupplierWrap**](../Model/SupplierWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierWrap**](../Model/SupplierWrap.md)
+[**\FortnoxApi\Model\SupplierWrap**](../Model/SupplierWrap.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `getSuppliersResource()`
 
 ```php
-getSuppliersResource($supplier_number): \OpenAPI\Client\Model\SupplierWrap
+getSuppliersResource($supplier_number): \FortnoxApi\Model\SupplierWrap
 ```
 
 Retrieve a single supplier
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SuppliersResourceApi(
+$apiInstance = new FortnoxApi\Api\SuppliersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierWrap**](../Model/SupplierWrap.md)
+[**\FortnoxApi\Model\SupplierWrap**](../Model/SupplierWrap.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 ## `listSuppliersResource()`
 
 ```php
-listSuppliersResource(): \OpenAPI\Client\Model\SupplierListItemList
+listSuppliersResource(): \FortnoxApi\Model\SupplierListItemList
 ```
 
 Retrieve a list of suppliers
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SuppliersResourceApi(
+$apiInstance = new FortnoxApi\Api\SuppliersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -156,7 +156,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierListItemList**](../Model/SupplierListItemList.md)
+[**\FortnoxApi\Model\SupplierListItemList**](../Model/SupplierListItemList.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
 ## `updateSuppliersResource()`
 
 ```php
-updateSuppliersResource($supplier_number, $supplier): \OpenAPI\Client\Model\SupplierWrap
+updateSuppliersResource($supplier_number, $supplier): \FortnoxApi\Model\SupplierWrap
 ```
 
 Update a supplier
@@ -187,13 +187,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SuppliersResourceApi(
+$apiInstance = new FortnoxApi\Api\SuppliersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $supplier_number = 'supplier_number_example'; // string | identifies the supplier
-$supplier = new \OpenAPI\Client\Model\SupplierWrap(); // \OpenAPI\Client\Model\SupplierWrap | to update
+$supplier = new \FortnoxApi\Model\SupplierWrap(); // \FortnoxApi\Model\SupplierWrap | to update
 
 try {
     $result = $apiInstance->updateSuppliersResource($supplier_number, $supplier);
@@ -208,11 +208,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **supplier_number** | **string**| identifies the supplier | |
-| **supplier** | [**\OpenAPI\Client\Model\SupplierWrap**](../Model/SupplierWrap.md)| to update | [optional] |
+| **supplier** | [**\FortnoxApi\Model\SupplierWrap**](../Model/SupplierWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SupplierWrap**](../Model/SupplierWrap.md)
+[**\FortnoxApi\Model\SupplierWrap**](../Model/SupplierWrap.md)
 
 ### Authorization
 

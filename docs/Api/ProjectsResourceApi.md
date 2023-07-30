@@ -1,4 +1,4 @@
-# OpenAPI\Client\ProjectsResourceApi
+# FortnoxApi\ProjectsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createProjectsResource()`
 
 ```php
-createProjectsResource($project): \OpenAPI\Client\Model\ProjectWrap
+createProjectsResource($project): \FortnoxApi\Model\ProjectWrap
 ```
 
 Create a project
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProjectsResourceApi(
+$apiInstance = new FortnoxApi\Api\ProjectsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$project = new \OpenAPI\Client\Model\ProjectWrap(); // \OpenAPI\Client\Model\ProjectWrap | to create
+$project = new \FortnoxApi\Model\ProjectWrap(); // \FortnoxApi\Model\ProjectWrap | to create
 
 try {
     $result = $apiInstance->createProjectsResource($project);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **project** | [**\OpenAPI\Client\Model\ProjectWrap**](../Model/ProjectWrap.md)| to create | [optional] |
+| **project** | [**\FortnoxApi\Model\ProjectWrap**](../Model/ProjectWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProjectWrap**](../Model/ProjectWrap.md)
+[**\FortnoxApi\Model\ProjectWrap**](../Model/ProjectWrap.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getProjectsResource()`
 
 ```php
-getProjectsResource($project_number): \OpenAPI\Client\Model\ProjectWrap
+getProjectsResource($project_number): \FortnoxApi\Model\ProjectWrap
 ```
 
 Retrieve a single project
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProjectsResourceApi(
+$apiInstance = new FortnoxApi\Api\ProjectsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProjectWrap**](../Model/ProjectWrap.md)
+[**\FortnoxApi\Model\ProjectWrap**](../Model/ProjectWrap.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `listProjectsResource()`
 
 ```php
-listProjectsResource(): \OpenAPI\Client\Model\ProjectListItemList
+listProjectsResource(): \FortnoxApi\Model\ProjectListItemList
 ```
 
 Retrieve a list of projects
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProjectsResourceApi(
+$apiInstance = new FortnoxApi\Api\ProjectsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProjectListItemList**](../Model/ProjectListItemList.md)
+[**\FortnoxApi\Model\ProjectListItemList**](../Model/ProjectListItemList.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProjectsResourceApi(
+$apiInstance = new FortnoxApi\Api\ProjectsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -228,7 +228,7 @@ No authorization required
 ## `updateProjectsResource()`
 
 ```php
-updateProjectsResource($project_number, $project): \OpenAPI\Client\Model\ProjectWrap
+updateProjectsResource($project_number, $project): \FortnoxApi\Model\ProjectWrap
 ```
 
 Update a project
@@ -241,13 +241,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ProjectsResourceApi(
+$apiInstance = new FortnoxApi\Api\ProjectsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $project_number = 56; // int | identifies the project
-$project = new \OpenAPI\Client\Model\ProjectWrap(); // \OpenAPI\Client\Model\ProjectWrap | to update
+$project = new \FortnoxApi\Model\ProjectWrap(); // \FortnoxApi\Model\ProjectWrap | to update
 
 try {
     $result = $apiInstance->updateProjectsResource($project_number, $project);
@@ -262,11 +262,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **project_number** | **int**| identifies the project | |
-| **project** | [**\OpenAPI\Client\Model\ProjectWrap**](../Model/ProjectWrap.md)| to update | [optional] |
+| **project** | [**\FortnoxApi\Model\ProjectWrap**](../Model/ProjectWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProjectWrap**](../Model/ProjectWrap.md)
+[**\FortnoxApi\Model\ProjectWrap**](../Model/ProjectWrap.md)
 
 ### Authorization
 

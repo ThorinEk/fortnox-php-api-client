@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * TermsOfDeliveryList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class TermsOfDeliveryList implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'terms_of_deliveries' => '\OpenAPI\Client\Model\TermsOfDelivery[]'
+        'terms_of_deliveries' => '\FortnoxApi\Model\TermsOfDelivery[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class TermsOfDeliveryList implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets terms_of_deliveries
      *
-     * @return \OpenAPI\Client\Model\TermsOfDelivery[]|null
+     * @return \FortnoxApi\Model\TermsOfDelivery[]|null
      */
     public function getTermsOfDeliveries()
     {
@@ -300,7 +300,7 @@ class TermsOfDeliveryList implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets terms_of_deliveries
      *
-     * @param \OpenAPI\Client\Model\TermsOfDelivery[]|null $terms_of_deliveries terms_of_deliveries
+     * @param \FortnoxApi\Model\TermsOfDelivery[]|null $terms_of_deliveries terms_of_deliveries
      *
      * @return self
      */

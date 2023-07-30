@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **payment_pending** | **bool** |  | [optional]
 **project** | **string** |  | [optional]
 **round_off_value** | **string** |  | [optional]
-**supplier_invoice_rows** | [**\OpenAPI\Client\Model\SupplierInvoiceSupplierInvoiceRow[]**](SupplierInvoiceSupplierInvoiceRow.md) |  | [optional]
+**supplier_invoice_rows** | [**\FortnoxApi\Model\SupplierInvoiceSupplierInvoiceRow[]**](SupplierInvoiceSupplierInvoiceRow.md) |  | [optional]
 **supplier_number** | **string** |  |
 **supplier_name** | **string** |  | [optional]
 **total** | **string** |  | [optional]
@@ -41,7 +41,7 @@ Name | Type | Description | Notes
 **vat_type** | **string** |  | [optional]
 **sales_type** | **string** |  | [optional]
 **accounting_method** | **string** |  | [optional]
-**vouchers** | [**\OpenAPI\Client\Model\SupplierInvoiceVoucher[]**](SupplierInvoiceVoucher.md) |  | [optional]
+**vouchers** | [**\FortnoxApi\Model\SupplierInvoiceVoucher[]**](SupplierInvoiceVoucher.md) |  | [optional]
 **final_pay_date** | **\DateTime** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

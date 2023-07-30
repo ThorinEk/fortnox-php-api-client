@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * TRItem Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TRItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => 'string',
         'active' => 'bool',
         'purchase_price' => 'float',
-        'sales_prices' => '\OpenAPI\Client\Model\TRItemPrice[]',
+        'sales_prices' => '\FortnoxApi\Model\TRItemPrice[]',
         'type' => 'string',
         'unit' => 'string',
         'is_stock' => 'bool'
@@ -501,7 +501,7 @@ class TRItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets sales_prices
      *
-     * @return \OpenAPI\Client\Model\TRItemPrice[]|null
+     * @return \FortnoxApi\Model\TRItemPrice[]|null
      */
     public function getSalesPrices()
     {
@@ -511,7 +511,7 @@ class TRItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sales_prices
      *
-     * @param \OpenAPI\Client\Model\TRItemPrice[]|null $sales_prices sales_prices
+     * @param \FortnoxApi\Model\TRItemPrice[]|null $sales_prices sales_prices
      *
      * @return self
      */

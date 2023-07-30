@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **accrual_account** | **int** |  |
 **cost_account** | **int** |  |
 **description** | **string** |  |
-**accrual_rows** | [**\OpenAPI\Client\Model\ContractAccrualAccrualRow[]**](ContractAccrualAccrualRow.md) |  |
+**accrual_rows** | [**\FortnoxApi\Model\ContractAccrualAccrualRow[]**](ContractAccrualAccrualRow.md) |  |
 **document_number** | **int** |  |
 **period** | **string** |  | [optional]
 **times** | **int** |  | [optional]

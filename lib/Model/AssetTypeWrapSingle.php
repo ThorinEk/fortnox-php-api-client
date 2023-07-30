@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * AssetTypeWrapSingle Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class AssetTypeWrapSingle implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => '\OpenAPI\Client\Model\AssetType'
+        'type' => '\FortnoxApi\Model\AssetType'
     ];
 
     /**
@@ -290,7 +290,7 @@ class AssetTypeWrapSingle implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets type
      *
-     * @return \OpenAPI\Client\Model\AssetType|null
+     * @return \FortnoxApi\Model\AssetType|null
      */
     public function getType()
     {
@@ -300,7 +300,7 @@ class AssetTypeWrapSingle implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets type
      *
-     * @param \OpenAPI\Client\Model\AssetType|null $type type
+     * @param \FortnoxApi\Model\AssetType|null $type type
      *
      * @return self
      */

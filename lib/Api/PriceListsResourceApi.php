@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * PriceListsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,12 +134,12 @@ class PriceListsResourceApi
      *
      * Create a price list
      *
-     * @param  \OpenAPI\Client\Model\PriceListWrap $price_list to create (optional)
+     * @param  \FortnoxApi\Model\PriceListWrap $price_list to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPriceListsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PriceListWrap
+     * @return \FortnoxApi\Model\PriceListWrap
      */
     public function createPriceListsResource($price_list = null, string $contentType = self::contentTypes['createPriceListsResource'][0])
     {
@@ -152,12 +152,12 @@ class PriceListsResourceApi
      *
      * Create a price list
      *
-     * @param  \OpenAPI\Client\Model\PriceListWrap $price_list to create (optional)
+     * @param  \FortnoxApi\Model\PriceListWrap $price_list to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPriceListsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PriceListWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PriceListWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPriceListsResourceWithHttpInfo($price_list = null, string $contentType = self::contentTypes['createPriceListsResource'][0])
     {
@@ -200,23 +200,23 @@ class PriceListsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PriceListWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PriceListWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PriceListWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\PriceListWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PriceListWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PriceListWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PriceListWrap';
+            $returnType = '\FortnoxApi\Model\PriceListWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -237,7 +237,7 @@ class PriceListsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PriceListWrap',
+                        '\FortnoxApi\Model\PriceListWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class PriceListsResourceApi
      *
      * Create a price list
      *
-     * @param  \OpenAPI\Client\Model\PriceListWrap $price_list to create (optional)
+     * @param  \FortnoxApi\Model\PriceListWrap $price_list to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPriceListsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class PriceListsResourceApi
      *
      * Create a price list
      *
-     * @param  \OpenAPI\Client\Model\PriceListWrap $price_list to create (optional)
+     * @param  \FortnoxApi\Model\PriceListWrap $price_list to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPriceListsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class PriceListsResourceApi
      */
     public function createPriceListsResourceAsyncWithHttpInfo($price_list = null, string $contentType = self::contentTypes['createPriceListsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PriceListWrap';
+        $returnType = '\FortnoxApi\Model\PriceListWrap';
         $request = $this->createPriceListsResourceRequest($price_list, $contentType);
 
         return $this->client
@@ -323,7 +323,7 @@ class PriceListsResourceApi
     /**
      * Create request for operation 'createPriceListsResource'
      *
-     * @param  \OpenAPI\Client\Model\PriceListWrap $price_list to create (optional)
+     * @param  \FortnoxApi\Model\PriceListWrap $price_list to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPriceListsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -413,9 +413,9 @@ class PriceListsResourceApi
      * @param  string $code identifies the price list (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPriceListsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PriceListWrap
+     * @return \FortnoxApi\Model\PriceListWrap
      */
     public function getPriceListsResource($code, string $contentType = self::contentTypes['getPriceListsResource'][0])
     {
@@ -431,9 +431,9 @@ class PriceListsResourceApi
      * @param  string $code identifies the price list (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPriceListsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PriceListWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PriceListWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPriceListsResourceWithHttpInfo($code, string $contentType = self::contentTypes['getPriceListsResource'][0])
     {
@@ -476,23 +476,23 @@ class PriceListsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PriceListWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PriceListWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PriceListWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\PriceListWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PriceListWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PriceListWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PriceListWrap';
+            $returnType = '\FortnoxApi\Model\PriceListWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -513,7 +513,7 @@ class PriceListsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PriceListWrap',
+                        '\FortnoxApi\Model\PriceListWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -557,7 +557,7 @@ class PriceListsResourceApi
      */
     public function getPriceListsResourceAsyncWithHttpInfo($code, string $contentType = self::contentTypes['getPriceListsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PriceListWrap';
+        $returnType = '\FortnoxApi\Model\PriceListWrap';
         $request = $this->getPriceListsResourceRequest($code, $contentType);
 
         return $this->client
@@ -695,9 +695,9 @@ class PriceListsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPriceListsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PriceListList
+     * @return \FortnoxApi\Model\PriceListList
      */
     public function listPriceListsResource(string $contentType = self::contentTypes['listPriceListsResource'][0])
     {
@@ -712,9 +712,9 @@ class PriceListsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPriceListsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PriceListList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PriceListList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPriceListsResourceWithHttpInfo(string $contentType = self::contentTypes['listPriceListsResource'][0])
     {
@@ -757,23 +757,23 @@ class PriceListsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PriceListList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PriceListList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PriceListList' !== 'string') {
+                        if ('\FortnoxApi\Model\PriceListList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PriceListList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PriceListList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PriceListList';
+            $returnType = '\FortnoxApi\Model\PriceListList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -794,7 +794,7 @@ class PriceListsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PriceListList',
+                        '\FortnoxApi\Model\PriceListList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -836,7 +836,7 @@ class PriceListsResourceApi
      */
     public function listPriceListsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listPriceListsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PriceListList';
+        $returnType = '\FortnoxApi\Model\PriceListList';
         $request = $this->listPriceListsResourceRequest($contentType);
 
         return $this->client
@@ -957,12 +957,12 @@ class PriceListsResourceApi
      * Update a price list
      *
      * @param  string $code identifies the price list (required)
-     * @param  \OpenAPI\Client\Model\PriceListWrap $price_list price list to update (optional)
+     * @param  \FortnoxApi\Model\PriceListWrap $price_list price list to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePriceListsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PriceListWrap
+     * @return \FortnoxApi\Model\PriceListWrap
      */
     public function updatePriceListsResource($code, $price_list = null, string $contentType = self::contentTypes['updatePriceListsResource'][0])
     {
@@ -976,12 +976,12 @@ class PriceListsResourceApi
      * Update a price list
      *
      * @param  string $code identifies the price list (required)
-     * @param  \OpenAPI\Client\Model\PriceListWrap $price_list price list to update (optional)
+     * @param  \FortnoxApi\Model\PriceListWrap $price_list price list to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePriceListsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PriceListWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\PriceListWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePriceListsResourceWithHttpInfo($code, $price_list = null, string $contentType = self::contentTypes['updatePriceListsResource'][0])
     {
@@ -1024,23 +1024,23 @@ class PriceListsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PriceListWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\PriceListWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PriceListWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\PriceListWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PriceListWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\PriceListWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PriceListWrap';
+            $returnType = '\FortnoxApi\Model\PriceListWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1061,7 +1061,7 @@ class PriceListsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PriceListWrap',
+                        '\FortnoxApi\Model\PriceListWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1077,7 +1077,7 @@ class PriceListsResourceApi
      * Update a price list
      *
      * @param  string $code identifies the price list (required)
-     * @param  \OpenAPI\Client\Model\PriceListWrap $price_list price list to update (optional)
+     * @param  \FortnoxApi\Model\PriceListWrap $price_list price list to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePriceListsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1099,7 +1099,7 @@ class PriceListsResourceApi
      * Update a price list
      *
      * @param  string $code identifies the price list (required)
-     * @param  \OpenAPI\Client\Model\PriceListWrap $price_list price list to update (optional)
+     * @param  \FortnoxApi\Model\PriceListWrap $price_list price list to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePriceListsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1107,7 +1107,7 @@ class PriceListsResourceApi
      */
     public function updatePriceListsResourceAsyncWithHttpInfo($code, $price_list = null, string $contentType = self::contentTypes['updatePriceListsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PriceListWrap';
+        $returnType = '\FortnoxApi\Model\PriceListWrap';
         $request = $this->updatePriceListsResourceRequest($code, $price_list, $contentType);
 
         return $this->client
@@ -1150,7 +1150,7 @@ class PriceListsResourceApi
      * Create request for operation 'updatePriceListsResource'
      *
      * @param  string $code identifies the price list (required)
-     * @param  \OpenAPI\Client\Model\PriceListWrap $price_list price list to update (optional)
+     * @param  \FortnoxApi\Model\PriceListWrap $price_list price list to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePriceListsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

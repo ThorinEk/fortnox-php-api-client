@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * OffersResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -155,9 +155,9 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OfferWrap
+     * @return \FortnoxApi\Model\OfferWrap
      */
     public function cancelOffersResource($document_number, string $contentType = self::contentTypes['cancelOffersResource'][0])
     {
@@ -173,9 +173,9 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelOffersResourceWithHttpInfo($document_number, string $contentType = self::contentTypes['cancelOffersResource'][0])
     {
@@ -218,23 +218,23 @@ class OffersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OfferWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OfferWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OfferWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OfferWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OfferWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OfferWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OfferWrap';
+            $returnType = '\FortnoxApi\Model\OfferWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -255,7 +255,7 @@ class OffersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OfferWrap',
+                        '\FortnoxApi\Model\OfferWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -299,7 +299,7 @@ class OffersResourceApi
      */
     public function cancelOffersResourceAsyncWithHttpInfo($document_number, string $contentType = self::contentTypes['cancelOffersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OfferWrap';
+        $returnType = '\FortnoxApi\Model\OfferWrap';
         $request = $this->cancelOffersResourceRequest($document_number, $contentType);
 
         return $this->client
@@ -435,12 +435,12 @@ class OffersResourceApi
      *
      * Create an offer
      *
-     * @param  \OpenAPI\Client\Model\OfferWrap $offer to create (optional)
+     * @param  \FortnoxApi\Model\OfferWrap $offer to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OfferWrap
+     * @return \FortnoxApi\Model\OfferWrap
      */
     public function createOffersResource($offer = null, string $contentType = self::contentTypes['createOffersResource'][0])
     {
@@ -453,12 +453,12 @@ class OffersResourceApi
      *
      * Create an offer
      *
-     * @param  \OpenAPI\Client\Model\OfferWrap $offer to create (optional)
+     * @param  \FortnoxApi\Model\OfferWrap $offer to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOffersResourceWithHttpInfo($offer = null, string $contentType = self::contentTypes['createOffersResource'][0])
     {
@@ -501,23 +501,23 @@ class OffersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OfferWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OfferWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OfferWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OfferWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OfferWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OfferWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OfferWrap';
+            $returnType = '\FortnoxApi\Model\OfferWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -538,7 +538,7 @@ class OffersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OfferWrap',
+                        '\FortnoxApi\Model\OfferWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class OffersResourceApi
      *
      * Create an offer
      *
-     * @param  \OpenAPI\Client\Model\OfferWrap $offer to create (optional)
+     * @param  \FortnoxApi\Model\OfferWrap $offer to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOffersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -574,7 +574,7 @@ class OffersResourceApi
      *
      * Create an offer
      *
-     * @param  \OpenAPI\Client\Model\OfferWrap $offer to create (optional)
+     * @param  \FortnoxApi\Model\OfferWrap $offer to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOffersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -582,7 +582,7 @@ class OffersResourceApi
      */
     public function createOffersResourceAsyncWithHttpInfo($offer = null, string $contentType = self::contentTypes['createOffersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OfferWrap';
+        $returnType = '\FortnoxApi\Model\OfferWrap';
         $request = $this->createOffersResourceRequest($offer, $contentType);
 
         return $this->client
@@ -624,7 +624,7 @@ class OffersResourceApi
     /**
      * Create request for operation 'createOffersResource'
      *
-     * @param  \OpenAPI\Client\Model\OfferWrap $offer to create (optional)
+     * @param  \FortnoxApi\Model\OfferWrap $offer to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOffersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -714,9 +714,9 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createorder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderWrap
+     * @return \FortnoxApi\Model\OrderWrap
      */
     public function createorder($document_number, string $contentType = self::contentTypes['createorder'][0])
     {
@@ -732,9 +732,9 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createorder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OrderWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createorderWithHttpInfo($document_number, string $contentType = self::contentTypes['createorder'][0])
     {
@@ -777,23 +777,23 @@ class OffersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OrderWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OrderWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OrderWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderWrap';
+            $returnType = '\FortnoxApi\Model\OrderWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -814,7 +814,7 @@ class OffersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderWrap',
+                        '\FortnoxApi\Model\OrderWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -858,7 +858,7 @@ class OffersResourceApi
      */
     public function createorderAsyncWithHttpInfo($document_number, string $contentType = self::contentTypes['createorder'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderWrap';
+        $returnType = '\FortnoxApi\Model\OrderWrap';
         $request = $this->createorderRequest($document_number, $contentType);
 
         return $this->client
@@ -997,9 +997,9 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OfferWrap
+     * @return \FortnoxApi\Model\OfferWrap
      */
     public function emailOffersResource($document_number, string $contentType = self::contentTypes['emailOffersResource'][0])
     {
@@ -1015,9 +1015,9 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function emailOffersResourceWithHttpInfo($document_number, string $contentType = self::contentTypes['emailOffersResource'][0])
     {
@@ -1060,23 +1060,23 @@ class OffersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OfferWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OfferWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OfferWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OfferWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OfferWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OfferWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OfferWrap';
+            $returnType = '\FortnoxApi\Model\OfferWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1097,7 +1097,7 @@ class OffersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OfferWrap',
+                        '\FortnoxApi\Model\OfferWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1141,7 +1141,7 @@ class OffersResourceApi
      */
     public function emailOffersResourceAsyncWithHttpInfo($document_number, string $contentType = self::contentTypes['emailOffersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OfferWrap';
+        $returnType = '\FortnoxApi\Model\OfferWrap';
         $request = $this->emailOffersResourceRequest($document_number, $contentType);
 
         return $this->client
@@ -1280,9 +1280,9 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['externalprint'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OfferWrap
+     * @return \FortnoxApi\Model\OfferWrap
      */
     public function externalprint($document_number, string $contentType = self::contentTypes['externalprint'][0])
     {
@@ -1298,9 +1298,9 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['externalprint'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function externalprintWithHttpInfo($document_number, string $contentType = self::contentTypes['externalprint'][0])
     {
@@ -1343,23 +1343,23 @@ class OffersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OfferWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OfferWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OfferWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OfferWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OfferWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OfferWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OfferWrap';
+            $returnType = '\FortnoxApi\Model\OfferWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1380,7 +1380,7 @@ class OffersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OfferWrap',
+                        '\FortnoxApi\Model\OfferWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1424,7 +1424,7 @@ class OffersResourceApi
      */
     public function externalprintAsyncWithHttpInfo($document_number, string $contentType = self::contentTypes['externalprint'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OfferWrap';
+        $returnType = '\FortnoxApi\Model\OfferWrap';
         $request = $this->externalprintRequest($document_number, $contentType);
 
         return $this->client
@@ -1563,9 +1563,9 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OfferWrap
+     * @return \FortnoxApi\Model\OfferWrap
      */
     public function getOffersResource($document_number, string $contentType = self::contentTypes['getOffersResource'][0])
     {
@@ -1581,9 +1581,9 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOffersResourceWithHttpInfo($document_number, string $contentType = self::contentTypes['getOffersResource'][0])
     {
@@ -1626,23 +1626,23 @@ class OffersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OfferWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OfferWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OfferWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OfferWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OfferWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OfferWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OfferWrap';
+            $returnType = '\FortnoxApi\Model\OfferWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1663,7 +1663,7 @@ class OffersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OfferWrap',
+                        '\FortnoxApi\Model\OfferWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1707,7 +1707,7 @@ class OffersResourceApi
      */
     public function getOffersResourceAsyncWithHttpInfo($document_number, string $contentType = self::contentTypes['getOffersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OfferWrap';
+        $returnType = '\FortnoxApi\Model\OfferWrap';
         $request = $this->getOffersResourceRequest($document_number, $contentType);
 
         return $this->client
@@ -1860,9 +1860,9 @@ class OffersResourceApi
      * @param  string $sortby sort returned list of offers (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OfferListItemList
+     * @return \FortnoxApi\Model\OfferListItemList
      */
     public function listOffersResource($filter = null, $customername = null, $customernumber = null, $documentnumber = null, $costcenter = null, $label = null, $fromdate = null, $todate = null, $project = null, $sent = null, $notcompleted = null, $ourreference = null, $yourreference = null, $lastmodified = null, $sortby = null, string $contentType = self::contentTypes['listOffersResource'][0])
     {
@@ -1892,9 +1892,9 @@ class OffersResourceApi
      * @param  string $sortby sort returned list of offers (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OfferListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OfferListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listOffersResourceWithHttpInfo($filter = null, $customername = null, $customernumber = null, $documentnumber = null, $costcenter = null, $label = null, $fromdate = null, $todate = null, $project = null, $sent = null, $notcompleted = null, $ourreference = null, $yourreference = null, $lastmodified = null, $sortby = null, string $contentType = self::contentTypes['listOffersResource'][0])
     {
@@ -1937,23 +1937,23 @@ class OffersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OfferListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OfferListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OfferListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\OfferListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OfferListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OfferListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OfferListItemList';
+            $returnType = '\FortnoxApi\Model\OfferListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1974,7 +1974,7 @@ class OffersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OfferListItemList',
+                        '\FortnoxApi\Model\OfferListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2046,7 +2046,7 @@ class OffersResourceApi
      */
     public function listOffersResourceAsyncWithHttpInfo($filter = null, $customername = null, $customernumber = null, $documentnumber = null, $costcenter = null, $label = null, $fromdate = null, $todate = null, $project = null, $sent = null, $notcompleted = null, $ourreference = null, $yourreference = null, $lastmodified = null, $sortby = null, string $contentType = self::contentTypes['listOffersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OfferListItemList';
+        $returnType = '\FortnoxApi\Model\OfferListItemList';
         $request = $this->listOffersResourceRequest($filter, $customername, $customernumber, $documentnumber, $costcenter, $label, $fromdate, $todate, $project, $sent, $notcompleted, $ourreference, $yourreference, $lastmodified, $sortby, $contentType);
 
         return $this->client
@@ -2334,7 +2334,7 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['previewOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -2352,7 +2352,7 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['previewOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2617,7 +2617,7 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['printOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -2635,7 +2635,7 @@ class OffersResourceApi
      * @param  string $document_number identifies the offer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['printOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2898,12 +2898,12 @@ class OffersResourceApi
      * Update an offer
      *
      * @param  string $document_number identifies the offer (required)
-     * @param  \OpenAPI\Client\Model\OfferWrap $offer to update (optional)
+     * @param  \FortnoxApi\Model\OfferWrap $offer to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OfferWrap
+     * @return \FortnoxApi\Model\OfferWrap
      */
     public function updateOffersResource($document_number, $offer = null, string $contentType = self::contentTypes['updateOffersResource'][0])
     {
@@ -2917,12 +2917,12 @@ class OffersResourceApi
      * Update an offer
      *
      * @param  string $document_number identifies the offer (required)
-     * @param  \OpenAPI\Client\Model\OfferWrap $offer to update (optional)
+     * @param  \FortnoxApi\Model\OfferWrap $offer to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOffersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\OfferWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateOffersResourceWithHttpInfo($document_number, $offer = null, string $contentType = self::contentTypes['updateOffersResource'][0])
     {
@@ -2965,23 +2965,23 @@ class OffersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OfferWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\OfferWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OfferWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\OfferWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OfferWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\OfferWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OfferWrap';
+            $returnType = '\FortnoxApi\Model\OfferWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3002,7 +3002,7 @@ class OffersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OfferWrap',
+                        '\FortnoxApi\Model\OfferWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3018,7 +3018,7 @@ class OffersResourceApi
      * Update an offer
      *
      * @param  string $document_number identifies the offer (required)
-     * @param  \OpenAPI\Client\Model\OfferWrap $offer to update (optional)
+     * @param  \FortnoxApi\Model\OfferWrap $offer to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOffersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3040,7 +3040,7 @@ class OffersResourceApi
      * Update an offer
      *
      * @param  string $document_number identifies the offer (required)
-     * @param  \OpenAPI\Client\Model\OfferWrap $offer to update (optional)
+     * @param  \FortnoxApi\Model\OfferWrap $offer to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOffersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3048,7 +3048,7 @@ class OffersResourceApi
      */
     public function updateOffersResourceAsyncWithHttpInfo($document_number, $offer = null, string $contentType = self::contentTypes['updateOffersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OfferWrap';
+        $returnType = '\FortnoxApi\Model\OfferWrap';
         $request = $this->updateOffersResourceRequest($document_number, $offer, $contentType);
 
         return $this->client
@@ -3091,7 +3091,7 @@ class OffersResourceApi
      * Create request for operation 'updateOffersResource'
      *
      * @param  string $document_number identifies the offer (required)
-     * @param  \OpenAPI\Client\Model\OfferWrap $offer to update (optional)
+     * @param  \FortnoxApi\Model\OfferWrap $offer to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOffersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

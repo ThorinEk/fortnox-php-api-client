@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * Offer Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -83,19 +83,19 @@ class Offer implements ModelInterface, ArrayAccess, \JsonSerializable
         'delivery_name' => 'string',
         'delivery_zip_code' => 'string',
         'document_number' => 'string',
-        'email_information' => '\OpenAPI\Client\Model\OfferEmailInformation',
+        'email_information' => '\FortnoxApi\Model\OfferEmailInformation',
         'expire_date' => '\DateTime',
         'freight' => 'float',
         'freight_vat' => 'float',
         'gross' => 'float',
         'house_work' => 'bool',
         'invoice_reference' => 'string',
-        'labels' => '\OpenAPI\Client\Model\OfferLabel[]',
+        'labels' => '\FortnoxApi\Model\OfferLabel[]',
         'language' => 'string',
         'net' => 'float',
         'not_completed' => 'bool',
         'offer_date' => '\DateTime',
-        'offer_rows' => '\OpenAPI\Client\Model\OfferOfferRow[]',
+        'offer_rows' => '\FortnoxApi\Model\OfferOfferRow[]',
         'order_reference' => 'string',
         'organisation_number' => 'string',
         'our_reference' => 'string',
@@ -1638,7 +1638,7 @@ class Offer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets email_information
      *
-     * @return \OpenAPI\Client\Model\OfferEmailInformation|null
+     * @return \FortnoxApi\Model\OfferEmailInformation|null
      */
     public function getEmailInformation()
     {
@@ -1648,7 +1648,7 @@ class Offer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets email_information
      *
-     * @param \OpenAPI\Client\Model\OfferEmailInformation|null $email_information email_information
+     * @param \FortnoxApi\Model\OfferEmailInformation|null $email_information email_information
      *
      * @return self
      */
@@ -1827,7 +1827,7 @@ class Offer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets labels
      *
-     * @return \OpenAPI\Client\Model\OfferLabel[]|null
+     * @return \FortnoxApi\Model\OfferLabel[]|null
      */
     public function getLabels()
     {
@@ -1837,7 +1837,7 @@ class Offer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets labels
      *
-     * @param \OpenAPI\Client\Model\OfferLabel[]|null $labels labels
+     * @param \FortnoxApi\Model\OfferLabel[]|null $labels labels
      *
      * @return self
      */
@@ -1962,7 +1962,7 @@ class Offer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets offer_rows
      *
-     * @return \OpenAPI\Client\Model\OfferOfferRow[]|null
+     * @return \FortnoxApi\Model\OfferOfferRow[]|null
      */
     public function getOfferRows()
     {
@@ -1972,7 +1972,7 @@ class Offer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets offer_rows
      *
-     * @param \OpenAPI\Client\Model\OfferOfferRow[]|null $offer_rows offer_rows
+     * @param \FortnoxApi\Model\OfferOfferRow[]|null $offer_rows offer_rows
      *
      * @return self
      */

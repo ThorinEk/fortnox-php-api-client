@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * PriceListList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class PriceListList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'price_lists' => '\OpenAPI\Client\Model\PriceList[]'
+        'price_lists' => '\FortnoxApi\Model\PriceList[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class PriceListList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets price_lists
      *
-     * @return \OpenAPI\Client\Model\PriceList[]|null
+     * @return \FortnoxApi\Model\PriceList[]|null
      */
     public function getPriceLists()
     {
@@ -300,7 +300,7 @@ class PriceListList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets price_lists
      *
-     * @param \OpenAPI\Client\Model\PriceList[]|null $price_lists price_lists
+     * @param \FortnoxApi\Model\PriceList[]|null $price_lists price_lists
      *
      * @return self
      */

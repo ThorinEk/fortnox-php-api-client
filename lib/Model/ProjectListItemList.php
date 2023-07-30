@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ProjectListItemList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class ProjectListItemList implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'projects' => '\OpenAPI\Client\Model\ProjectListItem[]'
+        'projects' => '\FortnoxApi\Model\ProjectListItem[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class ProjectListItemList implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets projects
      *
-     * @return \OpenAPI\Client\Model\ProjectListItem[]|null
+     * @return \FortnoxApi\Model\ProjectListItem[]|null
      */
     public function getProjects()
     {
@@ -300,7 +300,7 @@ class ProjectListItemList implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets projects
      *
-     * @param \OpenAPI\Client\Model\ProjectListItem[]|null $projects projects
+     * @param \FortnoxApi\Model\ProjectListItem[]|null $projects projects
      *
      * @return self
      */

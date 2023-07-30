@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * RegistrationsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,9 +141,9 @@ class RegistrationsResourceApi
      * @param  bool $include_non_invoiceable_charge_hours If the price of the non-invoiceable time/absence registration is included, or not. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listRegistrationsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DetailedRegistration[]
+     * @return \FortnoxApi\Model\DetailedRegistration[]
      */
     public function listRegistrationsResource($from_date = null, $to_date = null, $customer_ids = null, $project_ids = null, $service_ids = null, $cost_center_ids = null, $reg_codes = null, $user_ids = null, $include_registrations_without_project = null, $invoiced = null, $in_invoice_basis = null, $internal_time = null, $non_invoiceable = null, $include_non_invoiceable_charge_hours = null, string $contentType = self::contentTypes['listRegistrationsResource'][0])
     {
@@ -172,9 +172,9 @@ class RegistrationsResourceApi
      * @param  bool $include_non_invoiceable_charge_hours If the price of the non-invoiceable time/absence registration is included, or not. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listRegistrationsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DetailedRegistration[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\DetailedRegistration[], HTTP status code, HTTP response headers (array of strings)
      */
     public function listRegistrationsResourceWithHttpInfo($from_date = null, $to_date = null, $customer_ids = null, $project_ids = null, $service_ids = null, $cost_center_ids = null, $reg_codes = null, $user_ids = null, $include_registrations_without_project = null, $invoiced = null, $in_invoice_basis = null, $internal_time = null, $non_invoiceable = null, $include_non_invoiceable_charge_hours = null, string $contentType = self::contentTypes['listRegistrationsResource'][0])
     {
@@ -217,23 +217,23 @@ class RegistrationsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DetailedRegistration[]' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\DetailedRegistration[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DetailedRegistration[]' !== 'string') {
+                        if ('\FortnoxApi\Model\DetailedRegistration[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DetailedRegistration[]', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\DetailedRegistration[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DetailedRegistration[]';
+            $returnType = '\FortnoxApi\Model\DetailedRegistration[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -254,7 +254,7 @@ class RegistrationsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DetailedRegistration[]',
+                        '\FortnoxApi\Model\DetailedRegistration[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -324,7 +324,7 @@ class RegistrationsResourceApi
      */
     public function listRegistrationsResourceAsyncWithHttpInfo($from_date = null, $to_date = null, $customer_ids = null, $project_ids = null, $service_ids = null, $cost_center_ids = null, $reg_codes = null, $user_ids = null, $include_registrations_without_project = null, $invoiced = null, $in_invoice_basis = null, $internal_time = null, $non_invoiceable = null, $include_non_invoiceable_charge_hours = null, string $contentType = self::contentTypes['listRegistrationsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DetailedRegistration[]';
+        $returnType = '\FortnoxApi\Model\DetailedRegistration[]';
         $request = $this->listRegistrationsResourceRequest($from_date, $to_date, $customer_ids, $project_ids, $service_ids, $cost_center_ids, $reg_codes, $user_ids, $include_registrations_without_project, $invoiced, $in_invoice_basis, $internal_time, $non_invoiceable, $include_non_invoiceable_charge_hours, $contentType);
 
         return $this->client

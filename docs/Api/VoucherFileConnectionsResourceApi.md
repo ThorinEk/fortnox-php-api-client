@@ -1,4 +1,4 @@
-# OpenAPI\Client\VoucherFileConnectionsResourceApi
+# FortnoxApi\VoucherFileConnectionsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createVoucherFileConnectionsResource()`
 
 ```php
-createVoucherFileConnectionsResource($voucher_file_connection): \OpenAPI\Client\Model\VoucherFileConnectionWrap
+createVoucherFileConnectionsResource($voucher_file_connection): \FortnoxApi\Model\VoucherFileConnectionWrap
 ```
 
 Create a voucher file connection
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VoucherFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\VoucherFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$voucher_file_connection = new \OpenAPI\Client\Model\VoucherFileConnectionWrap(); // \OpenAPI\Client\Model\VoucherFileConnectionWrap | to create
+$voucher_file_connection = new \FortnoxApi\Model\VoucherFileConnectionWrap(); // \FortnoxApi\Model\VoucherFileConnectionWrap | to create
 
 try {
     $result = $apiInstance->createVoucherFileConnectionsResource($voucher_file_connection);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **voucher_file_connection** | [**\OpenAPI\Client\Model\VoucherFileConnectionWrap**](../Model/VoucherFileConnectionWrap.md)| to create | [optional] |
+| **voucher_file_connection** | [**\FortnoxApi\Model\VoucherFileConnectionWrap**](../Model/VoucherFileConnectionWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VoucherFileConnectionWrap**](../Model/VoucherFileConnectionWrap.md)
+[**\FortnoxApi\Model\VoucherFileConnectionWrap**](../Model/VoucherFileConnectionWrap.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `getVoucherFileConnectionsResource()`
 
 ```php
-getVoucherFileConnectionsResource($file_id): \OpenAPI\Client\Model\VoucherFileConnectionWrap
+getVoucherFileConnectionsResource($file_id): \FortnoxApi\Model\VoucherFileConnectionWrap
 ```
 
 Retrieve a single voucher file connection
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VoucherFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\VoucherFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VoucherFileConnectionWrap**](../Model/VoucherFileConnectionWrap.md)
+[**\FortnoxApi\Model\VoucherFileConnectionWrap**](../Model/VoucherFileConnectionWrap.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 ## `listVoucherFileConnectionsResource()`
 
 ```php
-listVoucherFileConnectionsResource(): \OpenAPI\Client\Model\VoucherFileConnectionList
+listVoucherFileConnectionsResource(): \FortnoxApi\Model\VoucherFileConnectionList
 ```
 
 Retrieve a list of voucher file connections
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VoucherFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\VoucherFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -156,7 +156,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VoucherFileConnectionList**](../Model/VoucherFileConnectionList.md)
+[**\FortnoxApi\Model\VoucherFileConnectionList**](../Model/VoucherFileConnectionList.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VoucherFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\VoucherFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

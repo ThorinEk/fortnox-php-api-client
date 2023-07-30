@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * AbsenceTransactionPayloadWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class AbsenceTransactionPayloadWrap implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'absence_transaction' => '\OpenAPI\Client\Model\AbsenceTransactionPayload'
+        'absence_transaction' => '\FortnoxApi\Model\AbsenceTransactionPayload'
     ];
 
     /**
@@ -290,7 +290,7 @@ class AbsenceTransactionPayloadWrap implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets absence_transaction
      *
-     * @return \OpenAPI\Client\Model\AbsenceTransactionPayload|null
+     * @return \FortnoxApi\Model\AbsenceTransactionPayload|null
      */
     public function getAbsenceTransaction()
     {
@@ -300,7 +300,7 @@ class AbsenceTransactionPayloadWrap implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets absence_transaction
      *
-     * @param \OpenAPI\Client\Model\AbsenceTransactionPayload|null $absence_transaction absence_transaction
+     * @param \FortnoxApi\Model\AbsenceTransactionPayload|null $absence_transaction absence_transaction
      *
      * @return self
      */

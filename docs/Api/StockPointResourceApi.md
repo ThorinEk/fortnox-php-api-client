@@ -1,4 +1,4 @@
-# OpenAPI\Client\StockPointResourceApi
+# FortnoxApi\StockPointResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -17,7 +17,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `appendStockLocations()`
 
 ```php
-appendStockLocations($id, $stock_locations): \OpenAPI\Client\Model\StockLocation[]
+appendStockLocations($id, $stock_locations): \FortnoxApi\Model\StockLocation[]
 ```
 
 Append stock locations
@@ -32,13 +32,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockPointResourceApi(
+$apiInstance = new FortnoxApi\Api\StockPointResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | stock point id
-$stock_locations = array(new \OpenAPI\Client\Model\StockLocation()); // \OpenAPI\Client\Model\StockLocation[] | A list of <code>StockLocations</code> to append.
+$stock_locations = array(new \FortnoxApi\Model\StockLocation()); // \FortnoxApi\Model\StockLocation[] | A list of <code>StockLocations</code> to append.
 
 try {
     $result = $apiInstance->appendStockLocations($id, $stock_locations);
@@ -53,11 +53,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| stock point id | |
-| **stock_locations** | [**\OpenAPI\Client\Model\StockLocation[]**](../Model/StockLocation.md)| A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. | [optional] |
+| **stock_locations** | [**\FortnoxApi\Model\StockLocation[]**](../Model/StockLocation.md)| A list of &lt;code&gt;StockLocations&lt;/code&gt; to append. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockLocation[]**](../Model/StockLocation.md)
+[**\FortnoxApi\Model\StockLocation[]**](../Model/StockLocation.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ No authorization required
 ## `create()`
 
 ```php
-create($stock_point): \OpenAPI\Client\Model\StockPoint
+create($stock_point): \FortnoxApi\Model\StockPoint
 ```
 
 Create stock point
@@ -90,12 +90,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockPointResourceApi(
+$apiInstance = new FortnoxApi\Api\StockPointResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$stock_point = new \OpenAPI\Client\Model\StockPoint(); // \OpenAPI\Client\Model\StockPoint | stock point
+$stock_point = new \FortnoxApi\Model\StockPoint(); // \FortnoxApi\Model\StockPoint | stock point
 
 try {
     $result = $apiInstance->create($stock_point);
@@ -109,11 +109,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stock_point** | [**\OpenAPI\Client\Model\StockPoint**](../Model/StockPoint.md)| stock point | [optional] |
+| **stock_point** | [**\FortnoxApi\Model\StockPoint**](../Model/StockPoint.md)| stock point | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockPoint**](../Model/StockPoint.md)
+[**\FortnoxApi\Model\StockPoint**](../Model/StockPoint.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ No authorization required
 ## `delete()`
 
 ```php
-delete($id): \OpenAPI\Client\Model\StockPoint
+delete($id): \FortnoxApi\Model\StockPoint
 ```
 
 Delete stock point
@@ -146,7 +146,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockPointResourceApi(
+$apiInstance = new FortnoxApi\Api\StockPointResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -169,7 +169,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockPoint**](../Model/StockPoint.md)
+[**\FortnoxApi\Model\StockPoint**](../Model/StockPoint.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ No authorization required
 ## `getAll()`
 
 ```php
-getAll($q, $state): \OpenAPI\Client\Model\StockPoint[]
+getAll($q, $state): \FortnoxApi\Model\StockPoint[]
 ```
 
 List stock points
@@ -202,7 +202,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockPointResourceApi(
+$apiInstance = new FortnoxApi\Api\StockPointResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -227,7 +227,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockPoint[]**](../Model/StockPoint.md)
+[**\FortnoxApi\Model\StockPoint[]**](../Model/StockPoint.md)
 
 ### Authorization
 
@@ -245,7 +245,7 @@ No authorization required
 ## `getByAmbiguousId()`
 
 ```php
-getByAmbiguousId($id): \OpenAPI\Client\Model\StockPoint
+getByAmbiguousId($id): \FortnoxApi\Model\StockPoint
 ```
 
 Get stock point
@@ -260,7 +260,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockPointResourceApi(
+$apiInstance = new FortnoxApi\Api\StockPointResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -283,7 +283,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockPoint**](../Model/StockPoint.md)
+[**\FortnoxApi\Model\StockPoint**](../Model/StockPoint.md)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ No authorization required
 ## `getMany()`
 
 ```php
-getMany($ids, $state): \OpenAPI\Client\Model\StockPoint[]
+getMany($ids, $state): \FortnoxApi\Model\StockPoint[]
 ```
 
 Get stock points
@@ -316,7 +316,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockPointResourceApi(
+$apiInstance = new FortnoxApi\Api\StockPointResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -341,7 +341,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockPoint[]**](../Model/StockPoint.md)
+[**\FortnoxApi\Model\StockPoint[]**](../Model/StockPoint.md)
 
 ### Authorization
 
@@ -359,7 +359,7 @@ No authorization required
 ## `getStockLocationsByAmbiguousId()`
 
 ```php
-getStockLocationsByAmbiguousId($id, $q): \OpenAPI\Client\Model\StockLocation[]
+getStockLocationsByAmbiguousId($id, $q): \FortnoxApi\Model\StockLocation[]
 ```
 
 Get stock locations
@@ -374,7 +374,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockPointResourceApi(
+$apiInstance = new FortnoxApi\Api\StockPointResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -399,7 +399,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockLocation[]**](../Model/StockLocation.md)
+[**\FortnoxApi\Model\StockLocation[]**](../Model/StockLocation.md)
 
 ### Authorization
 
@@ -417,7 +417,7 @@ No authorization required
 ## `update()`
 
 ```php
-update($id, $stock_point): \OpenAPI\Client\Model\StockPoint
+update($id, $stock_point): \FortnoxApi\Model\StockPoint
 ```
 
 Update stock point
@@ -432,13 +432,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StockPointResourceApi(
+$apiInstance = new FortnoxApi\Api\StockPointResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | id
-$stock_point = new \OpenAPI\Client\Model\StockPoint(); // \OpenAPI\Client\Model\StockPoint | complete representation of stock point including stock locations.
+$stock_point = new \FortnoxApi\Model\StockPoint(); // \FortnoxApi\Model\StockPoint | complete representation of stock point including stock locations.
 
 try {
     $result = $apiInstance->update($id, $stock_point);
@@ -453,11 +453,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| id | |
-| **stock_point** | [**\OpenAPI\Client\Model\StockPoint**](../Model/StockPoint.md)| complete representation of stock point including stock locations. | [optional] |
+| **stock_point** | [**\FortnoxApi\Model\StockPoint**](../Model/StockPoint.md)| complete representation of stock point including stock locations. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StockPoint**](../Model/StockPoint.md)
+[**\FortnoxApi\Model\StockPoint**](../Model/StockPoint.md)
 
 ### Authorization
 

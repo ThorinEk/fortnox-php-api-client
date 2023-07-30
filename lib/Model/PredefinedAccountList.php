@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * PredefinedAccountList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class PredefinedAccountList implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pre_defined_accounts' => '\OpenAPI\Client\Model\PredefinedAccount[]'
+        'pre_defined_accounts' => '\FortnoxApi\Model\PredefinedAccount[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class PredefinedAccountList implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets pre_defined_accounts
      *
-     * @return \OpenAPI\Client\Model\PredefinedAccount[]|null
+     * @return \FortnoxApi\Model\PredefinedAccount[]|null
      */
     public function getPreDefinedAccounts()
     {
@@ -300,7 +300,7 @@ class PredefinedAccountList implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets pre_defined_accounts
      *
-     * @param \OpenAPI\Client\Model\PredefinedAccount[]|null $pre_defined_accounts pre_defined_accounts
+     * @param \FortnoxApi\Model\PredefinedAccount[]|null $pre_defined_accounts pre_defined_accounts
      *
      * @return self
      */

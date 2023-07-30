@@ -1,4 +1,4 @@
-# OpenAPI\Client\MeResourceApi
+# FortnoxApi\MeResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getMeResource()`
 
 ```php
-getMeResource(): \OpenAPI\Client\Model\MeWrap
+getMeResource(): \FortnoxApi\Model\MeWrap
 ```
 
 Retrieve user information  Use this endpoint to retrieve user information related to the used access token
@@ -23,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\MeResourceApi(
+$apiInstance = new FortnoxApi\Api\MeResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeWrap**](../Model/MeWrap.md)
+[**\FortnoxApi\Model\MeWrap**](../Model/MeWrap.md)
 
 ### Authorization
 

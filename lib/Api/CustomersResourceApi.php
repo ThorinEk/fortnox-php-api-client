@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * CustomersResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class CustomersResourceApi
      *
      * Create a customer
      *
-     * @param  \OpenAPI\Client\Model\CustomerWrap $customer customer to create (optional)
+     * @param  \FortnoxApi\Model\CustomerWrap $customer customer to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerWrap
+     * @return \FortnoxApi\Model\CustomerWrap
      */
     public function createCustomersResource($customer = null, string $contentType = self::contentTypes['createCustomersResource'][0])
     {
@@ -155,12 +155,12 @@ class CustomersResourceApi
      *
      * Create a customer
      *
-     * @param  \OpenAPI\Client\Model\CustomerWrap $customer customer to create (optional)
+     * @param  \FortnoxApi\Model\CustomerWrap $customer customer to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomerWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCustomersResourceWithHttpInfo($customer = null, string $contentType = self::contentTypes['createCustomersResource'][0])
     {
@@ -203,23 +203,23 @@ class CustomersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomerWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomerWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomerWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerWrap';
+            $returnType = '\FortnoxApi\Model\CustomerWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class CustomersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerWrap',
+                        '\FortnoxApi\Model\CustomerWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class CustomersResourceApi
      *
      * Create a customer
      *
-     * @param  \OpenAPI\Client\Model\CustomerWrap $customer customer to create (optional)
+     * @param  \FortnoxApi\Model\CustomerWrap $customer customer to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class CustomersResourceApi
      *
      * Create a customer
      *
-     * @param  \OpenAPI\Client\Model\CustomerWrap $customer customer to create (optional)
+     * @param  \FortnoxApi\Model\CustomerWrap $customer customer to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class CustomersResourceApi
      */
     public function createCustomersResourceAsyncWithHttpInfo($customer = null, string $contentType = self::contentTypes['createCustomersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerWrap';
+        $returnType = '\FortnoxApi\Model\CustomerWrap';
         $request = $this->createCustomersResourceRequest($customer, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class CustomersResourceApi
     /**
      * Create request for operation 'createCustomersResource'
      *
-     * @param  \OpenAPI\Client\Model\CustomerWrap $customer customer to create (optional)
+     * @param  \FortnoxApi\Model\CustomerWrap $customer customer to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class CustomersResourceApi
      * @param  string $customer_number identifies the customer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerWrap
+     * @return \FortnoxApi\Model\CustomerWrap
      */
     public function getCustomersResource($customer_number, string $contentType = self::contentTypes['getCustomersResource'][0])
     {
@@ -434,9 +434,9 @@ class CustomersResourceApi
      * @param  string $customer_number identifies the customer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomerWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomersResourceWithHttpInfo($customer_number, string $contentType = self::contentTypes['getCustomersResource'][0])
     {
@@ -479,23 +479,23 @@ class CustomersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomerWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomerWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomerWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerWrap';
+            $returnType = '\FortnoxApi\Model\CustomerWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class CustomersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerWrap',
+                        '\FortnoxApi\Model\CustomerWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class CustomersResourceApi
      */
     public function getCustomersResourceAsyncWithHttpInfo($customer_number, string $contentType = self::contentTypes['getCustomersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerWrap';
+        $returnType = '\FortnoxApi\Model\CustomerWrap';
         $request = $this->getCustomersResourceRequest($customer_number, $contentType);
 
         return $this->client
@@ -710,9 +710,9 @@ class CustomersResourceApi
      * @param  string $sortby field to sort returned list (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCustomersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerListItemList
+     * @return \FortnoxApi\Model\CustomerListItemList
      */
     public function listCustomersResource($filter = null, $customernumber = null, $name = null, $zipcode = null, $city = null, $email = null, $phone = null, $organisationnumber = null, $gln = null, $glndelivery = null, $lastmodified = null, $sortby = null, string $contentType = self::contentTypes['listCustomersResource'][0])
     {
@@ -739,9 +739,9 @@ class CustomersResourceApi
      * @param  string $sortby field to sort returned list (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCustomersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomerListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCustomersResourceWithHttpInfo($filter = null, $customernumber = null, $name = null, $zipcode = null, $city = null, $email = null, $phone = null, $organisationnumber = null, $gln = null, $glndelivery = null, $lastmodified = null, $sortby = null, string $contentType = self::contentTypes['listCustomersResource'][0])
     {
@@ -784,23 +784,23 @@ class CustomersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomerListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomerListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomerListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerListItemList';
+            $returnType = '\FortnoxApi\Model\CustomerListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -821,7 +821,7 @@ class CustomersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerListItemList',
+                        '\FortnoxApi\Model\CustomerListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -887,7 +887,7 @@ class CustomersResourceApi
      */
     public function listCustomersResourceAsyncWithHttpInfo($filter = null, $customernumber = null, $name = null, $zipcode = null, $city = null, $email = null, $phone = null, $organisationnumber = null, $gln = null, $glndelivery = null, $lastmodified = null, $sortby = null, string $contentType = self::contentTypes['listCustomersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerListItemList';
+        $returnType = '\FortnoxApi\Model\CustomerListItemList';
         $request = $this->listCustomersResourceRequest($filter, $customernumber, $name, $zipcode, $city, $email, $phone, $organisationnumber, $gln, $glndelivery, $lastmodified, $sortby, $contentType);
 
         return $this->client
@@ -1142,7 +1142,7 @@ class CustomersResourceApi
      * @param  string $customer_number identifies the customer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeCustomersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1159,7 +1159,7 @@ class CustomersResourceApi
      * @param  string $customer_number identifies the customer (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeCustomersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1369,12 +1369,12 @@ class CustomersResourceApi
      * Update a customer
      *
      * @param  string $customer_number identifies the customer (required)
-     * @param  \OpenAPI\Client\Model\CustomerWrap $customer customer to update (optional)
+     * @param  \FortnoxApi\Model\CustomerWrap $customer customer to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerWrap
+     * @return \FortnoxApi\Model\CustomerWrap
      */
     public function updateCustomersResource($customer_number, $customer = null, string $contentType = self::contentTypes['updateCustomersResource'][0])
     {
@@ -1388,12 +1388,12 @@ class CustomersResourceApi
      * Update a customer
      *
      * @param  string $customer_number identifies the customer (required)
-     * @param  \OpenAPI\Client\Model\CustomerWrap $customer customer to update (optional)
+     * @param  \FortnoxApi\Model\CustomerWrap $customer customer to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomerWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCustomersResourceWithHttpInfo($customer_number, $customer = null, string $contentType = self::contentTypes['updateCustomersResource'][0])
     {
@@ -1436,23 +1436,23 @@ class CustomersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomerWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomerWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomerWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerWrap';
+            $returnType = '\FortnoxApi\Model\CustomerWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1473,7 +1473,7 @@ class CustomersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerWrap',
+                        '\FortnoxApi\Model\CustomerWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1489,7 +1489,7 @@ class CustomersResourceApi
      * Update a customer
      *
      * @param  string $customer_number identifies the customer (required)
-     * @param  \OpenAPI\Client\Model\CustomerWrap $customer customer to update (optional)
+     * @param  \FortnoxApi\Model\CustomerWrap $customer customer to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1511,7 +1511,7 @@ class CustomersResourceApi
      * Update a customer
      *
      * @param  string $customer_number identifies the customer (required)
-     * @param  \OpenAPI\Client\Model\CustomerWrap $customer customer to update (optional)
+     * @param  \FortnoxApi\Model\CustomerWrap $customer customer to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1519,7 +1519,7 @@ class CustomersResourceApi
      */
     public function updateCustomersResourceAsyncWithHttpInfo($customer_number, $customer = null, string $contentType = self::contentTypes['updateCustomersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerWrap';
+        $returnType = '\FortnoxApi\Model\CustomerWrap';
         $request = $this->updateCustomersResourceRequest($customer_number, $customer, $contentType);
 
         return $this->client
@@ -1562,7 +1562,7 @@ class CustomersResourceApi
      * Create request for operation 'updateCustomersResource'
      *
      * @param  string $customer_number identifies the customer (required)
-     * @param  \OpenAPI\Client\Model\CustomerWrap $customer customer to update (optional)
+     * @param  \FortnoxApi\Model\CustomerWrap $customer customer to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

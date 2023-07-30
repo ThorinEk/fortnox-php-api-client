@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **description** | **string** |  | [optional]
 **active** | **bool** |  | [optional]
 **purchase_price** | **float** |  | [optional]
-**sales_prices** | [**\OpenAPI\Client\Model\TRItemPrice[]**](TRItemPrice.md) |  | [optional]
+**sales_prices** | [**\FortnoxApi\Model\TRItemPrice[]**](TRItemPrice.md) |  | [optional]
 **type** | **string** |  | [optional]
 **unit** | **string** |  | [optional]
 **is_stock** | **bool** |  | [optional]

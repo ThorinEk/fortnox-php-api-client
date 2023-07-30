@@ -1,4 +1,4 @@
-# OpenAPI\Client\ExpensesResourceApi
+# FortnoxApi\ExpensesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createExpensesResource()`
 
 ```php
-createExpensesResource($expense): \OpenAPI\Client\Model\ExpenseWrap
+createExpensesResource($expense): \FortnoxApi\Model\ExpenseWrap
 ```
 
 Create an expense
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ExpensesResourceApi(
+$apiInstance = new FortnoxApi\Api\ExpensesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$expense = new \OpenAPI\Client\Model\ExpenseWrap(); // \OpenAPI\Client\Model\ExpenseWrap | expense to create
+$expense = new \FortnoxApi\Model\ExpenseWrap(); // \FortnoxApi\Model\ExpenseWrap | expense to create
 
 try {
     $result = $apiInstance->createExpensesResource($expense);
@@ -44,11 +44,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **expense** | [**\OpenAPI\Client\Model\ExpenseWrap**](../Model/ExpenseWrap.md)| expense to create | [optional] |
+| **expense** | [**\FortnoxApi\Model\ExpenseWrap**](../Model/ExpenseWrap.md)| expense to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExpenseWrap**](../Model/ExpenseWrap.md)
+[**\FortnoxApi\Model\ExpenseWrap**](../Model/ExpenseWrap.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ No authorization required
 ## `getExpensesResource()`
 
 ```php
-getExpensesResource($expense_code): \OpenAPI\Client\Model\ExpenseWrap
+getExpensesResource($expense_code): \FortnoxApi\Model\ExpenseWrap
 ```
 
 Retrieve an expense
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ExpensesResourceApi(
+$apiInstance = new FortnoxApi\Api\ExpensesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExpenseWrap**](../Model/ExpenseWrap.md)
+[**\FortnoxApi\Model\ExpenseWrap**](../Model/ExpenseWrap.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `listExpensesResource()`
 
 ```php
-listExpensesResource(): \OpenAPI\Client\Model\ExpenseListItemWrap
+listExpensesResource(): \FortnoxApi\Model\ExpenseListItemWrap
 ```
 
 Retrieve expenses
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ExpensesResourceApi(
+$apiInstance = new FortnoxApi\Api\ExpensesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExpenseListItemWrap**](../Model/ExpenseListItemWrap.md)
+[**\FortnoxApi\Model\ExpenseListItemWrap**](../Model/ExpenseListItemWrap.md)
 
 ### Authorization
 

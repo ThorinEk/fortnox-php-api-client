@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * SalaryTransactionsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,12 +137,12 @@ class SalaryTransactionsResourceApi
      *
      * Create a new salary transaction for an employee
      *
-     * @param  \OpenAPI\Client\Model\SalaryTransactionWrap $salary_transaction to create (optional)
+     * @param  \FortnoxApi\Model\SalaryTransactionWrap $salary_transaction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSalaryTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SalaryTransactionWrap
+     * @return \FortnoxApi\Model\SalaryTransactionWrap
      */
     public function createSalaryTransactionsResource($salary_transaction = null, string $contentType = self::contentTypes['createSalaryTransactionsResource'][0])
     {
@@ -155,12 +155,12 @@ class SalaryTransactionsResourceApi
      *
      * Create a new salary transaction for an employee
      *
-     * @param  \OpenAPI\Client\Model\SalaryTransactionWrap $salary_transaction to create (optional)
+     * @param  \FortnoxApi\Model\SalaryTransactionWrap $salary_transaction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSalaryTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SalaryTransactionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SalaryTransactionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSalaryTransactionsResourceWithHttpInfo($salary_transaction = null, string $contentType = self::contentTypes['createSalaryTransactionsResource'][0])
     {
@@ -203,23 +203,23 @@ class SalaryTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SalaryTransactionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SalaryTransactionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SalaryTransactionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\SalaryTransactionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SalaryTransactionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SalaryTransactionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SalaryTransactionWrap';
+            $returnType = '\FortnoxApi\Model\SalaryTransactionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -240,7 +240,7 @@ class SalaryTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SalaryTransactionWrap',
+                        '\FortnoxApi\Model\SalaryTransactionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class SalaryTransactionsResourceApi
      *
      * Create a new salary transaction for an employee
      *
-     * @param  \OpenAPI\Client\Model\SalaryTransactionWrap $salary_transaction to create (optional)
+     * @param  \FortnoxApi\Model\SalaryTransactionWrap $salary_transaction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSalaryTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -276,7 +276,7 @@ class SalaryTransactionsResourceApi
      *
      * Create a new salary transaction for an employee
      *
-     * @param  \OpenAPI\Client\Model\SalaryTransactionWrap $salary_transaction to create (optional)
+     * @param  \FortnoxApi\Model\SalaryTransactionWrap $salary_transaction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSalaryTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -284,7 +284,7 @@ class SalaryTransactionsResourceApi
      */
     public function createSalaryTransactionsResourceAsyncWithHttpInfo($salary_transaction = null, string $contentType = self::contentTypes['createSalaryTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SalaryTransactionWrap';
+        $returnType = '\FortnoxApi\Model\SalaryTransactionWrap';
         $request = $this->createSalaryTransactionsResourceRequest($salary_transaction, $contentType);
 
         return $this->client
@@ -326,7 +326,7 @@ class SalaryTransactionsResourceApi
     /**
      * Create request for operation 'createSalaryTransactionsResource'
      *
-     * @param  \OpenAPI\Client\Model\SalaryTransactionWrap $salary_transaction to create (optional)
+     * @param  \FortnoxApi\Model\SalaryTransactionWrap $salary_transaction to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSalaryTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class SalaryTransactionsResourceApi
      * @param  int $salary_row identifies the salary transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSalaryTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SalaryTransactionWrap
+     * @return \FortnoxApi\Model\SalaryTransactionWrap
      */
     public function deleteSalaryTransactionsResource($salary_row, string $contentType = self::contentTypes['deleteSalaryTransactionsResource'][0])
     {
@@ -434,9 +434,9 @@ class SalaryTransactionsResourceApi
      * @param  int $salary_row identifies the salary transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSalaryTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SalaryTransactionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SalaryTransactionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteSalaryTransactionsResourceWithHttpInfo($salary_row, string $contentType = self::contentTypes['deleteSalaryTransactionsResource'][0])
     {
@@ -479,23 +479,23 @@ class SalaryTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SalaryTransactionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SalaryTransactionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SalaryTransactionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\SalaryTransactionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SalaryTransactionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SalaryTransactionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SalaryTransactionWrap';
+            $returnType = '\FortnoxApi\Model\SalaryTransactionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -516,7 +516,7 @@ class SalaryTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SalaryTransactionWrap',
+                        '\FortnoxApi\Model\SalaryTransactionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class SalaryTransactionsResourceApi
      */
     public function deleteSalaryTransactionsResourceAsyncWithHttpInfo($salary_row, string $contentType = self::contentTypes['deleteSalaryTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SalaryTransactionWrap';
+        $returnType = '\FortnoxApi\Model\SalaryTransactionWrap';
         $request = $this->deleteSalaryTransactionsResourceRequest($salary_row, $contentType);
 
         return $this->client
@@ -699,9 +699,9 @@ class SalaryTransactionsResourceApi
      * @param  int $salary_row identifies the salary transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSalaryTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SalaryTransactionWrap
+     * @return \FortnoxApi\Model\SalaryTransactionWrap
      */
     public function getSalaryTransactionsResource($salary_row, string $contentType = self::contentTypes['getSalaryTransactionsResource'][0])
     {
@@ -717,9 +717,9 @@ class SalaryTransactionsResourceApi
      * @param  int $salary_row identifies the salary transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSalaryTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SalaryTransactionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SalaryTransactionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSalaryTransactionsResourceWithHttpInfo($salary_row, string $contentType = self::contentTypes['getSalaryTransactionsResource'][0])
     {
@@ -762,23 +762,23 @@ class SalaryTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SalaryTransactionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SalaryTransactionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SalaryTransactionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\SalaryTransactionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SalaryTransactionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SalaryTransactionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SalaryTransactionWrap';
+            $returnType = '\FortnoxApi\Model\SalaryTransactionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -799,7 +799,7 @@ class SalaryTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SalaryTransactionWrap',
+                        '\FortnoxApi\Model\SalaryTransactionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -843,7 +843,7 @@ class SalaryTransactionsResourceApi
      */
     public function getSalaryTransactionsResourceAsyncWithHttpInfo($salary_row, string $contentType = self::contentTypes['getSalaryTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SalaryTransactionWrap';
+        $returnType = '\FortnoxApi\Model\SalaryTransactionWrap';
         $request = $this->getSalaryTransactionsResourceRequest($salary_row, $contentType);
 
         return $this->client
@@ -983,9 +983,9 @@ class SalaryTransactionsResourceApi
      * @param  \DateTime $date filter on date (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listSalaryTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SalaryTransactionListItemList
+     * @return \FortnoxApi\Model\SalaryTransactionListItemList
      */
     public function listSalaryTransactionsResource($employee_id = null, $date = null, string $contentType = self::contentTypes['listSalaryTransactionsResource'][0])
     {
@@ -1002,9 +1002,9 @@ class SalaryTransactionsResourceApi
      * @param  \DateTime $date filter on date (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listSalaryTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SalaryTransactionListItemList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SalaryTransactionListItemList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSalaryTransactionsResourceWithHttpInfo($employee_id = null, $date = null, string $contentType = self::contentTypes['listSalaryTransactionsResource'][0])
     {
@@ -1047,23 +1047,23 @@ class SalaryTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SalaryTransactionListItemList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SalaryTransactionListItemList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SalaryTransactionListItemList' !== 'string') {
+                        if ('\FortnoxApi\Model\SalaryTransactionListItemList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SalaryTransactionListItemList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SalaryTransactionListItemList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SalaryTransactionListItemList';
+            $returnType = '\FortnoxApi\Model\SalaryTransactionListItemList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1084,7 +1084,7 @@ class SalaryTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SalaryTransactionListItemList',
+                        '\FortnoxApi\Model\SalaryTransactionListItemList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1130,7 +1130,7 @@ class SalaryTransactionsResourceApi
      */
     public function listSalaryTransactionsResourceAsyncWithHttpInfo($employee_id = null, $date = null, string $contentType = self::contentTypes['listSalaryTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SalaryTransactionListItemList';
+        $returnType = '\FortnoxApi\Model\SalaryTransactionListItemList';
         $request = $this->listSalaryTransactionsResourceRequest($employee_id, $date, $contentType);
 
         return $this->client
@@ -1273,12 +1273,12 @@ class SalaryTransactionsResourceApi
      * Update a salary transaction
      *
      * @param  int $salary_row identifies the salary transaction (required)
-     * @param  \OpenAPI\Client\Model\SalaryTransactionWrap $salary_transaction to update (optional)
+     * @param  \FortnoxApi\Model\SalaryTransactionWrap $salary_transaction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSalaryTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SalaryTransactionWrap
+     * @return \FortnoxApi\Model\SalaryTransactionWrap
      */
     public function updateSalaryTransactionsResource($salary_row, $salary_transaction = null, string $contentType = self::contentTypes['updateSalaryTransactionsResource'][0])
     {
@@ -1292,12 +1292,12 @@ class SalaryTransactionsResourceApi
      * Update a salary transaction
      *
      * @param  int $salary_row identifies the salary transaction (required)
-     * @param  \OpenAPI\Client\Model\SalaryTransactionWrap $salary_transaction to update (optional)
+     * @param  \FortnoxApi\Model\SalaryTransactionWrap $salary_transaction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSalaryTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SalaryTransactionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\SalaryTransactionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSalaryTransactionsResourceWithHttpInfo($salary_row, $salary_transaction = null, string $contentType = self::contentTypes['updateSalaryTransactionsResource'][0])
     {
@@ -1340,23 +1340,23 @@ class SalaryTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SalaryTransactionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\SalaryTransactionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SalaryTransactionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\SalaryTransactionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SalaryTransactionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\SalaryTransactionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SalaryTransactionWrap';
+            $returnType = '\FortnoxApi\Model\SalaryTransactionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1377,7 +1377,7 @@ class SalaryTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SalaryTransactionWrap',
+                        '\FortnoxApi\Model\SalaryTransactionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1393,7 +1393,7 @@ class SalaryTransactionsResourceApi
      * Update a salary transaction
      *
      * @param  int $salary_row identifies the salary transaction (required)
-     * @param  \OpenAPI\Client\Model\SalaryTransactionWrap $salary_transaction to update (optional)
+     * @param  \FortnoxApi\Model\SalaryTransactionWrap $salary_transaction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSalaryTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1415,7 +1415,7 @@ class SalaryTransactionsResourceApi
      * Update a salary transaction
      *
      * @param  int $salary_row identifies the salary transaction (required)
-     * @param  \OpenAPI\Client\Model\SalaryTransactionWrap $salary_transaction to update (optional)
+     * @param  \FortnoxApi\Model\SalaryTransactionWrap $salary_transaction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSalaryTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1423,7 +1423,7 @@ class SalaryTransactionsResourceApi
      */
     public function updateSalaryTransactionsResourceAsyncWithHttpInfo($salary_row, $salary_transaction = null, string $contentType = self::contentTypes['updateSalaryTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SalaryTransactionWrap';
+        $returnType = '\FortnoxApi\Model\SalaryTransactionWrap';
         $request = $this->updateSalaryTransactionsResourceRequest($salary_row, $salary_transaction, $contentType);
 
         return $this->client
@@ -1466,7 +1466,7 @@ class SalaryTransactionsResourceApi
      * Create request for operation 'updateSalaryTransactionsResource'
      *
      * @param  int $salary_row identifies the salary transaction (required)
-     * @param  \OpenAPI\Client\Model\SalaryTransactionWrap $salary_transaction to update (optional)
+     * @param  \FortnoxApi\Model\SalaryTransactionWrap $salary_transaction to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSalaryTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

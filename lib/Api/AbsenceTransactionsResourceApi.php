@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * AbsenceTransactionsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,12 +140,12 @@ class AbsenceTransactionsResourceApi
      *
      * Create a new absence transaction
      *
-     * @param  \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to create (optional)
+     * @param  \FortnoxApi\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAbsenceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap
+     * @return \FortnoxApi\Model\AbsenceTransactionSingleItemWrap
      */
     public function createAbsenceTransactionsResource($absence_transactions_payload = null, string $contentType = self::contentTypes['createAbsenceTransactionsResource'][0])
     {
@@ -158,12 +158,12 @@ class AbsenceTransactionsResourceApi
      *
      * Create a new absence transaction
      *
-     * @param  \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to create (optional)
+     * @param  \FortnoxApi\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAbsenceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AbsenceTransactionSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAbsenceTransactionsResourceWithHttpInfo($absence_transactions_payload = null, string $contentType = self::contentTypes['createAbsenceTransactionsResource'][0])
     {
@@ -206,23 +206,23 @@ class AbsenceTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AbsenceTransactionSingleItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AbsenceTransactionSingleItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap';
+            $returnType = '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -243,7 +243,7 @@ class AbsenceTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap',
+                        '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -258,7 +258,7 @@ class AbsenceTransactionsResourceApi
      *
      * Create a new absence transaction
      *
-     * @param  \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to create (optional)
+     * @param  \FortnoxApi\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAbsenceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -279,7 +279,7 @@ class AbsenceTransactionsResourceApi
      *
      * Create a new absence transaction
      *
-     * @param  \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to create (optional)
+     * @param  \FortnoxApi\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAbsenceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -287,7 +287,7 @@ class AbsenceTransactionsResourceApi
      */
     public function createAbsenceTransactionsResourceAsyncWithHttpInfo($absence_transactions_payload = null, string $contentType = self::contentTypes['createAbsenceTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap';
+        $returnType = '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap';
         $request = $this->createAbsenceTransactionsResourceRequest($absence_transactions_payload, $contentType);
 
         return $this->client
@@ -329,7 +329,7 @@ class AbsenceTransactionsResourceApi
     /**
      * Create request for operation 'createAbsenceTransactionsResource'
      *
-     * @param  \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to create (optional)
+     * @param  \FortnoxApi\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAbsenceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -419,9 +419,9 @@ class AbsenceTransactionsResourceApi
      * @param  string $id identifies the transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAbsenceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap
+     * @return \FortnoxApi\Model\AbsenceTransactionSingleItemWrap
      */
     public function getAbsenceTransactionsResource($id, string $contentType = self::contentTypes['getAbsenceTransactionsResource'][0])
     {
@@ -437,9 +437,9 @@ class AbsenceTransactionsResourceApi
      * @param  string $id identifies the transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAbsenceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AbsenceTransactionSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAbsenceTransactionsResourceWithHttpInfo($id, string $contentType = self::contentTypes['getAbsenceTransactionsResource'][0])
     {
@@ -482,23 +482,23 @@ class AbsenceTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AbsenceTransactionSingleItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AbsenceTransactionSingleItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap';
+            $returnType = '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -519,7 +519,7 @@ class AbsenceTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap',
+                        '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -563,7 +563,7 @@ class AbsenceTransactionsResourceApi
      */
     public function getAbsenceTransactionsResourceAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getAbsenceTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap';
+        $returnType = '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap';
         $request = $this->getAbsenceTransactionsResourceRequest($id, $contentType);
 
         return $this->client
@@ -704,9 +704,9 @@ class AbsenceTransactionsResourceApi
      * @param  string $code status code of the absence transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAbsenceTransactionsResource1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AbsenceTransactionListItemWrap
+     * @return \FortnoxApi\Model\AbsenceTransactionListItemWrap
      */
     public function getAbsenceTransactionsResource1($employee_id, $date, $code, string $contentType = self::contentTypes['getAbsenceTransactionsResource1'][0])
     {
@@ -724,9 +724,9 @@ class AbsenceTransactionsResourceApi
      * @param  string $code status code of the absence transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAbsenceTransactionsResource1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AbsenceTransactionListItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AbsenceTransactionListItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAbsenceTransactionsResource1WithHttpInfo($employee_id, $date, $code, string $contentType = self::contentTypes['getAbsenceTransactionsResource1'][0])
     {
@@ -769,23 +769,23 @@ class AbsenceTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AbsenceTransactionListItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AbsenceTransactionListItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AbsenceTransactionListItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AbsenceTransactionListItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AbsenceTransactionListItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AbsenceTransactionListItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AbsenceTransactionListItemWrap';
+            $returnType = '\FortnoxApi\Model\AbsenceTransactionListItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -806,7 +806,7 @@ class AbsenceTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AbsenceTransactionListItemWrap',
+                        '\FortnoxApi\Model\AbsenceTransactionListItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -854,7 +854,7 @@ class AbsenceTransactionsResourceApi
      */
     public function getAbsenceTransactionsResource1AsyncWithHttpInfo($employee_id, $date, $code, string $contentType = self::contentTypes['getAbsenceTransactionsResource1'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AbsenceTransactionListItemWrap';
+        $returnType = '\FortnoxApi\Model\AbsenceTransactionListItemWrap';
         $request = $this->getAbsenceTransactionsResource1Request($employee_id, $date, $code, $contentType);
 
         return $this->client
@@ -1026,9 +1026,9 @@ class AbsenceTransactionsResourceApi
      * @param  string $date filter by date (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAbsenceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AbsenceTransactionListItemWrap
+     * @return \FortnoxApi\Model\AbsenceTransactionListItemWrap
      */
     public function listAbsenceTransactionsResource($employeeid = null, $date = null, string $contentType = self::contentTypes['listAbsenceTransactionsResource'][0])
     {
@@ -1045,9 +1045,9 @@ class AbsenceTransactionsResourceApi
      * @param  string $date filter by date (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAbsenceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AbsenceTransactionListItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AbsenceTransactionListItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAbsenceTransactionsResourceWithHttpInfo($employeeid = null, $date = null, string $contentType = self::contentTypes['listAbsenceTransactionsResource'][0])
     {
@@ -1090,23 +1090,23 @@ class AbsenceTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AbsenceTransactionListItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AbsenceTransactionListItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AbsenceTransactionListItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AbsenceTransactionListItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AbsenceTransactionListItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AbsenceTransactionListItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AbsenceTransactionListItemWrap';
+            $returnType = '\FortnoxApi\Model\AbsenceTransactionListItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1127,7 +1127,7 @@ class AbsenceTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AbsenceTransactionListItemWrap',
+                        '\FortnoxApi\Model\AbsenceTransactionListItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1173,7 +1173,7 @@ class AbsenceTransactionsResourceApi
      */
     public function listAbsenceTransactionsResourceAsyncWithHttpInfo($employeeid = null, $date = null, string $contentType = self::contentTypes['listAbsenceTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AbsenceTransactionListItemWrap';
+        $returnType = '\FortnoxApi\Model\AbsenceTransactionListItemWrap';
         $request = $this->listAbsenceTransactionsResourceRequest($employeeid, $date, $contentType);
 
         return $this->client
@@ -1318,9 +1318,9 @@ class AbsenceTransactionsResourceApi
      * @param  string $id identifies the transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['remove'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap
+     * @return \FortnoxApi\Model\AbsenceTransactionSingleItemWrap
      */
     public function remove($id, string $contentType = self::contentTypes['remove'][0])
     {
@@ -1336,9 +1336,9 @@ class AbsenceTransactionsResourceApi
      * @param  string $id identifies the transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['remove'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AbsenceTransactionSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function removeWithHttpInfo($id, string $contentType = self::contentTypes['remove'][0])
     {
@@ -1381,23 +1381,23 @@ class AbsenceTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AbsenceTransactionSingleItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AbsenceTransactionSingleItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap';
+            $returnType = '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1418,7 +1418,7 @@ class AbsenceTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap',
+                        '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1462,7 +1462,7 @@ class AbsenceTransactionsResourceApi
      */
     public function removeAsyncWithHttpInfo($id, string $contentType = self::contentTypes['remove'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap';
+        $returnType = '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap';
         $request = $this->removeRequest($id, $contentType);
 
         return $this->client
@@ -1599,12 +1599,12 @@ class AbsenceTransactionsResourceApi
      * Update a single absence transaction
      *
      * @param  string $id identifies the transaction (required)
-     * @param  \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to update (optional)
+     * @param  \FortnoxApi\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAbsenceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap
+     * @return \FortnoxApi\Model\AbsenceTransactionSingleItemWrap
      */
     public function updateAbsenceTransactionsResource($id, $absence_transactions_payload = null, string $contentType = self::contentTypes['updateAbsenceTransactionsResource'][0])
     {
@@ -1618,12 +1618,12 @@ class AbsenceTransactionsResourceApi
      * Update a single absence transaction
      *
      * @param  string $id identifies the transaction (required)
-     * @param  \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to update (optional)
+     * @param  \FortnoxApi\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAbsenceTransactionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AbsenceTransactionSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAbsenceTransactionsResourceWithHttpInfo($id, $absence_transactions_payload = null, string $contentType = self::contentTypes['updateAbsenceTransactionsResource'][0])
     {
@@ -1666,23 +1666,23 @@ class AbsenceTransactionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AbsenceTransactionSingleItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AbsenceTransactionSingleItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap';
+            $returnType = '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1703,7 +1703,7 @@ class AbsenceTransactionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap',
+                        '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1719,7 +1719,7 @@ class AbsenceTransactionsResourceApi
      * Update a single absence transaction
      *
      * @param  string $id identifies the transaction (required)
-     * @param  \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to update (optional)
+     * @param  \FortnoxApi\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAbsenceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1741,7 +1741,7 @@ class AbsenceTransactionsResourceApi
      * Update a single absence transaction
      *
      * @param  string $id identifies the transaction (required)
-     * @param  \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to update (optional)
+     * @param  \FortnoxApi\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAbsenceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1749,7 +1749,7 @@ class AbsenceTransactionsResourceApi
      */
     public function updateAbsenceTransactionsResourceAsyncWithHttpInfo($id, $absence_transactions_payload = null, string $contentType = self::contentTypes['updateAbsenceTransactionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AbsenceTransactionSingleItemWrap';
+        $returnType = '\FortnoxApi\Model\AbsenceTransactionSingleItemWrap';
         $request = $this->updateAbsenceTransactionsResourceRequest($id, $absence_transactions_payload, $contentType);
 
         return $this->client
@@ -1792,7 +1792,7 @@ class AbsenceTransactionsResourceApi
      * Create request for operation 'updateAbsenceTransactionsResource'
      *
      * @param  string $id identifies the transaction (required)
-     * @param  \OpenAPI\Client\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to update (optional)
+     * @param  \FortnoxApi\Model\AbsenceTransactionPayloadWrap $absence_transactions_payload to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAbsenceTransactionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

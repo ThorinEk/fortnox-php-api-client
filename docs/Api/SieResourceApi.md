@@ -1,4 +1,4 @@
-# OpenAPI\Client\SieResourceApi
+# FortnoxApi\SieResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SieResourceApi(
+$apiInstance = new FortnoxApi\Api\SieResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

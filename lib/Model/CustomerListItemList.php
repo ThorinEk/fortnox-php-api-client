@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * CustomerListItemList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class CustomerListItemList implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'customers' => '\OpenAPI\Client\Model\CustomerListItem[]'
+        'customers' => '\FortnoxApi\Model\CustomerListItem[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class CustomerListItemList implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets customers
      *
-     * @return \OpenAPI\Client\Model\CustomerListItem[]|null
+     * @return \FortnoxApi\Model\CustomerListItem[]|null
      */
     public function getCustomers()
     {
@@ -300,7 +300,7 @@ class CustomerListItemList implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets customers
      *
-     * @param \OpenAPI\Client\Model\CustomerListItem[]|null $customers customers
+     * @param \FortnoxApi\Model\CustomerListItem[]|null $customers customers
      *
      * @return self
      */

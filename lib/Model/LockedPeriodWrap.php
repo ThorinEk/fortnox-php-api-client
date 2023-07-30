@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * LockedPeriodWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class LockedPeriodWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'locked_period' => '\OpenAPI\Client\Model\LockedPeriod'
+        'locked_period' => '\FortnoxApi\Model\LockedPeriod'
     ];
 
     /**
@@ -290,7 +290,7 @@ class LockedPeriodWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets locked_period
      *
-     * @return \OpenAPI\Client\Model\LockedPeriod|null
+     * @return \FortnoxApi\Model\LockedPeriod|null
      */
     public function getLockedPeriod()
     {
@@ -300,7 +300,7 @@ class LockedPeriodWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets locked_period
      *
-     * @param \OpenAPI\Client\Model\LockedPeriod|null $locked_period locked_period
+     * @param \FortnoxApi\Model\LockedPeriod|null $locked_period locked_period
      *
      * @return self
      */

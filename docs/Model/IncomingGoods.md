@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **has_delivery_note** | **bool** |  | [optional]
 **delivery_note_id** | **string** |  |
 **supplier_number** | **string** |  | [optional]
-**rows** | [**\OpenAPI\Client\Model\IncomingGoodsRow[]**](IncomingGoodsRow.md) |  | [optional]
+**rows** | [**\FortnoxApi\Model\IncomingGoodsRow[]**](IncomingGoodsRow.md) |  | [optional]
 **date** | **\DateTime** |  | [optional]
 **released** | **bool** |  | [optional]
 **note** | **string** |  | [optional]

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * FinancialYearWrapList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class FinancialYearWrapList implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'financial_years' => '\OpenAPI\Client\Model\FinancialYear[]'
+        'financial_years' => '\FortnoxApi\Model\FinancialYear[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class FinancialYearWrapList implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets financial_years
      *
-     * @return \OpenAPI\Client\Model\FinancialYear[]|null
+     * @return \FortnoxApi\Model\FinancialYear[]|null
      */
     public function getFinancialYears()
     {
@@ -300,7 +300,7 @@ class FinancialYearWrapList implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets financial_years
      *
-     * @param \OpenAPI\Client\Model\FinancialYear[]|null $financial_years financial_years
+     * @param \FortnoxApi\Model\FinancialYear[]|null $financial_years financial_years
      *
      * @return self
      */

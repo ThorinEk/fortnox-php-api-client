@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ArticleRegistration Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ArticleRegistration implements ModelInterface, ArrayAccess, \JsonSerializa
         'unit_cost' => 'float',
         'unit_price' => 'float',
         'order_index' => 'int',
-        'item' => '\OpenAPI\Client\Model\TRItem',
+        'item' => '\FortnoxApi\Model\TRItem',
         'invoice_text' => 'string',
         'note' => 'string',
         'time_locked' => 'bool',
@@ -570,7 +570,7 @@ class ArticleRegistration implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets item
      *
-     * @return \OpenAPI\Client\Model\TRItem|null
+     * @return \FortnoxApi\Model\TRItem|null
      */
     public function getItem()
     {
@@ -580,7 +580,7 @@ class ArticleRegistration implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets item
      *
-     * @param \OpenAPI\Client\Model\TRItem|null $item item
+     * @param \FortnoxApi\Model\TRItem|null $item item
      *
      * @return self
      */

@@ -31,6 +31,6 @@ Name | Type | Description | Notes
 **room** | **string** |  | [optional]
 **placement** | **string** |  | [optional]
 **department** | **string** |  | [optional]
-**history** | [**\OpenAPI\Client\Model\History[]**](History.md) |  | [optional]
+**history** | [**\FortnoxApi\Model\History[]**](History.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

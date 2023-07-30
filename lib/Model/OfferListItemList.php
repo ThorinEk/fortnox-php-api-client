@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * OfferListItemList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class OfferListItemList implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'offers' => '\OpenAPI\Client\Model\OfferListItem[]'
+        'offers' => '\FortnoxApi\Model\OfferListItem[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class OfferListItemList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets offers
      *
-     * @return \OpenAPI\Client\Model\OfferListItem[]|null
+     * @return \FortnoxApi\Model\OfferListItem[]|null
      */
     public function getOffers()
     {
@@ -300,7 +300,7 @@ class OfferListItemList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets offers
      *
-     * @param \OpenAPI\Client\Model\OfferListItem[]|null $offers offers
+     * @param \FortnoxApi\Model\OfferListItem[]|null $offers offers
      *
      * @return self
      */

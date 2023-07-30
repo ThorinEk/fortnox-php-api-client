@@ -1,4 +1,4 @@
-# OpenAPI\Client\CustomDocumentTypeResourceApi
+# FortnoxApi\CustomDocumentTypeResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomDocumentTypeResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomDocumentTypeResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_document_type = new \OpenAPI\Client\Model\CustomDocumentType(); // \OpenAPI\Client\Model\CustomDocumentType | The <code>CustomDocumentType</code>.
+$custom_document_type = new \FortnoxApi\Model\CustomDocumentType(); // \FortnoxApi\Model\CustomDocumentType | The <code>CustomDocumentType</code>.
 
 try {
     $result = $apiInstance->createCustomDocumentTypeResource($custom_document_type);
@@ -46,7 +46,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_document_type** | [**\OpenAPI\Client\Model\CustomDocumentType**](../Model/CustomDocumentType.md)| The &lt;code&gt;CustomDocumentType&lt;/code&gt;. | [optional] |
+| **custom_document_type** | [**\FortnoxApi\Model\CustomDocumentType**](../Model/CustomDocumentType.md)| The &lt;code&gt;CustomDocumentType&lt;/code&gt;. | [optional] |
 
 ### Return type
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getAllCustomDocumentTypeResource()`
 
 ```php
-getAllCustomDocumentTypeResource(): \OpenAPI\Client\Model\CustomDocumentType[]
+getAllCustomDocumentTypeResource(): \FortnoxApi\Model\CustomDocumentType[]
 ```
 
 List custom document types
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomDocumentTypeResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomDocumentTypeResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -101,7 +101,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomDocumentType[]**](../Model/CustomDocumentType.md)
+[**\FortnoxApi\Model\CustomDocumentType[]**](../Model/CustomDocumentType.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ No authorization required
 ## `getCustomDocumentTypeResource()`
 
 ```php
-getCustomDocumentTypeResource($type): \OpenAPI\Client\Model\CustomDocumentType
+getCustomDocumentTypeResource($type): \FortnoxApi\Model\CustomDocumentType
 ```
 
 Get custom document type
@@ -132,7 +132,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomDocumentTypeResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomDocumentTypeResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -155,7 +155,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomDocumentType**](../Model/CustomDocumentType.md)
+[**\FortnoxApi\Model\CustomDocumentType**](../Model/CustomDocumentType.md)
 
 ### Authorization
 

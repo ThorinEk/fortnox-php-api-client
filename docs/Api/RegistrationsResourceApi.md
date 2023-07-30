@@ -1,4 +1,4 @@
-# OpenAPI\Client\RegistrationsResourceApi
+# FortnoxApi\RegistrationsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `listRegistrationsResource()`
 
 ```php
-listRegistrationsResource($from_date, $to_date, $customer_ids, $project_ids, $service_ids, $cost_center_ids, $reg_codes, $user_ids, $include_registrations_without_project, $invoiced, $in_invoice_basis, $internal_time, $non_invoiceable, $include_non_invoiceable_charge_hours): \OpenAPI\Client\Model\DetailedRegistration[]
+listRegistrationsResource($from_date, $to_date, $customer_ids, $project_ids, $service_ids, $cost_center_ids, $reg_codes, $user_ids, $include_registrations_without_project, $invoiced, $in_invoice_basis, $internal_time, $non_invoiceable, $include_non_invoiceable_charge_hours): \FortnoxApi\Model\DetailedRegistration[]
 ```
 
 Get time/absence registrations that match filter
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\RegistrationsResourceApi(
+$apiInstance = new FortnoxApi\Api\RegistrationsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -74,7 +74,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DetailedRegistration[]**](../Model/DetailedRegistration.md)
+[**\FortnoxApi\Model\DetailedRegistration[]**](../Model/DetailedRegistration.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\InvoicesResourceApi
+# FortnoxApi\InvoicesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -24,7 +24,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `bookkeepInvoicesResource()`
 
 ```php
-bookkeepInvoicesResource($document_number): \OpenAPI\Client\Model\InvoiceWrap
+bookkeepInvoicesResource($document_number): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Bookkeep an invoice
@@ -37,7 +37,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -60,7 +60,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -132,7 +132,7 @@ No authorization required
 ## `cancel()`
 
 ```php
-cancel($document_number): \OpenAPI\Client\Model\InvoiceWrap
+cancel($document_number): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Cancel an invoice
@@ -145,7 +145,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -168,7 +168,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ No authorization required
 ## `createInvoicesResource()`
 
 ```php
-createInvoicesResource($invoice_payload): \OpenAPI\Client\Model\InvoiceWrap
+createInvoicesResource($invoice_payload): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Create an invoice
@@ -201,12 +201,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$invoice_payload = new \OpenAPI\Client\Model\InvoicePayloadWrap(); // \OpenAPI\Client\Model\InvoicePayloadWrap | payload
+$invoice_payload = new \FortnoxApi\Model\InvoicePayloadWrap(); // \FortnoxApi\Model\InvoicePayloadWrap | payload
 
 try {
     $result = $apiInstance->createInvoicesResource($invoice_payload);
@@ -220,11 +220,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **invoice_payload** | [**\OpenAPI\Client\Model\InvoicePayloadWrap**](../Model/InvoicePayloadWrap.md)| payload | [optional] |
+| **invoice_payload** | [**\FortnoxApi\Model\InvoicePayloadWrap**](../Model/InvoicePayloadWrap.md)| payload | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -242,7 +242,7 @@ No authorization required
 ## `credit()`
 
 ```php
-credit($document_number): \OpenAPI\Client\Model\InvoiceWrap
+credit($document_number): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Credit an invoice
@@ -257,7 +257,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -280,7 +280,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -298,7 +298,7 @@ No authorization required
 ## `eInvoice()`
 
 ```php
-eInvoice($document_number): \OpenAPI\Client\Model\InvoiceWrap
+eInvoice($document_number): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Send an invoice as e-invoice
@@ -311,7 +311,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -334,7 +334,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -352,7 +352,7 @@ No authorization required
 ## `ePrint()`
 
 ```php
-ePrint($document_number): \OpenAPI\Client\Model\InvoiceWrap
+ePrint($document_number): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Send an invoice as e-print
@@ -365,7 +365,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -388,7 +388,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -406,7 +406,7 @@ No authorization required
 ## `email()`
 
 ```php
-email($document_number): \OpenAPI\Client\Model\InvoiceWrap
+email($document_number): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Send an invoice as email
@@ -421,7 +421,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -444,7 +444,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -462,7 +462,7 @@ No authorization required
 ## `externalPrint()`
 
 ```php
-externalPrint($document_number): \OpenAPI\Client\Model\InvoiceWrap
+externalPrint($document_number): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Set an invoice as sent
@@ -477,7 +477,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -500,7 +500,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -518,7 +518,7 @@ No authorization required
 ## `getInvoicesResource()`
 
 ```php
-getInvoicesResource($document_number): \OpenAPI\Client\Model\InvoiceWrap
+getInvoicesResource($document_number): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Retrieve a single invoice
@@ -531,7 +531,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -554,7 +554,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -572,7 +572,7 @@ No authorization required
 ## `listInvoicesResource()`
 
 ```php
-listInvoicesResource($filter, $costcenter, $customername, $customernumber, $label, $documentnumber, $fromdate, $todate, $fromfinalpaydate, $tofinalpaydate, $lastmodified, $notcompleted, $ocr, $ourreference, $project, $sent, $externalinvoicereference1, $externalinvoicereference2, $yourreference, $invoicetype, $articlenumber, $articledescription, $currency, $accountnumberfrom, $accountnumberto, $yourordernumber, $credit, $sortby): \OpenAPI\Client\Model\InvoiceListItemWrap
+listInvoicesResource($filter, $costcenter, $customername, $customernumber, $label, $documentnumber, $fromdate, $todate, $fromfinalpaydate, $tofinalpaydate, $lastmodified, $notcompleted, $ocr, $ourreference, $project, $sent, $externalinvoicereference1, $externalinvoicereference2, $yourreference, $invoicetype, $articlenumber, $articledescription, $currency, $accountnumberfrom, $accountnumberto, $yourordernumber, $credit, $sortby): \FortnoxApi\Model\InvoiceListItemWrap
 ```
 
 Retrieve a list of invoices
@@ -585,7 +585,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -662,7 +662,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceListItemWrap**](../Model/InvoiceListItemWrap.md)
+[**\FortnoxApi\Model\InvoiceListItemWrap**](../Model/InvoiceListItemWrap.md)
 
 ### Authorization
 
@@ -695,7 +695,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -749,7 +749,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -790,7 +790,7 @@ No authorization required
 ## `updateInvoicesResource()`
 
 ```php
-updateInvoicesResource($document_number, $invoice_payload): \OpenAPI\Client\Model\InvoiceWrap
+updateInvoicesResource($document_number, $invoice_payload): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Update an invoice
@@ -805,13 +805,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $document_number = 'document_number_example'; // string | identifies the invoice
-$invoice_payload = new \OpenAPI\Client\Model\InvoicePayloadWrap(); // \OpenAPI\Client\Model\InvoicePayloadWrap | payload
+$invoice_payload = new \FortnoxApi\Model\InvoicePayloadWrap(); // \FortnoxApi\Model\InvoicePayloadWrap | payload
 
 try {
     $result = $apiInstance->updateInvoicesResource($document_number, $invoice_payload);
@@ -826,11 +826,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **document_number** | **string**| identifies the invoice | |
-| **invoice_payload** | [**\OpenAPI\Client\Model\InvoicePayloadWrap**](../Model/InvoicePayloadWrap.md)| payload | [optional] |
+| **invoice_payload** | [**\FortnoxApi\Model\InvoicePayloadWrap**](../Model/InvoicePayloadWrap.md)| payload | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 
@@ -848,7 +848,7 @@ No authorization required
 ## `warehouseReady()`
 
 ```php
-warehouseReady($document_number): \OpenAPI\Client\Model\InvoiceWrap
+warehouseReady($document_number): \FortnoxApi\Model\InvoiceWrap
 ```
 
 Set an invoice as done
@@ -863,7 +863,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesResourceApi(
+$apiInstance = new FortnoxApi\Api\InvoicesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -886,7 +886,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
+[**\FortnoxApi\Model\InvoiceWrap**](../Model/InvoiceWrap.md)
 
 ### Authorization
 

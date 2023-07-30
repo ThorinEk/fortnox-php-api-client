@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * AccountChartsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -127,9 +127,9 @@ class AccountChartsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAccountChartsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountChartWrap
+     * @return \FortnoxApi\Model\AccountChartWrap
      */
     public function listAccountChartsResource(string $contentType = self::contentTypes['listAccountChartsResource'][0])
     {
@@ -144,9 +144,9 @@ class AccountChartsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAccountChartsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountChartWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AccountChartWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAccountChartsResourceWithHttpInfo(string $contentType = self::contentTypes['listAccountChartsResource'][0])
     {
@@ -189,23 +189,23 @@ class AccountChartsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountChartWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AccountChartWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountChartWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AccountChartWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountChartWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AccountChartWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountChartWrap';
+            $returnType = '\FortnoxApi\Model\AccountChartWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -226,7 +226,7 @@ class AccountChartsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountChartWrap',
+                        '\FortnoxApi\Model\AccountChartWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -268,7 +268,7 @@ class AccountChartsResourceApi
      */
     public function listAccountChartsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listAccountChartsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AccountChartWrap';
+        $returnType = '\FortnoxApi\Model\AccountChartWrap';
         $request = $this->listAccountChartsResourceRequest($contentType);
 
         return $this->client

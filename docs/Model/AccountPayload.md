@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **transaction_information** | **string** |  | [optional]
 **transaction_information_settings** | **string** |  | [optional]
 **vat_code** | **string** |  | [optional]
-**opening_quantities** | [**\OpenAPI\Client\Model\AccountPayloadOpeningQuantities[]**](AccountPayloadOpeningQuantities.md) |  | [optional]
+**opening_quantities** | [**\FortnoxApi\Model\AccountPayloadOpeningQuantities[]**](AccountPayloadOpeningQuantities.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

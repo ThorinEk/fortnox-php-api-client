@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * VoucherFileConnectionsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,12 +134,12 @@ class VoucherFileConnectionsResourceApi
      *
      * Create a voucher file connection
      *
-     * @param  \OpenAPI\Client\Model\VoucherFileConnectionWrap $voucher_file_connection to create (optional)
+     * @param  \FortnoxApi\Model\VoucherFileConnectionWrap $voucher_file_connection to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVoucherFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VoucherFileConnectionWrap
+     * @return \FortnoxApi\Model\VoucherFileConnectionWrap
      */
     public function createVoucherFileConnectionsResource($voucher_file_connection = null, string $contentType = self::contentTypes['createVoucherFileConnectionsResource'][0])
     {
@@ -152,12 +152,12 @@ class VoucherFileConnectionsResourceApi
      *
      * Create a voucher file connection
      *
-     * @param  \OpenAPI\Client\Model\VoucherFileConnectionWrap $voucher_file_connection to create (optional)
+     * @param  \FortnoxApi\Model\VoucherFileConnectionWrap $voucher_file_connection to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVoucherFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VoucherFileConnectionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\VoucherFileConnectionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createVoucherFileConnectionsResourceWithHttpInfo($voucher_file_connection = null, string $contentType = self::contentTypes['createVoucherFileConnectionsResource'][0])
     {
@@ -200,23 +200,23 @@ class VoucherFileConnectionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\VoucherFileConnectionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\VoucherFileConnectionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\VoucherFileConnectionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\VoucherFileConnectionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\VoucherFileConnectionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\VoucherFileConnectionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\VoucherFileConnectionWrap';
+            $returnType = '\FortnoxApi\Model\VoucherFileConnectionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -237,7 +237,7 @@ class VoucherFileConnectionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VoucherFileConnectionWrap',
+                        '\FortnoxApi\Model\VoucherFileConnectionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class VoucherFileConnectionsResourceApi
      *
      * Create a voucher file connection
      *
-     * @param  \OpenAPI\Client\Model\VoucherFileConnectionWrap $voucher_file_connection to create (optional)
+     * @param  \FortnoxApi\Model\VoucherFileConnectionWrap $voucher_file_connection to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVoucherFileConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class VoucherFileConnectionsResourceApi
      *
      * Create a voucher file connection
      *
-     * @param  \OpenAPI\Client\Model\VoucherFileConnectionWrap $voucher_file_connection to create (optional)
+     * @param  \FortnoxApi\Model\VoucherFileConnectionWrap $voucher_file_connection to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVoucherFileConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class VoucherFileConnectionsResourceApi
      */
     public function createVoucherFileConnectionsResourceAsyncWithHttpInfo($voucher_file_connection = null, string $contentType = self::contentTypes['createVoucherFileConnectionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VoucherFileConnectionWrap';
+        $returnType = '\FortnoxApi\Model\VoucherFileConnectionWrap';
         $request = $this->createVoucherFileConnectionsResourceRequest($voucher_file_connection, $contentType);
 
         return $this->client
@@ -323,7 +323,7 @@ class VoucherFileConnectionsResourceApi
     /**
      * Create request for operation 'createVoucherFileConnectionsResource'
      *
-     * @param  \OpenAPI\Client\Model\VoucherFileConnectionWrap $voucher_file_connection to create (optional)
+     * @param  \FortnoxApi\Model\VoucherFileConnectionWrap $voucher_file_connection to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVoucherFileConnectionsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -413,9 +413,9 @@ class VoucherFileConnectionsResourceApi
      * @param  string $file_id identifies the voucher file connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVoucherFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VoucherFileConnectionWrap
+     * @return \FortnoxApi\Model\VoucherFileConnectionWrap
      */
     public function getVoucherFileConnectionsResource($file_id, string $contentType = self::contentTypes['getVoucherFileConnectionsResource'][0])
     {
@@ -431,9 +431,9 @@ class VoucherFileConnectionsResourceApi
      * @param  string $file_id identifies the voucher file connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVoucherFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VoucherFileConnectionWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\VoucherFileConnectionWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVoucherFileConnectionsResourceWithHttpInfo($file_id, string $contentType = self::contentTypes['getVoucherFileConnectionsResource'][0])
     {
@@ -476,23 +476,23 @@ class VoucherFileConnectionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\VoucherFileConnectionWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\VoucherFileConnectionWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\VoucherFileConnectionWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\VoucherFileConnectionWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\VoucherFileConnectionWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\VoucherFileConnectionWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\VoucherFileConnectionWrap';
+            $returnType = '\FortnoxApi\Model\VoucherFileConnectionWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -513,7 +513,7 @@ class VoucherFileConnectionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VoucherFileConnectionWrap',
+                        '\FortnoxApi\Model\VoucherFileConnectionWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -557,7 +557,7 @@ class VoucherFileConnectionsResourceApi
      */
     public function getVoucherFileConnectionsResourceAsyncWithHttpInfo($file_id, string $contentType = self::contentTypes['getVoucherFileConnectionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VoucherFileConnectionWrap';
+        $returnType = '\FortnoxApi\Model\VoucherFileConnectionWrap';
         $request = $this->getVoucherFileConnectionsResourceRequest($file_id, $contentType);
 
         return $this->client
@@ -695,9 +695,9 @@ class VoucherFileConnectionsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listVoucherFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VoucherFileConnectionList
+     * @return \FortnoxApi\Model\VoucherFileConnectionList
      */
     public function listVoucherFileConnectionsResource(string $contentType = self::contentTypes['listVoucherFileConnectionsResource'][0])
     {
@@ -712,9 +712,9 @@ class VoucherFileConnectionsResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listVoucherFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VoucherFileConnectionList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\VoucherFileConnectionList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listVoucherFileConnectionsResourceWithHttpInfo(string $contentType = self::contentTypes['listVoucherFileConnectionsResource'][0])
     {
@@ -757,23 +757,23 @@ class VoucherFileConnectionsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\VoucherFileConnectionList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\VoucherFileConnectionList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\VoucherFileConnectionList' !== 'string') {
+                        if ('\FortnoxApi\Model\VoucherFileConnectionList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\VoucherFileConnectionList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\VoucherFileConnectionList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\VoucherFileConnectionList';
+            $returnType = '\FortnoxApi\Model\VoucherFileConnectionList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -794,7 +794,7 @@ class VoucherFileConnectionsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VoucherFileConnectionList',
+                        '\FortnoxApi\Model\VoucherFileConnectionList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -836,7 +836,7 @@ class VoucherFileConnectionsResourceApi
      */
     public function listVoucherFileConnectionsResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listVoucherFileConnectionsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VoucherFileConnectionList';
+        $returnType = '\FortnoxApi\Model\VoucherFileConnectionList';
         $request = $this->listVoucherFileConnectionsResourceRequest($contentType);
 
         return $this->client
@@ -959,7 +959,7 @@ class VoucherFileConnectionsResourceApi
      * @param  string $file_id identifies the voucher file connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeVoucherFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -976,7 +976,7 @@ class VoucherFileConnectionsResourceApi
      * @param  string $file_id identifies the voucher file connection (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeVoucherFileConnectionsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

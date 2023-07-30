@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * AccountsResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -135,12 +135,12 @@ class AccountsResourceApi
      * Create an account
      *
      * @param  int $financialyear financial year to create account against (optional)
-     * @param  \OpenAPI\Client\Model\AccountPayloadWrap $account_payload account to create (optional)
+     * @param  \FortnoxApi\Model\AccountPayloadWrap $account_payload account to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountSingleItemWrap
+     * @return \FortnoxApi\Model\AccountSingleItemWrap
      */
     public function createAccountsResource($financialyear = null, $account_payload = null, string $contentType = self::contentTypes['createAccountsResource'][0])
     {
@@ -154,12 +154,12 @@ class AccountsResourceApi
      * Create an account
      *
      * @param  int $financialyear financial year to create account against (optional)
-     * @param  \OpenAPI\Client\Model\AccountPayloadWrap $account_payload account to create (optional)
+     * @param  \FortnoxApi\Model\AccountPayloadWrap $account_payload account to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AccountSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAccountsResourceWithHttpInfo($financialyear = null, $account_payload = null, string $contentType = self::contentTypes['createAccountsResource'][0])
     {
@@ -202,23 +202,23 @@ class AccountsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountSingleItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AccountSingleItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountSingleItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AccountSingleItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountSingleItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AccountSingleItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountSingleItemWrap';
+            $returnType = '\FortnoxApi\Model\AccountSingleItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -239,7 +239,7 @@ class AccountsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountSingleItemWrap',
+                        '\FortnoxApi\Model\AccountSingleItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class AccountsResourceApi
      * Create an account
      *
      * @param  int $financialyear financial year to create account against (optional)
-     * @param  \OpenAPI\Client\Model\AccountPayloadWrap $account_payload account to create (optional)
+     * @param  \FortnoxApi\Model\AccountPayloadWrap $account_payload account to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAccountsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -277,7 +277,7 @@ class AccountsResourceApi
      * Create an account
      *
      * @param  int $financialyear financial year to create account against (optional)
-     * @param  \OpenAPI\Client\Model\AccountPayloadWrap $account_payload account to create (optional)
+     * @param  \FortnoxApi\Model\AccountPayloadWrap $account_payload account to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAccountsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -285,7 +285,7 @@ class AccountsResourceApi
      */
     public function createAccountsResourceAsyncWithHttpInfo($financialyear = null, $account_payload = null, string $contentType = self::contentTypes['createAccountsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AccountSingleItemWrap';
+        $returnType = '\FortnoxApi\Model\AccountSingleItemWrap';
         $request = $this->createAccountsResourceRequest($financialyear, $account_payload, $contentType);
 
         return $this->client
@@ -328,7 +328,7 @@ class AccountsResourceApi
      * Create request for operation 'createAccountsResource'
      *
      * @param  int $financialyear financial year to create account against (optional)
-     * @param  \OpenAPI\Client\Model\AccountPayloadWrap $account_payload account to create (optional)
+     * @param  \FortnoxApi\Model\AccountPayloadWrap $account_payload account to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAccountsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -428,9 +428,9 @@ class AccountsResourceApi
      * @param  int $number identifies the account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountSingleItemWrap
+     * @return \FortnoxApi\Model\AccountSingleItemWrap
      */
     public function getAccountsResource($number, string $contentType = self::contentTypes['getAccountsResource'][0])
     {
@@ -446,9 +446,9 @@ class AccountsResourceApi
      * @param  int $number identifies the account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AccountSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountsResourceWithHttpInfo($number, string $contentType = self::contentTypes['getAccountsResource'][0])
     {
@@ -491,23 +491,23 @@ class AccountsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountSingleItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AccountSingleItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountSingleItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AccountSingleItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountSingleItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AccountSingleItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountSingleItemWrap';
+            $returnType = '\FortnoxApi\Model\AccountSingleItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -528,7 +528,7 @@ class AccountsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountSingleItemWrap',
+                        '\FortnoxApi\Model\AccountSingleItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -572,7 +572,7 @@ class AccountsResourceApi
      */
     public function getAccountsResourceAsyncWithHttpInfo($number, string $contentType = self::contentTypes['getAccountsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AccountSingleItemWrap';
+        $returnType = '\FortnoxApi\Model\AccountSingleItemWrap';
         $request = $this->getAccountsResourceRequest($number, $contentType);
 
         return $this->client
@@ -713,9 +713,9 @@ class AccountsResourceApi
      * @param  string $sortby field to sort returned list on (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountListItemWrap
+     * @return \FortnoxApi\Model\AccountListItemWrap
      */
     public function listAccountsResource($lastmodified = null, $sru = null, $sortby = null, string $contentType = self::contentTypes['listAccountsResource'][0])
     {
@@ -733,9 +733,9 @@ class AccountsResourceApi
      * @param  string $sortby field to sort returned list on (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountListItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AccountListItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAccountsResourceWithHttpInfo($lastmodified = null, $sru = null, $sortby = null, string $contentType = self::contentTypes['listAccountsResource'][0])
     {
@@ -778,23 +778,23 @@ class AccountsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountListItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AccountListItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountListItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AccountListItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountListItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AccountListItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountListItemWrap';
+            $returnType = '\FortnoxApi\Model\AccountListItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -815,7 +815,7 @@ class AccountsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountListItemWrap',
+                        '\FortnoxApi\Model\AccountListItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -863,7 +863,7 @@ class AccountsResourceApi
      */
     public function listAccountsResourceAsyncWithHttpInfo($lastmodified = null, $sru = null, $sortby = null, string $contentType = self::contentTypes['listAccountsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AccountListItemWrap';
+        $returnType = '\FortnoxApi\Model\AccountListItemWrap';
         $request = $this->listAccountsResourceRequest($lastmodified, $sru, $sortby, $contentType);
 
         return $this->client
@@ -1018,12 +1018,12 @@ class AccountsResourceApi
      *
      * @param  int $number identifies the account (required)
      * @param  int $financialyear financial year to update account against (optional)
-     * @param  \OpenAPI\Client\Model\AccountPayloadWrap $account_payload account to update (optional)
+     * @param  \FortnoxApi\Model\AccountPayloadWrap $account_payload account to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountSingleItemWrap
+     * @return \FortnoxApi\Model\AccountSingleItemWrap
      */
     public function updateAccountsResource($number, $financialyear = null, $account_payload = null, string $contentType = self::contentTypes['updateAccountsResource'][0])
     {
@@ -1038,12 +1038,12 @@ class AccountsResourceApi
      *
      * @param  int $number identifies the account (required)
      * @param  int $financialyear financial year to update account against (optional)
-     * @param  \OpenAPI\Client\Model\AccountPayloadWrap $account_payload account to update (optional)
+     * @param  \FortnoxApi\Model\AccountPayloadWrap $account_payload account to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAccountsResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\AccountSingleItemWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAccountsResourceWithHttpInfo($number, $financialyear = null, $account_payload = null, string $contentType = self::contentTypes['updateAccountsResource'][0])
     {
@@ -1086,23 +1086,23 @@ class AccountsResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountSingleItemWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\AccountSingleItemWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountSingleItemWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\AccountSingleItemWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountSingleItemWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\AccountSingleItemWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountSingleItemWrap';
+            $returnType = '\FortnoxApi\Model\AccountSingleItemWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1123,7 +1123,7 @@ class AccountsResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountSingleItemWrap',
+                        '\FortnoxApi\Model\AccountSingleItemWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1140,7 +1140,7 @@ class AccountsResourceApi
      *
      * @param  int $number identifies the account (required)
      * @param  int $financialyear financial year to update account against (optional)
-     * @param  \OpenAPI\Client\Model\AccountPayloadWrap $account_payload account to update (optional)
+     * @param  \FortnoxApi\Model\AccountPayloadWrap $account_payload account to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAccountsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1163,7 +1163,7 @@ class AccountsResourceApi
      *
      * @param  int $number identifies the account (required)
      * @param  int $financialyear financial year to update account against (optional)
-     * @param  \OpenAPI\Client\Model\AccountPayloadWrap $account_payload account to update (optional)
+     * @param  \FortnoxApi\Model\AccountPayloadWrap $account_payload account to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAccountsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1171,7 +1171,7 @@ class AccountsResourceApi
      */
     public function updateAccountsResourceAsyncWithHttpInfo($number, $financialyear = null, $account_payload = null, string $contentType = self::contentTypes['updateAccountsResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AccountSingleItemWrap';
+        $returnType = '\FortnoxApi\Model\AccountSingleItemWrap';
         $request = $this->updateAccountsResourceRequest($number, $financialyear, $account_payload, $contentType);
 
         return $this->client
@@ -1215,7 +1215,7 @@ class AccountsResourceApi
      *
      * @param  int $number identifies the account (required)
      * @param  int $financialyear financial year to update account against (optional)
-     * @param  \OpenAPI\Client\Model\AccountPayloadWrap $account_payload account to update (optional)
+     * @param  \FortnoxApi\Model\AccountPayloadWrap $account_payload account to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAccountsResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

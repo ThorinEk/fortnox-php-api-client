@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * SellWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class SellWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'asset' => '\OpenAPI\Client\Model\Sell'
+        'asset' => '\FortnoxApi\Model\Sell'
     ];
 
     /**
@@ -290,7 +290,7 @@ class SellWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets asset
      *
-     * @return \OpenAPI\Client\Model\Sell|null
+     * @return \FortnoxApi\Model\Sell|null
      */
     public function getAsset()
     {
@@ -300,7 +300,7 @@ class SellWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets asset
      *
-     * @param \OpenAPI\Client\Model\Sell|null $asset asset
+     * @param \FortnoxApi\Model\Sell|null $asset asset
      *
      * @return self
      */

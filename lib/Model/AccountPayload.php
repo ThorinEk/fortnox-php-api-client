@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * AccountPayload Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -67,7 +67,7 @@ class AccountPayload implements ModelInterface, ArrayAccess, \JsonSerializable
         'transaction_information' => 'string',
         'transaction_information_settings' => 'string',
         'vat_code' => 'string',
-        'opening_quantities' => '\OpenAPI\Client\Model\AccountPayloadOpeningQuantities[]'
+        'opening_quantities' => '\FortnoxApi\Model\AccountPayloadOpeningQuantities[]'
     ];
 
     /**
@@ -843,7 +843,7 @@ class AccountPayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets opening_quantities
      *
-     * @return \OpenAPI\Client\Model\AccountPayloadOpeningQuantities[]|null
+     * @return \FortnoxApi\Model\AccountPayloadOpeningQuantities[]|null
      */
     public function getOpeningQuantities()
     {
@@ -853,7 +853,7 @@ class AccountPayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets opening_quantities
      *
-     * @param \OpenAPI\Client\Model\AccountPayloadOpeningQuantities[]|null $opening_quantities opening_quantities
+     * @param \FortnoxApi\Model\AccountPayloadOpeningQuantities[]|null $opening_quantities opening_quantities
      *
      * @return self
      */

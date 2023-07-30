@@ -1,4 +1,4 @@
-# OpenAPI\Client\OffersResourceApi
+# FortnoxApi\OffersResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -19,7 +19,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `cancelOffersResource()`
 
 ```php
-cancelOffersResource($document_number): \OpenAPI\Client\Model\OfferWrap
+cancelOffersResource($document_number): \FortnoxApi\Model\OfferWrap
 ```
 
 Cancels given offer
@@ -32,7 +32,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OffersResourceApi(
+$apiInstance = new FortnoxApi\Api\OffersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OfferWrap**](../Model/OfferWrap.md)
+[**\FortnoxApi\Model\OfferWrap**](../Model/OfferWrap.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 ## `createOffersResource()`
 
 ```php
-createOffersResource($offer): \OpenAPI\Client\Model\OfferWrap
+createOffersResource($offer): \FortnoxApi\Model\OfferWrap
 ```
 
 Create an offer
@@ -88,12 +88,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OffersResourceApi(
+$apiInstance = new FortnoxApi\Api\OffersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$offer = new \OpenAPI\Client\Model\OfferWrap(); // \OpenAPI\Client\Model\OfferWrap | to create
+$offer = new \FortnoxApi\Model\OfferWrap(); // \FortnoxApi\Model\OfferWrap | to create
 
 try {
     $result = $apiInstance->createOffersResource($offer);
@@ -107,11 +107,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **offer** | [**\OpenAPI\Client\Model\OfferWrap**](../Model/OfferWrap.md)| to create | [optional] |
+| **offer** | [**\FortnoxApi\Model\OfferWrap**](../Model/OfferWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OfferWrap**](../Model/OfferWrap.md)
+[**\FortnoxApi\Model\OfferWrap**](../Model/OfferWrap.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ No authorization required
 ## `createorder()`
 
 ```php
-createorder($document_number): \OpenAPI\Client\Model\OrderWrap
+createorder($document_number): \FortnoxApi\Model\OrderWrap
 ```
 
 Create order out of given offer
@@ -142,7 +142,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OffersResourceApi(
+$apiInstance = new FortnoxApi\Api\OffersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -165,7 +165,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderWrap**](../Model/OrderWrap.md)
+[**\FortnoxApi\Model\OrderWrap**](../Model/OrderWrap.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ No authorization required
 ## `emailOffersResource()`
 
 ```php
-emailOffersResource($document_number): \OpenAPI\Client\Model\OfferWrap
+emailOffersResource($document_number): \FortnoxApi\Model\OfferWrap
 ```
 
 Send given offer as email
@@ -198,7 +198,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OffersResourceApi(
+$apiInstance = new FortnoxApi\Api\OffersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -221,7 +221,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OfferWrap**](../Model/OfferWrap.md)
+[**\FortnoxApi\Model\OfferWrap**](../Model/OfferWrap.md)
 
 ### Authorization
 
@@ -239,7 +239,7 @@ No authorization required
 ## `externalprint()`
 
 ```php
-externalprint($document_number): \OpenAPI\Client\Model\OfferWrap
+externalprint($document_number): \FortnoxApi\Model\OfferWrap
 ```
 
 Set given offer as sent
@@ -254,7 +254,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OffersResourceApi(
+$apiInstance = new FortnoxApi\Api\OffersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -277,7 +277,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OfferWrap**](../Model/OfferWrap.md)
+[**\FortnoxApi\Model\OfferWrap**](../Model/OfferWrap.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ No authorization required
 ## `getOffersResource()`
 
 ```php
-getOffersResource($document_number): \OpenAPI\Client\Model\OfferWrap
+getOffersResource($document_number): \FortnoxApi\Model\OfferWrap
 ```
 
 Retrieve a single offer
@@ -308,7 +308,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OffersResourceApi(
+$apiInstance = new FortnoxApi\Api\OffersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -331,7 +331,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OfferWrap**](../Model/OfferWrap.md)
+[**\FortnoxApi\Model\OfferWrap**](../Model/OfferWrap.md)
 
 ### Authorization
 
@@ -349,7 +349,7 @@ No authorization required
 ## `listOffersResource()`
 
 ```php
-listOffersResource($filter, $customername, $customernumber, $documentnumber, $costcenter, $label, $fromdate, $todate, $project, $sent, $notcompleted, $ourreference, $yourreference, $lastmodified, $sortby): \OpenAPI\Client\Model\OfferListItemList
+listOffersResource($filter, $customername, $customernumber, $documentnumber, $costcenter, $label, $fromdate, $todate, $project, $sent, $notcompleted, $ourreference, $yourreference, $lastmodified, $sortby): \FortnoxApi\Model\OfferListItemList
 ```
 
 Retrieve a list of offers
@@ -362,7 +362,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OffersResourceApi(
+$apiInstance = new FortnoxApi\Api\OffersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -413,7 +413,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OfferListItemList**](../Model/OfferListItemList.md)
+[**\FortnoxApi\Model\OfferListItemList**](../Model/OfferListItemList.md)
 
 ### Authorization
 
@@ -446,7 +446,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OffersResourceApi(
+$apiInstance = new FortnoxApi\Api\OffersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -500,7 +500,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OffersResourceApi(
+$apiInstance = new FortnoxApi\Api\OffersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -541,7 +541,7 @@ No authorization required
 ## `updateOffersResource()`
 
 ```php
-updateOffersResource($document_number, $offer): \OpenAPI\Client\Model\OfferWrap
+updateOffersResource($document_number, $offer): \FortnoxApi\Model\OfferWrap
 ```
 
 Update an offer
@@ -556,13 +556,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OffersResourceApi(
+$apiInstance = new FortnoxApi\Api\OffersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $document_number = 'document_number_example'; // string | identifies the offer
-$offer = new \OpenAPI\Client\Model\OfferWrap(); // \OpenAPI\Client\Model\OfferWrap | to update
+$offer = new \FortnoxApi\Model\OfferWrap(); // \FortnoxApi\Model\OfferWrap | to update
 
 try {
     $result = $apiInstance->updateOffersResource($document_number, $offer);
@@ -577,11 +577,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **document_number** | **string**| identifies the offer | |
-| **offer** | [**\OpenAPI\Client\Model\OfferWrap**](../Model/OfferWrap.md)| to update | [optional] |
+| **offer** | [**\FortnoxApi\Model\OfferWrap**](../Model/OfferWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OfferWrap**](../Model/OfferWrap.md)
+[**\FortnoxApi\Model\OfferWrap**](../Model/OfferWrap.md)
 
 ### Authorization
 

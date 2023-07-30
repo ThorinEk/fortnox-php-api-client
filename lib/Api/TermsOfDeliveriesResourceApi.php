@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * TermsOfDeliveriesResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,12 +134,12 @@ class TermsOfDeliveriesResourceApi
      *
      * Create a terms of delivery
      *
-     * @param  \OpenAPI\Client\Model\TermsOfDeliveryWrap $term_of_delivery to create (optional)
+     * @param  \FortnoxApi\Model\TermsOfDeliveryWrap $term_of_delivery to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTermsOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TermsOfDeliveryWrap
+     * @return \FortnoxApi\Model\TermsOfDeliveryWrap
      */
     public function createTermsOfDeliveriesResource($term_of_delivery = null, string $contentType = self::contentTypes['createTermsOfDeliveriesResource'][0])
     {
@@ -152,12 +152,12 @@ class TermsOfDeliveriesResourceApi
      *
      * Create a terms of delivery
      *
-     * @param  \OpenAPI\Client\Model\TermsOfDeliveryWrap $term_of_delivery to create (optional)
+     * @param  \FortnoxApi\Model\TermsOfDeliveryWrap $term_of_delivery to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTermsOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TermsOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TermsOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTermsOfDeliveriesResourceWithHttpInfo($term_of_delivery = null, string $contentType = self::contentTypes['createTermsOfDeliveriesResource'][0])
     {
@@ -200,23 +200,23 @@ class TermsOfDeliveriesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TermsOfDeliveryWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TermsOfDeliveryWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TermsOfDeliveryWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\TermsOfDeliveryWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TermsOfDeliveryWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TermsOfDeliveryWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TermsOfDeliveryWrap';
+            $returnType = '\FortnoxApi\Model\TermsOfDeliveryWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -237,7 +237,7 @@ class TermsOfDeliveriesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TermsOfDeliveryWrap',
+                        '\FortnoxApi\Model\TermsOfDeliveryWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class TermsOfDeliveriesResourceApi
      *
      * Create a terms of delivery
      *
-     * @param  \OpenAPI\Client\Model\TermsOfDeliveryWrap $term_of_delivery to create (optional)
+     * @param  \FortnoxApi\Model\TermsOfDeliveryWrap $term_of_delivery to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTermsOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class TermsOfDeliveriesResourceApi
      *
      * Create a terms of delivery
      *
-     * @param  \OpenAPI\Client\Model\TermsOfDeliveryWrap $term_of_delivery to create (optional)
+     * @param  \FortnoxApi\Model\TermsOfDeliveryWrap $term_of_delivery to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTermsOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class TermsOfDeliveriesResourceApi
      */
     public function createTermsOfDeliveriesResourceAsyncWithHttpInfo($term_of_delivery = null, string $contentType = self::contentTypes['createTermsOfDeliveriesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TermsOfDeliveryWrap';
+        $returnType = '\FortnoxApi\Model\TermsOfDeliveryWrap';
         $request = $this->createTermsOfDeliveriesResourceRequest($term_of_delivery, $contentType);
 
         return $this->client
@@ -323,7 +323,7 @@ class TermsOfDeliveriesResourceApi
     /**
      * Create request for operation 'createTermsOfDeliveriesResource'
      *
-     * @param  \OpenAPI\Client\Model\TermsOfDeliveryWrap $term_of_delivery to create (optional)
+     * @param  \FortnoxApi\Model\TermsOfDeliveryWrap $term_of_delivery to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTermsOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -413,9 +413,9 @@ class TermsOfDeliveriesResourceApi
      * @param  string $code identifies the terms of delivery (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTermsOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TermsOfDeliveryWrap
+     * @return \FortnoxApi\Model\TermsOfDeliveryWrap
      */
     public function getTermsOfDeliveriesResource($code, string $contentType = self::contentTypes['getTermsOfDeliveriesResource'][0])
     {
@@ -431,9 +431,9 @@ class TermsOfDeliveriesResourceApi
      * @param  string $code identifies the terms of delivery (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTermsOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TermsOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TermsOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTermsOfDeliveriesResourceWithHttpInfo($code, string $contentType = self::contentTypes['getTermsOfDeliveriesResource'][0])
     {
@@ -476,23 +476,23 @@ class TermsOfDeliveriesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TermsOfDeliveryWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TermsOfDeliveryWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TermsOfDeliveryWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\TermsOfDeliveryWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TermsOfDeliveryWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TermsOfDeliveryWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TermsOfDeliveryWrap';
+            $returnType = '\FortnoxApi\Model\TermsOfDeliveryWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -513,7 +513,7 @@ class TermsOfDeliveriesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TermsOfDeliveryWrap',
+                        '\FortnoxApi\Model\TermsOfDeliveryWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -557,7 +557,7 @@ class TermsOfDeliveriesResourceApi
      */
     public function getTermsOfDeliveriesResourceAsyncWithHttpInfo($code, string $contentType = self::contentTypes['getTermsOfDeliveriesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TermsOfDeliveryWrap';
+        $returnType = '\FortnoxApi\Model\TermsOfDeliveryWrap';
         $request = $this->getTermsOfDeliveriesResourceRequest($code, $contentType);
 
         return $this->client
@@ -695,9 +695,9 @@ class TermsOfDeliveriesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTermsOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TermsOfDeliveryList
+     * @return \FortnoxApi\Model\TermsOfDeliveryList
      */
     public function listTermsOfDeliveriesResource(string $contentType = self::contentTypes['listTermsOfDeliveriesResource'][0])
     {
@@ -712,9 +712,9 @@ class TermsOfDeliveriesResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTermsOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TermsOfDeliveryList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TermsOfDeliveryList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTermsOfDeliveriesResourceWithHttpInfo(string $contentType = self::contentTypes['listTermsOfDeliveriesResource'][0])
     {
@@ -757,23 +757,23 @@ class TermsOfDeliveriesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TermsOfDeliveryList' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TermsOfDeliveryList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TermsOfDeliveryList' !== 'string') {
+                        if ('\FortnoxApi\Model\TermsOfDeliveryList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TermsOfDeliveryList', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TermsOfDeliveryList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TermsOfDeliveryList';
+            $returnType = '\FortnoxApi\Model\TermsOfDeliveryList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -794,7 +794,7 @@ class TermsOfDeliveriesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TermsOfDeliveryList',
+                        '\FortnoxApi\Model\TermsOfDeliveryList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -836,7 +836,7 @@ class TermsOfDeliveriesResourceApi
      */
     public function listTermsOfDeliveriesResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['listTermsOfDeliveriesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TermsOfDeliveryList';
+        $returnType = '\FortnoxApi\Model\TermsOfDeliveryList';
         $request = $this->listTermsOfDeliveriesResourceRequest($contentType);
 
         return $this->client
@@ -957,12 +957,12 @@ class TermsOfDeliveriesResourceApi
      * Update a terms of delivery
      *
      * @param  string $code identifies the terms of delivery (required)
-     * @param  \OpenAPI\Client\Model\TermsOfDeliveryWrap $terms_of_delivery to update (optional)
+     * @param  \FortnoxApi\Model\TermsOfDeliveryWrap $terms_of_delivery to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTermsOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TermsOfDeliveryWrap
+     * @return \FortnoxApi\Model\TermsOfDeliveryWrap
      */
     public function updateTermsOfDeliveriesResource($code, $terms_of_delivery = null, string $contentType = self::contentTypes['updateTermsOfDeliveriesResource'][0])
     {
@@ -976,12 +976,12 @@ class TermsOfDeliveriesResourceApi
      * Update a terms of delivery
      *
      * @param  string $code identifies the terms of delivery (required)
-     * @param  \OpenAPI\Client\Model\TermsOfDeliveryWrap $terms_of_delivery to update (optional)
+     * @param  \FortnoxApi\Model\TermsOfDeliveryWrap $terms_of_delivery to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTermsOfDeliveriesResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TermsOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TermsOfDeliveryWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateTermsOfDeliveriesResourceWithHttpInfo($code, $terms_of_delivery = null, string $contentType = self::contentTypes['updateTermsOfDeliveriesResource'][0])
     {
@@ -1024,23 +1024,23 @@ class TermsOfDeliveriesResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TermsOfDeliveryWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TermsOfDeliveryWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TermsOfDeliveryWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\TermsOfDeliveryWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TermsOfDeliveryWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TermsOfDeliveryWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TermsOfDeliveryWrap';
+            $returnType = '\FortnoxApi\Model\TermsOfDeliveryWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1061,7 +1061,7 @@ class TermsOfDeliveriesResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TermsOfDeliveryWrap',
+                        '\FortnoxApi\Model\TermsOfDeliveryWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1077,7 +1077,7 @@ class TermsOfDeliveriesResourceApi
      * Update a terms of delivery
      *
      * @param  string $code identifies the terms of delivery (required)
-     * @param  \OpenAPI\Client\Model\TermsOfDeliveryWrap $terms_of_delivery to update (optional)
+     * @param  \FortnoxApi\Model\TermsOfDeliveryWrap $terms_of_delivery to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTermsOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1099,7 +1099,7 @@ class TermsOfDeliveriesResourceApi
      * Update a terms of delivery
      *
      * @param  string $code identifies the terms of delivery (required)
-     * @param  \OpenAPI\Client\Model\TermsOfDeliveryWrap $terms_of_delivery to update (optional)
+     * @param  \FortnoxApi\Model\TermsOfDeliveryWrap $terms_of_delivery to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTermsOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1107,7 +1107,7 @@ class TermsOfDeliveriesResourceApi
      */
     public function updateTermsOfDeliveriesResourceAsyncWithHttpInfo($code, $terms_of_delivery = null, string $contentType = self::contentTypes['updateTermsOfDeliveriesResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TermsOfDeliveryWrap';
+        $returnType = '\FortnoxApi\Model\TermsOfDeliveryWrap';
         $request = $this->updateTermsOfDeliveriesResourceRequest($code, $terms_of_delivery, $contentType);
 
         return $this->client
@@ -1150,7 +1150,7 @@ class TermsOfDeliveriesResourceApi
      * Create request for operation 'updateTermsOfDeliveriesResource'
      *
      * @param  string $code identifies the terms of delivery (required)
-     * @param  \OpenAPI\Client\Model\TermsOfDeliveryWrap $terms_of_delivery to update (optional)
+     * @param  \FortnoxApi\Model\TermsOfDeliveryWrap $terms_of_delivery to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTermsOfDeliveriesResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ProjectWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class ProjectWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'project' => '\OpenAPI\Client\Model\Project'
+        'project' => '\FortnoxApi\Model\Project'
     ];
 
     /**
@@ -290,7 +290,7 @@ class ProjectWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets project
      *
-     * @return \OpenAPI\Client\Model\Project|null
+     * @return \FortnoxApi\Model\Project|null
      */
     public function getProject()
     {
@@ -300,7 +300,7 @@ class ProjectWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets project
      *
-     * @param \OpenAPI\Client\Model\Project|null $project project
+     * @param \FortnoxApi\Model\Project|null $project project
      *
      * @return self
      */

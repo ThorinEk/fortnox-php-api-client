@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * Voucher Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class Voucher implements ModelInterface, ArrayAccess, \JsonSerializable
         'reference_type' => 'string',
         'transaction_date' => '\DateTime',
         'voucher_number' => 'int',
-        'voucher_rows' => '\OpenAPI\Client\Model\VoucherVoucherRow[]',
+        'voucher_rows' => '\FortnoxApi\Model\VoucherVoucherRow[]',
         'voucher_series' => 'string',
         'year' => 'int',
         'approval_state' => 'int'
@@ -711,7 +711,7 @@ class Voucher implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets voucher_rows
      *
-     * @return \OpenAPI\Client\Model\VoucherVoucherRow[]|null
+     * @return \FortnoxApi\Model\VoucherVoucherRow[]|null
      */
     public function getVoucherRows()
     {
@@ -721,7 +721,7 @@ class Voucher implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets voucher_rows
      *
-     * @param \OpenAPI\Client\Model\VoucherVoucherRow[]|null $voucher_rows voucher_rows
+     * @param \FortnoxApi\Model\VoucherVoucherRow[]|null $voucher_rows voucher_rows
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * CustomInboundDocumentResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,9 +138,9 @@ class CustomInboundDocumentResourceApi
      * @param  string $id Document id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomInboundDocumentResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomInboundDocument
+     * @return \FortnoxApi\Model\CustomInboundDocument
      */
     public function getCustomInboundDocumentResource($type, $id, string $contentType = self::contentTypes['getCustomInboundDocumentResource'][0])
     {
@@ -157,9 +157,9 @@ class CustomInboundDocumentResourceApi
      * @param  string $id Document id. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomInboundDocumentResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomInboundDocument, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomInboundDocument, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomInboundDocumentResourceWithHttpInfo($type, $id, string $contentType = self::contentTypes['getCustomInboundDocumentResource'][0])
     {
@@ -202,23 +202,23 @@ class CustomInboundDocumentResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomInboundDocument' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomInboundDocument' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomInboundDocument' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomInboundDocument' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomInboundDocument', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomInboundDocument', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomInboundDocument';
+            $returnType = '\FortnoxApi\Model\CustomInboundDocument';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -239,7 +239,7 @@ class CustomInboundDocumentResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomInboundDocument',
+                        '\FortnoxApi\Model\CustomInboundDocument',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -285,7 +285,7 @@ class CustomInboundDocumentResourceApi
      */
     public function getCustomInboundDocumentResourceAsyncWithHttpInfo($type, $id, string $contentType = self::contentTypes['getCustomInboundDocumentResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomInboundDocument';
+        $returnType = '\FortnoxApi\Model\CustomInboundDocument';
         $request = $this->getCustomInboundDocumentResourceRequest($type, $id, $contentType);
 
         return $this->client
@@ -441,7 +441,7 @@ class CustomInboundDocumentResourceApi
      * @param  string $id document id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['releaseCustomInboundDocumentResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -459,7 +459,7 @@ class CustomInboundDocumentResourceApi
      * @param  string $id document id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['releaseCustomInboundDocumentResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -688,12 +688,12 @@ class CustomInboundDocumentResourceApi
      *
      * @param  string $type min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-), type is case-insensitive  &lt;blockquote&gt;&lt;pre&gt;       Type is a custom name/reference of the document that will be used to reference the document type &lt;br&gt;       * If type is not known, it will be registered as belonging to the INBOUND category. &lt;br&gt;       * If type is an existing custom document type of category OUTBOUND an error is thrown. &lt;br&gt;       * If type is invalid an error is thrown. &lt;br&gt;  &lt;/pre&gt;&lt;/blockquote&gt; (required)
      * @param  string $id min 1 character, max 25 characters, may only contain digits 0-9 (required)
-     * @param  \OpenAPI\Client\Model\CustomInboundDocument $document the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create (optional)
+     * @param  \FortnoxApi\Model\CustomInboundDocument $document the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveCustomInboundDocumentResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomInboundDocument
+     * @return \FortnoxApi\Model\CustomInboundDocument
      */
     public function saveCustomInboundDocumentResource($type, $id, $document = null, string $contentType = self::contentTypes['saveCustomInboundDocumentResource'][0])
     {
@@ -708,12 +708,12 @@ class CustomInboundDocumentResourceApi
      *
      * @param  string $type min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-), type is case-insensitive  &lt;blockquote&gt;&lt;pre&gt;       Type is a custom name/reference of the document that will be used to reference the document type &lt;br&gt;       * If type is not known, it will be registered as belonging to the INBOUND category. &lt;br&gt;       * If type is an existing custom document type of category OUTBOUND an error is thrown. &lt;br&gt;       * If type is invalid an error is thrown. &lt;br&gt;  &lt;/pre&gt;&lt;/blockquote&gt; (required)
      * @param  string $id min 1 character, max 25 characters, may only contain digits 0-9 (required)
-     * @param  \OpenAPI\Client\Model\CustomInboundDocument $document the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create (optional)
+     * @param  \FortnoxApi\Model\CustomInboundDocument $document the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveCustomInboundDocumentResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomInboundDocument, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomInboundDocument, HTTP status code, HTTP response headers (array of strings)
      */
     public function saveCustomInboundDocumentResourceWithHttpInfo($type, $id, $document = null, string $contentType = self::contentTypes['saveCustomInboundDocumentResource'][0])
     {
@@ -756,23 +756,23 @@ class CustomInboundDocumentResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomInboundDocument' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomInboundDocument' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomInboundDocument' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomInboundDocument' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomInboundDocument', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomInboundDocument', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomInboundDocument';
+            $returnType = '\FortnoxApi\Model\CustomInboundDocument';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -793,7 +793,7 @@ class CustomInboundDocumentResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomInboundDocument',
+                        '\FortnoxApi\Model\CustomInboundDocument',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -810,7 +810,7 @@ class CustomInboundDocumentResourceApi
      *
      * @param  string $type min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-), type is case-insensitive  &lt;blockquote&gt;&lt;pre&gt;       Type is a custom name/reference of the document that will be used to reference the document type &lt;br&gt;       * If type is not known, it will be registered as belonging to the INBOUND category. &lt;br&gt;       * If type is an existing custom document type of category OUTBOUND an error is thrown. &lt;br&gt;       * If type is invalid an error is thrown. &lt;br&gt;  &lt;/pre&gt;&lt;/blockquote&gt; (required)
      * @param  string $id min 1 character, max 25 characters, may only contain digits 0-9 (required)
-     * @param  \OpenAPI\Client\Model\CustomInboundDocument $document the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create (optional)
+     * @param  \FortnoxApi\Model\CustomInboundDocument $document the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveCustomInboundDocumentResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -833,7 +833,7 @@ class CustomInboundDocumentResourceApi
      *
      * @param  string $type min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-), type is case-insensitive  &lt;blockquote&gt;&lt;pre&gt;       Type is a custom name/reference of the document that will be used to reference the document type &lt;br&gt;       * If type is not known, it will be registered as belonging to the INBOUND category. &lt;br&gt;       * If type is an existing custom document type of category OUTBOUND an error is thrown. &lt;br&gt;       * If type is invalid an error is thrown. &lt;br&gt;  &lt;/pre&gt;&lt;/blockquote&gt; (required)
      * @param  string $id min 1 character, max 25 characters, may only contain digits 0-9 (required)
-     * @param  \OpenAPI\Client\Model\CustomInboundDocument $document the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create (optional)
+     * @param  \FortnoxApi\Model\CustomInboundDocument $document the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveCustomInboundDocumentResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -841,7 +841,7 @@ class CustomInboundDocumentResourceApi
      */
     public function saveCustomInboundDocumentResourceAsyncWithHttpInfo($type, $id, $document = null, string $contentType = self::contentTypes['saveCustomInboundDocumentResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomInboundDocument';
+        $returnType = '\FortnoxApi\Model\CustomInboundDocument';
         $request = $this->saveCustomInboundDocumentResourceRequest($type, $id, $document, $contentType);
 
         return $this->client
@@ -885,7 +885,7 @@ class CustomInboundDocumentResourceApi
      *
      * @param  string $type min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-), type is case-insensitive  &lt;blockquote&gt;&lt;pre&gt;       Type is a custom name/reference of the document that will be used to reference the document type &lt;br&gt;       * If type is not known, it will be registered as belonging to the INBOUND category. &lt;br&gt;       * If type is an existing custom document type of category OUTBOUND an error is thrown. &lt;br&gt;       * If type is invalid an error is thrown. &lt;br&gt;  &lt;/pre&gt;&lt;/blockquote&gt; (required)
      * @param  string $id min 1 character, max 25 characters, may only contain digits 0-9 (required)
-     * @param  \OpenAPI\Client\Model\CustomInboundDocument $document the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create (optional)
+     * @param  \FortnoxApi\Model\CustomInboundDocument $document the &lt;code&gt;CustomInboundDocument&lt;/code&gt; to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveCustomInboundDocumentResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1007,7 +1007,7 @@ class CustomInboundDocumentResourceApi
      * @param  bool $force true if the document should be voided even if the document has connected outbounds, defaults to false. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['voidDocumentCustomInboundDocumentResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1026,7 +1026,7 @@ class CustomInboundDocumentResourceApi
      * @param  bool $force true if the document should be voided even if the document has connected outbounds, defaults to false. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['voidDocumentCustomInboundDocumentResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

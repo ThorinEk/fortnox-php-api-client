@@ -1,4 +1,4 @@
-# OpenAPI\Client\CurrenciesResourceApi
+# FortnoxApi\CurrenciesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createCurrenciesResource()`
 
 ```php
-createCurrenciesResource($currency): \OpenAPI\Client\Model\CurrencyWrap
+createCurrenciesResource($currency): \FortnoxApi\Model\CurrencyWrap
 ```
 
 Create a currency
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CurrenciesResourceApi(
+$apiInstance = new FortnoxApi\Api\CurrenciesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$currency = new \OpenAPI\Client\Model\CurrencyWrap(); // \OpenAPI\Client\Model\CurrencyWrap | currency to create
+$currency = new \FortnoxApi\Model\CurrencyWrap(); // \FortnoxApi\Model\CurrencyWrap | currency to create
 
 try {
     $result = $apiInstance->createCurrenciesResource($currency);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **currency** | [**\OpenAPI\Client\Model\CurrencyWrap**](../Model/CurrencyWrap.md)| currency to create | [optional] |
+| **currency** | [**\FortnoxApi\Model\CurrencyWrap**](../Model/CurrencyWrap.md)| currency to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CurrencyWrap**](../Model/CurrencyWrap.md)
+[**\FortnoxApi\Model\CurrencyWrap**](../Model/CurrencyWrap.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getCurrenciesResource()`
 
 ```php
-getCurrenciesResource($code): \OpenAPI\Client\Model\CurrencyWrap
+getCurrenciesResource($code): \FortnoxApi\Model\CurrencyWrap
 ```
 
 Retrieve a single currency
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CurrenciesResourceApi(
+$apiInstance = new FortnoxApi\Api\CurrenciesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CurrencyWrap**](../Model/CurrencyWrap.md)
+[**\FortnoxApi\Model\CurrencyWrap**](../Model/CurrencyWrap.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `listCurrenciesResource()`
 
 ```php
-listCurrenciesResource(): \OpenAPI\Client\Model\CurrencyList
+listCurrenciesResource(): \FortnoxApi\Model\CurrencyList
 ```
 
 Retrieve a list of currencies
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CurrenciesResourceApi(
+$apiInstance = new FortnoxApi\Api\CurrenciesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CurrencyList**](../Model/CurrencyList.md)
+[**\FortnoxApi\Model\CurrencyList**](../Model/CurrencyList.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CurrenciesResourceApi(
+$apiInstance = new FortnoxApi\Api\CurrenciesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -228,7 +228,7 @@ No authorization required
 ## `updateCurrenciesResource()`
 
 ```php
-updateCurrenciesResource($code, $currency): \OpenAPI\Client\Model\CurrencyWrap
+updateCurrenciesResource($code, $currency): \FortnoxApi\Model\CurrencyWrap
 ```
 
 Update a currency
@@ -241,13 +241,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CurrenciesResourceApi(
+$apiInstance = new FortnoxApi\Api\CurrenciesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $code = 'code_example'; // string | identifies the currency
-$currency = new \OpenAPI\Client\Model\CurrencyWrap(); // \OpenAPI\Client\Model\CurrencyWrap | to update
+$currency = new \FortnoxApi\Model\CurrencyWrap(); // \FortnoxApi\Model\CurrencyWrap | to update
 
 try {
     $result = $apiInstance->updateCurrenciesResource($code, $currency);
@@ -262,11 +262,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **code** | **string**| identifies the currency | |
-| **currency** | [**\OpenAPI\Client\Model\CurrencyWrap**](../Model/CurrencyWrap.md)| to update | [optional] |
+| **currency** | [**\FortnoxApi\Model\CurrencyWrap**](../Model/CurrencyWrap.md)| to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CurrencyWrap**](../Model/CurrencyWrap.md)
+[**\FortnoxApi\Model\CurrencyWrap**](../Model/CurrencyWrap.md)
 
 ### Authorization
 

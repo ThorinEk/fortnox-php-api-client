@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * CustomOutboundDocumentResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,9 +138,9 @@ class CustomOutboundDocumentResourceApi
      * @param  string $id document id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['get'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomOutboundDocument
+     * @return \FortnoxApi\Model\CustomOutboundDocument
      */
     public function get($type, $id, string $contentType = self::contentTypes['get'][0])
     {
@@ -157,9 +157,9 @@ class CustomOutboundDocumentResourceApi
      * @param  string $id document id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['get'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomOutboundDocument, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomOutboundDocument, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithHttpInfo($type, $id, string $contentType = self::contentTypes['get'][0])
     {
@@ -202,23 +202,23 @@ class CustomOutboundDocumentResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomOutboundDocument' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomOutboundDocument' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomOutboundDocument' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomOutboundDocument' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomOutboundDocument', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomOutboundDocument', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomOutboundDocument';
+            $returnType = '\FortnoxApi\Model\CustomOutboundDocument';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -239,7 +239,7 @@ class CustomOutboundDocumentResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomOutboundDocument',
+                        '\FortnoxApi\Model\CustomOutboundDocument',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -285,7 +285,7 @@ class CustomOutboundDocumentResourceApi
      */
     public function getAsyncWithHttpInfo($type, $id, string $contentType = self::contentTypes['get'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomOutboundDocument';
+        $returnType = '\FortnoxApi\Model\CustomOutboundDocument';
         $request = $this->getRequest($type, $id, $contentType);
 
         return $this->client
@@ -441,7 +441,7 @@ class CustomOutboundDocumentResourceApi
      * @param  string $id document id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['release'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -459,7 +459,7 @@ class CustomOutboundDocumentResourceApi
      * @param  string $id document id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['release'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -688,12 +688,12 @@ class CustomOutboundDocumentResourceApi
      *
      * @param  string $type the type of the custom outbound document, min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-). Always stored as upper case. (required)
      * @param  string $id the id of the custom outbound document, min 1 character, max 25 characters, may only contain digits 0-9 (required)
-     * @param  \OpenAPI\Client\Model\CustomOutboundDocument $document the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create (optional)
+     * @param  \FortnoxApi\Model\CustomOutboundDocument $document the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['save'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomOutboundDocument
+     * @return \FortnoxApi\Model\CustomOutboundDocument
      */
     public function save($type, $id, $document = null, string $contentType = self::contentTypes['save'][0])
     {
@@ -708,12 +708,12 @@ class CustomOutboundDocumentResourceApi
      *
      * @param  string $type the type of the custom outbound document, min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-). Always stored as upper case. (required)
      * @param  string $id the id of the custom outbound document, min 1 character, max 25 characters, may only contain digits 0-9 (required)
-     * @param  \OpenAPI\Client\Model\CustomOutboundDocument $document the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create (optional)
+     * @param  \FortnoxApi\Model\CustomOutboundDocument $document the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['save'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomOutboundDocument, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\CustomOutboundDocument, HTTP status code, HTTP response headers (array of strings)
      */
     public function saveWithHttpInfo($type, $id, $document = null, string $contentType = self::contentTypes['save'][0])
     {
@@ -756,23 +756,23 @@ class CustomOutboundDocumentResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomOutboundDocument' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\CustomOutboundDocument' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomOutboundDocument' !== 'string') {
+                        if ('\FortnoxApi\Model\CustomOutboundDocument' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomOutboundDocument', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\CustomOutboundDocument', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomOutboundDocument';
+            $returnType = '\FortnoxApi\Model\CustomOutboundDocument';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -793,7 +793,7 @@ class CustomOutboundDocumentResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomOutboundDocument',
+                        '\FortnoxApi\Model\CustomOutboundDocument',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -810,7 +810,7 @@ class CustomOutboundDocumentResourceApi
      *
      * @param  string $type the type of the custom outbound document, min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-). Always stored as upper case. (required)
      * @param  string $id the id of the custom outbound document, min 1 character, max 25 characters, may only contain digits 0-9 (required)
-     * @param  \OpenAPI\Client\Model\CustomOutboundDocument $document the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create (optional)
+     * @param  \FortnoxApi\Model\CustomOutboundDocument $document the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['save'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -833,7 +833,7 @@ class CustomOutboundDocumentResourceApi
      *
      * @param  string $type the type of the custom outbound document, min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-). Always stored as upper case. (required)
      * @param  string $id the id of the custom outbound document, min 1 character, max 25 characters, may only contain digits 0-9 (required)
-     * @param  \OpenAPI\Client\Model\CustomOutboundDocument $document the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create (optional)
+     * @param  \FortnoxApi\Model\CustomOutboundDocument $document the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['save'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -841,7 +841,7 @@ class CustomOutboundDocumentResourceApi
      */
     public function saveAsyncWithHttpInfo($type, $id, $document = null, string $contentType = self::contentTypes['save'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomOutboundDocument';
+        $returnType = '\FortnoxApi\Model\CustomOutboundDocument';
         $request = $this->saveRequest($type, $id, $document, $contentType);
 
         return $this->client
@@ -885,7 +885,7 @@ class CustomOutboundDocumentResourceApi
      *
      * @param  string $type the type of the custom outbound document, min 1 character, max 25 characters, may contain letters A-Z, digits 0-9, underscore (_), and dash (-). Always stored as upper case. (required)
      * @param  string $id the id of the custom outbound document, min 1 character, max 25 characters, may only contain digits 0-9 (required)
-     * @param  \OpenAPI\Client\Model\CustomOutboundDocument $document the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create (optional)
+     * @param  \FortnoxApi\Model\CustomOutboundDocument $document the &lt;code&gt;CustomOutboundDocument&lt;/code&gt; to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['save'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1007,7 +1007,7 @@ class CustomOutboundDocumentResourceApi
      * @param  bool $force true if the document should be voided even if the document has connected outbounds, defaults to false. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['voidDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1026,7 +1026,7 @@ class CustomOutboundDocumentResourceApi
      * @param  bool $force true if the document should be voided even if the document has connected outbounds, defaults to false. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['voidDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

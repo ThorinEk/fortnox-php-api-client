@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * TrustedEmailSender Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,8 +55,8 @@ class TrustedEmailSender implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'trusted_senders' => '\OpenAPI\Client\Model\TrustedEmailSenderTrustedSender[]',
-        'rejected_senders' => '\OpenAPI\Client\Model\TrustedEmailSenderRejectedSender[]'
+        'trusted_senders' => '\FortnoxApi\Model\TrustedEmailSenderTrustedSender[]',
+        'rejected_senders' => '\FortnoxApi\Model\TrustedEmailSenderRejectedSender[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class TrustedEmailSender implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets trusted_senders
      *
-     * @return \OpenAPI\Client\Model\TrustedEmailSenderTrustedSender[]|null
+     * @return \FortnoxApi\Model\TrustedEmailSenderTrustedSender[]|null
      */
     public function getTrustedSenders()
     {
@@ -307,7 +307,7 @@ class TrustedEmailSender implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets trusted_senders
      *
-     * @param \OpenAPI\Client\Model\TrustedEmailSenderTrustedSender[]|null $trusted_senders trusted_senders
+     * @param \FortnoxApi\Model\TrustedEmailSenderTrustedSender[]|null $trusted_senders trusted_senders
      *
      * @return self
      */
@@ -324,7 +324,7 @@ class TrustedEmailSender implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets rejected_senders
      *
-     * @return \OpenAPI\Client\Model\TrustedEmailSenderRejectedSender[]|null
+     * @return \FortnoxApi\Model\TrustedEmailSenderRejectedSender[]|null
      */
     public function getRejectedSenders()
     {
@@ -334,7 +334,7 @@ class TrustedEmailSender implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets rejected_senders
      *
-     * @param \OpenAPI\Client\Model\TrustedEmailSenderRejectedSender[]|null $rejected_senders rejected_senders
+     * @param \FortnoxApi\Model\TrustedEmailSenderRejectedSender[]|null $rejected_senders rejected_senders
      *
      * @return self
      */

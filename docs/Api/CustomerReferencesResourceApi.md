@@ -1,4 +1,4 @@
-# OpenAPI\Client\CustomerReferencesResourceApi
+# FortnoxApi\CustomerReferencesResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createCustomerReferencesResource()`
 
 ```php
-createCustomerReferencesResource($customer_reference_row): \OpenAPI\Client\Model\CustomerReferenceWrap
+createCustomerReferencesResource($customer_reference_row): \FortnoxApi\Model\CustomerReferenceWrap
 ```
 
 Create a customer reference row
@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomerReferencesResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomerReferencesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$customer_reference_row = new \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap(); // \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap | customer reference row to create
+$customer_reference_row = new \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap(); // \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap | customer reference row to create
 
 try {
     $result = $apiInstance->createCustomerReferencesResource($customer_reference_row);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **customer_reference_row** | [**\OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap**](../Model/CustomerReferenceCustomerReferenceRowWrap.md)| customer reference row to create | [optional] |
+| **customer_reference_row** | [**\FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap**](../Model/CustomerReferenceCustomerReferenceRowWrap.md)| customer reference row to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerReferenceWrap**](../Model/CustomerReferenceWrap.md)
+[**\FortnoxApi\Model\CustomerReferenceWrap**](../Model/CustomerReferenceWrap.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `getCustomerReferencesResource()`
 
 ```php
-getCustomerReferencesResource($customer_reference_row_id): \OpenAPI\Client\Model\CustomerReferenceWrap
+getCustomerReferencesResource($customer_reference_row_id): \FortnoxApi\Model\CustomerReferenceWrap
 ```
 
 Retrieve a customer reference row
@@ -85,7 +85,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomerReferencesResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomerReferencesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -108,7 +108,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerReferenceWrap**](../Model/CustomerReferenceWrap.md)
+[**\FortnoxApi\Model\CustomerReferenceWrap**](../Model/CustomerReferenceWrap.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 ## `listCustomerReferencesResource()`
 
 ```php
-listCustomerReferencesResource($customer): \OpenAPI\Client\Model\CustomerReferenceWrap
+listCustomerReferencesResource($customer): \FortnoxApi\Model\CustomerReferenceWrap
 ```
 
 Retrieve a list of customers reference rows
@@ -141,7 +141,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomerReferencesResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomerReferencesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -164,7 +164,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerReferenceWrap**](../Model/CustomerReferenceWrap.md)
+[**\FortnoxApi\Model\CustomerReferenceWrap**](../Model/CustomerReferenceWrap.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomerReferencesResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomerReferencesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -237,7 +237,7 @@ No authorization required
 ## `updateCustomerReferencesResource()`
 
 ```php
-updateCustomerReferencesResource($customer_reference_row_id, $customer_reference_row): \OpenAPI\Client\Model\CustomerWrap
+updateCustomerReferencesResource($customer_reference_row_id, $customer_reference_row): \FortnoxApi\Model\CustomerWrap
 ```
 
 Update a customer reference row
@@ -252,13 +252,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomerReferencesResourceApi(
+$apiInstance = new FortnoxApi\Api\CustomerReferencesResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $customer_reference_row_id = 'customer_reference_row_id_example'; // string | identifies the customer reference row
-$customer_reference_row = new \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap(); // \OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap | customer reference row to update
+$customer_reference_row = new \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap(); // \FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap | customer reference row to update
 
 try {
     $result = $apiInstance->updateCustomerReferencesResource($customer_reference_row_id, $customer_reference_row);
@@ -273,11 +273,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customer_reference_row_id** | **string**| identifies the customer reference row | |
-| **customer_reference_row** | [**\OpenAPI\Client\Model\CustomerReferenceCustomerReferenceRowWrap**](../Model/CustomerReferenceCustomerReferenceRowWrap.md)| customer reference row to update | [optional] |
+| **customer_reference_row** | [**\FortnoxApi\Model\CustomerReferenceCustomerReferenceRowWrap**](../Model/CustomerReferenceCustomerReferenceRowWrap.md)| customer reference row to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerWrap**](../Model/CustomerWrap.md)
+[**\FortnoxApi\Model\CustomerWrap**](../Model/CustomerWrap.md)
 
 ### Authorization
 

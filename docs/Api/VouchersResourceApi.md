@@ -1,4 +1,4 @@
-# OpenAPI\Client\VouchersResourceApi
+# FortnoxApi\VouchersResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createVouchersResource()`
 
 ```php
-createVouchersResource($financialyear, $voucher): \OpenAPI\Client\Model\VoucherWrap
+createVouchersResource($financialyear, $voucher): \FortnoxApi\Model\VoucherWrap
 ```
 
 Create a voucher
@@ -28,13 +28,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VouchersResourceApi(
+$apiInstance = new FortnoxApi\Api\VouchersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $financialyear = 56; // int | Financial year id, used to determine which financial year the voucher is created in
-$voucher = new \OpenAPI\Client\Model\VoucherWrap(); // \OpenAPI\Client\Model\VoucherWrap | voucher to create
+$voucher = new \FortnoxApi\Model\VoucherWrap(); // \FortnoxApi\Model\VoucherWrap | voucher to create
 
 try {
     $result = $apiInstance->createVouchersResource($financialyear, $voucher);
@@ -49,11 +49,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **financialyear** | **int**| Financial year id, used to determine which financial year the voucher is created in | [optional] |
-| **voucher** | [**\OpenAPI\Client\Model\VoucherWrap**](../Model/VoucherWrap.md)| voucher to create | [optional] |
+| **voucher** | [**\FortnoxApi\Model\VoucherWrap**](../Model/VoucherWrap.md)| voucher to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VoucherWrap**](../Model/VoucherWrap.md)
+[**\FortnoxApi\Model\VoucherWrap**](../Model/VoucherWrap.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 ## `getVouchersResource()`
 
 ```php
-getVouchersResource($voucher_series, $voucher_number, $financialyear): \OpenAPI\Client\Model\VoucherWrap
+getVouchersResource($voucher_series, $voucher_number, $financialyear): \FortnoxApi\Model\VoucherWrap
 ```
 
 Retrieve a specific voucher
@@ -84,7 +84,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VouchersResourceApi(
+$apiInstance = new FortnoxApi\Api\VouchersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -111,7 +111,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VoucherWrap**](../Model/VoucherWrap.md)
+[**\FortnoxApi\Model\VoucherWrap**](../Model/VoucherWrap.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ No authorization required
 ## `listSeries()`
 
 ```php
-listSeries($voucher_series, $financialyear): \OpenAPI\Client\Model\VoucherListItemList
+listSeries($voucher_series, $financialyear): \FortnoxApi\Model\VoucherListItemList
 ```
 
 Retrieve a list of vouchers for a specific series
@@ -142,7 +142,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VouchersResourceApi(
+$apiInstance = new FortnoxApi\Api\VouchersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -167,7 +167,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VoucherListItemList**](../Model/VoucherListItemList.md)
+[**\FortnoxApi\Model\VoucherListItemList**](../Model/VoucherListItemList.md)
 
 ### Authorization
 
@@ -185,7 +185,7 @@ No authorization required
 ## `listVouchersResource()`
 
 ```php
-listVouchersResource($financialyear): \OpenAPI\Client\Model\VoucherListItemList
+listVouchersResource($financialyear): \FortnoxApi\Model\VoucherListItemList
 ```
 
 Retrieve all vouchers
@@ -200,7 +200,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VouchersResourceApi(
+$apiInstance = new FortnoxApi\Api\VouchersResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -223,7 +223,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VoucherListItemList**](../Model/VoucherListItemList.md)
+[**\FortnoxApi\Model\VoucherListItemList**](../Model/VoucherListItemList.md)
 
 ### Authorization
 

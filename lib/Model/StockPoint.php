@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * StockPoint Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class StockPoint implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'code' => 'string',
         'name' => 'string',
-        'stock_locations' => '\OpenAPI\Client\Model\StockLocation[]',
+        'stock_locations' => '\FortnoxApi\Model\StockLocation[]',
         'using_company_address' => 'bool',
         'delivery_name' => 'string',
         'delivery_address' => 'string',
@@ -547,7 +547,7 @@ class StockPoint implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets stock_locations
      *
-     * @return \OpenAPI\Client\Model\StockLocation[]|null
+     * @return \FortnoxApi\Model\StockLocation[]|null
      */
     public function getStockLocations()
     {
@@ -557,7 +557,7 @@ class StockPoint implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets stock_locations
      *
-     * @param \OpenAPI\Client\Model\StockLocation[]|null $stock_locations stock_locations
+     * @param \FortnoxApi\Model\StockLocation[]|null $stock_locations stock_locations
      *
      * @return self
      */

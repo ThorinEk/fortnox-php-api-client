@@ -1,4 +1,4 @@
-# OpenAPI\Client\IncomingGoodsResourceApi
+# FortnoxApi\IncomingGoodsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -31,7 +31,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\IncomingGoodsResourceApi(
+$apiInstance = new FortnoxApi\Api\IncomingGoodsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -73,7 +73,7 @@ No authorization required
 ## `createIncomingGoodsResource()`
 
 ```php
-createIncomingGoodsResource($incoming_goods): \OpenAPI\Client\Model\IncomingGoods
+createIncomingGoodsResource($incoming_goods): \FortnoxApi\Model\IncomingGoods
 ```
 
 Create Incoming Goods document
@@ -86,12 +86,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\IncomingGoodsResourceApi(
+$apiInstance = new FortnoxApi\Api\IncomingGoodsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$incoming_goods = new \OpenAPI\Client\Model\IncomingGoods(); // \OpenAPI\Client\Model\IncomingGoods | The <code>IncomingGoods</code> document.
+$incoming_goods = new \FortnoxApi\Model\IncomingGoods(); // \FortnoxApi\Model\IncomingGoods | The <code>IncomingGoods</code> document.
 
 try {
     $result = $apiInstance->createIncomingGoodsResource($incoming_goods);
@@ -105,11 +105,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **incoming_goods** | [**\OpenAPI\Client\Model\IncomingGoods**](../Model/IncomingGoods.md)| The &lt;code&gt;IncomingGoods&lt;/code&gt; document. | [optional] |
+| **incoming_goods** | [**\FortnoxApi\Model\IncomingGoods**](../Model/IncomingGoods.md)| The &lt;code&gt;IncomingGoods&lt;/code&gt; document. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\IncomingGoods**](../Model/IncomingGoods.md)
+[**\FortnoxApi\Model\IncomingGoods**](../Model/IncomingGoods.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ No authorization required
 ## `getAllIncomingGoodsResource()`
 
 ```php
-getAllIncomingGoodsResource($released, $completed, $voided, $supplier_number, $item_id, $note, $delivery_note, $q): \OpenAPI\Client\Model\IncomingGoodsListRow[]
+getAllIncomingGoodsResource($released, $completed, $voided, $supplier_number, $item_id, $note, $delivery_note, $q): \FortnoxApi\Model\IncomingGoodsListRow[]
 ```
 
 List Incoming Goods Documents
@@ -142,7 +142,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\IncomingGoodsResourceApi(
+$apiInstance = new FortnoxApi\Api\IncomingGoodsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -179,7 +179,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\IncomingGoodsListRow[]**](../Model/IncomingGoodsListRow.md)
+[**\FortnoxApi\Model\IncomingGoodsListRow[]**](../Model/IncomingGoodsListRow.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ No authorization required
 ## `getIncomingGoodsResource()`
 
 ```php
-getIncomingGoodsResource($id, $ignore_supplier_invoice_id): \OpenAPI\Client\Model\IncomingGoods
+getIncomingGoodsResource($id, $ignore_supplier_invoice_id): \FortnoxApi\Model\IncomingGoods
 ```
 
 Get Incoming Goods document
@@ -210,7 +210,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\IncomingGoodsResourceApi(
+$apiInstance = new FortnoxApi\Api\IncomingGoodsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -235,7 +235,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\IncomingGoods**](../Model/IncomingGoods.md)
+[**\FortnoxApi\Model\IncomingGoods**](../Model/IncomingGoods.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\IncomingGoodsResourceApi(
+$apiInstance = new FortnoxApi\Api\IncomingGoodsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -308,7 +308,7 @@ No authorization required
 ## `saveIncomingGoodsResource()`
 
 ```php
-saveIncomingGoodsResource($id, $incoming_goods): \OpenAPI\Client\Model\IncomingGoods
+saveIncomingGoodsResource($id, $incoming_goods): \FortnoxApi\Model\IncomingGoods
 ```
 
 Update Incoming Goods document
@@ -321,13 +321,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\IncomingGoodsResourceApi(
+$apiInstance = new FortnoxApi\Api\IncomingGoodsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int | Incoming goods document id.
-$incoming_goods = new \OpenAPI\Client\Model\IncomingGoods(); // \OpenAPI\Client\Model\IncomingGoods | The <code>IncomingGoods</code> document.
+$incoming_goods = new \FortnoxApi\Model\IncomingGoods(); // \FortnoxApi\Model\IncomingGoods | The <code>IncomingGoods</code> document.
 
 try {
     $result = $apiInstance->saveIncomingGoodsResource($id, $incoming_goods);
@@ -342,11 +342,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Incoming goods document id. | |
-| **incoming_goods** | [**\OpenAPI\Client\Model\IncomingGoods**](../Model/IncomingGoods.md)| The &lt;code&gt;IncomingGoods&lt;/code&gt; document. | [optional] |
+| **incoming_goods** | [**\FortnoxApi\Model\IncomingGoods**](../Model/IncomingGoods.md)| The &lt;code&gt;IncomingGoods&lt;/code&gt; document. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\IncomingGoods**](../Model/IncomingGoods.md)
+[**\FortnoxApi\Model\IncomingGoods**](../Model/IncomingGoods.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\IncomingGoodsResourceApi(
+$apiInstance = new FortnoxApi\Api\IncomingGoodsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

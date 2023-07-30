@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ArticleFileConnectionWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class ArticleFileConnectionWrap implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'article_file_connection' => '\OpenAPI\Client\Model\ArticleFileConnection'
+        'article_file_connection' => '\FortnoxApi\Model\ArticleFileConnection'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ArticleFileConnectionWrap implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets article_file_connection
      *
-     * @return \OpenAPI\Client\Model\ArticleFileConnection
+     * @return \FortnoxApi\Model\ArticleFileConnection
      */
     public function getArticleFileConnection()
     {
@@ -303,7 +303,7 @@ class ArticleFileConnectionWrap implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets article_file_connection
      *
-     * @param \OpenAPI\Client\Model\ArticleFileConnection $article_file_connection article_file_connection
+     * @param \FortnoxApi\Model\ArticleFileConnection $article_file_connection article_file_connection
      *
      * @return self
      */

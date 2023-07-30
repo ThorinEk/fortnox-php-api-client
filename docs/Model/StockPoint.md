@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **string** |  | [optional]
 **code** | **string** |  |
 **name** | **string** |  |
-**stock_locations** | [**\OpenAPI\Client\Model\StockLocation[]**](StockLocation.md) |  | [optional]
+**stock_locations** | [**\FortnoxApi\Model\StockLocation[]**](StockLocation.md) |  | [optional]
 **using_company_address** | **bool** |  | [optional]
 **delivery_name** | **string** |  | [optional]
 **delivery_address** | **string** |  | [optional]

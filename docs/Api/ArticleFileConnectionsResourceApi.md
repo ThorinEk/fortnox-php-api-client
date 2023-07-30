@@ -1,4 +1,4 @@
-# OpenAPI\Client\ArticleFileConnectionsResourceApi
+# FortnoxApi\ArticleFileConnectionsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createArticleFileConnectionsResource()`
 
 ```php
-createArticleFileConnectionsResource($article_file_connection): \OpenAPI\Client\Model\ArticleFileConnectionWrap
+createArticleFileConnectionsResource($article_file_connection): \FortnoxApi\Model\ArticleFileConnectionWrap
 ```
 
 Create an article file connection
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArticleFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\ArticleFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$article_file_connection = new \OpenAPI\Client\Model\ArticleFileConnectionWrap(); // \OpenAPI\Client\Model\ArticleFileConnectionWrap | to create
+$article_file_connection = new \FortnoxApi\Model\ArticleFileConnectionWrap(); // \FortnoxApi\Model\ArticleFileConnectionWrap | to create
 
 try {
     $result = $apiInstance->createArticleFileConnectionsResource($article_file_connection);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **article_file_connection** | [**\OpenAPI\Client\Model\ArticleFileConnectionWrap**](../Model/ArticleFileConnectionWrap.md)| to create | [optional] |
+| **article_file_connection** | [**\FortnoxApi\Model\ArticleFileConnectionWrap**](../Model/ArticleFileConnectionWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ArticleFileConnectionWrap**](../Model/ArticleFileConnectionWrap.md)
+[**\FortnoxApi\Model\ArticleFileConnectionWrap**](../Model/ArticleFileConnectionWrap.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `getArticleFileConnectionsResource()`
 
 ```php
-getArticleFileConnectionsResource($file_id): \OpenAPI\Client\Model\ArticleFileConnectionWrap
+getArticleFileConnectionsResource($file_id): \FortnoxApi\Model\ArticleFileConnectionWrap
 ```
 
 Retrieve a single article file connection
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArticleFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\ArticleFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ArticleFileConnectionWrap**](../Model/ArticleFileConnectionWrap.md)
+[**\FortnoxApi\Model\ArticleFileConnectionWrap**](../Model/ArticleFileConnectionWrap.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 ## `listArticleFileConnectionsResource()`
 
 ```php
-listArticleFileConnectionsResource(): \OpenAPI\Client\Model\ArticleFileConnectionListItemWrap
+listArticleFileConnectionsResource(): \FortnoxApi\Model\ArticleFileConnectionListItemWrap
 ```
 
 Retrieve a list of article file connections
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArticleFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\ArticleFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -156,7 +156,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ArticleFileConnectionListItemWrap**](../Model/ArticleFileConnectionListItemWrap.md)
+[**\FortnoxApi\Model\ArticleFileConnectionListItemWrap**](../Model/ArticleFileConnectionListItemWrap.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ArticleFileConnectionsResourceApi(
+$apiInstance = new FortnoxApi\Api\ArticleFileConnectionsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace FortnoxApi\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -32,16 +32,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use FortnoxApi\ApiException;
+use FortnoxApi\Configuration;
+use FortnoxApi\HeaderSelector;
+use FortnoxApi\ObjectSerializer;
 
 /**
  * TrustedEmailSendersResourceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,12 +131,12 @@ class TrustedEmailSendersResourceApi
      *
      * Add a new email address as trusted
      *
-     * @param  \OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap $trusted_email_sender trusted email sender to create (optional)
+     * @param  \FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap $trusted_email_sender trusted email sender to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTrustedEmailSendersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap
+     * @return \FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap
      */
     public function createTrustedEmailSendersResource($trusted_email_sender = null, string $contentType = self::contentTypes['createTrustedEmailSendersResource'][0])
     {
@@ -149,12 +149,12 @@ class TrustedEmailSendersResourceApi
      *
      * Add a new email address as trusted
      *
-     * @param  \OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap $trusted_email_sender trusted email sender to create (optional)
+     * @param  \FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap $trusted_email_sender trusted email sender to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTrustedEmailSendersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTrustedEmailSendersResourceWithHttpInfo($trusted_email_sender = null, string $contentType = self::contentTypes['createTrustedEmailSendersResource'][0])
     {
@@ -197,23 +197,23 @@ class TrustedEmailSendersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap';
+            $returnType = '\FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -234,7 +234,7 @@ class TrustedEmailSendersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap',
+                        '\FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -249,7 +249,7 @@ class TrustedEmailSendersResourceApi
      *
      * Add a new email address as trusted
      *
-     * @param  \OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap $trusted_email_sender trusted email sender to create (optional)
+     * @param  \FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap $trusted_email_sender trusted email sender to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTrustedEmailSendersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -270,7 +270,7 @@ class TrustedEmailSendersResourceApi
      *
      * Add a new email address as trusted
      *
-     * @param  \OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap $trusted_email_sender trusted email sender to create (optional)
+     * @param  \FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap $trusted_email_sender trusted email sender to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTrustedEmailSendersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -278,7 +278,7 @@ class TrustedEmailSendersResourceApi
      */
     public function createTrustedEmailSendersResourceAsyncWithHttpInfo($trusted_email_sender = null, string $contentType = self::contentTypes['createTrustedEmailSendersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap';
+        $returnType = '\FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap';
         $request = $this->createTrustedEmailSendersResourceRequest($trusted_email_sender, $contentType);
 
         return $this->client
@@ -320,7 +320,7 @@ class TrustedEmailSendersResourceApi
     /**
      * Create request for operation 'createTrustedEmailSendersResource'
      *
-     * @param  \OpenAPI\Client\Model\TrustedEmailSenderTrustedSenderWrap $trusted_email_sender trusted email sender to create (optional)
+     * @param  \FortnoxApi\Model\TrustedEmailSenderTrustedSenderWrap $trusted_email_sender trusted email sender to create (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTrustedEmailSendersResource'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -409,9 +409,9 @@ class TrustedEmailSendersResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTrustedEmailSendersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrustedEmailSenderWrap
+     * @return \FortnoxApi\Model\TrustedEmailSenderWrap
      */
     public function getTrustedEmailSendersResource(string $contentType = self::contentTypes['getTrustedEmailSendersResource'][0])
     {
@@ -426,9 +426,9 @@ class TrustedEmailSendersResourceApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTrustedEmailSendersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrustedEmailSenderWrap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \FortnoxApi\Model\TrustedEmailSenderWrap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTrustedEmailSendersResourceWithHttpInfo(string $contentType = self::contentTypes['getTrustedEmailSendersResource'][0])
     {
@@ -471,23 +471,23 @@ class TrustedEmailSendersResourceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrustedEmailSenderWrap' === '\SplFileObject') {
+                    if ('\FortnoxApi\Model\TrustedEmailSenderWrap' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrustedEmailSenderWrap' !== 'string') {
+                        if ('\FortnoxApi\Model\TrustedEmailSenderWrap' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrustedEmailSenderWrap', []),
+                        ObjectSerializer::deserialize($content, '\FortnoxApi\Model\TrustedEmailSenderWrap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrustedEmailSenderWrap';
+            $returnType = '\FortnoxApi\Model\TrustedEmailSenderWrap';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -508,7 +508,7 @@ class TrustedEmailSendersResourceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrustedEmailSenderWrap',
+                        '\FortnoxApi\Model\TrustedEmailSenderWrap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -550,7 +550,7 @@ class TrustedEmailSendersResourceApi
      */
     public function getTrustedEmailSendersResourceAsyncWithHttpInfo(string $contentType = self::contentTypes['getTrustedEmailSendersResource'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrustedEmailSenderWrap';
+        $returnType = '\FortnoxApi\Model\TrustedEmailSenderWrap';
         $request = $this->getTrustedEmailSendersResourceRequest($contentType);
 
         return $this->client
@@ -673,7 +673,7 @@ class TrustedEmailSendersResourceApi
      * @param  int $id identifies the trusted email sender to delete (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeTrustedEmailSendersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -690,7 +690,7 @@ class TrustedEmailSendersResourceApi
      * @param  int $id identifies the trusted email sender to delete (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeTrustedEmailSendersResource'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \FortnoxApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

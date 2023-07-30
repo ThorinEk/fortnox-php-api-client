@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * TaxReductionWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class TaxReductionWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tax_reduction' => '\OpenAPI\Client\Model\TaxReduction'
+        'tax_reduction' => '\FortnoxApi\Model\TaxReduction'
     ];
 
     /**
@@ -293,7 +293,7 @@ class TaxReductionWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tax_reduction
      *
-     * @return \OpenAPI\Client\Model\TaxReduction
+     * @return \FortnoxApi\Model\TaxReduction
      */
     public function getTaxReduction()
     {
@@ -303,7 +303,7 @@ class TaxReductionWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tax_reduction
      *
-     * @param \OpenAPI\Client\Model\TaxReduction $tax_reduction tax_reduction
+     * @param \FortnoxApi\Model\TaxReduction $tax_reduction tax_reduction
      *
      * @return self
      */

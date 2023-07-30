@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * ArticleWrap Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class ArticleWrap implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'article' => '\OpenAPI\Client\Model\Article'
+        'article' => '\FortnoxApi\Model\Article'
     ];
 
     /**
@@ -290,7 +290,7 @@ class ArticleWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets article
      *
-     * @return \OpenAPI\Client\Model\Article|null
+     * @return \FortnoxApi\Model\Article|null
      */
     public function getArticle()
     {
@@ -300,7 +300,7 @@ class ArticleWrap implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets article
      *
-     * @param \OpenAPI\Client\Model\Article|null $article article
+     * @param \FortnoxApi\Model\Article|null $article article
      *
      * @return self
      */

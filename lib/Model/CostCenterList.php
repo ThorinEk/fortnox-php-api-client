@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,16 +24,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace FortnoxApi\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \FortnoxApi\ObjectSerializer;
 
 /**
  * CostCenterList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  FortnoxApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -55,7 +55,7 @@ class CostCenterList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'cost_centers' => '\OpenAPI\Client\Model\CostCenter[]'
+        'cost_centers' => '\FortnoxApi\Model\CostCenter[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class CostCenterList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets cost_centers
      *
-     * @return \OpenAPI\Client\Model\CostCenter[]|null
+     * @return \FortnoxApi\Model\CostCenter[]|null
      */
     public function getCostCenters()
     {
@@ -300,7 +300,7 @@ class CostCenterList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cost_centers
      *
-     * @param \OpenAPI\Client\Model\CostCenter[]|null $cost_centers cost_centers
+     * @param \FortnoxApi\Model\CostCenter[]|null $cost_centers cost_centers
      *
      * @return self
      */

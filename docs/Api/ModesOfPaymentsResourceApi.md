@@ -1,4 +1,4 @@
-# OpenAPI\Client\ModesOfPaymentsResourceApi
+# FortnoxApi\ModesOfPaymentsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createModesOfPaymentsResource()`
 
 ```php
-createModesOfPaymentsResource($mode_of_payment): \OpenAPI\Client\Model\ModeOfPaymentWrap
+createModesOfPaymentsResource($mode_of_payment): \FortnoxApi\Model\ModeOfPaymentWrap
 ```
 
 Create a mode of payment
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ModesOfPaymentsResourceApi(
+$apiInstance = new FortnoxApi\Api\ModesOfPaymentsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$mode_of_payment = new \OpenAPI\Client\Model\ModeOfPaymentWrap(); // \OpenAPI\Client\Model\ModeOfPaymentWrap | to create
+$mode_of_payment = new \FortnoxApi\Model\ModeOfPaymentWrap(); // \FortnoxApi\Model\ModeOfPaymentWrap | to create
 
 try {
     $result = $apiInstance->createModesOfPaymentsResource($mode_of_payment);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **mode_of_payment** | [**\OpenAPI\Client\Model\ModeOfPaymentWrap**](../Model/ModeOfPaymentWrap.md)| to create | [optional] |
+| **mode_of_payment** | [**\FortnoxApi\Model\ModeOfPaymentWrap**](../Model/ModeOfPaymentWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ModeOfPaymentWrap**](../Model/ModeOfPaymentWrap.md)
+[**\FortnoxApi\Model\ModeOfPaymentWrap**](../Model/ModeOfPaymentWrap.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `getModesOfPaymentsResource()`
 
 ```php
-getModesOfPaymentsResource($code): \OpenAPI\Client\Model\ModeOfPaymentWrap
+getModesOfPaymentsResource($code): \FortnoxApi\Model\ModeOfPaymentWrap
 ```
 
 Retrieve a single mode of payment
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ModesOfPaymentsResourceApi(
+$apiInstance = new FortnoxApi\Api\ModesOfPaymentsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ModeOfPaymentWrap**](../Model/ModeOfPaymentWrap.md)
+[**\FortnoxApi\Model\ModeOfPaymentWrap**](../Model/ModeOfPaymentWrap.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 ## `listModesOfPaymentsResource()`
 
 ```php
-listModesOfPaymentsResource(): \OpenAPI\Client\Model\ModeOfPaymentList
+listModesOfPaymentsResource(): \FortnoxApi\Model\ModeOfPaymentList
 ```
 
 Retrieve a list of modes of payments
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ModesOfPaymentsResourceApi(
+$apiInstance = new FortnoxApi\Api\ModesOfPaymentsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -156,7 +156,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ModeOfPaymentList**](../Model/ModeOfPaymentList.md)
+[**\FortnoxApi\Model\ModeOfPaymentList**](../Model/ModeOfPaymentList.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
 ## `updateModesOfPaymentsResource()`
 
 ```php
-updateModesOfPaymentsResource($code, $unit): \OpenAPI\Client\Model\ModeOfPaymentWrap
+updateModesOfPaymentsResource($code, $unit): \FortnoxApi\Model\ModeOfPaymentWrap
 ```
 
 Update a mode of payment
@@ -187,13 +187,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ModesOfPaymentsResourceApi(
+$apiInstance = new FortnoxApi\Api\ModesOfPaymentsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $code = 'code_example'; // string | identifies the mode of payment
-$unit = new \OpenAPI\Client\Model\ModeOfPaymentWrap(); // \OpenAPI\Client\Model\ModeOfPaymentWrap | mode of payment to update
+$unit = new \FortnoxApi\Model\ModeOfPaymentWrap(); // \FortnoxApi\Model\ModeOfPaymentWrap | mode of payment to update
 
 try {
     $result = $apiInstance->updateModesOfPaymentsResource($code, $unit);
@@ -208,11 +208,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **code** | **string**| identifies the mode of payment | |
-| **unit** | [**\OpenAPI\Client\Model\ModeOfPaymentWrap**](../Model/ModeOfPaymentWrap.md)| mode of payment to update | [optional] |
+| **unit** | [**\FortnoxApi\Model\ModeOfPaymentWrap**](../Model/ModeOfPaymentWrap.md)| mode of payment to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ModeOfPaymentWrap**](../Model/ModeOfPaymentWrap.md)
+[**\FortnoxApi\Model\ModeOfPaymentWrap**](../Model/ModeOfPaymentWrap.md)
 
 ### Authorization
 

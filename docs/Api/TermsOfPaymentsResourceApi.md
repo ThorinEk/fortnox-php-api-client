@@ -1,4 +1,4 @@
-# OpenAPI\Client\TermsOfPaymentsResourceApi
+# FortnoxApi\TermsOfPaymentsResourceApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createTermsOfPaymentsResource()`
 
 ```php
-createTermsOfPaymentsResource($terms_of_payment): \OpenAPI\Client\Model\TermsOfPaymentWrap
+createTermsOfPaymentsResource($terms_of_payment): \FortnoxApi\Model\TermsOfPaymentWrap
 ```
 
 Create a term of payment
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TermsOfPaymentsResourceApi(
+$apiInstance = new FortnoxApi\Api\TermsOfPaymentsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$terms_of_payment = new \OpenAPI\Client\Model\TermsOfPaymentWrap(); // \OpenAPI\Client\Model\TermsOfPaymentWrap | to create
+$terms_of_payment = new \FortnoxApi\Model\TermsOfPaymentWrap(); // \FortnoxApi\Model\TermsOfPaymentWrap | to create
 
 try {
     $result = $apiInstance->createTermsOfPaymentsResource($terms_of_payment);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **terms_of_payment** | [**\OpenAPI\Client\Model\TermsOfPaymentWrap**](../Model/TermsOfPaymentWrap.md)| to create | [optional] |
+| **terms_of_payment** | [**\FortnoxApi\Model\TermsOfPaymentWrap**](../Model/TermsOfPaymentWrap.md)| to create | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TermsOfPaymentWrap**](../Model/TermsOfPaymentWrap.md)
+[**\FortnoxApi\Model\TermsOfPaymentWrap**](../Model/TermsOfPaymentWrap.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getTermsOfPaymentsResource()`
 
 ```php
-getTermsOfPaymentsResource($code): \OpenAPI\Client\Model\TermsOfPaymentWrap
+getTermsOfPaymentsResource($code): \FortnoxApi\Model\TermsOfPaymentWrap
 ```
 
 Retrieve a single terms of payment
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TermsOfPaymentsResourceApi(
+$apiInstance = new FortnoxApi\Api\TermsOfPaymentsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TermsOfPaymentWrap**](../Model/TermsOfPaymentWrap.md)
+[**\FortnoxApi\Model\TermsOfPaymentWrap**](../Model/TermsOfPaymentWrap.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `listTermsOfPaymentsResource()`
 
 ```php
-listTermsOfPaymentsResource(): \OpenAPI\Client\Model\TermsOfPaymentList
+listTermsOfPaymentsResource(): \FortnoxApi\Model\TermsOfPaymentList
 ```
 
 Retrieve a list of all terms of payments
@@ -135,7 +135,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TermsOfPaymentsResourceApi(
+$apiInstance = new FortnoxApi\Api\TermsOfPaymentsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -155,7 +155,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TermsOfPaymentList**](../Model/TermsOfPaymentList.md)
+[**\FortnoxApi\Model\TermsOfPaymentList**](../Model/TermsOfPaymentList.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TermsOfPaymentsResourceApi(
+$apiInstance = new FortnoxApi\Api\TermsOfPaymentsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -226,7 +226,7 @@ No authorization required
 ## `updateTermsOfPaymentsResource()`
 
 ```php
-updateTermsOfPaymentsResource($code, $term_of_payment): \OpenAPI\Client\Model\TermsOfPaymentWrap
+updateTermsOfPaymentsResource($code, $term_of_payment): \FortnoxApi\Model\TermsOfPaymentWrap
 ```
 
 Update a term of payment
@@ -239,13 +239,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TermsOfPaymentsResourceApi(
+$apiInstance = new FortnoxApi\Api\TermsOfPaymentsResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $code = 'code_example'; // string | identifies the term of payment
-$term_of_payment = new \OpenAPI\Client\Model\TermsOfPaymentWrap(); // \OpenAPI\Client\Model\TermsOfPaymentWrap | term of payment to update
+$term_of_payment = new \FortnoxApi\Model\TermsOfPaymentWrap(); // \FortnoxApi\Model\TermsOfPaymentWrap | term of payment to update
 
 try {
     $result = $apiInstance->updateTermsOfPaymentsResource($code, $term_of_payment);
@@ -260,11 +260,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **code** | **string**| identifies the term of payment | |
-| **term_of_payment** | [**\OpenAPI\Client\Model\TermsOfPaymentWrap**](../Model/TermsOfPaymentWrap.md)| term of payment to update | [optional] |
+| **term_of_payment** | [**\FortnoxApi\Model\TermsOfPaymentWrap**](../Model/TermsOfPaymentWrap.md)| term of payment to update | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TermsOfPaymentWrap**](../Model/TermsOfPaymentWrap.md)
+[**\FortnoxApi\Model\TermsOfPaymentWrap**](../Model/TermsOfPaymentWrap.md)
 
 ### Authorization
 
