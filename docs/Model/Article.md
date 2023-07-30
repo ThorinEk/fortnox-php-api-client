@@ -1,0 +1,53 @@
+# # Article
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**at_url** | **string** |  | [optional]
+**article_number** | **string** |  | [optional]
+**bulky** | **bool** |  | [optional]
+**construction_account** | **int** |  | [optional]
+**depth** | **int** |  | [optional]
+**description** | **string** |  |
+**disposable_quantity** | **float** |  | [optional]
+**ean** | **string** |  | [optional]
+**eu_account** | **int** |  | [optional]
+**euvat_account** | **int** |  | [optional]
+**export_account** | **int** |  | [optional]
+**height** | **int** |  | [optional]
+**housework** | **bool** |  | [optional]
+**housework_type** | **string** |  | [optional]
+**active** | **bool** |  | [optional]
+**manufacturer** | **string** |  | [optional]
+**manufacturer_article_number** | **string** |  | [optional]
+**note** | **string** |  | [optional]
+**purchase_account** | **int** |  | [optional]
+**purchase_price** | **float** |  | [optional]
+**quantity_in_stock** | **float** |  | [optional]
+**reserved_quantity** | **float** |  | [optional]
+**sales_account** | **int** |  | [optional]
+**stock_goods** | **bool** |  | [optional]
+**stock_place** | **string** |  | [optional]
+**stock_value** | **float** |  | [optional]
+**stock_warning** | **float** |  | [optional]
+**supplier_name** | **string** |  | [optional]
+**supplier_number** | **string** |  | [optional]
+**type** | **string** |  | [optional]
+**unit** | **string** |  | [optional]
+**vat** | **float** |  | [optional]
+**webshop_article** | **bool** |  | [optional]
+**weight** | **int** |  | [optional]
+**width** | **int** |  | [optional]
+**expired** | **bool** |  | [optional]
+**sales_price** | **float** |  | [optional]
+**cost_calculation_method** | **string** |  | [optional]
+**stock_account** | **int** |  | [optional]
+**stock_change_account** | **int** |  | [optional]
+**direct_cost** | **float** |  | [optional]
+**freight_cost** | **float** |  | [optional]
+**other_cost** | **float** |  | [optional]
+**default_stock_point** | **string** |  | [optional]
+**default_stock_location** | **string** |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
