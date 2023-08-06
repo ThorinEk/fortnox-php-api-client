@@ -47,19 +47,16 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 
 ```json
 {
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
-    }
-  ],
-  "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
-  }
+     "repositories": [
+       {
+           "type": "vcs",
+           "url": "https://github.com/ThorinEk/fortnox-php-api-client.git"
+       }
+   ],
 }
 ```
 
-Then run `composer install`
+Then run `composer install thorinek/fortnox-php-api-client`
 
 ### Manual Installation
 
